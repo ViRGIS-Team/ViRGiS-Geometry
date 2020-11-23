@@ -2,3673 +2,3673 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.virgis.org/api/g3.AddTrianglesMeshChange.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Arc2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ArcLengthSoftTranslation.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Arrangement2d.Intersection.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Arrangement2d.SegmentPoint.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Arrangement2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ArrayAlias-1.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.AxisAlignedBox2d.ScaleMode.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.AxisAlignedBox2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.AxisAlignedBox2f.ScaleMode.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.AxisAlignedBox2f.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.AxisAlignedBox2i.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.AxisAlignedBox3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.AxisAlignedBox3f.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.AxisAlignedBox3i.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.BaseCurve2.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.BezierCurve2.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.BiArcFit2.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.BiGrid3-1.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.BinaryG3FormatReader.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.BinaryG3Reader.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.BinaryG3Writer.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Bitmap2.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Bitmap3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.BlockSupportGenerator.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.BlockTimer.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.BoundedImplicitFunction3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.BoundsUtil.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Box2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Box2f.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Box3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Box3f.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.BSplineBasis.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.BufferUtil.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.CachingDenseGridTrilinearImplicit.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.CachingMeshSDF.InsideModes.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.CachingMeshSDF.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.CachingMeshSDFImplicit.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.CancelFunction.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.CappedCylinderGenerator.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.CholeskyDecomposition.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Circle2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Circle3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.CircleProjectionTarget.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Colorb.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Colorf.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ColorHSV.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ColorMap.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ColorMixer.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.CommandArgumentSet.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ComplexEndpoint2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ComplexSegment2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ConeGenerator.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ConstantIndexMap.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ConstantItr-1.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ContMinBox2.RCFlags.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ContMinBox2.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ContMinCircle2.Support.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ContMinCircle2.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ContOrientedBox3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ConvexHull2.Edge.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ConvexHull2.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Curve3Axis3RevolveGenerator.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Curve3Curve3RevolveGenerator.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.CurveGenerator.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.CurveResampler.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.CurveSample.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.CurveSample2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.CurveSampler2.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.CurveUtils.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.CurveUtils2.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Cylinder3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.CylinderProjectionTarget.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DCurve3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DCurve3BoxTree.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DCurveProjectionTarget.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DeepCopy.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DenseGrid2f.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DenseGrid2i.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DenseGrid3f.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DenseGrid3i.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DenseGridTrilinearImplicit.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DenseMatrix.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DenseUVMesh.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DenseVector.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DGraph.EdgeCollapseInfo.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DGraph.EdgeSplitInfo.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DGraph.FailMode.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DGraph.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DGraph2.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DGraph2Resampler.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DGraph2Util.Curves.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DGraph2Util.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DGraph3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DGraph3Util.Curves.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DGraph3Util.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DGraphN.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DiagonalMatrix.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DijkstraGraphDistance.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DIndexArray2i.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DIndexArray3i.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Distance.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DistanceFieldToSkeletalField.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DistLine2Line2.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DistLine2Segment2.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DistLine3Ray3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DistLine3Segment3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DistLine3Triangle3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DistPoint2Box2.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DistPoint2Circle2.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DistPoint3Circle3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DistPoint3Cylinder3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DistPoint3Triangle3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DistRay3Ray3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DistRay3Segment3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DistSegment2Segment2.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DistSegment3Triangle3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DistTriangle3Triangle3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DMesh3.CompactInfo.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DMesh3.EdgeCollapseInfo.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DMesh3.EdgeFlipInfo.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DMesh3.EdgeSplitInfo.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DMesh3.MergeEdgesInfo.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DMesh3.PokeTriangleInfo.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DMesh3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DMesh3Builder.AddTriangleFailBehaviors.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DMesh3Builder.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DMeshAABBTree3.BuildStrategy.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DMeshAABBTree3.ClusterFunctionType.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DMeshAABBTree3.ClusterPolicy.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DMeshAABBTree3.IntersectionsQueryResult.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DMeshAABBTree3.PointIntersection.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DMeshAABBTree3.SegmentIntersection.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DMeshAABBTree3.TreeTraversal.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DMeshAABBTree3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DMeshIntersectionTarget.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DPolyLine2f.Edge.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DPolyLine2f.Vertex.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DPolyLine2f.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DS3FormatReader.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DSparseGrid3-1.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DSubmesh3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DSubmesh3Set.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DVector-1.DBlock.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DVector-1.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DVectorArray2-1.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DVectorArray2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DVectorArray2f.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DVectorArray3-1.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DVectorArray3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DVectorArray3f.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DVectorArray3i.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DynamicPriorityQueue-1.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.DynamicPriorityQueueNode.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.EdgeConstraint.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.EdgeLoop.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.EdgeLoopRemesher.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.EdgeRefineFlags.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.EdgeSpan.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Ellipse2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.EllipseArc2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.FaceGroupOptimizer.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.FaceGroupUtil.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.FailMode.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.FastPointWinding.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.FastQuaternionSVD.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.FastTriWinding.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.FileSystemUtils.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Frame3f.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.FrameGridIndexer3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.GaussPointsFit3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.GeneralPolygon2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.GeneralPolygon2dBoxTree.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.GenericMaterial.KnownMaterialTypes.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.GenericMaterial.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.gException.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.gIndices.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.gParallel.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.GraphCells2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.GraphSplitter2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.GraphSupportGenerator.ImplicitCurve3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.GraphSupportGenerator.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.GraphTubeMesher.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.GridBox3Generator.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.GriddedRectGenerator.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.GridLevelIndex.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.GridLevelIndex2.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.gSerialization.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.HashBuilder.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.HBitArray.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Hexagon2d.TopModes.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Hexagon2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IArcLengthParam.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IArcLengthParam2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IBinaryVoxelGrid.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ICancelSource.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IDeformableMesh.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IdentityIndexMap.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IDuplicatable-1.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IFixedGrid3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IGrid3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IGridElement3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IGridWorldIndexer2.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IGridWorldIndexer3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IIndexMap.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IIntersectionTarget.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IMatrix.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IMesh.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IMeshBuilder.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IMeshComponentManager.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IMeshReader.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IMeshWriter.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ImplicitAxisAlignedBox3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ImplicitBlend2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ImplicitBlend3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ImplicitBox3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ImplicitDifference2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ImplicitDifference3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ImplicitField2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ImplicitFieldSampler3d.CombineModes.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ImplicitFieldSampler3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ImplicitFunction3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ImplicitHalfSpace3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ImplicitIntersection2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ImplicitIntersection3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ImplicitLine3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ImplicitNaryDifference3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ImplicitNaryIntersection3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ImplicitNAryOp2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ImplicitNaryUnion3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ImplicitOffset3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ImplicitOperator2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ImplicitPoint2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ImplicitShell3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ImplicitSmoothDifference3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ImplicitSmoothIntersection3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ImplicitSmoothUnion3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ImplicitSphere3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ImplicitUnion2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ImplicitUnion3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IMultiCurve2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IMultigridIndexer2.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IMultigridIndexer3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Index2i.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Index3i.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Index4i.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IndexArray2i.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IndexArray3i.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IndexArray4i.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IndexFlagSet.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IndexHashSet.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IndexMap.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IndexPriorityQueue.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IndexRangeEnumerator.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IndexUtil.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.InPlaceIterativeCurveSmooth.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Integrate1d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IntersectionResult.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IntersectionType.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IntersectionUtil.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Intersector1.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Interval1d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Interval1i.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IntrLine2Line2.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IntrLine2Segment2.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IntrLine2Triangle2.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IntrLine3AxisAlignedBox3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IntrLine3Box3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IntrRay3AxisAlignedBox3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IntrRay3Box3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IntrRay3Triangle3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IntrSegment2Segment2.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IntrSegment2Triangle2.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IntrSegment3Box3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IntrTriangle2Triangle2.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IntrTriangle3Triangle3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IntSequence.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IntTagPair.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IntTagSet-1.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IOCode.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IOReadResult.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IOrientedProjectionTarget.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IOWriteResult.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IParametricCurve2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IParametricCurve3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IPointSet.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IProjectionTarget.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ISampledCurve3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ISpatial.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ITransform2.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.IWrappedCurve3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.LaplacianCurveDeformer.SoftConstraintV.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.LaplacianCurveDeformer.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.LaplacianMeshDeformer.SoftConstraintV.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.LaplacianMeshDeformer.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.LaplacianMeshSmoother.SoftConstraintV.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.LaplacianMeshSmoother.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Line2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Line2f.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Line3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Line3f.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.LinearIntersection.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.LineGenerator.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.LocalProfiler.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.LockingQueue-1.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MappedList.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MarchingCubes.RootfindingModes.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MarchingCubes.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MarchingQuads.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MathUtil.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.matrix_entry.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Matrix2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Matrix2f.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Matrix3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Matrix3f.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MatrixUtil.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MemoryPool-1.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshBoolean.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshBoundaryEdgeMidpoints.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshBoundaryLoops.FailureBehaviors.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshBoundaryLoops.SpanBehaviors.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshBoundaryLoops.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshBoundaryLoopsException.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshComponents.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshConnectedComponents.Component.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshConnectedComponents.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshConstraints.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshConstraintUtil.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshDecomposition.Component.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshDecomposition.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshEdgeMidpoints.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshEdgeSelection.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshEditor.DuplicateTriBehavior.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshEditor.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshExtrudeFaces.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshExtrudeLoop.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshExtrudeMesh.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshFaceSelection.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshFacesFromLoop.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshFormatReader.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshGenerator.CircularSection.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshGenerator.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshHints.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshICP.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshIndexUtil.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshInsertPolygon.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshInsertUVPolyCurve.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshIOUtil.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshIsoCurves.GraphEdgeInfo.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshIsoCurves.RootfindingModes.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshIsoCurves.TriangleCase.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshIsoCurves.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshIterativeSmooth.SmoothTypes.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshIterativeSmooth.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshIterators.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshLocalParam.UVModes.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshLocalParam.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshLoopClosure.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshLoopSmooth.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshMeasurements.GenusResult.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshMeasurements.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshMeshCut.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshNormals.NormalsTypes.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshNormals.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshOps.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshPlaneCut.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshProjectionTarget.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshQueries.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshRefinerBase.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshRegionBoundaryLoops.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshResult.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshSignedDistanceGrid.ComputeModes.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshSignedDistanceGrid.InsideModes.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshSignedDistanceGrid.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshTransforms.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshTriInfoCache.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshTrimLoop.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshUtil.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshValidation.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshVertexSelection.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MeshWeights.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ModifyVerticesMeshChange.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MultigridIndexer2.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.MultigridIndexer3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.NewVertexInfo.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.NormalHistogram.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.NTMesh3.EdgeSplitInfo.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.NTMesh3.PokeTriangleInfo.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.NTMesh3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.NURBSCurve2.CurveDerivatives.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.NURBSCurve2.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.OBJFormatReader.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.OBJMaterial.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.OBJReader.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.OBJWriter.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.OFFFormatReader.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.OFFWriter.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.OpenCylinderGenerator.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.OrthogonalPlaneFit3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.PackedSparseMatrix.nonzero.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.PackedSparseMatrix.StorageModes.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.PackedSparseMatrix.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ParallelStream-2.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ParametricCurveSequence2.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ParsingMessagesHandler.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.PlanarComplex.ClosedLoopsInfo.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.PlanarComplex.Element.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.PlanarComplex.FindSolidsOptions.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.PlanarComplex.GeneralSolid.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.PlanarComplex.OpenCurvesInfo.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.PlanarComplex.SmoothCurveElement.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.PlanarComplex.SmoothLoopElement.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.PlanarComplex.SolidRegionInfo.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.PlanarComplex.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.PlanarHoleFiller.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.PlanarSolid2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.PlanarSpansFiller.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Plane3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Plane3f.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.PlaneIntersectionTarget.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.PlaneProjectionTarget.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.PointAABBTree3.BuildStrategy.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.PointAABBTree3.TreeTraversal.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.PointAABBTree3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.PointHashGrid2d-1.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.PointHashGrid3d-1.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.PointSplatsGenerator.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Polygon2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Polygon2dBoxTree.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Polygon2DCurve.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.PolygonFont2d.CharacterInfo.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.PolygonFont2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.PolyLine2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.PolyLine2DCurve.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.PolyLine3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.PolySimplification2.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ProgressCancel.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.PuncturedDiscGenerator.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.QuadraticFit2.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.QuadricError.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Quaterniond.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Quaternionf.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Query2.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Query2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Query2Int64.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.QueryBase.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.QueryNumberType.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.QueryTuple2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Radial3DArrowGenerator.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Ray3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Ray3f.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.RayIntersection.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ReadOptions.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Reducer.ProcessResult.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Reducer.QEdge.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Reducer.TargetModes.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Reducer.TargetProjectionMode.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Reducer.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.RefCountVector.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.RegionOperator.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.RegionRemesher.QuickRemeshFlags.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.RegionRemesher.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.RemapItr-2.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Remesher.ProcessResult.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Remesher.SmoothTypes.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Remesher.TargetProjectionMode.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Remesher.VertexControl.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Remesher.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.RemoveTrianglesMeshChange.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.RoundRectGenerator.Corner.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.RoundRectGenerator.UVModes.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.RoundRectGenerator.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.SafeListBuilder-1.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.SampledArcLengthParam.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.SampledArcLengthParam2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ScalarMap.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ScaleGridIndexer2.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ScaleGridIndexer3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.SculptCurveDeformation.DeformInfo.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.SculptCurveDeformation.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.SculptCurveMove.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.SculptCurveSmooth.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Segment2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Segment2dBox.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Segment2f.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Segment3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Segment3f.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.SegmentHashGrid2d-1.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.SegmentSet2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.SequentialProjectionTarget.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.SetGroupBehavior.Modes.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.SetGroupBehavior.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.SetVerticesMeshChange.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ShiftGridIndexer2.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ShiftGridIndexer3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ShiftIndexMap.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.SimpleHoleFiller.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.SimpleMesh.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.SimpleMeshBuilder.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.SimpleQuadMesh.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.SimpleStore.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.SingularValueDecomposition.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.SkeletalBlend3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.SkeletalRicciBlend3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.SkeletalRicciNaryBlend3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.SmallListSet.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Snapping.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.SparseList-1.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.SparseObjectList-1.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.SparseSymmetricCG.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.SparseSymmetricCGMultipleRHS.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.SpatialFunctions.NormalOffset.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.SpatialFunctions.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Sphere3Generator_NormalizedCube.NormalizationTypes.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Sphere3Generator_NormalizedCube.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.SphericalFibonacciPointSet.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.StandardMeshReader.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.StandardMeshWriter.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.StandardSculptCurveDeformation.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.STLFormatReader.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.STLReader.STLSolid.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.STLReader.Strategy.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.STLReader.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.STLWriter.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.StringTagSet-1.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.SVGWriter.Style.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.SVGWriter.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.SymmetricEigenSolver.SortType.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.SymmetricEigenSolver.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.SymmetricSparseMatrix.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.TilingUtil.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.TransformedIntersectionTarget.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.TransformedMeshProjectionTarget.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.TransformSequence.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.TransformSequence2.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Triangle2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Triangle2f.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Triangle3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Triangle3f.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.TriangleBinsGrid2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.TriangulatedPolygonGenerator.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.TrivialBox3Generator.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.TrivialDiscGenerator.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.TrivialRectGenerator.UVModes.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.TrivialRectGenerator.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.TubeGenerator.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Units.Angular.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Units.Linear.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Units.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Util.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.ValidationStatus.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Vector2d.Information.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Vector2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Vector2dTuple2.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Vector2dTuple3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Vector2dTuple4.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Vector2f.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Vector2i.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Vector2l.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Vector3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Vector3dTuple2.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Vector3dTuple3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Vector3f.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Vector3fTuple3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Vector3i.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Vector4d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.Vector4f.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.VectorArray2-1.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.VectorArray2d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.VectorArray2f.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.VectorArray3-1.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.VectorArray3d.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.VectorArray3f.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.VectorArray3i.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.VectorArray4-1.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.VertexConstraint.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.VerticalGeneralizedCylinderGenerator.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.VoxelSurfaceGenerator.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.WriteMesh.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.WriteOptions.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/g3.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/gs.AutoHoleFill.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/gs.EditMeshSpatial.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/gs.IFalloffFunction.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/gs.LinearFalloff.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/gs.MarchingCubesPro.RootfindingModes.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/gs.MarchingCubesPro.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/gs.MergeCoincidentEdges.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/gs.MeshAssembly.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/gs.MeshAutoRepair.RemoveModes.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/gs.MeshAutoRepair.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/gs.MeshInsertProjectedPolygon.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/gs.MeshRepairOrientation.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/gs.MeshScalarSamplingGrid.ComputeModes.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/gs.MeshScalarSamplingGrid.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/gs.MeshSpatialSort.ComponentMesh.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/gs.MeshSpatialSort.MeshSolid.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/gs.MeshSpatialSort.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/gs.MeshStitchLoops.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/gs.MeshTopology.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/gs.MeshWindingNumberGrid.ComputeModes.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/gs.MeshWindingNumberGrid.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/gs.MinimalHoleFill.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/gs.PointSetHashtable.PointList.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/gs.PointSetHashtable.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/gs.RemesherPro.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/gs.RemoveDuplicateTriangles.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/gs.RemoveOccludedTriangles.CalculationMode.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/gs.RemoveOccludedTriangles.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/gs.SmoothedHoleFill.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/gs.WyvillFalloff.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.virgis.org/api/gs.html</loc>
-    <lastmod>2020-11-23T02:31:09+00:00</lastmod>
+    <lastmod>2020-11-23T02:49:07+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
