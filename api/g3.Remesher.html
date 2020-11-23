@@ -1,0 +1,1556 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Remesher
+   | ViRGIS VR GIS </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Remesher
+   | ViRGIS VR GIS ">
+    <meta name="generator" content="docfx 2.56.5.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    
+    <link rel="shortcut icon" href="https://www.virgis.org/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="https://www.virgis.org">
+                <img id="logo" class="img" src="https://www.virgis.org/images/virgis_light.png" alt="">
+              </a>    </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="g3.Remesher">
+  
+  
+  <h1 id="g3_Remesher" data-uid="g3.Remesher" class="text-break">Class Remesher
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="g3.MeshRefinerBase.html">MeshRefinerBase</a></div>
+    <div class="level2"><span class="xref">Remesher</span></div>
+      <div class="level3"><a class="xref" href="g3.EdgeLoopRemesher.html">EdgeLoopRemesher</a></div>
+      <div class="level3"><a class="xref" href="g3.RegionRemesher.html">RegionRemesher</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="g3.MeshRefinerBase.html#g3_MeshRefinerBase_mesh">MeshRefinerBase.mesh</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshRefinerBase.html#g3_MeshRefinerBase_constraints">MeshRefinerBase.constraints</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshRefinerBase.html#g3_MeshRefinerBase_AllowCollapseFixedVertsWithSameSetID">MeshRefinerBase.AllowCollapseFixedVertsWithSameSetID</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshRefinerBase.html#g3_MeshRefinerBase_EdgeFlipTolerance">MeshRefinerBase.EdgeFlipTolerance</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshRefinerBase.html#g3_MeshRefinerBase_edge_flip_tol">MeshRefinerBase.edge_flip_tol</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshRefinerBase.html#g3_MeshRefinerBase_Mesh">MeshRefinerBase.Mesh</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshRefinerBase.html#g3_MeshRefinerBase_Constraints">MeshRefinerBase.Constraints</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshRefinerBase.html#g3_MeshRefinerBase_SetExternalConstraints_g3_MeshConstraints_">MeshRefinerBase.SetExternalConstraints(MeshConstraints)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshRefinerBase.html#g3_MeshRefinerBase_Progress">MeshRefinerBase.Progress</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshRefinerBase.html#g3_MeshRefinerBase_Cancelled">MeshRefinerBase.Cancelled()</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshRefinerBase.html#g3_MeshRefinerBase_edge_flip_metric_g3_Vector3d__g3_Vector3d__">MeshRefinerBase.edge_flip_metric(Vector3d, Vector3d)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshRefinerBase.html#g3_MeshRefinerBase_collapse_creates_flip_or_invalid_System_Int32_System_Int32_g3_Vector3d__System_Int32_System_Int32_">MeshRefinerBase.collapse_creates_flip_or_invalid(Int32, Int32, Vector3d, Int32, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshRefinerBase.html#g3_MeshRefinerBase_flip_inverts_normals_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_">MeshRefinerBase.flip_inverts_normals(Int32, Int32, Int32, Int32, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshRefinerBase.html#g3_MeshRefinerBase_can_collapse_constraints_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32__">MeshRefinerBase.can_collapse_constraints(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshRefinerBase.html#g3_MeshRefinerBase_can_collapse_vtx_System_Int32_System_Int32_System_Int32_System_Int32__">MeshRefinerBase.can_collapse_vtx(Int32, Int32, Int32, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshRefinerBase.html#g3_MeshRefinerBase_vertex_is_fixed_System_Int32_">MeshRefinerBase.vertex_is_fixed(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshRefinerBase.html#g3_MeshRefinerBase_vertex_is_constrained_System_Int32_">MeshRefinerBase.vertex_is_constrained(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshRefinerBase.html#g3_MeshRefinerBase_get_vertex_constraint_System_Int32_">MeshRefinerBase.get_vertex_constraint(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshRefinerBase.html#g3_MeshRefinerBase_get_vertex_constraint_System_Int32_g3_VertexConstraint__">MeshRefinerBase.get_vertex_constraint(Int32, VertexConstraint)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="g3.html">g3</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="g3_Remesher_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Remesher : MeshRefinerBase</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="g3_Remesher__ctor_" data-uid="g3.Remesher.#ctor*"></a>
+  <h4 id="g3_Remesher__ctor" data-uid="g3.Remesher.#ctor">Remesher()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Remesher()</code></pre>
+  </div>
+  
+  
+  <a id="g3_Remesher__ctor_" data-uid="g3.Remesher.#ctor*"></a>
+  <h4 id="g3_Remesher__ctor_g3_DMesh3_" data-uid="g3.Remesher.#ctor(g3.DMesh3)">Remesher(DMesh3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Remesher(DMesh3 m)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.DMesh3.html">DMesh3</a></td>
+        <td><span class="parametername">m</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="g3_Remesher_CustomSmoothF" data-uid="g3.Remesher.CustomSmoothF">CustomSmoothF</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Func&lt;DMesh3, int, double, Vector3d&gt; CustomSmoothF</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-4">Func</a>&lt;<a class="xref" href="g3.DMesh3.html">DMesh3</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a>, <a class="xref" href="g3.Vector3d.html">Vector3d</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_Remesher_DebugEdges" data-uid="g3.Remesher.DebugEdges">DebugEdges</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;int&gt; DebugEdges</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_Remesher_ENABLE_DEBUG_CHECKS" data-uid="g3.Remesher.ENABLE_DEBUG_CHECKS">ENABLE_DEBUG_CHECKS</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ENABLE_DEBUG_CHECKS</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_Remesher_ENABLE_PROFILING" data-uid="g3.Remesher.ENABLE_PROFILING">ENABLE_PROFILING</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ENABLE_PROFILING</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_Remesher_EnableCollapses" data-uid="g3.Remesher.EnableCollapses">EnableCollapses</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableCollapses</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_Remesher_EnableFlips" data-uid="g3.Remesher.EnableFlips">EnableFlips</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableFlips</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_Remesher_EnableParallelProjection" data-uid="g3.Remesher.EnableParallelProjection">EnableParallelProjection</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableParallelProjection</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_Remesher_EnableParallelSmooth" data-uid="g3.Remesher.EnableParallelSmooth">EnableParallelSmooth</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableParallelSmooth</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_Remesher_EnableSmoothing" data-uid="g3.Remesher.EnableSmoothing">EnableSmoothing</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableSmoothing</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_Remesher_EnableSmoothInPlace" data-uid="g3.Remesher.EnableSmoothInPlace">EnableSmoothInPlace</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableSmoothInPlace</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_Remesher_EnableSplits" data-uid="g3.Remesher.EnableSplits">EnableSplits</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableSplits</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_Remesher_MaxEdgeLength" data-uid="g3.Remesher.MaxEdgeLength">MaxEdgeLength</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double MaxEdgeLength</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_Remesher_MinEdgeLength" data-uid="g3.Remesher.MinEdgeLength">MinEdgeLength</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double MinEdgeLength</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_Remesher_ModifiedEdgesLastPass" data-uid="g3.Remesher.ModifiedEdgesLastPass">ModifiedEdgesLastPass</h4>
+  <div class="markdown level1 summary"><p>Number of edges that were modified in previous Remesh pass.
+If this number gets small relative to edge count, you have probably converged (ish)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ModifiedEdgesLastPass</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_Remesher_PreventNormalFlips" data-uid="g3.Remesher.PreventNormalFlips">PreventNormalFlips</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool PreventNormalFlips</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_Remesher_ProjectionMode" data-uid="g3.Remesher.ProjectionMode">ProjectionMode</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Remesher.TargetProjectionMode ProjectionMode</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.Remesher.TargetProjectionMode.html">Remesher.TargetProjectionMode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_Remesher_SmoothSpeedT" data-uid="g3.Remesher.SmoothSpeedT">SmoothSpeedT</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double SmoothSpeedT</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_Remesher_SmoothType" data-uid="g3.Remesher.SmoothType">SmoothType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Remesher.SmoothTypes SmoothType</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.Remesher.SmoothTypes.html">Remesher.SmoothTypes</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_Remesher_vBufferV" data-uid="g3.Remesher.vBufferV">vBufferV</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected DVector&lt;Vector3d&gt; vBufferV</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.DVector-1.html">DVector</a>&lt;<a class="xref" href="g3.Vector3d.html">Vector3d</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_Remesher_VertexControlF" data-uid="g3.Remesher.VertexControlF">VertexControlF</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Func&lt;int, Remesher.VertexControl&gt; VertexControlF</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>, <a class="xref" href="g3.Remesher.VertexControl.html">Remesher.VertexControl</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_Remesher_vModifiedV" data-uid="g3.Remesher.vModifiedV">vModifiedV</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BitArray vModifiedV</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BitArray</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="g3_Remesher_ProjectionTarget_" data-uid="g3.Remesher.ProjectionTarget*"></a>
+  <h4 id="g3_Remesher_ProjectionTarget" data-uid="g3.Remesher.ProjectionTarget">ProjectionTarget</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IProjectionTarget ProjectionTarget { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.IProjectionTarget.html">IProjectionTarget</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="g3_Remesher_ApplyVertexBuffer_" data-uid="g3.Remesher.ApplyVertexBuffer*"></a>
+  <h4 id="g3_Remesher_ApplyVertexBuffer_System_Boolean_" data-uid="g3.Remesher.ApplyVertexBuffer(System.Boolean)">ApplyVertexBuffer(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ApplyVertexBuffer(bool bParallel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">bParallel</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_Remesher_BasicRemeshPass_" data-uid="g3.Remesher.BasicRemeshPass*"></a>
+  <h4 id="g3_Remesher_BasicRemeshPass" data-uid="g3.Remesher.BasicRemeshPass">BasicRemeshPass()</h4>
+  <div class="markdown level1 summary"><p>Linear edge-refinement pass, followed by smoothing and projection</p>
+<ul>
+<li>Edges are processed in prime-modulo-order to break symmetry</li>
+<li>smoothing is done in parallel if EnableParallelSmooth = true</li>
+<li>Projection pass if ProjectionMode == AfterRefinement</li>
+<li>number of modified edges returned in ModifiedEdgesLastPass</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void BasicRemeshPass()</code></pre>
+  </div>
+  
+  
+  <a id="g3_Remesher_begin_collapse_" data-uid="g3.Remesher.begin_collapse*"></a>
+  <h4 id="g3_Remesher_begin_collapse" data-uid="g3.Remesher.begin_collapse">begin_collapse()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void begin_collapse()</code></pre>
+  </div>
+  
+  
+  <a id="g3_Remesher_begin_flip_" data-uid="g3.Remesher.begin_flip*"></a>
+  <h4 id="g3_Remesher_begin_flip" data-uid="g3.Remesher.begin_flip">begin_flip()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void begin_flip()</code></pre>
+  </div>
+  
+  
+  <a id="g3_Remesher_begin_ops_" data-uid="g3.Remesher.begin_ops*"></a>
+  <h4 id="g3_Remesher_begin_ops" data-uid="g3.Remesher.begin_ops">begin_ops()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void begin_ops()</code></pre>
+  </div>
+  
+  
+  <a id="g3_Remesher_begin_pass_" data-uid="g3.Remesher.begin_pass*"></a>
+  <h4 id="g3_Remesher_begin_pass" data-uid="g3.Remesher.begin_pass">begin_pass()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void begin_pass()</code></pre>
+  </div>
+  
+  
+  <a id="g3_Remesher_begin_project_" data-uid="g3.Remesher.begin_project*"></a>
+  <h4 id="g3_Remesher_begin_project" data-uid="g3.Remesher.begin_project">begin_project()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void begin_project()</code></pre>
+  </div>
+  
+  
+  <a id="g3_Remesher_begin_smooth_" data-uid="g3.Remesher.begin_smooth*"></a>
+  <h4 id="g3_Remesher_begin_smooth" data-uid="g3.Remesher.begin_smooth">begin_smooth()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void begin_smooth()</code></pre>
+  </div>
+  
+  
+  <a id="g3_Remesher_begin_split_" data-uid="g3.Remesher.begin_split*"></a>
+  <h4 id="g3_Remesher_begin_split" data-uid="g3.Remesher.begin_split">begin_split()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void begin_split()</code></pre>
+  </div>
+  
+  
+  <a id="g3_Remesher_ComputeSmoothedVertexPos_" data-uid="g3.Remesher.ComputeSmoothedVertexPos*"></a>
+  <h4 id="g3_Remesher_ComputeSmoothedVertexPos_System_Int32_System_Func_g3_DMesh3_System_Int32_System_Double_g3_Vector3d__System_Boolean__" data-uid="g3.Remesher.ComputeSmoothedVertexPos(System.Int32,System.Func{g3.DMesh3,System.Int32,System.Double,g3.Vector3d},System.Boolean@)">ComputeSmoothedVertexPos(Int32, Func&lt;DMesh3, Int32, Double, Vector3d&gt;, out Boolean)</h4>
+  <div class="markdown level1 summary"><p>This computes smoothed positions w/ proper constraints/etc.
+Does not modify mesh.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual Vector3d ComputeSmoothedVertexPos(int vID, Func&lt;DMesh3, int, double, Vector3d&gt; smoothFunc, out bool bModified)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">vID</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-4">Func</a>&lt;<a class="xref" href="g3.DMesh3.html">DMesh3</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a>, <a class="xref" href="g3.Vector3d.html">Vector3d</a>&gt;</td>
+        <td><span class="parametername">smoothFunc</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">bModified</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.Vector3d.html">Vector3d</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_Remesher_DoDebugChecks_" data-uid="g3.Remesher.DoDebugChecks*"></a>
+  <h4 id="g3_Remesher_DoDebugChecks" data-uid="g3.Remesher.DoDebugChecks">DoDebugChecks()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void DoDebugChecks()</code></pre>
+  </div>
+  
+  
+  <a id="g3_Remesher_end_collapse_" data-uid="g3.Remesher.end_collapse*"></a>
+  <h4 id="g3_Remesher_end_collapse" data-uid="g3.Remesher.end_collapse">end_collapse()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void end_collapse()</code></pre>
+  </div>
+  
+  
+  <a id="g3_Remesher_end_flip_" data-uid="g3.Remesher.end_flip*"></a>
+  <h4 id="g3_Remesher_end_flip" data-uid="g3.Remesher.end_flip">end_flip()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void end_flip()</code></pre>
+  </div>
+  
+  
+  <a id="g3_Remesher_end_ops_" data-uid="g3.Remesher.end_ops*"></a>
+  <h4 id="g3_Remesher_end_ops" data-uid="g3.Remesher.end_ops">end_ops()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void end_ops()</code></pre>
+  </div>
+  
+  
+  <a id="g3_Remesher_end_pass_" data-uid="g3.Remesher.end_pass*"></a>
+  <h4 id="g3_Remesher_end_pass" data-uid="g3.Remesher.end_pass">end_pass()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void end_pass()</code></pre>
+  </div>
+  
+  
+  <a id="g3_Remesher_end_project_" data-uid="g3.Remesher.end_project*"></a>
+  <h4 id="g3_Remesher_end_project" data-uid="g3.Remesher.end_project">end_project()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void end_project()</code></pre>
+  </div>
+  
+  
+  <a id="g3_Remesher_end_smooth_" data-uid="g3.Remesher.end_smooth*"></a>
+  <h4 id="g3_Remesher_end_smooth" data-uid="g3.Remesher.end_smooth">end_smooth()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void end_smooth()</code></pre>
+  </div>
+  
+  
+  <a id="g3_Remesher_end_split_" data-uid="g3.Remesher.end_split*"></a>
+  <h4 id="g3_Remesher_end_split" data-uid="g3.Remesher.end_split">end_split()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void end_split()</code></pre>
+  </div>
+  
+  
+  <a id="g3_Remesher_FullProjectionPass_" data-uid="g3.Remesher.FullProjectionPass*"></a>
+  <h4 id="g3_Remesher_FullProjectionPass" data-uid="g3.Remesher.FullProjectionPass">FullProjectionPass()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void FullProjectionPass()</code></pre>
+  </div>
+  
+  
+  <a id="g3_Remesher_FullSmoothPass_Buffer_" data-uid="g3.Remesher.FullSmoothPass_Buffer*"></a>
+  <h4 id="g3_Remesher_FullSmoothPass_Buffer_System_Boolean_" data-uid="g3.Remesher.FullSmoothPass_Buffer(System.Boolean)">FullSmoothPass_Buffer(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void FullSmoothPass_Buffer(bool bParallel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">bParallel</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_Remesher_FullSmoothPass_InPlace_" data-uid="g3.Remesher.FullSmoothPass_InPlace*"></a>
+  <h4 id="g3_Remesher_FullSmoothPass_InPlace_System_Boolean_" data-uid="g3.Remesher.FullSmoothPass_InPlace(System.Boolean)">FullSmoothPass_InPlace(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void FullSmoothPass_InPlace(bool bParallel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">bParallel</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_Remesher_get_projected_collapse_position_" data-uid="g3.Remesher.get_projected_collapse_position*"></a>
+  <h4 id="g3_Remesher_get_projected_collapse_position_System_Int32_g3_Vector3d_" data-uid="g3.Remesher.get_projected_collapse_position(System.Int32,g3.Vector3d)">get_projected_collapse_position(Int32, Vector3d)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual Vector3d get_projected_collapse_position(int vid, Vector3d vNewPos)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">vid</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">vNewPos</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.Vector3d.html">Vector3d</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_Remesher_InitializeVertexBufferForPass_" data-uid="g3.Remesher.InitializeVertexBufferForPass*"></a>
+  <h4 id="g3_Remesher_InitializeVertexBufferForPass" data-uid="g3.Remesher.InitializeVertexBufferForPass">InitializeVertexBufferForPass()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void InitializeVertexBufferForPass()</code></pre>
+  </div>
+  
+  
+  <a id="g3_Remesher_next_edge_" data-uid="g3.Remesher.next_edge*"></a>
+  <h4 id="g3_Remesher_next_edge_System_Int32_System_Boolean__" data-uid="g3.Remesher.next_edge(System.Int32,System.Boolean@)">next_edge(Int32, out Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual int next_edge(int cur_eid, out bool bDone)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">cur_eid</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">bDone</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_Remesher_OnEdgeCollapse_" data-uid="g3.Remesher.OnEdgeCollapse*"></a>
+  <h4 id="g3_Remesher_OnEdgeCollapse_System_Int32_System_Int32_System_Int32_g3_DMesh3_EdgeCollapseInfo_" data-uid="g3.Remesher.OnEdgeCollapse(System.Int32,System.Int32,System.Int32,g3.DMesh3.EdgeCollapseInfo)">OnEdgeCollapse(Int32, Int32, Int32, DMesh3.EdgeCollapseInfo)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnEdgeCollapse(int edgeID, int va, int vb, DMesh3.EdgeCollapseInfo collapseInfo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">edgeID</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">va</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">vb</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.DMesh3.EdgeCollapseInfo.html">DMesh3.EdgeCollapseInfo</a></td>
+        <td><span class="parametername">collapseInfo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_Remesher_OnEdgeSplit_" data-uid="g3.Remesher.OnEdgeSplit*"></a>
+  <h4 id="g3_Remesher_OnEdgeSplit_System_Int32_System_Int32_System_Int32_g3_DMesh3_EdgeSplitInfo_" data-uid="g3.Remesher.OnEdgeSplit(System.Int32,System.Int32,System.Int32,g3.DMesh3.EdgeSplitInfo)">OnEdgeSplit(Int32, Int32, Int32, DMesh3.EdgeSplitInfo)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnEdgeSplit(int edgeID, int va, int vb, DMesh3.EdgeSplitInfo splitInfo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">edgeID</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">va</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">vb</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.DMesh3.EdgeSplitInfo.html">DMesh3.EdgeSplitInfo</a></td>
+        <td><span class="parametername">splitInfo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_Remesher_Precompute_" data-uid="g3.Remesher.Precompute*"></a>
+  <h4 id="g3_Remesher_Precompute" data-uid="g3.Remesher.Precompute">Precompute()</h4>
+  <div class="markdown level1 summary"><p>we can vastly speed things up if we precompute some invariants. 
+You need to re-run this if you are changing the mesh externally
+between remesh passes, otherwise you will get weird results.
+But you will probably still come out ahead, computation-time-wise</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Precompute()</code></pre>
+  </div>
+  
+  
+  <a id="g3_Remesher_ProcessEdge_" data-uid="g3.Remesher.ProcessEdge*"></a>
+  <h4 id="g3_Remesher_ProcessEdge_System_Int32_" data-uid="g3.Remesher.ProcessEdge(System.Int32)">ProcessEdge(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual Remesher.ProcessResult ProcessEdge(int edgeID)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">edgeID</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.Remesher.ProcessResult.html">Remesher.ProcessResult</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_Remesher_project_vertex_" data-uid="g3.Remesher.project_vertex*"></a>
+  <h4 id="g3_Remesher_project_vertex_System_Int32_g3_IProjectionTarget_" data-uid="g3.Remesher.project_vertex(System.Int32,g3.IProjectionTarget)">project_vertex(Int32, IProjectionTarget)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void project_vertex(int vID, IProjectionTarget targetIn)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">vID</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.IProjectionTarget.html">IProjectionTarget</a></td>
+        <td><span class="parametername">targetIn</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_Remesher_project_vertices_" data-uid="g3.Remesher.project_vertices*"></a>
+  <h4 id="g3_Remesher_project_vertices" data-uid="g3.Remesher.project_vertices">project_vertices()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IEnumerable&lt;int&gt; project_vertices()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_Remesher_SetProjectionTarget_" data-uid="g3.Remesher.SetProjectionTarget*"></a>
+  <h4 id="g3_Remesher_SetProjectionTarget_g3_IProjectionTarget_" data-uid="g3.Remesher.SetProjectionTarget(g3.IProjectionTarget)">SetProjectionTarget(IProjectionTarget)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetProjectionTarget(IProjectionTarget target)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.IProjectionTarget.html">IProjectionTarget</a></td>
+        <td><span class="parametername">target</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_Remesher_SetTargetEdgeLength_" data-uid="g3.Remesher.SetTargetEdgeLength*"></a>
+  <h4 id="g3_Remesher_SetTargetEdgeLength_System_Double_" data-uid="g3.Remesher.SetTargetEdgeLength(System.Double)">SetTargetEdgeLength(Double)</h4>
+  <div class="markdown level1 summary"><p>Set min/max edge-lengths to sane values for given target edge length</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetTargetEdgeLength(double fLength)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">fLength</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_Remesher_smooth_vertices_" data-uid="g3.Remesher.smooth_vertices*"></a>
+  <h4 id="g3_Remesher_smooth_vertices" data-uid="g3.Remesher.smooth_vertices">smooth_vertices()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IEnumerable&lt;int&gt; smooth_vertices()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_Remesher_start_edges_" data-uid="g3.Remesher.start_edges*"></a>
+  <h4 id="g3_Remesher_start_edges" data-uid="g3.Remesher.start_edges">start_edges()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual int start_edges()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_Remesher_update_after_split_" data-uid="g3.Remesher.update_after_split*"></a>
+  <h4 id="g3_Remesher_update_after_split_System_Int32_System_Int32_System_Int32_g3_DMesh3_EdgeSplitInfo__" data-uid="g3.Remesher.update_after_split(System.Int32,System.Int32,System.Int32,g3.DMesh3.EdgeSplitInfo@)">update_after_split(Int32, Int32, Int32, ref DMesh3.EdgeSplitInfo)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void update_after_split(int edgeID, int va, int vb, ref DMesh3.EdgeSplitInfo splitInfo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">edgeID</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">va</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">vb</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.DMesh3.EdgeSplitInfo.html">DMesh3.EdgeSplitInfo</a></td>
+        <td><span class="parametername">splitInfo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            ViRGIS VR GIS
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

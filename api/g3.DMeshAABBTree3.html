@@ -1,0 +1,2437 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DMeshAABBTree3
+   | ViRGIS VR GIS </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DMeshAABBTree3
+   | ViRGIS VR GIS ">
+    <meta name="generator" content="docfx 2.56.5.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    
+    <link rel="shortcut icon" href="https://www.virgis.org/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="https://www.virgis.org">
+                <img id="logo" class="img" src="https://www.virgis.org/images/virgis_light.png" alt="">
+              </a>    </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="g3.DMeshAABBTree3">
+  
+  
+  <h1 id="g3_DMeshAABBTree3" data-uid="g3.DMeshAABBTree3" class="text-break">Class DMeshAABBTree3
+  </h1>
+  <div class="markdown level0 summary"><p>Hierarchical Axis-Aligned-Bounding-Box tree for a DMesh3 mesh.
+This class supports a variety of spatial queries, listed below.</p>
+<p>Various construction strategies are also available, the default is the
+fastest to build but if you are doing a <em>lot</em> of queries, you might experiment
+with the others (eg TopDownMedian)</p>
+<p>Available queries:</p>
+<ul>
+<li>FindNearestTriangle(point, maxdist)</li>
+<li>FindNearestHitTriangle(ray, maxdist)</li>
+<li>FindAllHitTriangles(ray, maxdist)</li>
+<li>TestIntersection(triangle)</li>
+<li>TestIntersection(mesh)</li>
+<li>TestIntersection(otherAABBTree)</li>
+<li>FindAllIntersections(otherAABBTree)</li>
+<li>FindNearestTriangles(otherAABBTree, maxdist)</li>
+<li>IsInside(point)</li>
+<li>WindingNumber(point)</li>
+<li>FastWindingNumber(point)</li>
+<li>DoTraversal(generic_traversal_object)</li>
+</ul>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">DMeshAABBTree3</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="g3.ISpatial.html">ISpatial</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="g3.html">g3</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="g3_DMeshAABBTree3_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DMeshAABBTree3 : ISpatial</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="g3_DMeshAABBTree3__ctor_" data-uid="g3.DMeshAABBTree3.#ctor*"></a>
+  <h4 id="g3_DMeshAABBTree3__ctor_g3_DMesh3_System_Boolean_" data-uid="g3.DMeshAABBTree3.#ctor(g3.DMesh3,System.Boolean)">DMeshAABBTree3(DMesh3, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DMeshAABBTree3(DMesh3 m, bool autoBuild = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.DMesh3.html">DMesh3</a></td>
+        <td><span class="parametername">m</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">autoBuild</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="g3_DMeshAABBTree3_BottomUpClusterLookahead" data-uid="g3.DMeshAABBTree3.BottomUpClusterLookahead">BottomUpClusterLookahead</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int BottomUpClusterLookahead</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_DMeshAABBTree3_box_centers" data-uid="g3.DMeshAABBTree3.box_centers">box_centers</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected DVector&lt;Vector3f&gt; box_centers</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.DVector-1.html">DVector</a>&lt;<a class="xref" href="g3.Vector3f.html">Vector3f</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_DMeshAABBTree3_box_extents" data-uid="g3.DMeshAABBTree3.box_extents">box_extents</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected DVector&lt;Vector3f&gt; box_extents</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.DVector-1.html">DVector</a>&lt;<a class="xref" href="g3.Vector3f.html">Vector3f</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_DMeshAABBTree3_box_to_index" data-uid="g3.DMeshAABBTree3.box_to_index">box_to_index</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected DVector&lt;int&gt; box_to_index</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.DVector-1.html">DVector</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_DMeshAABBTree3_FWNApproxOrder" data-uid="g3.DMeshAABBTree3.FWNApproxOrder">FWNApproxOrder</h4>
+  <div class="markdown level1 summary"><p>FWN approximation order. can be 1 or 2. 2 is more accurate, obviously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int FWNApproxOrder</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_DMeshAABBTree3_FWNBeta" data-uid="g3.DMeshAABBTree3.FWNBeta">FWNBeta</h4>
+  <div class="markdown level1 summary"><p>FWN beta parameter - is 2.0 in paper</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double FWNBeta</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_DMeshAABBTree3_index_list" data-uid="g3.DMeshAABBTree3.index_list">index_list</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected DVector&lt;int&gt; index_list</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.DVector-1.html">DVector</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_DMeshAABBTree3_mesh" data-uid="g3.DMeshAABBTree3.mesh">mesh</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected DMesh3 mesh</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.DMesh3.html">DMesh3</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_DMeshAABBTree3_mesh_timestamp" data-uid="g3.DMeshAABBTree3.mesh_timestamp">mesh_timestamp</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int mesh_timestamp</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_DMeshAABBTree3_root_index" data-uid="g3.DMeshAABBTree3.root_index">root_index</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int root_index</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_DMeshAABBTree3_TopDownLeafMaxTriCount" data-uid="g3.DMeshAABBTree3.TopDownLeafMaxTriCount">TopDownLeafMaxTriCount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int TopDownLeafMaxTriCount</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_DMeshAABBTree3_TriangleFilterF" data-uid="g3.DMeshAABBTree3.TriangleFilterF">TriangleFilterF</h4>
+  <div class="markdown level1 summary"><p>If non-null, only triangle IDs that pass this filter (ie filter is true) are considered</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Func&lt;int, bool&gt; TriangleFilterF</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_DMeshAABBTree3_triangles_end" data-uid="g3.DMeshAABBTree3.triangles_end">triangles_end</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int triangles_end</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="g3_DMeshAABBTree3_Bounds_" data-uid="g3.DMeshAABBTree3.Bounds*"></a>
+  <h4 id="g3_DMeshAABBTree3_Bounds" data-uid="g3.DMeshAABBTree3.Bounds">Bounds</h4>
+  <div class="markdown level1 summary"><p>Root bounding box of tree (note: tree must be generated by calling a query function first!)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AxisAlignedBox3d Bounds { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.AxisAlignedBox3d.html">AxisAlignedBox3d</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_IsValid_" data-uid="g3.DMeshAABBTree3.IsValid*"></a>
+  <h4 id="g3_DMeshAABBTree3_IsValid" data-uid="g3.DMeshAABBTree3.IsValid">IsValid</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsValid { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_Mesh_" data-uid="g3.DMeshAABBTree3.Mesh*"></a>
+  <h4 id="g3_DMeshAABBTree3_Mesh" data-uid="g3.DMeshAABBTree3.Mesh">Mesh</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DMesh3 Mesh { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.DMesh3.html">DMesh3</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_SupportsNearestTriangle_" data-uid="g3.DMeshAABBTree3.SupportsNearestTriangle*"></a>
+  <h4 id="g3_DMeshAABBTree3_SupportsNearestTriangle" data-uid="g3.DMeshAABBTree3.SupportsNearestTriangle">SupportsNearestTriangle</h4>
+  <div class="markdown level1 summary"><p>Does this ISpatial implementation support nearest-point query? (yes)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SupportsNearestTriangle { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_SupportsPointContainment_" data-uid="g3.DMeshAABBTree3.SupportsPointContainment*"></a>
+  <h4 id="g3_DMeshAABBTree3_SupportsPointContainment" data-uid="g3.DMeshAABBTree3.SupportsPointContainment">SupportsPointContainment</h4>
+  <div class="markdown level1 summary"><p>Does this ISpatial support IsInside() test (yes!)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SupportsPointContainment { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_SupportsTriangleRayIntersection_" data-uid="g3.DMeshAABBTree3.SupportsTriangleRayIntersection*"></a>
+  <h4 id="g3_DMeshAABBTree3_SupportsTriangleRayIntersection" data-uid="g3.DMeshAABBTree3.SupportsTriangleRayIntersection">SupportsTriangleRayIntersection</h4>
+  <div class="markdown level1 summary"><p>Does this ISpatial implementation support ray-triangle intersection? (yes)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SupportsTriangleRayIntersection { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="g3_DMeshAABBTree3_box_contains_" data-uid="g3.DMeshAABBTree3.box_contains*"></a>
+  <h4 id="g3_DMeshAABBTree3_box_contains_System_Int32_g3_Vector3d_" data-uid="g3.DMeshAABBTree3.box_contains(System.Int32,g3.Vector3d)">box_contains(Int32, Vector3d)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool box_contains(int iBox, Vector3d p)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">iBox</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">p</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_branch_fast_winding_num_" data-uid="g3.DMeshAABBTree3.branch_fast_winding_num*"></a>
+  <h4 id="g3_DMeshAABBTree3_branch_fast_winding_num_System_Int32_g3_Vector3d_" data-uid="g3.DMeshAABBTree3.branch_fast_winding_num(System.Int32,g3.Vector3d)">branch_fast_winding_num(Int32, Vector3d)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected double branch_fast_winding_num(int iBox, Vector3d p)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">iBox</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">p</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_branch_winding_num_" data-uid="g3.DMeshAABBTree3.branch_winding_num*"></a>
+  <h4 id="g3_DMeshAABBTree3_branch_winding_num_System_Int32_g3_Vector3d_" data-uid="g3.DMeshAABBTree3.branch_winding_num(System.Int32,g3.Vector3d)">branch_winding_num(Int32, Vector3d)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected double branch_winding_num(int iBox, Vector3d p)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">iBox</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">p</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_Build_" data-uid="g3.DMeshAABBTree3.Build*"></a>
+  <h4 id="g3_DMeshAABBTree3_Build_g3_DMeshAABBTree3_BuildStrategy_g3_DMeshAABBTree3_ClusterPolicy_" data-uid="g3.DMeshAABBTree3.Build(g3.DMeshAABBTree3.BuildStrategy,g3.DMeshAABBTree3.ClusterPolicy)">Build(DMeshAABBTree3.BuildStrategy, DMeshAABBTree3.ClusterPolicy)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Build(DMeshAABBTree3.BuildStrategy eStrategy = DMeshAABBTree3.BuildStrategy.TopDownMidpoint, DMeshAABBTree3.ClusterPolicy ePolicy = DMeshAABBTree3.ClusterPolicy.Default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.DMeshAABBTree3.BuildStrategy.html">DMeshAABBTree3.BuildStrategy</a></td>
+        <td><span class="parametername">eStrategy</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.DMeshAABBTree3.ClusterPolicy.html">DMeshAABBTree3.ClusterPolicy</a></td>
+        <td><span class="parametername">ePolicy</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_build_fast_winding_cache_" data-uid="g3.DMeshAABBTree3.build_fast_winding_cache*"></a>
+  <h4 id="g3_DMeshAABBTree3_build_fast_winding_cache" data-uid="g3.DMeshAABBTree3.build_fast_winding_cache">build_fast_winding_cache()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void build_fast_winding_cache()</code></pre>
+  </div>
+  
+  
+  <a id="g3_DMeshAABBTree3_build_fast_winding_cache_" data-uid="g3.DMeshAABBTree3.build_fast_winding_cache*"></a>
+  <h4 id="g3_DMeshAABBTree3_build_fast_winding_cache_System_Int32_System_Int32_System_Int32_HashSet_System_Int32___g3_MeshTriInfoCache_" data-uid="g3.DMeshAABBTree3.build_fast_winding_cache(System.Int32,System.Int32,System.Int32,HashSet{System.Int32}@,g3.MeshTriInfoCache)">build_fast_winding_cache(Int32, Int32, Int32, out HashSet&lt;Int32&gt;, MeshTriInfoCache)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int build_fast_winding_cache(int iBox, int depth, int tri_count_thresh, out HashSet&lt;int&gt; tri_hash, MeshTriInfoCache triCache)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">iBox</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">depth</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">tri_count_thresh</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">HashSet</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">tri_hash</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.MeshTriInfoCache.html">MeshTriInfoCache</a></td>
+        <td><span class="parametername">triCache</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_build_winding_cache_" data-uid="g3.DMeshAABBTree3.build_winding_cache*"></a>
+  <h4 id="g3_DMeshAABBTree3_build_winding_cache" data-uid="g3.DMeshAABBTree3.build_winding_cache">build_winding_cache()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void build_winding_cache()</code></pre>
+  </div>
+  
+  
+  <a id="g3_DMeshAABBTree3_build_winding_cache_" data-uid="g3.DMeshAABBTree3.build_winding_cache*"></a>
+  <h4 id="g3_DMeshAABBTree3_build_winding_cache_System_Int32_System_Int32_System_Int32_HashSet_System_Int32___" data-uid="g3.DMeshAABBTree3.build_winding_cache(System.Int32,System.Int32,System.Int32,HashSet{System.Int32}@)">build_winding_cache(Int32, Int32, Int32, out HashSet&lt;Int32&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int build_winding_cache(int iBox, int depth, int tri_count_thresh, out HashSet&lt;int&gt; tri_hash)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">iBox</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">depth</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">tri_count_thresh</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">HashSet</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">tri_hash</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_can_use_fast_winding_cache_" data-uid="g3.DMeshAABBTree3.can_use_fast_winding_cache*"></a>
+  <h4 id="g3_DMeshAABBTree3_can_use_fast_winding_cache_System_Int32_g3_Vector3d__" data-uid="g3.DMeshAABBTree3.can_use_fast_winding_cache(System.Int32,g3.Vector3d@)">can_use_fast_winding_cache(Int32, ref Vector3d)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool can_use_fast_winding_cache(int iBox, ref Vector3d q)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">iBox</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">q</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_collect_triangles_" data-uid="g3.DMeshAABBTree3.collect_triangles*"></a>
+  <h4 id="g3_DMeshAABBTree3_collect_triangles_System_Int32_HashSet_System_Int32__" data-uid="g3.DMeshAABBTree3.collect_triangles(System.Int32,HashSet{System.Int32})">collect_triangles(Int32, HashSet&lt;Int32&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void collect_triangles(int iBox, HashSet&lt;int&gt; triangles)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">iBox</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">HashSet</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">triangles</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_DoTraversal_" data-uid="g3.DMeshAABBTree3.DoTraversal*"></a>
+  <h4 id="g3_DMeshAABBTree3_DoTraversal_g3_DMeshAABBTree3_TreeTraversal_" data-uid="g3.DMeshAABBTree3.DoTraversal(g3.DMeshAABBTree3.TreeTraversal)">DoTraversal(DMeshAABBTree3.TreeTraversal)</h4>
+  <div class="markdown level1 summary"><p>Hierarchically descend through the tree nodes, calling the TreeTrversal functions at each level</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void DoTraversal(DMeshAABBTree3.TreeTraversal traversal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.DMeshAABBTree3.TreeTraversal.html">DMeshAABBTree3.TreeTraversal</a></td>
+        <td><span class="parametername">traversal</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_evaluate_box_fast_winding_cache_" data-uid="g3.DMeshAABBTree3.evaluate_box_fast_winding_cache*"></a>
+  <h4 id="g3_DMeshAABBTree3_evaluate_box_fast_winding_cache_System_Int32_g3_Vector3d__" data-uid="g3.DMeshAABBTree3.evaluate_box_fast_winding_cache(System.Int32,g3.Vector3d@)">evaluate_box_fast_winding_cache(Int32, ref Vector3d)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected double evaluate_box_fast_winding_cache(int iBox, ref Vector3d q)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">iBox</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">q</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_evaluate_box_winding_cache_" data-uid="g3.DMeshAABBTree3.evaluate_box_winding_cache*"></a>
+  <h4 id="g3_DMeshAABBTree3_evaluate_box_winding_cache_System_Int32_g3_Vector3d_" data-uid="g3.DMeshAABBTree3.evaluate_box_winding_cache(System.Int32,g3.Vector3d)">evaluate_box_winding_cache(Int32, Vector3d)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected double evaluate_box_winding_cache(int iBox, Vector3d p)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">iBox</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">p</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_FastWindingNumber_" data-uid="g3.DMeshAABBTree3.FastWindingNumber*"></a>
+  <h4 id="g3_DMeshAABBTree3_FastWindingNumber_g3_Vector3d_" data-uid="g3.DMeshAABBTree3.FastWindingNumber(g3.Vector3d)">FastWindingNumber(Vector3d)</h4>
+  <div class="markdown level1 summary"><p>Fast approximation of winding number using far-field approximations</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual double FastWindingNumber(Vector3d p)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">p</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_find_all_hit_triangles_" data-uid="g3.DMeshAABBTree3.find_all_hit_triangles*"></a>
+  <h4 id="g3_DMeshAABBTree3_find_all_hit_triangles_System_Int32_System_Collections_Generic_List_System_Int32__g3_Ray3d__System_Double_" data-uid="g3.DMeshAABBTree3.find_all_hit_triangles(System.Int32,System.Collections.Generic.List{System.Int32},g3.Ray3d@,System.Double)">find_all_hit_triangles(Int32, List&lt;Int32&gt;, ref Ray3d, Double)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int find_all_hit_triangles(int iBox, List&lt;int&gt; hitTriangles, ref Ray3d ray, double fMaxDist)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">iBox</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">hitTriangles</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.Ray3d.html">Ray3d</a></td>
+        <td><span class="parametername">ray</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">fMaxDist</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_find_any_intersection_" data-uid="g3.DMeshAABBTree3.find_any_intersection*"></a>
+  <h4 id="g3_DMeshAABBTree3_find_any_intersection_System_Int32_g3_DMeshAABBTree3_System_Func_g3_Vector3d_g3_Vector3d__System_Int32_System_Int32_" data-uid="g3.DMeshAABBTree3.find_any_intersection(System.Int32,g3.DMeshAABBTree3,System.Func{g3.Vector3d,g3.Vector3d},System.Int32,System.Int32)">find_any_intersection(Int32, DMeshAABBTree3, Func&lt;Vector3d, Vector3d&gt;, Int32, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool find_any_intersection(int iBox, DMeshAABBTree3 otherTree, Func&lt;Vector3d, Vector3d&gt; TransformF, int oBox, int depth)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">iBox</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.DMeshAABBTree3.html">DMeshAABBTree3</a></td>
+        <td><span class="parametername">otherTree</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="g3.Vector3d.html">Vector3d</a>, <a class="xref" href="g3.Vector3d.html">Vector3d</a>&gt;</td>
+        <td><span class="parametername">TransformF</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">oBox</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">depth</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_find_any_intersection_" data-uid="g3.DMeshAABBTree3.find_any_intersection*"></a>
+  <h4 id="g3_DMeshAABBTree3_find_any_intersection_System_Int32_g3_Triangle3d__g3_AxisAlignedBox3d__" data-uid="g3.DMeshAABBTree3.find_any_intersection(System.Int32,g3.Triangle3d@,g3.AxisAlignedBox3d@)">find_any_intersection(Int32, ref Triangle3d, ref AxisAlignedBox3d)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int find_any_intersection(int iBox, ref Triangle3d triangle, ref AxisAlignedBox3d triBounds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">iBox</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.Triangle3d.html">Triangle3d</a></td>
+        <td><span class="parametername">triangle</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.AxisAlignedBox3d.html">AxisAlignedBox3d</a></td>
+        <td><span class="parametername">triBounds</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_find_hit_triangle_" data-uid="g3.DMeshAABBTree3.find_hit_triangle*"></a>
+  <h4 id="g3_DMeshAABBTree3_find_hit_triangle_System_Int32_g3_Ray3d__System_Double__System_Int32__" data-uid="g3.DMeshAABBTree3.find_hit_triangle(System.Int32,g3.Ray3d@,System.Double@,System.Int32@)">find_hit_triangle(Int32, ref Ray3d, ref Double, ref Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void find_hit_triangle(int iBox, ref Ray3d ray, ref double fNearestT, ref int tID)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">iBox</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.Ray3d.html">Ray3d</a></td>
+        <td><span class="parametername">ray</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">fNearestT</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">tID</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_find_intersections_" data-uid="g3.DMeshAABBTree3.find_intersections*"></a>
+  <h4 id="g3_DMeshAABBTree3_find_intersections_System_Int32_g3_DMeshAABBTree3_System_Func_g3_Vector3d_g3_Vector3d__System_Int32_System_Int32_g3_IntrTriangle3Triangle3_g3_DMeshAABBTree3_IntersectionsQueryResult_" data-uid="g3.DMeshAABBTree3.find_intersections(System.Int32,g3.DMeshAABBTree3,System.Func{g3.Vector3d,g3.Vector3d},System.Int32,System.Int32,g3.IntrTriangle3Triangle3,g3.DMeshAABBTree3.IntersectionsQueryResult)">find_intersections(Int32, DMeshAABBTree3, Func&lt;Vector3d, Vector3d&gt;, Int32, Int32, IntrTriangle3Triangle3, DMeshAABBTree3.IntersectionsQueryResult)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void find_intersections(int iBox, DMeshAABBTree3 otherTree, Func&lt;Vector3d, Vector3d&gt; TransformF, int oBox, int depth, IntrTriangle3Triangle3 intr, DMeshAABBTree3.IntersectionsQueryResult result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">iBox</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.DMeshAABBTree3.html">DMeshAABBTree3</a></td>
+        <td><span class="parametername">otherTree</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="g3.Vector3d.html">Vector3d</a>, <a class="xref" href="g3.Vector3d.html">Vector3d</a>&gt;</td>
+        <td><span class="parametername">TransformF</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">oBox</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">depth</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.IntrTriangle3Triangle3.html">IntrTriangle3Triangle3</a></td>
+        <td><span class="parametername">intr</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.DMeshAABBTree3.IntersectionsQueryResult.html">DMeshAABBTree3.IntersectionsQueryResult</a></td>
+        <td><span class="parametername">result</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_find_nearest_tri_" data-uid="g3.DMeshAABBTree3.find_nearest_tri*"></a>
+  <h4 id="g3_DMeshAABBTree3_find_nearest_tri_System_Int32_g3_Vector3d_System_Double__System_Int32__" data-uid="g3.DMeshAABBTree3.find_nearest_tri(System.Int32,g3.Vector3d,System.Double@,System.Int32@)">find_nearest_tri(Int32, Vector3d, ref Double, ref Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void find_nearest_tri(int iBox, Vector3d p, ref double fNearestSqr, ref int tID)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">iBox</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">p</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">fNearestSqr</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">tID</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_find_nearest_triangles_" data-uid="g3.DMeshAABBTree3.find_nearest_triangles*"></a>
+  <h4 id="g3_DMeshAABBTree3_find_nearest_triangles_System_Int32_g3_DMeshAABBTree3_System_Func_g3_Vector3d_g3_Vector3d__System_Int32_System_Int32_System_Double__g3_Index2i__" data-uid="g3.DMeshAABBTree3.find_nearest_triangles(System.Int32,g3.DMeshAABBTree3,System.Func{g3.Vector3d,g3.Vector3d},System.Int32,System.Int32,System.Double@,g3.Index2i@)">find_nearest_triangles(Int32, DMeshAABBTree3, Func&lt;Vector3d, Vector3d&gt;, Int32, Int32, ref Double, ref Index2i)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void find_nearest_triangles(int iBox, DMeshAABBTree3 otherTree, Func&lt;Vector3d, Vector3d&gt; TransformF, int oBox, int depth, ref double nearest_sqr, ref Index2i nearest_pair)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">iBox</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.DMeshAABBTree3.html">DMeshAABBTree3</a></td>
+        <td><span class="parametername">otherTree</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="g3.Vector3d.html">Vector3d</a>, <a class="xref" href="g3.Vector3d.html">Vector3d</a>&gt;</td>
+        <td><span class="parametername">TransformF</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">oBox</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">depth</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">nearest_sqr</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.Index2i.html">Index2i</a></td>
+        <td><span class="parametername">nearest_pair</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_find_nearest_vtx_" data-uid="g3.DMeshAABBTree3.find_nearest_vtx*"></a>
+  <h4 id="g3_DMeshAABBTree3_find_nearest_vtx_System_Int32_g3_Vector3d_System_Double__System_Int32__" data-uid="g3.DMeshAABBTree3.find_nearest_vtx(System.Int32,g3.Vector3d,System.Double@,System.Int32@)">find_nearest_vtx(Int32, Vector3d, ref Double, ref Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void find_nearest_vtx(int iBox, Vector3d p, ref double fNearestSqr, ref int vid)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">iBox</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">p</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">fNearestSqr</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">vid</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_FindAllHitTriangles_" data-uid="g3.DMeshAABBTree3.FindAllHitTriangles*"></a>
+  <h4 id="g3_DMeshAABBTree3_FindAllHitTriangles_g3_Ray3d_System_Collections_Generic_List_System_Int32__System_Double_" data-uid="g3.DMeshAABBTree3.FindAllHitTriangles(g3.Ray3d,System.Collections.Generic.List{System.Int32},System.Double)">FindAllHitTriangles(Ray3d, List&lt;Int32&gt;, Double)</h4>
+  <div class="markdown level1 summary"><p>Find the ids of all the triangles that they ray intersects, within distance fMaxDist from ray origin
+Returns count of triangles.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual int FindAllHitTriangles(Ray3d ray, List&lt;int&gt; hitTriangles = null, double fMaxDist = 1.7976931348623157E+308)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.Ray3d.html">Ray3d</a></td>
+        <td><span class="parametername">ray</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">hitTriangles</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">fMaxDist</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_FindAllIntersections_" data-uid="g3.DMeshAABBTree3.FindAllIntersections*"></a>
+  <h4 id="g3_DMeshAABBTree3_FindAllIntersections_g3_DMeshAABBTree3_System_Func_g3_Vector3d_g3_Vector3d__" data-uid="g3.DMeshAABBTree3.FindAllIntersections(g3.DMeshAABBTree3,System.Func{g3.Vector3d,g3.Vector3d})">FindAllIntersections(DMeshAABBTree3, Func&lt;Vector3d, Vector3d&gt;)</h4>
+  <div class="markdown level1 summary"><p>Compute all intersections between two Meshes. 
+TransformF argument transforms vertices of otherTree to our tree (can be null if in same coord space)
+Returns pairs of intersecting triangles, which could intersect in either point or segment
+Currently <em>does not</em> return coplanar intersections.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DMeshAABBTree3.IntersectionsQueryResult FindAllIntersections(DMeshAABBTree3 otherTree, Func&lt;Vector3d, Vector3d&gt; TransformF = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.DMeshAABBTree3.html">DMeshAABBTree3</a></td>
+        <td><span class="parametername">otherTree</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="g3.Vector3d.html">Vector3d</a>, <a class="xref" href="g3.Vector3d.html">Vector3d</a>&gt;</td>
+        <td><span class="parametername">TransformF</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.DMeshAABBTree3.IntersectionsQueryResult.html">DMeshAABBTree3.IntersectionsQueryResult</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_FindNearestHitTriangle_" data-uid="g3.DMeshAABBTree3.FindNearestHitTriangle*"></a>
+  <h4 id="g3_DMeshAABBTree3_FindNearestHitTriangle_g3_Ray3d_System_Double_" data-uid="g3.DMeshAABBTree3.FindNearestHitTriangle(g3.Ray3d,System.Double)">FindNearestHitTriangle(Ray3d, Double)</h4>
+  <div class="markdown level1 summary"><p>find id of first triangle that ray hits, within distance fMaxDist, or return DMesh3.InvalidID
+Use MeshQueries.TriangleIntersection() to get more information</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual int FindNearestHitTriangle(Ray3d ray, double fMaxDist = 1.7976931348623157E+308)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.Ray3d.html">Ray3d</a></td>
+        <td><span class="parametername">ray</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">fMaxDist</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_FindNearestTriangle_" data-uid="g3.DMeshAABBTree3.FindNearestTriangle*"></a>
+  <h4 id="g3_DMeshAABBTree3_FindNearestTriangle_g3_Vector3d_System_Double_" data-uid="g3.DMeshAABBTree3.FindNearestTriangle(g3.Vector3d,System.Double)">FindNearestTriangle(Vector3d, Double)</h4>
+  <div class="markdown level1 summary"><p>Find the triangle closest to p, within distance fMaxDist, or return InvalidID
+Use MeshQueries.TriangleDistance() to get more information</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual int FindNearestTriangle(Vector3d p, double fMaxDist = 1.7976931348623157E+308)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">p</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">fMaxDist</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_FindNearestTriangle_" data-uid="g3.DMeshAABBTree3.FindNearestTriangle*"></a>
+  <h4 id="g3_DMeshAABBTree3_FindNearestTriangle_g3_Vector3d_System_Double__System_Double_" data-uid="g3.DMeshAABBTree3.FindNearestTriangle(g3.Vector3d,System.Double@,System.Double)">FindNearestTriangle(Vector3d, out Double, Double)</h4>
+  <div class="markdown level1 summary"><p>Find the triangle closest to p, and distance to it, within distance fMaxDist, or return InvalidID
+Use MeshQueries.TriangleDistance() to get more information</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual int FindNearestTriangle(Vector3d p, out double fNearestDistSqr, double fMaxDist = 1.7976931348623157E+308)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">p</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">fNearestDistSqr</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">fMaxDist</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_FindNearestTriangles_" data-uid="g3.DMeshAABBTree3.FindNearestTriangles*"></a>
+  <h4 id="g3_DMeshAABBTree3_FindNearestTriangles_g3_DMeshAABBTree3_System_Func_g3_Vector3d_g3_Vector3d__System_Double__System_Double_" data-uid="g3.DMeshAABBTree3.FindNearestTriangles(g3.DMeshAABBTree3,System.Func{g3.Vector3d,g3.Vector3d},System.Double@,System.Double)">FindNearestTriangles(DMeshAABBTree3, Func&lt;Vector3d, Vector3d&gt;, out Double, Double)</h4>
+  <div class="markdown level1 summary"><p>Find nearest pair of triangles on this tree with otherTree, within max_dist.
+TransformF transforms vertices of otherTree into our coordinates. can be null.
+returns triangle-id pair (my_tri,other_tri), or Index2i.Max if not found within max_dist
+Use MeshQueries.TrianglesDistance() to get more information</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Index2i FindNearestTriangles(DMeshAABBTree3 otherTree, Func&lt;Vector3d, Vector3d&gt; TransformF, out double distance, double max_dist = 1.7976931348623157E+308)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.DMeshAABBTree3.html">DMeshAABBTree3</a></td>
+        <td><span class="parametername">otherTree</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="g3.Vector3d.html">Vector3d</a>, <a class="xref" href="g3.Vector3d.html">Vector3d</a>&gt;</td>
+        <td><span class="parametername">TransformF</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">distance</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">max_dist</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.Index2i.html">Index2i</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_FindNearestVertex_" data-uid="g3.DMeshAABBTree3.FindNearestVertex*"></a>
+  <h4 id="g3_DMeshAABBTree3_FindNearestVertex_g3_Vector3d_System_Double_" data-uid="g3.DMeshAABBTree3.FindNearestVertex(g3.Vector3d,System.Double)">FindNearestVertex(Vector3d, Double)</h4>
+  <div class="markdown level1 summary"><p>Find the vertex closest to p, within distance fMaxDist, or return InvalidID</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual int FindNearestVertex(Vector3d p, double fMaxDist = 1.7976931348623157E+308)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">p</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">fMaxDist</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_IsInside_" data-uid="g3.DMeshAABBTree3.IsInside*"></a>
+  <h4 id="g3_DMeshAABBTree3_IsInside_g3_Vector3d_" data-uid="g3.DMeshAABBTree3.IsInside(g3.Vector3d)">IsInside(Vector3d)</h4>
+  <div class="markdown level1 summary"><p>Returns true if point p is inside this mesh.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IsInside(Vector3d p)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">p</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_make_box_fast_winding_cache_" data-uid="g3.DMeshAABBTree3.make_box_fast_winding_cache*"></a>
+  <h4 id="g3_DMeshAABBTree3_make_box_fast_winding_cache_System_Int32_System_Collections_Generic_IEnumerable_System_Int32__g3_MeshTriInfoCache_" data-uid="g3.DMeshAABBTree3.make_box_fast_winding_cache(System.Int32,System.Collections.Generic.IEnumerable{System.Int32},g3.MeshTriInfoCache)">make_box_fast_winding_cache(Int32, IEnumerable&lt;Int32&gt;, MeshTriInfoCache)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void make_box_fast_winding_cache(int iBox, IEnumerable&lt;int&gt; triangles, MeshTriInfoCache triCache)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">iBox</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">triangles</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.MeshTriInfoCache.html">MeshTriInfoCache</a></td>
+        <td><span class="parametername">triCache</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_make_box_winding_cache_" data-uid="g3.DMeshAABBTree3.make_box_winding_cache*"></a>
+  <h4 id="g3_DMeshAABBTree3_make_box_winding_cache_System_Int32_HashSet_System_Int32__" data-uid="g3.DMeshAABBTree3.make_box_winding_cache(System.Int32,HashSet{System.Int32})">make_box_winding_cache(Int32, HashSet&lt;Int32&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void make_box_winding_cache(int iBox, HashSet&lt;int&gt; triangles)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">iBox</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">HashSet</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">triangles</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_TestCoverage_" data-uid="g3.DMeshAABBTree3.TestCoverage*"></a>
+  <h4 id="g3_DMeshAABBTree3_TestCoverage" data-uid="g3.DMeshAABBTree3.TestCoverage">TestCoverage()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void TestCoverage()</code></pre>
+  </div>
+  
+  
+  <a id="g3_DMeshAABBTree3_TestIntersection_" data-uid="g3.DMeshAABBTree3.TestIntersection*"></a>
+  <h4 id="g3_DMeshAABBTree3_TestIntersection_g3_DMeshAABBTree3_System_Func_g3_Vector3d_g3_Vector3d__" data-uid="g3.DMeshAABBTree3.TestIntersection(g3.DMeshAABBTree3,System.Func{g3.Vector3d,g3.Vector3d})">TestIntersection(DMeshAABBTree3, Func&lt;Vector3d, Vector3d&gt;)</h4>
+  <div class="markdown level1 summary"><p>Returns true if there is <em>any</em> intersection between our mesh and &apos;other&apos; mesh.
+TransformF takes vertices of otherTree into our tree - can be null if in same coord space</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool TestIntersection(DMeshAABBTree3 otherTree, Func&lt;Vector3d, Vector3d&gt; TransformF = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.DMeshAABBTree3.html">DMeshAABBTree3</a></td>
+        <td><span class="parametername">otherTree</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="g3.Vector3d.html">Vector3d</a>, <a class="xref" href="g3.Vector3d.html">Vector3d</a>&gt;</td>
+        <td><span class="parametername">TransformF</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_TestIntersection_" data-uid="g3.DMeshAABBTree3.TestIntersection*"></a>
+  <h4 id="g3_DMeshAABBTree3_TestIntersection_g3_IMesh_System_Func_g3_Vector3d_g3_Vector3d__System_Boolean_" data-uid="g3.DMeshAABBTree3.TestIntersection(g3.IMesh,System.Func{g3.Vector3d,g3.Vector3d},System.Boolean)">TestIntersection(IMesh, Func&lt;Vector3d, Vector3d&gt;, Boolean)</h4>
+  <div class="markdown level1 summary"><p>return true if <em>any</em> triangle of testMesh intersects with our tree.
+Use TransformF to transform vertices of testMesh into space of this tree.
+if boundsCheck is false, we skip bbox/bbox early-out</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool TestIntersection(IMesh testMesh, Func&lt;Vector3d, Vector3d&gt; TransformF = null, bool bBoundsCheck = true)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.IMesh.html">IMesh</a></td>
+        <td><span class="parametername">testMesh</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="g3.Vector3d.html">Vector3d</a>, <a class="xref" href="g3.Vector3d.html">Vector3d</a>&gt;</td>
+        <td><span class="parametername">TransformF</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">bBoundsCheck</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_TestIntersection_" data-uid="g3.DMeshAABBTree3.TestIntersection*"></a>
+  <h4 id="g3_DMeshAABBTree3_TestIntersection_g3_Triangle3d_" data-uid="g3.DMeshAABBTree3.TestIntersection(g3.Triangle3d)">TestIntersection(Triangle3d)</h4>
+  <div class="markdown level1 summary"><p>Returns true if triangle intersects any triangle of our mesh</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool TestIntersection(Triangle3d triangle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.Triangle3d.html">Triangle3d</a></td>
+        <td><span class="parametername">triangle</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_TotalExtentSum_" data-uid="g3.DMeshAABBTree3.TotalExtentSum*"></a>
+  <h4 id="g3_DMeshAABBTree3_TotalExtentSum" data-uid="g3.DMeshAABBTree3.TotalExtentSum">TotalExtentSum()</h4>
+  <div class="markdown level1 summary"><p>Total sum-of-extents over all boxes in the tree. Mainly useful to evaluate tree quality.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double TotalExtentSum()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_TotalVolume_" data-uid="g3.DMeshAABBTree3.TotalVolume*"></a>
+  <h4 id="g3_DMeshAABBTree3_TotalVolume" data-uid="g3.DMeshAABBTree3.TotalVolume">TotalVolume()</h4>
+  <div class="markdown level1 summary"><p>Total sum of volumes of all boxes in the tree. Mainly useful to evaluate tree quality.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double TotalVolume()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_tree_traversal_" data-uid="g3.DMeshAABBTree3.tree_traversal*"></a>
+  <h4 id="g3_DMeshAABBTree3_tree_traversal_System_Int32_System_Int32_g3_DMeshAABBTree3_TreeTraversal_" data-uid="g3.DMeshAABBTree3.tree_traversal(System.Int32,System.Int32,g3.DMeshAABBTree3.TreeTraversal)">tree_traversal(Int32, Int32, DMeshAABBTree3.TreeTraversal)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void tree_traversal(int iBox, int depth, DMeshAABBTree3.TreeTraversal traversal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">iBox</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">depth</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.DMeshAABBTree3.TreeTraversal.html">DMeshAABBTree3.TreeTraversal</a></td>
+        <td><span class="parametername">traversal</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DMeshAABBTree3_WindingNumber_" data-uid="g3.DMeshAABBTree3.WindingNumber*"></a>
+  <h4 id="g3_DMeshAABBTree3_WindingNumber_g3_Vector3d_" data-uid="g3.DMeshAABBTree3.WindingNumber(g3.Vector3d)">WindingNumber(Vector3d)</h4>
+  <div class="markdown level1 summary"><p>Evaluate the mesh winding number at point. To do this, we must construct additional
+information to short-circuit tree branches. This happens on the first evaluation.
+This does consume some additional memory, mainly temporary memory during construction.
+(eg on a 500k sphere, about 30mb to construct, but then only 2-5mb is stored at the end)
+If you don&apos;t want this, just use Mesh.WindingNumber() directly. Also note that if you
+are only evaluating a few times, it is not sensible - assume you need at least 
+hundreds of evaluations to see speed improvements.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual double WindingNumber(Vector3d p)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">p</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="g3.ISpatial.html">ISpatial</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            ViRGIS VR GIS
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1931 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace g3
+   | ViRGIS VR GIS </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace g3
+   | ViRGIS VR GIS ">
+    <meta name="generator" content="docfx 2.56.5.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    
+    <link rel="shortcut icon" href="https://www.virgis.org/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="https://www.virgis.org">
+                <img id="logo" class="img" src="https://www.virgis.org/images/virgis_light.png" alt="">
+              </a>    </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="g3">
+  
+  <h1 id="g3" data-uid="g3" class="text-break">Namespace g3
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="g3.AddTrianglesMeshChange.html">AddTrianglesMeshChange</a></h4>
+      <section><p>Add triangles from mesh and store necessary data to be able to reverse the change.
+Vertex and Triangle IDs will be restored on Revert()
+Currently does <em>not</em> restore the same EdgeIDs</p>
+</section>
+      <h4><a class="xref" href="g3.Arc2d.html">Arc2d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.ArcLengthSoftTranslation.html">ArcLengthSoftTranslation</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Arrangement2d.html">Arrangement2d</a></h4>
+      <section><p>Arrangement2d constructs a planar arrangement of a set of 2D line segments.
+When a segment is inserted, existing edges are split, and the inserted
+segment becomes multiple graph edges. So, the resulting DGraph2 should
+not have any edges that intersect.</p>
+<p>Calculations are performed in double-precision, so there is no guarantee
+of correctness. </p>
+<p>[TODO] multi-level segment has to accelerate find_intersecting_edges()
+[TODO] maybe smarter handling</p>
+</section>
+      <h4><a class="xref" href="g3.BaseCurve2.html">BaseCurve2</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.BezierCurve2.html">BezierCurve2</a></h4>
+      <section><p>2D Bezier curve of arbitrary degree
+Ported from WildMagic5 Wm5BezierCurve2</p>
+</section>
+      <h4><a class="xref" href="g3.BiArcFit2.html">BiArcFit2</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.BiGrid3-1.html">BiGrid3&lt;BlockType&gt;</a></h4>
+      <section><p>BiGrid3 is a two-level multiresolution grid data structure. You provide
+exemplar object that implements suitable interfaces, and the class
+automatically generates necessary data structures. 
+Functions to act on parent/child grids are in-progress...</p>
+</section>
+      <h4><a class="xref" href="g3.BinaryG3FormatReader.html">BinaryG3FormatReader</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.BinaryG3Reader.html">BinaryG3Reader</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.BinaryG3Writer.html">BinaryG3Writer</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Bitmap2.html">Bitmap2</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Bitmap3.html">Bitmap3</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.BlockSupportGenerator.html">BlockSupportGenerator</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.BlockTimer.html">BlockTimer</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.BoundsUtil.html">BoundsUtil</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.BSplineBasis.html">BSplineBasis</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.BufferUtil.html">BufferUtil</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.CachingDenseGridTrilinearImplicit.html">CachingDenseGridTrilinearImplicit</a></h4>
+      <section><p>[RMS] variant of DenseGridTrilinearImplicit that does lazy evaluation
+of Grid values.</p>
+<p>Tri-linear interpolant for a 3D dense grid. Supports grid translation
+via GridOrigin, but does not support scaling or rotation. If you need those,
+you can wrap this in something that does the xform.</p>
+</section>
+      <h4><a class="xref" href="g3.CachingMeshSDF.html">CachingMeshSDF</a></h4>
+      <section><p>[RMS] this is variant of MeshSignedDistanceGrid that does lazy evaluation of actual distances,
+using mesh spatial data structure. This is much faster if we are doing continuation-method
+marching cubes as only values on surface will be computed!</p>
+<p>Compute discretely-sampled (ie gridded) signed distance field for a mesh
+The basic approach is, first compute exact distances in a narrow band, and then
+extend out to rest of grid using fast &quot;sweeping&quot; (ie like a distance transform).
+The resulting unsigned grid is then signed using ray-intersection counting, which
+is also computed on the grid, so no BVH is necessary</p>
+<p>If you set ComputeMode to NarrowBandOnly, result is a narrow-band signed distance field.
+This is quite a bit faster as the sweeping is the most computationally-intensive step.</p>
+<p>Caveats:</p>
+<ul>
+<li>the &quot;narrow band&quot; is based on triangle bounding boxes, so it is not necessarily
+that &quot;narrow&quot; if you have large triangles on a diagonal to grid axes</li>
+</ul>
+<p>Potential optimizations:</p>
+<ul>
+<li>Often we have a spatial data structure that would allow faster computation of the
+narrow-band distances (which become quite expensive if we want a wider band!)
+Not clear how to take advantage of this though. Perhaps we could have a binary
+grid that, in first pass, we set bits inside triangle bboxes to 1? Or perhaps
+same as current code, but we use spatial-dist, and so for each ijk we only compute once?
+(then have to test for computed value at each cell of each triangle...)</li>
+</ul>
+<p>This code is based on the C++ implementation found at <a href="https://github.com/christopherbatty/SDFGen">https://github.com/christopherbatty/SDFGen</a>
+Original license was public domain. 
+Permission granted by Christopher Batty to include C# port under Boost license.</p>
+</section>
+      <h4><a class="xref" href="g3.CachingMeshSDFImplicit.html">CachingMeshSDFImplicit</a></h4>
+      <section><p>Tri-linear interpolant for a 3D dense grid. Supports grid translation
+via GridOrigin, but does not support scaling or rotation. If you need those,
+you can wrap this in something that does the xform.</p>
+</section>
+      <h4><a class="xref" href="g3.CancelFunction.html">CancelFunction</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.CappedCylinderGenerator.html">CappedCylinderGenerator</a></h4>
+      <section><p>Generate a Cylinder with caps. Supports sections of cylinder as well (eg wedges).
+Curently UV islands are overlapping for different mesh components, if NoSharedVertices
+Positioned along Y axis such that base-center is at Origin, and top is at Y=Height
+You get a cone unless BaseRadius = TopRadius
+No subdivisions along top/base rings or height steps.
+cylinder triangles have groupid = 1, top cap = 2, bottom cap = 3, wedge faces 5 and 6</p>
+</section>
+      <h4><a class="xref" href="g3.CholeskyDecomposition.html">CholeskyDecomposition</a></h4>
+      <section><p>Computes Cholesky decomposition/factorization L of matrix A
+A must be symmetric and positive-definite
+computed lower-triangular matrix L satisfies L*L^T = A.
+<a href="https://en.wikipedia.org/wiki/Cholesky_decomposition">https://en.wikipedia.org/wiki/Cholesky_decomposition</a></p>
+</section>
+      <h4><a class="xref" href="g3.Circle2d.html">Circle2d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Circle3d.html">Circle3d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.CircleProjectionTarget.html">CircleProjectionTarget</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.ColorHSV.html">ColorHSV</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.ColorMap.html">ColorMap</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.ColorMixer.html">ColorMixer</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.CommandArgumentSet.html">CommandArgumentSet</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.ConeGenerator.html">ConeGenerator</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.ConstantIndexMap.html">ConstantIndexMap</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.ConstantItr-1.html">ConstantItr&lt;T&gt;</a></h4>
+      <section><p>Iterator that just returns a constant value N times</p>
+</section>
+      <h4><a class="xref" href="g3.ContMinBox2.html">ContMinBox2</a></h4>
+      <section><p>Fit minimal bounding-box to a set of 2D points. Result is in MinBox.</p>
+</section>
+      <h4><a class="xref" href="g3.ContMinCircle2.html">ContMinCircle2</a></h4>
+      <section><p>Fit minimal bounding-circle to a set of 2D points </p>
+</section>
+      <h4><a class="xref" href="g3.ContMinCircle2.Support.html">ContMinCircle2.Support</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.ContOrientedBox3.html">ContOrientedBox3</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.ConvexHull2.html">ConvexHull2</a></h4>
+      <section><p>Construct convex hull of a set of 2D points, with various accuracy levels.</p>
+<p>HullIndices provides ordered indices of vertices of input points that form hull.</p>
+</section>
+      <h4><a class="xref" href="g3.ConvexHull2.Edge.html">ConvexHull2.Edge</a></h4>
+      <section><p>Internal class that represents edge of hull, and neighbours</p>
+</section>
+      <h4><a class="xref" href="g3.Curve3Axis3RevolveGenerator.html">Curve3Axis3RevolveGenerator</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Curve3Curve3RevolveGenerator.html">Curve3Curve3RevolveGenerator</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.CurveGenerator.html">CurveGenerator</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.CurveResampler.html">CurveResampler</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.CurveSampler2.html">CurveSampler2</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.CurveUtils.html">CurveUtils</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.CurveUtils2.html">CurveUtils2</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Cylinder3d.html">Cylinder3d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.CylinderProjectionTarget.html">CylinderProjectionTarget</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DCurve3.html">DCurve3</a></h4>
+      <section><p>DCurve3 is a 3D polyline, either open or closed (via .Closed)
+Despite the D prefix, it is <em>not</em> dynamic</p>
+</section>
+      <h4><a class="xref" href="g3.DCurve3BoxTree.html">DCurve3BoxTree</a></h4>
+      <section><p>tree of Oriented Boxes (OBB) for a DCurve3. 
+Construction is sequential, ie pairs of segments are merged into boxes, then pairs of boxes, and so on</p>
+<p>[TODO] is this the best strategy? is there maybe some kind of sorting/sweepline algo?
+[TODO] would it make more sense to have more than just 2 segments at lowest level?</p>
+</section>
+      <h4><a class="xref" href="g3.DCurveProjectionTarget.html">DCurveProjectionTarget</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DeepCopy.html">DeepCopy</a></h4>
+      <section><p>Collection of utility functions for one-line deep copies of lists</p>
+</section>
+      <h4><a class="xref" href="g3.DenseGrid2f.html">DenseGrid2f</a></h4>
+      <section><p>2D dense grid of floating-point scalar values. </p>
+</section>
+      <h4><a class="xref" href="g3.DenseGrid2i.html">DenseGrid2i</a></h4>
+      <section><p>2D dense grid of integers. </p>
+</section>
+      <h4><a class="xref" href="g3.DenseGrid3f.html">DenseGrid3f</a></h4>
+      <section><p>3D dense grid of floating-point scalar values. </p>
+</section>
+      <h4><a class="xref" href="g3.DenseGrid3i.html">DenseGrid3i</a></h4>
+      <section><p>3D dense grid of integers. </p>
+</section>
+      <h4><a class="xref" href="g3.DenseGridTrilinearImplicit.html">DenseGridTrilinearImplicit</a></h4>
+      <section><p>Tri-linear interpolant for a 3D dense grid. Supports grid translation
+via GridOrigin, but does not support scaling or rotation. If you need those,
+you can wrap this in something that does the xform.</p>
+</section>
+      <h4><a class="xref" href="g3.DenseMatrix.html">DenseMatrix</a></h4>
+      <section><p>Row-major dense matrix</p>
+</section>
+      <h4><a class="xref" href="g3.DenseUVMesh.html">DenseUVMesh</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DenseVector.html">DenseVector</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DGraph.html">DGraph</a></h4>
+      <section><p>Base class for Arbitrary-Topology Graphs. Similar structure to topology parts of DMesh3.
+Each vertex can be connected to an arbitrary number of edges.
+Each edge can have an integer GroupID.
+See DGraph2 and DGraph3 for 3d implementations.
+Use DGraphN if you would like a topology-only graph.
+You cannot instantiate DGraph directly.</p>
+</section>
+      <h4><a class="xref" href="g3.DGraph2.html">DGraph2</a></h4>
+      <section><p>Arbitrary-Topology 2D Graph. This is similar to DMesh3 but without faces. 
+Each vertex can be connected to an arbitrary number of edges.
+Each vertex can have a 3-float color, and edge edge can have an integer GroupID</p>
+</section>
+      <h4><a class="xref" href="g3.DGraph2Resampler.html">DGraph2Resampler</a></h4>
+      <section><p>&quot;Remesher&quot; for DGraph2 </p>
+</section>
+      <h4><a class="xref" href="g3.DGraph2Util.html">DGraph2Util</a></h4>
+      <section><p>Utility functions for DGraph2 data structure</p>
+</section>
+      <h4><a class="xref" href="g3.DGraph2Util.Curves.html">DGraph2Util.Curves</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DGraph3.html">DGraph3</a></h4>
+      <section><p>Arbitrary-Topology 3D Graph. This is similar to DMesh3 but without faces. 
+Each vertex can be connected to an arbitrary number of edges.
+Each vertex can have a 3-float color, and edge edge can have an integer GroupID</p>
+</section>
+      <h4><a class="xref" href="g3.DGraph3Util.html">DGraph3Util</a></h4>
+      <section><p>Utility functions for DGraph3 data structure</p>
+</section>
+      <h4><a class="xref" href="g3.DGraphN.html">DGraphN</a></h4>
+      <section><p>Implementation of DGraph that has no dimensionality, ie no data
+stored for vertieces besides indices. </p>
+</section>
+      <h4><a class="xref" href="g3.DiagonalMatrix.html">DiagonalMatrix</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DijkstraGraphDistance.html">DijkstraGraphDistance</a></h4>
+      <section><p>Compute Dijkstra shortest-path algorithm on a graph. 
+Computation is index-based, but can use sparse data
+structures if the index space will be sparse.</p>
+<p>Construction is somewhat complicated, but see shortcut static
+methods at end of file for common construction cases:</p>
+<ul>
+<li>MeshVertices(mesh) - compute on vertices of mesh</li>
+<li>MeshVertices(mesh) - compute on vertices of mesh</li>
+</ul>
+</section>
+      <h4><a class="xref" href="g3.DIndexArray2i.html">DIndexArray2i</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DIndexArray3i.html">DIndexArray3i</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Distance.html">Distance</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DistanceFieldToSkeletalField.html">DistanceFieldToSkeletalField</a></h4>
+      <section><p>This class converts the interval [-falloff,falloff] to [0,1],
+Then applies Wyvill falloff function (1-t^2)^3.
+The result is a skeletal-primitive-like shape with 
+the distance=0 isocontour lying just before midway in
+the range (at the .ZeroIsocontour constant)</p>
+</section>
+      <h4><a class="xref" href="g3.DistLine2Line2.html">DistLine2Line2</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DistLine2Segment2.html">DistLine2Segment2</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DistLine3Ray3.html">DistLine3Ray3</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DistLine3Segment3.html">DistLine3Segment3</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DistLine3Triangle3.html">DistLine3Triangle3</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DistPoint2Box2.html">DistPoint2Box2</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DistPoint2Circle2.html">DistPoint2Circle2</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DistPoint3Circle3.html">DistPoint3Circle3</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DistPoint3Cylinder3.html">DistPoint3Cylinder3</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DistPoint3Triangle3.html">DistPoint3Triangle3</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DistRay3Ray3.html">DistRay3Ray3</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DistRay3Segment3.html">DistRay3Segment3</a></h4>
+      <section><p>Distance between ray and segment
+ported from WildMagic5</p>
+</section>
+      <h4><a class="xref" href="g3.DistSegment2Segment2.html">DistSegment2Segment2</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DistSegment3Triangle3.html">DistSegment3Triangle3</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DistTriangle3Triangle3.html">DistTriangle3Triangle3</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DMesh3.html">DMesh3</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DMesh3Builder.html">DMesh3Builder</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DMeshAABBTree3.html">DMeshAABBTree3</a></h4>
+      <section><p>Hierarchical Axis-Aligned-Bounding-Box tree for a DMesh3 mesh.
+This class supports a variety of spatial queries, listed below.</p>
+<p>Various construction strategies are also available, the default is the
+fastest to build but if you are doing a <em>lot</em> of queries, you might experiment
+with the others (eg TopDownMedian)</p>
+<p>Available queries:</p>
+<ul>
+<li>FindNearestTriangle(point, maxdist)</li>
+<li>FindNearestHitTriangle(ray, maxdist)</li>
+<li>FindAllHitTriangles(ray, maxdist)</li>
+<li>TestIntersection(triangle)</li>
+<li>TestIntersection(mesh)</li>
+<li>TestIntersection(otherAABBTree)</li>
+<li>FindAllIntersections(otherAABBTree)</li>
+<li>FindNearestTriangles(otherAABBTree, maxdist)</li>
+<li>IsInside(point)</li>
+<li>WindingNumber(point)</li>
+<li>FastWindingNumber(point)</li>
+<li>DoTraversal(generic_traversal_object)</li>
+</ul>
+</section>
+      <h4><a class="xref" href="g3.DMeshAABBTree3.IntersectionsQueryResult.html">DMeshAABBTree3.IntersectionsQueryResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DMeshAABBTree3.TreeTraversal.html">DMeshAABBTree3.TreeTraversal</a></h4>
+      <section><p>Instances of this class can be passed in to the DoTraversal() function to implement your
+own tree-traversal queries.
+NextBoxF() is called for each box node. Return false from this function to halt terminate 
+that branch of the traversal, or true to descend into that box&apos;s children (boxes or triangles).
+NextTriangleF() is called for each triangle.</p>
+</section>
+      <h4><a class="xref" href="g3.DMeshIntersectionTarget.html">DMeshIntersectionTarget</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DPolyLine2f.html">DPolyLine2f</a></h4>
+      <section><p>Summary description for PolyLine.</p>
+</section>
+      <h4><a class="xref" href="g3.DS3FormatReader.html">DS3FormatReader</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DSparseGrid3-1.html">DSparseGrid3&lt;ElemType&gt;</a></h4>
+      <section><p>Dynamic sparse 3D grid. Idea is that we have grid of some type of object
+and we don&apos;t want to pre-allocate full grid of them. So we allocate on-demand.
+This can be used to implement multi-grid schemes, eg for example the GridElement
+type could be Bitmap3 of a fixed dimension.</p>
+</section>
+      <h4><a class="xref" href="g3.DSubmesh3.html">DSubmesh3</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DSubmesh3Set.html">DSubmesh3Set</a></h4>
+      <section><p>A set of submeshes of a base mesh. You provide a set of keys, and a Func
+that returns the triangle index list for a given key. The set of DSubmesh3
+objects are computed on construction.</p>
+</section>
+      <h4><a class="xref" href="g3.DVector-1.html">DVector&lt;T&gt;</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DVectorArray2-1.html">DVectorArray2&lt;T&gt;</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DVectorArray2d.html">DVectorArray2d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DVectorArray2f.html">DVectorArray2f</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DVectorArray3-1.html">DVectorArray3&lt;T&gt;</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DVectorArray3d.html">DVectorArray3d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DVectorArray3f.html">DVectorArray3f</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DVectorArray3i.html">DVectorArray3i</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DynamicPriorityQueue-1.html">DynamicPriorityQueue&lt;T&gt;</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DynamicPriorityQueueNode.html">DynamicPriorityQueueNode</a></h4>
+      <section><p>To use DynamicPriorityQueue, your queue node type needs to subclass this one.
+However the priority and index members are for internal queue use, not yours!</p>
+</section>
+      <h4><a class="xref" href="g3.EdgeLoop.html">EdgeLoop</a></h4>
+      <section><p>Sequential set of vertices/edges in a mesh, that form a closed loop.</p>
+<p>If all you have are the vertices, use EdgeLoop.VertexLoopToEdgeLoop() to construct an EdgeLoop</p>
+</section>
+      <h4><a class="xref" href="g3.EdgeLoopRemesher.html">EdgeLoopRemesher</a></h4>
+      <section><p>This is a custom Remesher that only affects the edges along an EdgeLoop.
+The edges are only split and collapsed, flipping is not permitted.
+The loop vertices are smoothed along the loop, ie using curve laplacian
+rather than one-ring laplacian.</p>
+<p>[TODO] avoid rebuild_edge_list(). requires handling various cases below...
+[TODO] Precompute() seems overly expensive...?
+[TODO] local-smoothing impl is not very efficient. Should not be necessary to
+rebuild nbrhood each time if we are not changing it.</p>
+</section>
+      <h4><a class="xref" href="g3.EdgeSpan.html">EdgeSpan</a></h4>
+      <section><p>An EdgeSpan is a continous set of edges in a Mesh that is <em>not</em> closed
+(that would be an EdgeLoop)</p>
+</section>
+      <h4><a class="xref" href="g3.Ellipse2d.html">Ellipse2d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.EllipseArc2d.html">EllipseArc2d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.FaceGroupOptimizer.html">FaceGroupOptimizer</a></h4>
+      <section><p>Given input mesh with a set of face groups, optimize the face group boundaries.
+This involves flipping triangles between groups, and/or assigning to &quot;background&quot; group.
+Also has Dilate/Contract functions to grow/shrink groups in various ways.</p>
+</section>
+      <h4><a class="xref" href="g3.FaceGroupUtil.html">FaceGroupUtil</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.FastPointWinding.html">FastPointWinding</a></h4>
+      <section><p>Formulas for point-set winding number approximation</p>
+</section>
+      <h4><a class="xref" href="g3.FastQuaternionSVD.html">FastQuaternionSVD</a></h4>
+      <section><p>Fast Approximate SVD of 3x3 matrix that returns quaternions. 
+Implemented based on <a href="https://github.com/benjones/quatSVD/blob/master/quatSVD.hpp">https://github.com/benjones/quatSVD/blob/master/quatSVD.hpp</a>
+which was re-implemented from <a href="http://pages.cs.wisc.edu/~sifakis/project_pages/svd.html">http://pages.cs.wisc.edu/~sifakis/project_pages/svd.html</a></p>
+<p>By default, only does a small number of diagonalization iterations (4), which limits
+the accuracy of the solution. Results are still orthonormal but error when reconstructing
+matrix will be larger. This is fine for many applications. Can increase accuracy
+by increasing NumJacobiIterations parameter</p>
+<p>Note: does <em>not</em> produce same quaternions as running SingularValueDecomposition on
+matrix and converting resulting U/V to quaternions. The numbers will be similar
+but the signs will be different</p>
+<p>Useful properties:</p>
+<ul>
+<li>quaternions are rotations, there are no mirrors like in normal SVD</li>
+</ul>
+<p>TODO:</p>
+<ul>
+<li>SymmetricMatrix3d currently a class, could make a struct (see comments)</li>
+</ul>
+</section>
+      <h4><a class="xref" href="g3.FastTriWinding.html">FastTriWinding</a></h4>
+      <section><p>Formulas for triangle winding number approximation</p>
+</section>
+      <h4><a class="xref" href="g3.FileSystemUtils.html">FileSystemUtils</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.GaussPointsFit3.html">GaussPointsFit3</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.GeneralPolygon2d.html">GeneralPolygon2d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.GeneralPolygon2dBoxTree.html">GeneralPolygon2dBoxTree</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.GenericMaterial.html">GenericMaterial</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.gException.html">gException</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.gIndices.html">gIndices</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.gParallel.html">gParallel</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.GraphCells2d.html">GraphCells2d</a></h4>
+      <section><p>This class extracts the set of loops bounding the &quot;cells&quot; of a DGraph2, ie 
+each cell is a connected region with a polygonal boundary. 
+Precondition: the graph has no self-intersections.
+Precondition: at any vertex, the edges are sortable by angle (ie no outgoing edges overlap)
+** numerically this may not be 100% reliable....</p>
+<p>Both &quot;sides&quot; of each edge are included in some cell boundary, ie so for a simple
+polygon, there are two cells, one infinitely large. The &quot;inside&quot; cells will be
+oriented clockwise, if converted to a Polygon2d.</p>
+</section>
+      <h4><a class="xref" href="g3.GraphSplitter2d.html">GraphSplitter2d</a></h4>
+      <section><p>This class is used to bisect an existing DGraph2 with infinite lines.
+This is easier than inserting new segments, which can be done using Arrangement2d.</p>
+<p>Computations are done in double precision. Use at your own risk.</p>
+<p>[TODO]</p>
+<ul>
+<li>computation of signs for a split-line is currently O(N). If inserting many
+parallel lines, can improve this using standard sorting.</li>
+</ul>
+</section>
+      <h4><a class="xref" href="g3.GraphSupportGenerator.html">GraphSupportGenerator</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.GraphSupportGenerator.ImplicitCurve3d.html">GraphSupportGenerator.ImplicitCurve3d</a></h4>
+      <section><p>Implicit tube around line segment</p>
+</section>
+      <h4><a class="xref" href="g3.GraphTubeMesher.html">GraphTubeMesher</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.GridBox3Generator.html">GridBox3Generator</a></h4>
+      <section><p>Generate a mesh of a box that has &quot;gridded&quot; faces, ie grid of triangulated quads, 
+with EdgeVertices verts along each edge.
+[TODO] allow varying EdgeVertices in each dimension (tricky...)</p>
+</section>
+      <h4><a class="xref" href="g3.GriddedRectGenerator.html">GriddedRectGenerator</a></h4>
+      <section><p>Generate a mesh of a rect that has &quot;gridded&quot; faces, ie grid of triangulated quads, 
+with EdgeVertices verts along each edge.
+[TODO] allow varying EdgeVertices in each dimension (tricky...)</p>
+</section>
+      <h4><a class="xref" href="g3.gSerialization.html">gSerialization</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.HBitArray.html">HBitArray</a></h4>
+      <section><p>HBitArray is a hierarchical variant of BitArray. Basically the idea
+is to make a tree of 32-bit blocks, where at level N, a &apos;0&apos; means that
+no bits are true in level N-1. This means we can more efficiently iterate
+over the bit set. </p>
+<p>Uses more memory than BitArray, but each tree level is divided by 32, so
+it is better than NlogN</p>
+</section>
+      <h4><a class="xref" href="g3.Hexagon2d.html">Hexagon2d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IdentityIndexMap.html">IdentityIndexMap</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.ImplicitAxisAlignedBox3d.html">ImplicitAxisAlignedBox3d</a></h4>
+      <section><p>Implicit axis-aligned box</p>
+</section>
+      <h4><a class="xref" href="g3.ImplicitBlend2d.html">ImplicitBlend2d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.ImplicitBlend3d.html">ImplicitBlend3d</a></h4>
+      <section><p>Blend of two implicit surfaces. Assumes surface is at zero iscontour.
+Uses Pasko blend from <a href="http://www.hyperfun.org/F-rep.pdf">http://www.hyperfun.org/F-rep.pdf</a></p>
+</section>
+      <h4><a class="xref" href="g3.ImplicitBox3d.html">ImplicitBox3d</a></h4>
+      <section><p>Implicit oriented box</p>
+</section>
+      <h4><a class="xref" href="g3.ImplicitDifference2d.html">ImplicitDifference2d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.ImplicitDifference3d.html">ImplicitDifference3d</a></h4>
+      <section><p>Boolean Difference/Subtraction of two implicit functions A-B = A AND (NOT B)
+Assumption is that both have surface at zero isocontour and 
+negative is inside.</p>
+</section>
+      <h4><a class="xref" href="g3.ImplicitFieldSampler3d.html">ImplicitFieldSampler3d</a></h4>
+      <section><p>Sample implicit fields into a dense grid</p>
+</section>
+      <h4><a class="xref" href="g3.ImplicitHalfSpace3d.html">ImplicitHalfSpace3d</a></h4>
+      <section><p>Implicit half-space. &quot;Inside&quot; is opposite of Normal direction.</p>
+</section>
+      <h4><a class="xref" href="g3.ImplicitIntersection2d.html">ImplicitIntersection2d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.ImplicitIntersection3d.html">ImplicitIntersection3d</a></h4>
+      <section><p>Boolean Intersection of two implicit functions, A AND B
+Assumption is that both have surface at zero isocontour and 
+negative is inside.</p>
+</section>
+      <h4><a class="xref" href="g3.ImplicitLine3d.html">ImplicitLine3d</a></h4>
+      <section><p>Implicit tube around line segment</p>
+</section>
+      <h4><a class="xref" href="g3.ImplicitNaryDifference3d.html">ImplicitNaryDifference3d</a></h4>
+      <section><p>Boolean Difference of N implicit functions, A - Union(B1..BN)
+Assumption is that both have surface at zero isocontour and 
+negative is inside.</p>
+</section>
+      <h4><a class="xref" href="g3.ImplicitNaryIntersection3d.html">ImplicitNaryIntersection3d</a></h4>
+      <section><p>Boolean Intersection of N implicit functions, A AND B.
+Assumption is that both have surface at zero isocontour and 
+negative is inside.</p>
+</section>
+      <h4><a class="xref" href="g3.ImplicitNAryOp2d.html">ImplicitNAryOp2d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.ImplicitNaryUnion3d.html">ImplicitNaryUnion3d</a></h4>
+      <section><p>Boolean Union of N implicit functions, A OR B.
+Assumption is that both have surface at zero isocontour and 
+negative is inside.</p>
+</section>
+      <h4><a class="xref" href="g3.ImplicitOffset3d.html">ImplicitOffset3d</a></h4>
+      <section><p>Offset the zero-isocontour of an implicit function.
+Assumes that negative is inside, if not, reverse offset.</p>
+</section>
+      <h4><a class="xref" href="g3.ImplicitPoint2d.html">ImplicitPoint2d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.ImplicitShell3d.html">ImplicitShell3d</a></h4>
+      <section><p>remaps values so that values within given interval are negative,
+and values outside this interval are positive. So, for a distance
+field, this converts single isocontour into two nested isocontours
+with zeros at interval a and b, with &apos;inside&apos; in interval</p>
+</section>
+      <h4><a class="xref" href="g3.ImplicitSmoothDifference3d.html">ImplicitSmoothDifference3d</a></h4>
+      <section><p>Continuous R-Function Boolean Difference of two implicit functions, A AND B
+Assumption is that both have surface at zero isocontour and 
+negative is inside.</p>
+</section>
+      <h4><a class="xref" href="g3.ImplicitSmoothIntersection3d.html">ImplicitSmoothIntersection3d</a></h4>
+      <section><p>Continuous R-Function Boolean Intersection of two implicit functions, A-B = A AND (NOT B)
+Assumption is that both have surface at zero isocontour and 
+negative is inside.</p>
+</section>
+      <h4><a class="xref" href="g3.ImplicitSmoothUnion3d.html">ImplicitSmoothUnion3d</a></h4>
+      <section><p>Continuous R-Function Boolean Union of two implicit functions, A OR B.
+Assumption is that both have surface at zero isocontour and 
+negative is inside.</p>
+</section>
+      <h4><a class="xref" href="g3.ImplicitSphere3d.html">ImplicitSphere3d</a></h4>
+      <section><p>Implicit sphere, where zero isocontour is at Radius</p>
+</section>
+      <h4><a class="xref" href="g3.ImplicitUnion2d.html">ImplicitUnion2d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.ImplicitUnion3d.html">ImplicitUnion3d</a></h4>
+      <section><p>Boolean Union of two implicit functions, A OR B.
+Assumption is that both have surface at zero isocontour and 
+negative is inside.</p>
+</section>
+      <h4><a class="xref" href="g3.IndexArray2i.html">IndexArray2i</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IndexArray3i.html">IndexArray3i</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IndexArray4i.html">IndexArray4i</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IndexFlagSet.html">IndexFlagSet</a></h4>
+      <section><p>This class provides a similar interface to BitArray, but can optionally
+use a HashSet (or perhaps some other DS) if the fraction of the index space 
+required is small</p>
+</section>
+      <h4><a class="xref" href="g3.IndexHashSet.html">IndexHashSet</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IndexMap.html">IndexMap</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IndexPriorityQueue.html">IndexPriorityQueue</a></h4>
+      <section><p>This is a min-heap priority queue class that does not use an object for each queue node.
+Integer IDs must be provided by the user to identify unique nodes.
+Internally an array is used to keep track of the mapping from ids to internal indices,
+so the max ID must also be provided.</p>
+<p>See DijkstraGraphDistance for example usage.</p>
+<p>conceptually based on <a href="https://github.com/BlueRaja/High-Speed-Priority-Queue-for-C-Sharp">https://github.com/BlueRaja/High-Speed-Priority-Queue-for-C-Sharp</a></p>
+</section>
+      <h4><a class="xref" href="g3.IndexRangeEnumerator.html">IndexRangeEnumerator</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IndexUtil.html">IndexUtil</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.InPlaceIterativeCurveSmooth.html">InPlaceIterativeCurveSmooth</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Integrate1d.html">Integrate1d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IntersectionUtil.html">IntersectionUtil</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Intersector1.html">Intersector1</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IntrLine2Line2.html">IntrLine2Line2</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IntrLine2Segment2.html">IntrLine2Segment2</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IntrLine2Triangle2.html">IntrLine2Triangle2</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IntrLine3AxisAlignedBox3.html">IntrLine3AxisAlignedBox3</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IntrLine3Box3.html">IntrLine3Box3</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IntrRay3AxisAlignedBox3.html">IntrRay3AxisAlignedBox3</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IntrRay3Box3.html">IntrRay3Box3</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IntrRay3Triangle3.html">IntrRay3Triangle3</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IntrSegment2Segment2.html">IntrSegment2Segment2</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IntrSegment2Triangle2.html">IntrSegment2Triangle2</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IntrSegment3Box3.html">IntrSegment3Box3</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IntrTriangle2Triangle2.html">IntrTriangle2Triangle2</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IntrTriangle3Triangle3.html">IntrTriangle3Triangle3</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IntTagSet-1.html">IntTagSet&lt;T&gt;</a></h4>
+      <section><p>Basic object-&gt;integer mapping</p>
+</section>
+      <h4><a class="xref" href="g3.IWrappedCurve3d.html">IWrappedCurve3d</a></h4>
+      <section><p>Simple sampled-curve wrapper type</p>
+</section>
+      <h4><a class="xref" href="g3.LaplacianCurveDeformer.html">LaplacianCurveDeformer</a></h4>
+      <section><p>Variant of LaplacianMeshDeformer that can be applied to 3D curve.</p>
+<p>Solve in each dimension can be disabled using .SolveX/Y/Z</p>
+<p>Currently only supports uniform weights (in Initialize)</p>
+</section>
+      <h4><a class="xref" href="g3.LaplacianMeshDeformer.html">LaplacianMeshDeformer</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.LaplacianMeshSmoother.html">LaplacianMeshSmoother</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.LineGenerator.html">LineGenerator</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.LocalProfiler.html">LocalProfiler</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.LockingQueue-1.html">LockingQueue&lt;T&gt;</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MappedList.html">MappedList</a></h4>
+      <section><p>IList wrapper that remaps values via a Func (eg for index maps)</p>
+</section>
+      <h4><a class="xref" href="g3.MarchingCubes.html">MarchingCubes</a></h4>
+      <section><p>Basic implementation of marching cubes mesh generation, which can be applied to
+arbitrary Implicit function. Multi-threading enabled by default.</p>
+<p>[TODO] support locking on Implicit.Value()? May not be thread-safe!!
+[TODO] extension that tracks set of triangles in each cube, so we can do partial updates?
+[TODO] is hash table on vertex x/y/z the best idea?
+[TODO] hash table for edge vtx-indices instead, like old polygonizer? (how did we index edges?!?)</p>
+</section>
+      <h4><a class="xref" href="g3.MarchingQuads.html">MarchingQuads</a></h4>
+      <section><p>2D MarchingQuads polyline extraction from scalar field
+[TODO] this is very, very old code. Should at minimum rewrite using current
+vector classes/etc.</p>
+</section>
+      <h4><a class="xref" href="g3.MathUtil.html">MathUtil</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Matrix2d.html">Matrix2d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Matrix2f.html">Matrix2f</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MatrixUtil.html">MatrixUtil</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MemoryPool-1.html">MemoryPool&lt;T&gt;</a></h4>
+      <section><p>Very basic object pool class. </p>
+</section>
+      <h4><a class="xref" href="g3.MeshBoolean.html">MeshBoolean</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshBoundaryEdgeMidpoints.html">MeshBoundaryEdgeMidpoints</a></h4>
+      <section><p>Present mesh boundary-edge midpoints as a point set</p>
+</section>
+      <h4><a class="xref" href="g3.MeshBoundaryLoops.html">MeshBoundaryLoops</a></h4>
+      <section><p>Extract boundary EdgeLoops from Mesh. Can also extract EdgeSpans for open areas,
+however default behavior is to ignore these. Set .SpanBehavior to configure.</p>
+</section>
+      <h4><a class="xref" href="g3.MeshBoundaryLoopsException.html">MeshBoundaryLoopsException</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshConnectedComponents.html">MeshConnectedComponents</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshConstraints.html">MeshConstraints</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshConstraintUtil.html">MeshConstraintUtil</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshDecomposition.html">MeshDecomposition</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshEdgeMidpoints.html">MeshEdgeMidpoints</a></h4>
+      <section><p>Present mesh edge midpoints as a point set</p>
+</section>
+      <h4><a class="xref" href="g3.MeshEdgeSelection.html">MeshEdgeSelection</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshEditor.html">MeshEditor</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshExtrudeFaces.html">MeshExtrudeFaces</a></h4>
+      <section><p>Extrude a subset of faces of Mesh. Steps are:
+1) separate subset from neighbouring triangles
+2) offset them
+3) connect original and offset edges (now boundary edges) with a triangle strip</p>
+<p>Caveats:</p>
+<ul>
+<li>not sure it works for multiple regions?</li>
+<li>boundary vertices are currently attached to offset region, rather than also duplicated
+and then connected w/ strip
+[TODO] implement this behavior</li>
+</ul>
+</section>
+      <h4><a class="xref" href="g3.MeshExtrudeLoop.html">MeshExtrudeLoop</a></h4>
+      <section><p>Assumption is that Loop is a boundary loop on Mesh.
+Operation makes a duplicate loop of vertices, at location defind by PositionF,
+then stitches input and new loops together with a ring of triangles.</p>
+</section>
+      <h4><a class="xref" href="g3.MeshExtrudeMesh.html">MeshExtrudeMesh</a></h4>
+      <section><p>Extrude all faces of a mesh, and stitch together any boundary loops. Steps are:
+1) make a copy of all triangles in mesh
+2) offset copy vertices
+3) connect up loops with triangle strips</p>
+</section>
+      <h4><a class="xref" href="g3.MeshFaceSelection.html">MeshFaceSelection</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshFacesFromLoop.html">MeshFacesFromLoop</a></h4>
+      <section><p>Find mesh triangles enclosed by a curve embedded in the mesh
+If a seed triangle in the enclosed region is not provided, then the
+smaller of the two largest connected-components is chosen as the &quot;inside&quot;.</p>
+</section>
+      <h4><a class="xref" href="g3.MeshGenerator.html">MeshGenerator</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshICP.html">MeshICP</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshIndexUtil.html">MeshIndexUtil</a></h4>
+      <section><p>Utility functions for manipulating sets/lists of mesh indices</p>
+</section>
+      <h4><a class="xref" href="g3.MeshInsertPolygon.html">MeshInsertPolygon</a></h4>
+      <section><p>Insert Polygon into Mesh. Assumption is that Mesh has 3D coordinates (u,v,0).
+This is basically a helper/wrapper around MeshInsertUVPolyCurve.
+Inserted edge set is avaliable as .InsertedPolygonEdges, and
+triangles inside polygon as .InteriorTriangles</p>
+</section>
+      <h4><a class="xref" href="g3.MeshInsertUVPolyCurve.html">MeshInsertUVPolyCurve</a></h4>
+      <section><p>Cut mesh with a path of 2D line segments
+Assumptions:</p>
+<ul>
+<li>mesh vertex x/y coordinates are 2D coordinates we want to use. Replace PointF if this is not the case.</li>
+<li>segments of Curve lie entirely within UV-triangles</li>
+</ul>
+<p>Limitations:</p>
+<ul>
+<li>currently not robust to near-parallel line segments that are within epsilon-band of the
+input loop. In this case, we will include all such segments in the &apos;cut&apos; set, but we
+will probably not be able to find a connected path through them. </li>
+<li>not robust to degenerate geometry. Strongly recommend that you use Validate() and/or
+preprocess the input mesh to remove degenerate faces/edges</li>
+</ul>
+</section>
+      <h4><a class="xref" href="g3.MeshIOUtil.html">MeshIOUtil</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshIsoCurves.html">MeshIsoCurves</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshIterativeSmooth.html">MeshIterativeSmooth</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshIterators.html">MeshIterators</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshLocalParam.html">MeshLocalParam</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshLoopClosure.html">MeshLoopClosure</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshLoopSmooth.html">MeshLoopSmooth</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshMeasurements.html">MeshMeasurements</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshMeshCut.html">MeshMeshCut</a></h4>
+      <section><p>TODO:</p>
+<ul>
+<li>track descendant triangles of each input face</li>
+<li>for missing segments, can resolve in 2D in plane of face</li>
+</ul>
+</section>
+      <h4><a class="xref" href="g3.MeshNormals.html">MeshNormals</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshOps.html">MeshOps</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshPlaneCut.html">MeshPlaneCut</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshProjectionTarget.html">MeshProjectionTarget</a></h4>
+      <section><p>MeshProjectionTarget provides an IProjectionTarget interface to a mesh + spatial data structure.
+Use to project points to mesh surface.</p>
+</section>
+      <h4><a class="xref" href="g3.MeshQueries.html">MeshQueries</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshRefinerBase.html">MeshRefinerBase</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshRegionBoundaryLoops.html">MeshRegionBoundaryLoops</a></h4>
+      <section><p>Extract boundary EdgeLoops for subregions of Mesh</p>
+</section>
+      <h4><a class="xref" href="g3.MeshSignedDistanceGrid.html">MeshSignedDistanceGrid</a></h4>
+      <section><p>Compute discretely-sampled (ie gridded) signed distance field for a mesh
+The basic approach is, first compute exact distances in a narrow band, and then
+extend out to rest of grid using fast &quot;sweeping&quot; (ie like a distance transform).
+The resulting unsigned grid is then signed using ray-intersection counting, which
+is also computed on the grid, so no BVH is necessary</p>
+<p>If you set ComputeMode to NarrowBandOnly, result is a narrow-band signed distance field.
+This is quite a bit faster as the sweeping is the most computationally-intensive step.</p>
+<p>Caveats:</p>
+<ul>
+<li>the &quot;narrow band&quot; is based on triangle bounding boxes, so it is not necessarily
+that &quot;narrow&quot; if you have large triangles on a diagonal to grid axes</li>
+</ul>
+<p>Potential optimizations:</p>
+<ul>
+<li>Often we have a spatial data structure that would allow faster computation of the
+narrow-band distances (which become quite expensive if we want a wider band!)
+Not clear how to take advantage of this though. Perhaps we could have a binary
+grid that, in first pass, we set bits inside triangle bboxes to 1? Or perhaps
+same as current code, but we use spatial-dist, and so for each ijk we only compute once?
+(then have to test for computed value at each cell of each triangle...)</li>
+</ul>
+<p>This code is based on the C++ implementation found at <a href="https://github.com/christopherbatty/SDFGen">https://github.com/christopherbatty/SDFGen</a>
+Original license was public domain. 
+Permission granted by Christopher Batty to include C# port under Boost license.</p>
+</section>
+      <h4><a class="xref" href="g3.MeshTransforms.html">MeshTransforms</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshTriInfoCache.html">MeshTriInfoCache</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshTrimLoop.html">MeshTrimLoop</a></h4>
+      <section><p>Delete triangles inside on/near-surface trimming curve, and then adapt the new
+boundary loop to conform to the loop.</p>
+<p>[DANGER] To use this class, we require a spatial data structure we can project onto. 
+Currently we assume that this is a DMesh3AABBTree <em>because</em> if you don&apos;t provide a
+seed triangle, we use FindNearestTriangle() to find this index on the input mesh.
+So, it must be a tree for the exact same mesh (!). 
+However we then delete a bunch of triangles and use this spatial DS only for reprojection.
+Possibly these should be two separate things? Or force caller to provide seed triangle
+for trim loop, instead of solving this problem for them?
+(But basically there is no way around having a full mesh copy...)</p>
+<p>TODO:</p>
+<ul>
+<li>output boundary EdgeLoop that has been aligned w/ trim curve</li>
+<li>handle cases where input mesh has open borders</li>
+</ul>
+</section>
+      <h4><a class="xref" href="g3.MeshUtil.html">MeshUtil</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshValidation.html">MeshValidation</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshVertexSelection.html">MeshVertexSelection</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshWeights.html">MeshWeights</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.ModifyVerticesMeshChange.html">ModifyVerticesMeshChange</a></h4>
+      <section><p>Mesh change for vertex deformations. Currently minimal support for initializing buffers.
+AppendNewVertex() can be used to accumulate modified vertices and their initial positions.</p>
+</section>
+      <h4><a class="xref" href="g3.NormalHistogram.html">NormalHistogram</a></h4>
+      <section><p>Construct spherical histogram of normals of mesh. 
+Binning is done using a Spherical Fibonacci point set.</p>
+</section>
+      <h4><a class="xref" href="g3.NTMesh3.html">NTMesh3</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.NURBSCurve2.html">NURBSCurve2</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.OBJFormatReader.html">OBJFormatReader</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.OBJMaterial.html">OBJMaterial</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.OBJReader.html">OBJReader</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.OBJWriter.html">OBJWriter</a></h4>
+      <section><p>gradientspace OBJ writer</p>
+<p>[TODO] if mesh has groups, usemtl lines will not be written (see TODO below)
+[TODO] options to preserve vertex and triangle indices</p>
+</section>
+      <h4><a class="xref" href="g3.OFFFormatReader.html">OFFFormatReader</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.OFFWriter.html">OFFWriter</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.OpenCylinderGenerator.html">OpenCylinderGenerator</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.OrthogonalPlaneFit3.html">OrthogonalPlaneFit3</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.PackedSparseMatrix.html">PackedSparseMatrix</a></h4>
+      <section><p>This is a sparse matrix where each row is an array of (column,value) pairs
+This is more efficient for Matrix*Vector multiply.</p>
+</section>
+      <h4><a class="xref" href="g3.ParallelStream-2.html">ParallelStream&lt;V, T&gt;</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.ParametricCurveSequence2.html">ParametricCurveSequence2</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.PlanarComplex.html">PlanarComplex</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.PlanarComplex.ClosedLoopsInfo.html">PlanarComplex.ClosedLoopsInfo</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.PlanarComplex.Element.html">PlanarComplex.Element</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.PlanarComplex.GeneralSolid.html">PlanarComplex.GeneralSolid</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.PlanarComplex.OpenCurvesInfo.html">PlanarComplex.OpenCurvesInfo</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.PlanarComplex.SmoothCurveElement.html">PlanarComplex.SmoothCurveElement</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.PlanarComplex.SmoothLoopElement.html">PlanarComplex.SmoothLoopElement</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.PlanarComplex.SolidRegionInfo.html">PlanarComplex.SolidRegionInfo</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.PlanarHoleFiller.html">PlanarHoleFiller</a></h4>
+      <section><p>Try to fill planar holes in a mesh. The fill is computed by mapping the hole boundary into 2D,
+filling using 2D algorithms, and then mapping back to 3D. This allows us to properly handle cases like
+nested holes (eg from slicing a torus in half). </p>
+<p>PlanarComplex is used to sort the input 2D polyons. </p>
+<p>MeshInsertUVPolyCurve is used to insert each 2D polygon into a generated planar mesh.
+The resolution of the generated mesh is controlled by .FillTargetEdgeLen</p>
+<p>In theory this approach can handle more geometric degeneracies than Delaunay triangluation.
+However, the current code requires that MeshInsertUVPolyCurve produce output boundary loops that
+have a 1-1 correspondence with the input polygons. This is not always possible.</p>
+<p>Currently these failure cases are not handled properly. In that case the loops will
+not be stitched.</p>
+</section>
+      <h4><a class="xref" href="g3.PlanarSolid2d.html">PlanarSolid2d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.PlanarSpansFiller.html">PlanarSpansFiller</a></h4>
+      <section><p>This class fills an ordered sequence of planar spans. The 2D polygon is formed
+by chaining the spans.</p>
+<p>Current issues:</p>
+<ul>
+<li>connectors have a single segment, so when simplified, they become a single edge.
+should subsample them instead.</li>
+<li>currently mapping from inserted edges back to span edges is not calculated, so
+we have no way to merge them (ie MergeFillBoundary not implemented)</li>
+<li>fill triangles not returned?</li>
+</ul>
+</section>
+      <h4><a class="xref" href="g3.PlaneIntersectionTarget.html">PlaneIntersectionTarget</a></h4>
+      <section><p>Compute ray-intersection with plane</p>
+</section>
+      <h4><a class="xref" href="g3.PlaneProjectionTarget.html">PlaneProjectionTarget</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.PointAABBTree3.html">PointAABBTree3</a></h4>
+      <section><p>Hierarchical Axis-Aligned-Bounding-Box tree for an IPointSet</p>
+<p>TODO: no timestamp support right now...</p>
+</section>
+      <h4><a class="xref" href="g3.PointAABBTree3.TreeTraversal.html">PointAABBTree3.TreeTraversal</a></h4>
+      <section><p>Instances of this class can be passed in to the DoTraversal() function to implement your
+own tree-traversal queries.
+NextBoxF() is called for each box node. Return false from this function to halt terminate 
+that branch of the traversal, or true to descend into that box&apos;s children (boxes or points).
+NextPointF() is called for each point.</p>
+</section>
+      <h4><a class="xref" href="g3.PointHashGrid2d-1.html">PointHashGrid2d&lt;T&gt;</a></h4>
+      <section><p>Hash Grid for 2D points. You provide the &apos;point&apos; type. If you have an indexable
+set of points this can just be int, or can be more complex point data structure
+(but be careful w/ structs...)</p>
+<p>Does not actually store 2D points. So, to remove a point
+you must also know it&apos;s 2D coordinate, so we can look up the cell coordinates.
+Hence, to &apos;update&apos; a point, you need to know both it&apos;s old and new 2D coordinates.</p>
+</section>
+      <h4><a class="xref" href="g3.PointHashGrid3d-1.html">PointHashGrid3d&lt;T&gt;</a></h4>
+      <section><p>Hash Grid for 3D points. You provide the &apos;point&apos; type. If you have an indexable
+set of points this can just be int, or can be more complex point data structure
+(but be careful w/ structs...)</p>
+<p>Does not actually store 3D points. So, to remove a point
+you must also know it&apos;s 3D coordinate, so we can look up the cell coordinates.
+Hence, to &apos;update&apos; a point, you need to know both it&apos;s old and new 3D coordinates.</p>
+<p>TODO: if a lot of points are in the same spot, this is still a disaster.
+What if we had a second level of hashing, where once a list at a level gets too
+big, we build a sub-hash there?</p>
+</section>
+      <h4><a class="xref" href="g3.PointSplatsGenerator.html">PointSplatsGenerator</a></h4>
+      <section><p>Create a mesh that contains a planar element for each point and normal
+(currently only triangles)</p>
+</section>
+      <h4><a class="xref" href="g3.Polygon2d.html">Polygon2d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Polygon2dBoxTree.html">Polygon2dBoxTree</a></h4>
+      <section><p>tree of Oriented Boxes (OBB) for a Polygon2d. 
+Construction is sequential, ie pairs of segments are merged into boxes, then pairs of boxes, and so on</p>
+<p>[TODO] is this the best strategy? is there maybe some kind of sorting/sweepline algo?
+[TODO] would it make more sense to have more than just 2 segments at lowest level?</p>
+</section>
+      <h4><a class="xref" href="g3.Polygon2DCurve.html">Polygon2DCurve</a></h4>
+      <section><p>Wrapper for a Polygon2d that provides minimal IParametricCurve2D interface</p>
+</section>
+      <h4><a class="xref" href="g3.PolygonFont2d.html">PolygonFont2d</a></h4>
+      <section><p>This class represents an outline font, where the outline is composed of polygons.
+Each font is a list of GeneralPolygon2D objects, so each outline may have 1 or more holes.
+(In fact, the mapping is [string,list_of_gpolygons], so you can actually keep entire strings together if desired)</p>
+</section>
+      <h4><a class="xref" href="g3.PolygonFont2d.CharacterInfo.html">PolygonFont2d.CharacterInfo</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.PolyLine2d.html">PolyLine2d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.PolyLine2DCurve.html">PolyLine2DCurve</a></h4>
+      <section><p>Wrapper for a PolyLine2d that provides minimal IParametricCurve2D interface</p>
+</section>
+      <h4><a class="xref" href="g3.PolyLine3d.html">PolyLine3d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.PolySimplification2.html">PolySimplification2</a></h4>
+      <section><p>2D Polyline/Polygon simplification.</p>
+<p>This is a more complex approach than Polygon.Simplify(), which uses sequential vtx clustering
+and then runs douglas-peucker algorithm. That method can end up modifying long straight segments,
+which is not ideal in many contexts (eg manufacturing).</p>
+<p>Strategy here is :
+1) find runs of vertices that are very close to straight lines (default 0.01mm deviation tol)
+2) find all straight segments longer than threshold distance (default 2mm)
+3) discard vertices that deviate less than tolerance (default = 0.2mm)
+ from sequential-points-segment, unless they are required to preserve
+ straight segments</p>
+<p>[TODO] currently doing greedy search in 1,3. Could do more optimal search.
+[TODO] currently measuring deviation of p1...pN-1 from line [p0,pN] for points [p0,p1,...pN].
+could alternately fit best segment to p1...pN (p0 is already fixed).
+[TODO] 2d variant of variational shape segmentation?</p>
+</section>
+      <h4><a class="xref" href="g3.ProgressCancel.html">ProgressCancel</a></h4>
+      <section><p>This class is intended to be passed to long-running computes to 
+1) provide progress info back to caller (not implemented yet)
+2) allow caller to cancel the computation</p>
+</section>
+      <h4><a class="xref" href="g3.PuncturedDiscGenerator.html">PuncturedDiscGenerator</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.QuadraticFit2.html">QuadraticFit2</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Query2d.html">Query2d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Query2Int64.html">Query2Int64</a></h4>
+      <section><p>2D queries for integer coordinates. 
+Note that input Vector2d values are directly cast to int64 - you must
+scale them to suitable coordinates yourself!</p>
+</section>
+      <h4><a class="xref" href="g3.QueryBase.html">QueryBase</a></h4>
+      <section><p>Port of WildMagic5 Query class</p>
+</section>
+      <h4><a class="xref" href="g3.QueryTuple2d.html">QueryTuple2d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Radial3DArrowGenerator.html">Radial3DArrowGenerator</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.RayIntersection.html">RayIntersection</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.ReadOptions.html">ReadOptions</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Reducer.html">Reducer</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.RefCountVector.html">RefCountVector</a></h4>
+      <section><p>RefCountedVector is used to keep track of which indices in a linear index list are in use/referenced.
+A free list is tracked so that unreferenced indices can be re-used.</p>
+<p>The enumerator iterates over valid indices (ie where refcount &gt; 0)</p>
+<p><strong>refcounts are shorts</strong> so the maximum count is 65536. 
+No overflow checking is done in release builds.</p>
+</section>
+      <h4><a class="xref" href="g3.RegionOperator.html">RegionOperator</a></h4>
+      <section><p>This class automatically extracts a submesh from a mesh, and can re-insert it after you have
+edited it, as long as you have not messed up the boundary</p>
+<p>[TODO] Nearly all the code here is duplicated from RegionRemesher. Maybe this could be a base class for that?
+[TODO] ReinsertSubToBaseMapT is not returned by the MeshEditor.ReinsertSubmesh, instead we are
+trying to guess it here, by making some assumptions about what happens. It works for now, but
+it would better if MeshEditor returned this information.</p>
+</section>
+      <h4><a class="xref" href="g3.RegionRemesher.html">RegionRemesher</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.RemapItr-2.html">RemapItr&lt;T, T2&gt;</a></h4>
+      <section><p>Iterator that re-maps iterated values via a Func</p>
+</section>
+      <h4><a class="xref" href="g3.Remesher.html">Remesher</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.RemoveTrianglesMeshChange.html">RemoveTrianglesMeshChange</a></h4>
+      <section><p>Remove triangles from mesh and store necessary data to be able to reverse the change.
+Vertex and Triangle IDs will be restored on Revert()
+Currently does <em>not</em> restore the same EdgeIDs</p>
+</section>
+      <h4><a class="xref" href="g3.RoundRectGenerator.html">RoundRectGenerator</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.SafeListBuilder-1.html">SafeListBuilder&lt;T&gt;</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.SampledArcLengthParam.html">SampledArcLengthParam</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.SampledArcLengthParam2d.html">SampledArcLengthParam2d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.ScalarMap.html">ScalarMap</a></h4>
+      <section><p>Scalar version of a ColorMap (ie interpolate between sample points)
+[TODO] could we make this a template?</p>
+</section>
+      <h4><a class="xref" href="g3.SculptCurveDeformation.html">SculptCurveDeformation</a></h4>
+      <section><p>Base-class for DCurve3 spatial deformations. 
+Subclasses must implement abstract Apply() method.</p>
+</section>
+      <h4><a class="xref" href="g3.SculptCurveMove.html">SculptCurveMove</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.SculptCurveSmooth.html">SculptCurveSmooth</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Segment2dBox.html">Segment2dBox</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.SegmentHashGrid2d-1.html">SegmentHashGrid2d&lt;T&gt;</a></h4>
+      <section><p>Hash Grid for 2D segments. You provide the &apos;segment&apos; type. If you have an indexable
+set of segments this can just be int, or can be more complex segment data structure
+(but be careful w/ structs...)</p>
+<p>Segments are stored in the grid cell that contains the segment center. We keep track
+of the extent of the <em>longest</em> segment that has been added. The search radius for
+distance queries is expanded by this extent. </p>
+<p>So, distance queries <strong>ARE NOT EFFICIENT</strong> if you even one very long segment.
+[TODO] make a multi-level hash</p>
+<p>Does not actually store 2D segments. So, to remove a segment
+you must also know it&apos;s 2D center, so we can look up the cell coordinates.
+Hence, to &apos;update&apos; a segment, you need to know both it&apos;s old and new 2D centers.</p>
+</section>
+      <h4><a class="xref" href="g3.SegmentSet2d.html">SegmentSet2d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.SequentialProjectionTarget.html">SequentialProjectionTarget</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.SetVerticesMeshChange.html">SetVerticesMeshChange</a></h4>
+      <section><p>Mesh change for full-mesh vertex deformations - more efficient than ModifyVerticesMeshChange.
+Note that this does not enforce that vertex count does not change!</p>
+</section>
+      <h4><a class="xref" href="g3.ShiftIndexMap.html">ShiftIndexMap</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.SimpleHoleFiller.html">SimpleHoleFiller</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.SimpleMesh.html">SimpleMesh</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.SimpleMeshBuilder.html">SimpleMeshBuilder</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.SimpleQuadMesh.html">SimpleQuadMesh</a></h4>
+      <section><p>SimpleTriangleMesh but for quads. Data packed into buffers, no dynamics.
+Supports Per-Vertex Normals, Colors, UV, and Per-Quad Facegroup.</p>
+<p>use static WriteOBJ() to save. No loading, for now. </p>
+</section>
+      <h4><a class="xref" href="g3.SimpleStore.html">SimpleStore</a></h4>
+      <section><p>Utility class that is intended to support things like writing and reading
+test cases, etc. You can write out a test case in a single line, eg
+SimpleStore.Store(path, new object[] { TestMesh, VertexList, PlaneNormal, ... })
+The object list will be binned into the relevant sublists automatically.
+Then you can load this data via:
+SimpleStore s = SimpleStore.Restore(path)</p>
+</section>
+      <h4><a class="xref" href="g3.SingularValueDecomposition.html">SingularValueDecomposition</a></h4>
+      <section><p>Singular Value Decomposition of arbitrary matrix A
+Computes U/S/V of  A = U * S * V^T</p>
+<p>Useful Properties:
+S = square-roots of eigenvalues of A
+U = eigenvectors of A * A^T
+V = eigenvectors of A^T * A
+U * V^T = rotation matrix closest to A 
+V * Inv(S) * U^T = psuedoinverse of A</p>
+<p>U and/or V are rotation matrices but may also contain reflections
+Detection: det(U) or det(v) == -1
+Removal: if ( det(U) == -1 ) { U *= -1; S *= -1 }
+     if ( det(V) == -1 ) { V *= -1; S *= -1 }     (right? seems to work)</p>
+</section>
+      <h4><a class="xref" href="g3.SkeletalBlend3d.html">SkeletalBlend3d</a></h4>
+      <section><p>sum-blend</p>
+</section>
+      <h4><a class="xref" href="g3.SkeletalRicciBlend3d.html">SkeletalRicciBlend3d</a></h4>
+      <section><p>Ricci blend</p>
+</section>
+      <h4><a class="xref" href="g3.SkeletalRicciNaryBlend3d.html">SkeletalRicciNaryBlend3d</a></h4>
+      <section><p>Boolean Union of N implicit functions, A OR B.
+Assumption is that both have surface at zero isocontour and 
+negative is inside.</p>
+</section>
+      <h4><a class="xref" href="g3.SmallListSet.html">SmallListSet</a></h4>
+      <section><p>SmallListSet stores a set of short integer-valued variable-size lists.
+The lists are encoded into a few large DVector buffers, with internal pooling,
+so adding/removing lists usually does not involve any new or delete ops.</p>
+<p>The lists are stored in two parts. The first N elements are stored in a linear
+subset of a dvector. If the list spills past these N elements, the extra elements
+are stored in a linked list (which is also stored in a flat array).</p>
+<p>Each list stores its count, so list-size operations are constant time.
+All the internal &quot;pointers&quot; are 32-bit.</p>
+</section>
+      <h4><a class="xref" href="g3.Snapping.html">Snapping</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.SparseList-1.html">SparseList&lt;T&gt;</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.SparseObjectList-1.html">SparseObjectList&lt;T&gt;</a></h4>
+      <section><p>variant of SparseList for class objects, then &quot;zero&quot; is null</p>
+<p>TODO: can we combine these classes somehow?</p>
+</section>
+      <h4><a class="xref" href="g3.SparseSymmetricCG.html">SparseSymmetricCG</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.SparseSymmetricCGMultipleRHS.html">SparseSymmetricCGMultipleRHS</a></h4>
+      <section><p>[RMS] this is a variant of SparseSymmetricCG that supports multiple right-hand-sides.
+Makes quite a big difference as matrix gets bigger, because MultiplyF can
+unroll inner loops (as long as you actually do that)</p>
+<p>However, if this is done then it is not really possible to do different numbers
+of iterations for different RHS&apos;s. We will not update that RHS once it has 
+converged, however we still have to do the multiplies!</p>
+</section>
+      <h4><a class="xref" href="g3.SpatialFunctions.html">SpatialFunctions</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.SpatialFunctions.NormalOffset.html">SpatialFunctions.NormalOffset</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Sphere3Generator_NormalizedCube.html">Sphere3Generator_NormalizedCube</a></h4>
+      <section><p>Generate a mesh of a sphere by first generating a mesh of a cube, 
+and then normalizing the vertices and moving them to sphere of desired radius.</p>
+</section>
+      <h4><a class="xref" href="g3.SphericalFibonacciPointSet.html">SphericalFibonacciPointSet</a></h4>
+      <section><p>A Spherical Fibonacci Point Set is a set of points that are roughly evenly distributed on
+a sphere. Basically the points lie on a spiral, see pdf below.
+The i-th SF point of an N-point set can be calculated directly.
+For a given (normalized) point P, finding the nearest SF point (ie mapping back to i)
+can be done in constant time.</p>
+<p>math from <a href="http://lgdv.cs.fau.de/uploads/publications/spherical_fibonacci_mapping_opt.pdf">http://lgdv.cs.fau.de/uploads/publications/spherical_fibonacci_mapping_opt.pdf</a></p>
+</section>
+      <h4><a class="xref" href="g3.StandardMeshReader.html">StandardMeshReader</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.StandardMeshWriter.html">StandardMeshWriter</a></h4>
+      <section><p>Writes various mesh file formats. Format is determined from extension. Currently supports:</p>
+<ul>
+<li>.obj : Wavefront OBJ Format <a href="https://en.wikipedia.org/wiki/Wavefront_.obj_file">https://en.wikipedia.org/wiki/Wavefront_.obj_file</a></li>
+<li>.stl : ascii and binary STL formats <a href="https://en.wikipedia.org/wiki/STL_(file_format">https://en.wikipedia.org/wiki/STL_(file_format</a>) </li>
+<li>.off : OFF format <a href="https://en.wikipedia.org/wiki/OFF_(file_format">https://en.wikipedia.org/wiki/OFF_(file_format</a>)</li>
+<li>.g3mesh : internal binary format for packed DMesh3 objects</li>
+</ul>
+<p>Each of these is implemented in a separate Writer class, eg OBJWriter, STLWriter, etc</p>
+</section>
+      <h4><a class="xref" href="g3.StandardSculptCurveDeformation.html">StandardSculptCurveDeformation</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.STLFormatReader.html">STLFormatReader</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.STLReader.html">STLReader</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.STLReader.STLSolid.html">STLReader.STLSolid</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.STLWriter.html">STLWriter</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.StringTagSet-1.html">StringTagSet&lt;T&gt;</a></h4>
+      <section><p>Basic object-&gt;string mapping</p>
+</section>
+      <h4><a class="xref" href="g3.SVGWriter.html">SVGWriter</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.SymmetricEigenSolver.html">SymmetricEigenSolver</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.SymmetricSparseMatrix.html">SymmetricSparseMatrix</a></h4>
+      <section><p>Basic sparse-symmetric-matrix class. Stores upper-triangular portion.
+Uses Dictionary as sparsifying data structure, which is probably
+not a good option. But it is easy.</p>
+</section>
+      <h4><a class="xref" href="g3.TilingUtil.html">TilingUtil</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.TransformedIntersectionTarget.html">TransformedIntersectionTarget</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.TransformedMeshProjectionTarget.html">TransformedMeshProjectionTarget</a></h4>
+      <section><p>Extension of MeshProjectionTarget that allows the target to have a transformation
+relative to it&apos;s internal space. Call SetTransform(), or initialize the transforms yourself</p>
+</section>
+      <h4><a class="xref" href="g3.TransformSequence.html">TransformSequence</a></h4>
+      <section><p>TransformSequence stores an ordered list of basic transformations.
+This can be useful if you need to construct some modifications and want
+to use the same set later. For example, if you have a hierarchy of objects
+with relative transformations and want to &quot;save&quot; the nested transform sequence
+without having to hold references to the original objects.</p>
+<p>Use the Append() functions to add different transform types, and the TransformX()
+to apply the sequence</p>
+</section>
+      <h4><a class="xref" href="g3.TransformSequence2.html">TransformSequence2</a></h4>
+      <section><p>TransformSequence stores an ordered list of basic transformations.
+This can be useful if you need to construct some modifications and want
+to use the same set later. For example, if you have a hierarchy of objects
+with relative transformations and want to &quot;save&quot; the nested transform sequence
+without having to hold references to the original objects.</p>
+<p>Use the Append() functions to add different transform types, and the TransformX()
+to apply the sequence</p>
+</section>
+      <h4><a class="xref" href="g3.TriangleBinsGrid2d.html">TriangleBinsGrid2d</a></h4>
+      <section><p>This class is a spatial data structure for 2D triangles. It is intended
+for point-containment and box-overlap queries. It does not store the
+triangles, only indices, so you must pass in the triangle vertices to add/remove
+functions, similar to PointHashGrid2d.</p>
+<p>However, unlike the hash classes, this one is based on a grid of &quot;bins&quot; which 
+has a fixed size, so you must provide a bounding box on construction. 
+Each triangle is inserted into every bin that it overlaps. </p>
+<p>[TODO] currently each triangle is inserted into every bin that it&apos;s <em>bounding box</em>
+overlaps. Need conservative rasterization to improve this. Can implement by
+testing each bin bbox for intersection w/ triangle</p>
+</section>
+      <h4><a class="xref" href="g3.TriangulatedPolygonGenerator.html">TriangulatedPolygonGenerator</a></h4>
+      <section><p>Triangulate a 2D polygon-with-holes by inserting it&apos;s edges into a meshed rectangle
+and then removing the triangles outside the polygon.</p>
+</section>
+      <h4><a class="xref" href="g3.TrivialBox3Generator.html">TrivialBox3Generator</a></h4>
+      <section><p>Generate a minimal box</p>
+</section>
+      <h4><a class="xref" href="g3.TrivialDiscGenerator.html">TrivialDiscGenerator</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.TrivialRectGenerator.html">TrivialRectGenerator</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.TubeGenerator.html">TubeGenerator</a></h4>
+      <section><p>Sweep a 2D Profile Polygon along a 3D Path.
+Supports closed and open paths, and capping open paths.
+However caps are triangulated using a fan around a center vertex (which you
+can set using CapCenter). If Polygon is non-convex, this will have foldovers.
+In that case, you have to triangulate and append it yourself.</p>
+<p>If your profile curve does not contain the polygon bbox center, 
+set OverrideCapCenter=true and set CapCenter to a suitable center point.</p>
+<p>The output normals are currently set to those for a circular profile.
+Call MeshNormals.QuickCompute() on the output DMesh to estimate proper
+vertex normals</p>
+</section>
+      <h4><a class="xref" href="g3.Units.html">Units</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Util.html">Util</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.VectorArray2-1.html">VectorArray2&lt;T&gt;</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.VectorArray2d.html">VectorArray2d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.VectorArray2f.html">VectorArray2f</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.VectorArray3-1.html">VectorArray3&lt;T&gt;</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.VectorArray3d.html">VectorArray3d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.VectorArray3f.html">VectorArray3f</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.VectorArray3i.html">VectorArray3i</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.VectorArray4-1.html">VectorArray4&lt;T&gt;</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.VerticalGeneralizedCylinderGenerator.html">VerticalGeneralizedCylinderGenerator</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.VoxelSurfaceGenerator.html">VoxelSurfaceGenerator</a></h4>
+      <section></section>
+    <h3 id="structs">Structs
+  </h3>
+      <h4><a class="xref" href="g3.Arrangement2d.Intersection.html">Arrangement2d.Intersection</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Arrangement2d.SegmentPoint.html">Arrangement2d.SegmentPoint</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.ArrayAlias-1.html">ArrayAlias&lt;T&gt;</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.AxisAlignedBox2d.html">AxisAlignedBox2d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.AxisAlignedBox2f.html">AxisAlignedBox2f</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.AxisAlignedBox2i.html">AxisAlignedBox2i</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.AxisAlignedBox3d.html">AxisAlignedBox3d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.AxisAlignedBox3f.html">AxisAlignedBox3f</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.AxisAlignedBox3i.html">AxisAlignedBox3i</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Box2d.html">Box2d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Box2f.html">Box2f</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Box3d.html">Box3d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Box3f.html">Box3f</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Colorb.html">Colorb</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Colorf.html">Colorf</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.ComplexEndpoint2d.html">ComplexEndpoint2d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.ComplexSegment2d.html">ComplexSegment2d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.CurveSample.html">CurveSample</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.CurveSample2d.html">CurveSample2d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DGraph.EdgeCollapseInfo.html">DGraph.EdgeCollapseInfo</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DGraph.EdgeSplitInfo.html">DGraph.EdgeSplitInfo</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DGraph3Util.Curves.html">DGraph3Util.Curves</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DMesh3.CompactInfo.html">DMesh3.CompactInfo</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DMesh3.EdgeCollapseInfo.html">DMesh3.EdgeCollapseInfo</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DMesh3.EdgeFlipInfo.html">DMesh3.EdgeFlipInfo</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DMesh3.EdgeSplitInfo.html">DMesh3.EdgeSplitInfo</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DMesh3.MergeEdgesInfo.html">DMesh3.MergeEdgesInfo</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DMesh3.PokeTriangleInfo.html">DMesh3.PokeTriangleInfo</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DMeshAABBTree3.PointIntersection.html">DMeshAABBTree3.PointIntersection</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DMeshAABBTree3.SegmentIntersection.html">DMeshAABBTree3.SegmentIntersection</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DPolyLine2f.Edge.html">DPolyLine2f.Edge</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DPolyLine2f.Vertex.html">DPolyLine2f.Vertex</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DVector-1.DBlock.html">DVector&lt;T&gt;.DBlock</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.EdgeConstraint.html">EdgeConstraint</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Frame3f.html">Frame3f</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.FrameGridIndexer3.html">FrameGridIndexer3</a></h4>
+      <section><p>Map to/from grid coords, where grid is relative to frame coords/axes</p>
+</section>
+      <h4><a class="xref" href="g3.GridLevelIndex.html">GridLevelIndex</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.GridLevelIndex2.html">GridLevelIndex2</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.HashBuilder.html">HashBuilder</a></h4>
+      <section><p>Construct hash of multiple values using FNV hash (ish)
+<a href="http://www.isthe.com/chongo/tech/comp/fnv/">http://www.isthe.com/chongo/tech/comp/fnv/</a></p>
+<p>(should probably be using uint? but standard GetHashCode() returns int...)</p>
+</section>
+      <h4><a class="xref" href="g3.Index2i.html">Index2i</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Index3i.html">Index3i</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Index4i.html">Index4i</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Interval1d.html">Interval1d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Interval1i.html">Interval1i</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IntSequence.html">IntSequence</a></h4>
+      <section><p>IList wrapper for an Interval1i, ie sequential list of integers</p>
+</section>
+      <h4><a class="xref" href="g3.IntTagPair.html">IntTagPair</a></h4>
+      <section><p>integer type/value pair, packed into 32 bits - 8 for type, 24 for value</p>
+</section>
+      <h4><a class="xref" href="g3.IOReadResult.html">IOReadResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IOWriteResult.html">IOWriteResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.LaplacianCurveDeformer.SoftConstraintV.html">LaplacianCurveDeformer.SoftConstraintV</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.LaplacianMeshDeformer.SoftConstraintV.html">LaplacianMeshDeformer.SoftConstraintV</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.LaplacianMeshSmoother.SoftConstraintV.html">LaplacianMeshSmoother.SoftConstraintV</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Line2d.html">Line2d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Line2f.html">Line2f</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Line3d.html">Line3d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Line3f.html">Line3f</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.LinearIntersection.html">LinearIntersection</a></h4>
+      <section><p>returned by linear-primitive intersection functions</p>
+</section>
+      <h4><a class="xref" href="g3.matrix_entry.html">matrix_entry</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Matrix3d.html">Matrix3d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Matrix3f.html">Matrix3f</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshConnectedComponents.Component.html">MeshConnectedComponents.Component</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshDecomposition.Component.html">MeshDecomposition.Component</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshGenerator.CircularSection.html">MeshGenerator.CircularSection</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshIsoCurves.GraphEdgeInfo.html">MeshIsoCurves.GraphEdgeInfo</a></h4>
+      <section><p>Information about edge of the computed Graph. 
+mesh_tri is triangle ID of crossed triangle
+mesh_edges depends on case. EdgeEdge is [edgeid,edgeid], EdgeVertex is [edgeid,vertexid], and OnEdge is [edgeid,-1]</p>
+</section>
+      <h4><a class="xref" href="g3.MeshMeasurements.GenusResult.html">MeshMeasurements.GenusResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MultigridIndexer2.html">MultigridIndexer2</a></h4>
+      <section><p>map between &quot;outer&quot; (ie higher-res) grid coordinates and 
+&quot;blocks&quot; of those coordinates.</p>
+</section>
+      <h4><a class="xref" href="g3.MultigridIndexer3.html">MultigridIndexer3</a></h4>
+      <section><p>map between &quot;outer&quot; (ie higher-res) grid coordinates and 
+&quot;blocks&quot; of those coordinates.</p>
+</section>
+      <h4><a class="xref" href="g3.NewVertexInfo.html">NewVertexInfo</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.NTMesh3.EdgeSplitInfo.html">NTMesh3.EdgeSplitInfo</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.NTMesh3.PokeTriangleInfo.html">NTMesh3.PokeTriangleInfo</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.NURBSCurve2.CurveDerivatives.html">NURBSCurve2.CurveDerivatives</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.PackedSparseMatrix.nonzero.html">PackedSparseMatrix.nonzero</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.PlanarComplex.FindSolidsOptions.html">PlanarComplex.FindSolidsOptions</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Plane3d.html">Plane3d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Plane3f.html">Plane3f</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.QuadricError.html">QuadricError</a></h4>
+      <section><p>Stores quadratic function that evaluates distance to plane,
+in minimal 10-coefficient form, following <a href="http://mgarland.org/files/papers/qtheory.pdf">http://mgarland.org/files/papers/qtheory.pdf</a></p>
+<ul>
+<li>symmetric matrix A</li>
+<li>vector b</li>
+<li>constant c</li>
+</ul>
+</section>
+      <h4><a class="xref" href="g3.Quaterniond.html">Quaterniond</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Quaternionf.html">Quaternionf</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Ray3d.html">Ray3d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Ray3f.html">Ray3f</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Reducer.QEdge.html">Reducer.QEdge</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.ScaleGridIndexer2.html">ScaleGridIndexer2</a></h4>
+      <section><p>Map to/from grid coords</p>
+</section>
+      <h4><a class="xref" href="g3.ScaleGridIndexer3.html">ScaleGridIndexer3</a></h4>
+      <section><p>Map to/from grid coords</p>
+</section>
+      <h4><a class="xref" href="g3.SculptCurveDeformation.DeformInfo.html">SculptCurveDeformation.DeformInfo</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Segment2d.html">Segment2d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Segment2f.html">Segment2f</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Segment3d.html">Segment3d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Segment3f.html">Segment3f</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.SetGroupBehavior.html">SetGroupBehavior</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.ShiftGridIndexer2.html">ShiftGridIndexer2</a></h4>
+      <section><p>Map to/from grid coords, where grid is translated from origin</p>
+</section>
+      <h4><a class="xref" href="g3.ShiftGridIndexer3.html">ShiftGridIndexer3</a></h4>
+      <section><p>Map to/from grid coords, where grid is translated from origin</p>
+</section>
+      <h4><a class="xref" href="g3.SVGWriter.Style.html">SVGWriter.Style</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Triangle2d.html">Triangle2d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Triangle2f.html">Triangle2f</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Triangle3d.html">Triangle3d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Triangle3f.html">Triangle3f</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Vector2d.html">Vector2d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Vector2d.Information.html">Vector2d.Information</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Vector2dTuple2.html">Vector2dTuple2</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Vector2dTuple3.html">Vector2dTuple3</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Vector2dTuple4.html">Vector2dTuple4</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Vector2f.html">Vector2f</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Vector2i.html">Vector2i</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Vector2l.html">Vector2l</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Vector3d.html">Vector3d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Vector3dTuple2.html">Vector3dTuple2</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Vector3dTuple3.html">Vector3dTuple3</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Vector3f.html">Vector3f</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Vector3fTuple3.html">Vector3fTuple3</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Vector3i.html">Vector3i</a></h4>
+      <section><p>3D integer vector type. This is basically the same as Index3i but
+with .x.y.z member names. This makes code far more readable in many places.
+Unfortunately I can&apos;t see a way to do this w/o so much duplication...we could
+have .x/.y/.z accessors but that is much less efficient...</p>
+</section>
+      <h4><a class="xref" href="g3.Vector4d.html">Vector4d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Vector4f.html">Vector4f</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.VertexConstraint.html">VertexConstraint</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.WriteMesh.html">WriteMesh</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.WriteOptions.html">WriteOptions</a></h4>
+      <section></section>
+    <h3 id="interfaces">Interfaces
+  </h3>
+      <h4><a class="xref" href="g3.BoundedImplicitFunction3d.html">BoundedImplicitFunction3d</a></h4>
+      <section><p>Bounded implicit function has a bounding box within which
+the &quot;interesting&quot; part of the function is contained 
+(eg the surface)</p>
+</section>
+      <h4><a class="xref" href="g3.IArcLengthParam.html">IArcLengthParam</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IArcLengthParam2d.html">IArcLengthParam2d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IBinaryVoxelGrid.html">IBinaryVoxelGrid</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.ICancelSource.html">ICancelSource</a></h4>
+      <section><p>interface that provides a cancel function</p>
+</section>
+      <h4><a class="xref" href="g3.IDeformableMesh.html">IDeformableMesh</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IDuplicatable-1.html">IDuplicatable&lt;T&gt;</a></h4>
+      <section><p>Deep-copy cloning interface. Duplicate() <em>must</em> return
+a full deep copy of object, including all internal data structures.</p>
+</section>
+      <h4><a class="xref" href="g3.IFixedGrid3.html">IFixedGrid3</a></h4>
+      <section><p>generic 3D grid interface for grids of fixed dimensions</p>
+</section>
+      <h4><a class="xref" href="g3.IGrid3.html">IGrid3</a></h4>
+      <section><p>generic 3D grid interface (is this useful?)</p>
+</section>
+      <h4><a class="xref" href="g3.IGridElement3.html">IGridElement3</a></h4>
+      <section><p>this type can be used in a SparseGrid. </p>
+</section>
+      <h4><a class="xref" href="g3.IGridWorldIndexer2.html">IGridWorldIndexer2</a></h4>
+      <section><p>interface that maps between double real-space coords and integer grid goords</p>
+</section>
+      <h4><a class="xref" href="g3.IGridWorldIndexer3.html">IGridWorldIndexer3</a></h4>
+      <section><p>interface that maps between double real-space coords and integer grid goords</p>
+</section>
+      <h4><a class="xref" href="g3.IIndexMap.html">IIndexMap</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IIntersectionTarget.html">IIntersectionTarget</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IMatrix.html">IMatrix</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IMesh.html">IMesh</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IMeshBuilder.html">IMeshBuilder</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IMeshComponentManager.html">IMeshComponentManager</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IMeshReader.html">IMeshReader</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IMeshWriter.html">IMeshWriter</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.ImplicitField2d.html">ImplicitField2d</a></h4>
+      <section><p>Summary description for ImplicitField2D.</p>
+</section>
+      <h4><a class="xref" href="g3.ImplicitFunction3d.html">ImplicitFunction3d</a></h4>
+      <section><p>Minimalist implicit function interface</p>
+</section>
+      <h4><a class="xref" href="g3.ImplicitOperator2d.html">ImplicitOperator2d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IMultiCurve2d.html">IMultiCurve2d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IMultigridIndexer2.html">IMultigridIndexer2</a></h4>
+      <section><p>interface that maps between integer grid coords and &apos;blocks&apos; of those
+coordinates, ie for multigrid-like structures</p>
+</section>
+      <h4><a class="xref" href="g3.IMultigridIndexer3.html">IMultigridIndexer3</a></h4>
+      <section><p>interface that maps between integer grid coords and &apos;blocks&apos; of those
+coordinates, ie for multigrid-like structures</p>
+</section>
+      <h4><a class="xref" href="g3.IOrientedProjectionTarget.html">IOrientedProjectionTarget</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IParametricCurve2d.html">IParametricCurve2d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IParametricCurve3d.html">IParametricCurve3d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IPointSet.html">IPointSet</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IProjectionTarget.html">IProjectionTarget</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.ISampledCurve3d.html">ISampledCurve3d</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.ISpatial.html">ISpatial</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.ITransform2.html">ITransform2</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshFormatReader.html">MeshFormatReader</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Query2.html">Query2</a></h4>
+      <section></section>
+    <h3 id="enums">Enums
+  </h3>
+      <h4><a class="xref" href="g3.AxisAlignedBox2d.ScaleMode.html">AxisAlignedBox2d.ScaleMode</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.AxisAlignedBox2f.ScaleMode.html">AxisAlignedBox2f.ScaleMode</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.CachingMeshSDF.InsideModes.html">CachingMeshSDF.InsideModes</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.ContMinBox2.RCFlags.html">ContMinBox2.RCFlags</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DGraph.FailMode.html">DGraph.FailMode</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DMesh3Builder.AddTriangleFailBehaviors.html">DMesh3Builder.AddTriangleFailBehaviors</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DMeshAABBTree3.BuildStrategy.html">DMeshAABBTree3.BuildStrategy</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.DMeshAABBTree3.ClusterPolicy.html">DMeshAABBTree3.ClusterPolicy</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.EdgeRefineFlags.html">EdgeRefineFlags</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.FailMode.html">FailMode</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.GenericMaterial.KnownMaterialTypes.html">GenericMaterial.KnownMaterialTypes</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Hexagon2d.TopModes.html">Hexagon2d.TopModes</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.ImplicitFieldSampler3d.CombineModes.html">ImplicitFieldSampler3d.CombineModes</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IntersectionResult.html">IntersectionResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IntersectionType.html">IntersectionType</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.IOCode.html">IOCode</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MarchingCubes.RootfindingModes.html">MarchingCubes.RootfindingModes</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshBoundaryLoops.FailureBehaviors.html">MeshBoundaryLoops.FailureBehaviors</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshBoundaryLoops.SpanBehaviors.html">MeshBoundaryLoops.SpanBehaviors</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshComponents.html">MeshComponents</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshEditor.DuplicateTriBehavior.html">MeshEditor.DuplicateTriBehavior</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshHints.html">MeshHints</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshIsoCurves.RootfindingModes.html">MeshIsoCurves.RootfindingModes</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshIsoCurves.TriangleCase.html">MeshIsoCurves.TriangleCase</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshIterativeSmooth.SmoothTypes.html">MeshIterativeSmooth.SmoothTypes</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshLocalParam.UVModes.html">MeshLocalParam.UVModes</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshNormals.NormalsTypes.html">MeshNormals.NormalsTypes</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshResult.html">MeshResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshSignedDistanceGrid.ComputeModes.html">MeshSignedDistanceGrid.ComputeModes</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.MeshSignedDistanceGrid.InsideModes.html">MeshSignedDistanceGrid.InsideModes</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.PackedSparseMatrix.StorageModes.html">PackedSparseMatrix.StorageModes</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.PointAABBTree3.BuildStrategy.html">PointAABBTree3.BuildStrategy</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.QueryNumberType.html">QueryNumberType</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Reducer.ProcessResult.html">Reducer.ProcessResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Reducer.TargetModes.html">Reducer.TargetModes</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Reducer.TargetProjectionMode.html">Reducer.TargetProjectionMode</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.RegionRemesher.QuickRemeshFlags.html">RegionRemesher.QuickRemeshFlags</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Remesher.ProcessResult.html">Remesher.ProcessResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Remesher.SmoothTypes.html">Remesher.SmoothTypes</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Remesher.TargetProjectionMode.html">Remesher.TargetProjectionMode</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Remesher.VertexControl.html">Remesher.VertexControl</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.RoundRectGenerator.Corner.html">RoundRectGenerator.Corner</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.RoundRectGenerator.UVModes.html">RoundRectGenerator.UVModes</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.SetGroupBehavior.Modes.html">SetGroupBehavior.Modes</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Sphere3Generator_NormalizedCube.NormalizationTypes.html">Sphere3Generator_NormalizedCube.NormalizationTypes</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.STLReader.Strategy.html">STLReader.Strategy</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.SymmetricEigenSolver.SortType.html">SymmetricEigenSolver.SortType</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.TrivialRectGenerator.UVModes.html">TrivialRectGenerator.UVModes</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Units.Angular.html">Units.Angular</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.Units.Linear.html">Units.Linear</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.ValidationStatus.html">ValidationStatus</a></h4>
+      <section></section>
+    <h3 id="delegates">Delegates
+  </h3>
+      <h4><a class="xref" href="g3.DMeshAABBTree3.ClusterFunctionType.html">DMeshAABBTree3.ClusterFunctionType</a></h4>
+      <section></section>
+      <h4><a class="xref" href="g3.ParsingMessagesHandler.html">ParsingMessagesHandler</a></h4>
+      <section></section>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            ViRGIS VR GIS
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

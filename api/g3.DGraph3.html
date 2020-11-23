@@ -1,0 +1,1043 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DGraph3
+   | ViRGIS VR GIS </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DGraph3
+   | ViRGIS VR GIS ">
+    <meta name="generator" content="docfx 2.56.5.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    
+    <link rel="shortcut icon" href="https://www.virgis.org/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="https://www.virgis.org">
+                <img id="logo" class="img" src="https://www.virgis.org/images/virgis_light.png" alt="">
+              </a>    </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="g3.DGraph3">
+  
+  
+  <h1 id="g3_DGraph3" data-uid="g3.DGraph3" class="text-break">Class DGraph3
+  </h1>
+  <div class="markdown level0 summary"><p>Arbitrary-Topology 3D Graph. This is similar to DMesh3 but without faces. 
+Each vertex can be connected to an arbitrary number of edges.
+Each vertex can have a 3-float color, and edge edge can have an integer GroupID</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="g3.DGraph.html">DGraph</a></div>
+    <div class="level2"><span class="xref">DGraph3</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_InvalidID">DGraph.InvalidID</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_DuplicateEdgeID">DGraph.DuplicateEdgeID</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_InvalidEdgeV">DGraph.InvalidEdgeV</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_InvalidEdge3">DGraph.InvalidEdge3</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_vertices_refcount">DGraph.vertices_refcount</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_vertex_edges">DGraph.vertex_edges</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_edges_refcount">DGraph.edges_refcount</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_edges">DGraph.edges</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_timestamp">DGraph.timestamp</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_shape_timestamp">DGraph.shape_timestamp</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_max_group_id">DGraph.max_group_id</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_updateTimeStamp_System_Boolean_">DGraph.updateTimeStamp(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_Timestamp">DGraph.Timestamp</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_ShapeTimestamp">DGraph.ShapeTimestamp</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_VertexCount">DGraph.VertexCount</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_EdgeCount">DGraph.EdgeCount</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_MaxVertexID">DGraph.MaxVertexID</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_MaxEdgeID">DGraph.MaxEdgeID</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_MaxGroupID">DGraph.MaxGroupID</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_IsVertex_System_Int32_">DGraph.IsVertex(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_IsEdge_System_Int32_">DGraph.IsEdge(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_GetVtxEdges_System_Int32_">DGraph.GetVtxEdges(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_GetVtxEdgeCount_System_Int32_">DGraph.GetVtxEdgeCount(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_GetMaxVtxEdgeCount">DGraph.GetMaxVtxEdgeCount()</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_GetEdgeGroup_System_Int32_">DGraph.GetEdgeGroup(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_SetEdgeGroup_System_Int32_System_Int32_">DGraph.SetEdgeGroup(Int32, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_AllocateEdgeGroup">DGraph.AllocateEdgeGroup()</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_GetEdgeV_System_Int32_">DGraph.GetEdgeV(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_GetEdge_System_Int32_">DGraph.GetEdge(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_append_vertex_internal">DGraph.append_vertex_internal()</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_AppendEdge_System_Int32_System_Int32_System_Int32_">DGraph.AppendEdge(Int32, Int32, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_AppendEdge_g3_Index2i_System_Int32_">DGraph.AppendEdge(Index2i, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_add_edge_System_Int32_System_Int32_System_Int32_">DGraph.add_edge(Int32, Int32, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_VertexIndices">DGraph.VertexIndices()</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_EdgeIndices">DGraph.EdgeIndices()</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_Edges">DGraph.Edges()</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_VtxVerticesItr_System_Int32_">DGraph.VtxVerticesItr(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_VtxEdgesItr_System_Int32_">DGraph.VtxEdgesItr(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_FindEdge_System_Int32_System_Int32_">DGraph.FindEdge(Int32, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_RemoveEdge_System_Int32_System_Boolean_">DGraph.RemoveEdge(Int32, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_RemoveVertex_System_Int32_System_Boolean_">DGraph.RemoveVertex(Int32, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_SplitEdge_System_Int32_System_Int32_g3_DGraph_EdgeSplitInfo__">DGraph.SplitEdge(Int32, Int32, DGraph.EdgeSplitInfo)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_SplitEdge_System_Int32_g3_DGraph_EdgeSplitInfo__">DGraph.SplitEdge(Int32, DGraph.EdgeSplitInfo)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_CollapseEdge_System_Int32_System_Int32_g3_DGraph_EdgeCollapseInfo__">DGraph.CollapseEdge(Int32, Int32, DGraph.EdgeCollapseInfo)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_edge_has_v_System_Int32_System_Int32_">DGraph.edge_has_v(Int32, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_edge_other_v_System_Int32_System_Int32_">DGraph.edge_other_v(Int32, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_replace_edge_vertex_System_Int32_System_Int32_System_Int32_">DGraph.replace_edge_vertex(Int32, Int32, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_IsCompact">DGraph.IsCompact</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_IsCompactV">DGraph.IsCompactV</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_IsBoundaryVertex_System_Int32_">DGraph.IsBoundaryVertex(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_IsJunctionVertex_System_Int32_">DGraph.IsJunctionVertex(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_IsRegularVertex_System_Int32_">DGraph.IsRegularVertex(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_CheckValidity_g3_DGraph_FailMode_">DGraph.CheckValidity(DGraph.FailMode)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_debug_check_is_vertex_System_Int32_">DGraph.debug_check_is_vertex(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.DGraph.html#g3_DGraph_debug_check_is_edge_System_Int32_">DGraph.debug_check_is_edge(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="g3.html">g3</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="g3_DGraph3_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DGraph3 : DGraph</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="g3_DGraph3__ctor_" data-uid="g3.DGraph3.#ctor*"></a>
+  <h4 id="g3_DGraph3__ctor" data-uid="g3.DGraph3.#ctor">DGraph3()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DGraph3()</code></pre>
+  </div>
+  
+  
+  <a id="g3_DGraph3__ctor_" data-uid="g3.DGraph3.#ctor*"></a>
+  <h4 id="g3_DGraph3__ctor_g3_DGraph3_" data-uid="g3.DGraph3.#ctor(g3.DGraph3)">DGraph3(DGraph3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DGraph3(DGraph3 copy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.DGraph3.html">DGraph3</a></td>
+        <td><span class="parametername">copy</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="g3_DGraph3_InvalidVertex" data-uid="g3.DGraph3.InvalidVertex">InvalidVertex</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Vector3d InvalidVertex</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.Vector3d.html">Vector3d</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="g3_DGraph3_CachedBounds_" data-uid="g3.DGraph3.CachedBounds*"></a>
+  <h4 id="g3_DGraph3_CachedBounds" data-uid="g3.DGraph3.CachedBounds">CachedBounds</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AxisAlignedBox3d CachedBounds { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.AxisAlignedBox3d.html">AxisAlignedBox3d</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DGraph3_HasVertexColors_" data-uid="g3.DGraph3.HasVertexColors*"></a>
+  <h4 id="g3_DGraph3_HasVertexColors" data-uid="g3.DGraph3.HasVertexColors">HasVertexColors</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasVertexColors { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="g3_DGraph3_append_new_split_vertex_" data-uid="g3.DGraph3.append_new_split_vertex*"></a>
+  <h4 id="g3_DGraph3_append_new_split_vertex_System_Int32_System_Int32_" data-uid="g3.DGraph3.append_new_split_vertex(System.Int32,System.Int32)">append_new_split_vertex(Int32, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override int append_new_split_vertex(int a, int b)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">a</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">b</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="g3.DGraph.html#g3_DGraph_append_new_split_vertex_System_Int32_System_Int32_">DGraph.append_new_split_vertex(Int32, Int32)</a></div>
+  
+  
+  <a id="g3_DGraph3_AppendGraph_" data-uid="g3.DGraph3.AppendGraph*"></a>
+  <h4 id="g3_DGraph3_AppendGraph_g3_DGraph3_System_Int32_" data-uid="g3.DGraph3.AppendGraph(g3.DGraph3,System.Int32)">AppendGraph(DGraph3, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AppendGraph(DGraph3 graph, int gid = -1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.DGraph3.html">DGraph3</a></td>
+        <td><span class="parametername">graph</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">gid</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DGraph3_AppendVertex_" data-uid="g3.DGraph3.AppendVertex*"></a>
+  <h4 id="g3_DGraph3_AppendVertex_g3_Vector3d_" data-uid="g3.DGraph3.AppendVertex(g3.Vector3d)">AppendVertex(Vector3d)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int AppendVertex(Vector3d v)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">v</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DGraph3_AppendVertex_" data-uid="g3.DGraph3.AppendVertex*"></a>
+  <h4 id="g3_DGraph3_AppendVertex_g3_Vector3d_g3_Vector3f_" data-uid="g3.DGraph3.AppendVertex(g3.Vector3d,g3.Vector3f)">AppendVertex(Vector3d, Vector3f)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int AppendVertex(Vector3d v, Vector3f c)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">v</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.Vector3f.html">Vector3f</a></td>
+        <td><span class="parametername">c</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DGraph3_DiscardVertexColors_" data-uid="g3.DGraph3.DiscardVertexColors*"></a>
+  <h4 id="g3_DGraph3_DiscardVertexColors" data-uid="g3.DGraph3.DiscardVertexColors">DiscardVertexColors()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DiscardVertexColors()</code></pre>
+  </div>
+  
+  
+  <a id="g3_DGraph3_EnableVertexColors_" data-uid="g3.DGraph3.EnableVertexColors*"></a>
+  <h4 id="g3_DGraph3_EnableVertexColors_g3_Vector3f_" data-uid="g3.DGraph3.EnableVertexColors(g3.Vector3f)">EnableVertexColors(Vector3f)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EnableVertexColors(Vector3f initial_color)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.Vector3f.html">Vector3f</a></td>
+        <td><span class="parametername">initial_color</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DGraph3_GetBounds_" data-uid="g3.DGraph3.GetBounds*"></a>
+  <h4 id="g3_DGraph3_GetBounds" data-uid="g3.DGraph3.GetBounds">GetBounds()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AxisAlignedBox3d GetBounds()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.AxisAlignedBox3d.html">AxisAlignedBox3d</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DGraph3_GetEdgeCenter_" data-uid="g3.DGraph3.GetEdgeCenter*"></a>
+  <h4 id="g3_DGraph3_GetEdgeCenter_System_Int32_" data-uid="g3.DGraph3.GetEdgeCenter(System.Int32)">GetEdgeCenter(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3d GetEdgeCenter(int eID)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">eID</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.Vector3d.html">Vector3d</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DGraph3_GetEdgeSegment_" data-uid="g3.DGraph3.GetEdgeSegment*"></a>
+  <h4 id="g3_DGraph3_GetEdgeSegment_System_Int32_" data-uid="g3.DGraph3.GetEdgeSegment(System.Int32)">GetEdgeSegment(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Segment3d GetEdgeSegment(int eID)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">eID</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.Segment3d.html">Segment3d</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DGraph3_GetEdgeV_" data-uid="g3.DGraph3.GetEdgeV*"></a>
+  <h4 id="g3_DGraph3_GetEdgeV_System_Int32_g3_Vector3d__g3_Vector3d__" data-uid="g3.DGraph3.GetEdgeV(System.Int32,g3.Vector3d@,g3.Vector3d@)">GetEdgeV(Int32, ref Vector3d, ref Vector3d)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetEdgeV(int eID, ref Vector3d a, ref Vector3d b)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">eID</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">a</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">b</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DGraph3_GetVertex_" data-uid="g3.DGraph3.GetVertex*"></a>
+  <h4 id="g3_DGraph3_GetVertex_System_Int32_" data-uid="g3.DGraph3.GetVertex(System.Int32)">GetVertex(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3d GetVertex(int vID)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">vID</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.Vector3d.html">Vector3d</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DGraph3_GetVertexColor_" data-uid="g3.DGraph3.GetVertexColor*"></a>
+  <h4 id="g3_DGraph3_GetVertexColor_System_Int32_" data-uid="g3.DGraph3.GetVertexColor(System.Int32)">GetVertexColor(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3f GetVertexColor(int vID)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">vID</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.Vector3f.html">Vector3f</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DGraph3_Segments_" data-uid="g3.DGraph3.Segments*"></a>
+  <h4 id="g3_DGraph3_Segments" data-uid="g3.DGraph3.Segments">Segments()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;Segment3d&gt; Segments()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="g3.Segment3d.html">Segment3d</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DGraph3_SetVertex_" data-uid="g3.DGraph3.SetVertex*"></a>
+  <h4 id="g3_DGraph3_SetVertex_System_Int32_g3_Vector3d_" data-uid="g3.DGraph3.SetVertex(System.Int32,g3.Vector3d)">SetVertex(Int32, Vector3d)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetVertex(int vID, Vector3d vNewPos)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">vID</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">vNewPos</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DGraph3_SetVertexColor_" data-uid="g3.DGraph3.SetVertexColor*"></a>
+  <h4 id="g3_DGraph3_SetVertexColor_System_Int32_g3_Vector3f_" data-uid="g3.DGraph3.SetVertexColor(System.Int32,g3.Vector3f)">SetVertexColor(Int32, Vector3f)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetVertexColor(int vID, Vector3f vNewColor)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">vID</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.Vector3f.html">Vector3f</a></td>
+        <td><span class="parametername">vNewColor</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_DGraph3_subclass_validity_checks_" data-uid="g3.DGraph3.subclass_validity_checks*"></a>
+  <h4 id="g3_DGraph3_subclass_validity_checks_System_Action_System_Boolean__" data-uid="g3.DGraph3.subclass_validity_checks(System.Action{System.Boolean})">subclass_validity_checks(Action&lt;Boolean&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void subclass_validity_checks(Action&lt;bool&gt; CheckOrFailF)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">CheckOrFailF</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="g3.DGraph.html#g3_DGraph_subclass_validity_checks_System_Action_System_Boolean__">DGraph.subclass_validity_checks(Action&lt;Boolean&gt;)</a></div>
+  
+  
+  <a id="g3_DGraph3_Vertices_" data-uid="g3.DGraph3.Vertices*"></a>
+  <h4 id="g3_DGraph3_Vertices" data-uid="g3.DGraph3.Vertices">Vertices()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;Vector3d&gt; Vertices()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="g3.Vector3d.html">Vector3d</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            ViRGIS VR GIS
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,459 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PointSplatsGenerator
+   | ViRGIS VR GIS </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PointSplatsGenerator
+   | ViRGIS VR GIS ">
+    <meta name="generator" content="docfx 2.56.5.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    
+    <link rel="shortcut icon" href="https://www.virgis.org/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="https://www.virgis.org">
+                <img id="logo" class="img" src="https://www.virgis.org/images/virgis_light.png" alt="">
+              </a>    </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="g3.PointSplatsGenerator">
+  
+  
+  <h1 id="g3_PointSplatsGenerator" data-uid="g3.PointSplatsGenerator" class="text-break">Class PointSplatsGenerator
+  </h1>
+  <div class="markdown level0 summary"><p>Create a mesh that contains a planar element for each point and normal
+(currently only triangles)</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="g3.MeshGenerator.html">MeshGenerator</a></div>
+    <div class="level2"><span class="xref">PointSplatsGenerator</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="g3.MeshGenerator.html#g3_MeshGenerator_vertices">MeshGenerator.vertices</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshGenerator.html#g3_MeshGenerator_uv">MeshGenerator.uv</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshGenerator.html#g3_MeshGenerator_normals">MeshGenerator.normals</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshGenerator.html#g3_MeshGenerator_triangles">MeshGenerator.triangles</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshGenerator.html#g3_MeshGenerator_groups">MeshGenerator.groups</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshGenerator.html#g3_MeshGenerator_WantUVs">MeshGenerator.WantUVs</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshGenerator.html#g3_MeshGenerator_WantNormals">MeshGenerator.WantNormals</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshGenerator.html#g3_MeshGenerator_WantGroups">MeshGenerator.WantGroups</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshGenerator.html#g3_MeshGenerator_Clockwise">MeshGenerator.Clockwise</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshGenerator.html#g3_MeshGenerator_MakeMesh_g3_SimpleMesh_">MeshGenerator.MakeMesh(SimpleMesh)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshGenerator.html#g3_MeshGenerator_MakeSimpleMesh">MeshGenerator.MakeSimpleMesh()</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshGenerator.html#g3_MeshGenerator_MakeMesh_g3_DMesh3_">MeshGenerator.MakeMesh(DMesh3)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshGenerator.html#g3_MeshGenerator_MakeDMesh">MeshGenerator.MakeDMesh()</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshGenerator.html#g3_MeshGenerator_MakeMesh_g3_NTMesh3_">MeshGenerator.MakeMesh(NTMesh3)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshGenerator.html#g3_MeshGenerator_MakeNTMesh">MeshGenerator.MakeNTMesh()</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshGenerator.html#g3_MeshGenerator_duplicate_vertex_span_System_Int32_System_Int32_">MeshGenerator.duplicate_vertex_span(Int32, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshGenerator.html#g3_MeshGenerator_append_disc_System_Int32_System_Int32_System_Int32_System_Boolean_System_Boolean_System_Int32__System_Int32_">MeshGenerator.append_disc(Int32, Int32, Int32, Boolean, Boolean, Int32, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshGenerator.html#g3_MeshGenerator_append_rectangle_System_Int32_System_Int32_System_Int32_System_Int32_System_Boolean_System_Int32__System_Int32_">MeshGenerator.append_rectangle(Int32, Int32, Int32, Int32, Boolean, Int32, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshGenerator.html#g3_MeshGenerator_append_2d_disc_segment_System_Int32_System_Int32_System_Int32_System_Int32_System_Boolean_System_Int32__System_Int32__System_Int32_System_Double_">MeshGenerator.append_2d_disc_segment(Int32, Int32, Int32, Int32, Boolean, Int32, Int32, Int32, Double)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshGenerator.html#g3_MeshGenerator_estimate_normal_System_Int32_System_Int32_System_Int32_">MeshGenerator.estimate_normal(Int32, Int32, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshGenerator.html#g3_MeshGenerator_bilerp_g3_Vector3d__g3_Vector3d__g3_Vector3d__g3_Vector3d__System_Double_System_Double_">MeshGenerator.bilerp(Vector3d, Vector3d, Vector3d, Vector3d, Double, Double)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshGenerator.html#g3_MeshGenerator_bilerp_g3_Vector2d__g3_Vector2d__g3_Vector2d__g3_Vector2d__System_Double_System_Double_">MeshGenerator.bilerp(Vector2d, Vector2d, Vector2d, Vector2d, Double, Double)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshGenerator.html#g3_MeshGenerator_bilerp_g3_Vector2f__g3_Vector2f__g3_Vector2f__g3_Vector2f__System_Single_System_Single_">MeshGenerator.bilerp(Vector2f, Vector2f, Vector2f, Vector2f, Single, Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshGenerator.html#g3_MeshGenerator_bilerp_g3_Vector3i__g3_Vector3i__g3_Vector3i__g3_Vector3i__System_Double_System_Double_">MeshGenerator.bilerp(Vector3i, Vector3i, Vector3i, Vector3i, Double, Double)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshGenerator.html#g3_MeshGenerator_lerp_g3_Vector3i__g3_Vector3i__System_Double_">MeshGenerator.lerp(Vector3i, Vector3i, Double)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="g3.html">g3</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="g3_PointSplatsGenerator_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PointSplatsGenerator : MeshGenerator</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="g3_PointSplatsGenerator__ctor_" data-uid="g3.PointSplatsGenerator.#ctor*"></a>
+  <h4 id="g3_PointSplatsGenerator__ctor" data-uid="g3.PointSplatsGenerator.#ctor">PointSplatsGenerator()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PointSplatsGenerator()</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="g3_PointSplatsGenerator_NormalF" data-uid="g3.PointSplatsGenerator.NormalF">NormalF</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Func&lt;int, Vector3d&gt; NormalF</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>, <a class="xref" href="g3.Vector3d.html">Vector3d</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_PointSplatsGenerator_PointF" data-uid="g3.PointSplatsGenerator.PointF">PointF</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Func&lt;int, Vector3d&gt; PointF</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>, <a class="xref" href="g3.Vector3d.html">Vector3d</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_PointSplatsGenerator_PointIndices" data-uid="g3.PointSplatsGenerator.PointIndices">PointIndices</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;int&gt; PointIndices</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_PointSplatsGenerator_PointIndicesCount" data-uid="g3.PointSplatsGenerator.PointIndicesCount">PointIndicesCount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int PointIndicesCount</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_PointSplatsGenerator_Radius" data-uid="g3.PointSplatsGenerator.Radius">Radius</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Radius</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="g3_PointSplatsGenerator_Generate_" data-uid="g3.PointSplatsGenerator.Generate*"></a>
+  <h4 id="g3_PointSplatsGenerator_Generate" data-uid="g3.PointSplatsGenerator.Generate">Generate()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override MeshGenerator Generate()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.MeshGenerator.html">MeshGenerator</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="g3.MeshGenerator.html#g3_MeshGenerator_Generate">MeshGenerator.Generate()</a></div>
+  
+  
+  <a id="g3_PointSplatsGenerator_Generate_" data-uid="g3.PointSplatsGenerator.Generate*"></a>
+  <h4 id="g3_PointSplatsGenerator_Generate_System_Collections_Generic_IList_System_Int32__System_Func_System_Int32_g3_Vector3d__System_Func_System_Int32_g3_Vector3d__System_Double_" data-uid="g3.PointSplatsGenerator.Generate(System.Collections.Generic.IList{System.Int32},System.Func{System.Int32,g3.Vector3d},System.Func{System.Int32,g3.Vector3d},System.Double)">Generate(IList&lt;Int32&gt;, Func&lt;Int32, Vector3d&gt;, Func&lt;Int32, Vector3d&gt;, Double)</h4>
+  <div class="markdown level1 summary"><p>shortcut utility</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DMesh3 Generate(IList&lt;int&gt; indices, Func&lt;int, Vector3d&gt; PointF, Func&lt;int, Vector3d&gt; NormalF, double radius)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">indices</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>, <a class="xref" href="g3.Vector3d.html">Vector3d</a>&gt;</td>
+        <td><span class="parametername">PointF</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>, <a class="xref" href="g3.Vector3d.html">Vector3d</a>&gt;</td>
+        <td><span class="parametername">NormalF</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">radius</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.DMesh3.html">DMesh3</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            ViRGIS VR GIS
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

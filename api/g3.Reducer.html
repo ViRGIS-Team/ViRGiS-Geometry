@@ -1,0 +1,1386 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Reducer
+   | ViRGIS VR GIS </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Reducer
+   | ViRGIS VR GIS ">
+    <meta name="generator" content="docfx 2.56.5.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    
+    <link rel="shortcut icon" href="https://www.virgis.org/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="https://www.virgis.org">
+                <img id="logo" class="img" src="https://www.virgis.org/images/virgis_light.png" alt="">
+              </a>    </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="g3.Reducer">
+  
+  
+  <h1 id="g3_Reducer" data-uid="g3.Reducer" class="text-break">Class Reducer
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="g3.MeshRefinerBase.html">MeshRefinerBase</a></div>
+    <div class="level2"><span class="xref">Reducer</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="g3.MeshRefinerBase.html#g3_MeshRefinerBase_mesh">MeshRefinerBase.mesh</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshRefinerBase.html#g3_MeshRefinerBase_constraints">MeshRefinerBase.constraints</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshRefinerBase.html#g3_MeshRefinerBase_AllowCollapseFixedVertsWithSameSetID">MeshRefinerBase.AllowCollapseFixedVertsWithSameSetID</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshRefinerBase.html#g3_MeshRefinerBase_EdgeFlipTolerance">MeshRefinerBase.EdgeFlipTolerance</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshRefinerBase.html#g3_MeshRefinerBase_edge_flip_tol">MeshRefinerBase.edge_flip_tol</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshRefinerBase.html#g3_MeshRefinerBase_Mesh">MeshRefinerBase.Mesh</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshRefinerBase.html#g3_MeshRefinerBase_Constraints">MeshRefinerBase.Constraints</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshRefinerBase.html#g3_MeshRefinerBase_SetExternalConstraints_g3_MeshConstraints_">MeshRefinerBase.SetExternalConstraints(MeshConstraints)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshRefinerBase.html#g3_MeshRefinerBase_Progress">MeshRefinerBase.Progress</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshRefinerBase.html#g3_MeshRefinerBase_Cancelled">MeshRefinerBase.Cancelled()</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshRefinerBase.html#g3_MeshRefinerBase_edge_flip_metric_g3_Vector3d__g3_Vector3d__">MeshRefinerBase.edge_flip_metric(Vector3d, Vector3d)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshRefinerBase.html#g3_MeshRefinerBase_collapse_creates_flip_or_invalid_System_Int32_System_Int32_g3_Vector3d__System_Int32_System_Int32_">MeshRefinerBase.collapse_creates_flip_or_invalid(Int32, Int32, Vector3d, Int32, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshRefinerBase.html#g3_MeshRefinerBase_flip_inverts_normals_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_">MeshRefinerBase.flip_inverts_normals(Int32, Int32, Int32, Int32, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshRefinerBase.html#g3_MeshRefinerBase_can_collapse_constraints_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32__">MeshRefinerBase.can_collapse_constraints(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshRefinerBase.html#g3_MeshRefinerBase_can_collapse_vtx_System_Int32_System_Int32_System_Int32_System_Int32__">MeshRefinerBase.can_collapse_vtx(Int32, Int32, Int32, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshRefinerBase.html#g3_MeshRefinerBase_vertex_is_fixed_System_Int32_">MeshRefinerBase.vertex_is_fixed(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshRefinerBase.html#g3_MeshRefinerBase_vertex_is_constrained_System_Int32_">MeshRefinerBase.vertex_is_constrained(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshRefinerBase.html#g3_MeshRefinerBase_get_vertex_constraint_System_Int32_">MeshRefinerBase.get_vertex_constraint(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="g3.MeshRefinerBase.html#g3_MeshRefinerBase_get_vertex_constraint_System_Int32_g3_VertexConstraint__">MeshRefinerBase.get_vertex_constraint(Int32, VertexConstraint)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="g3.html">g3</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="g3_Reducer_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Reducer : MeshRefinerBase</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="g3_Reducer__ctor_" data-uid="g3.Reducer.#ctor*"></a>
+  <h4 id="g3_Reducer__ctor" data-uid="g3.Reducer.#ctor">Reducer()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Reducer()</code></pre>
+  </div>
+  
+  
+  <a id="g3_Reducer__ctor_" data-uid="g3.Reducer.#ctor*"></a>
+  <h4 id="g3_Reducer__ctor_g3_DMesh3_" data-uid="g3.Reducer.#ctor(g3.DMesh3)">Reducer(DMesh3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Reducer(DMesh3 m)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.DMesh3.html">DMesh3</a></td>
+        <td><span class="parametername">m</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="g3_Reducer_DebugEdges" data-uid="g3.Reducer.DebugEdges">DebugEdges</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;int&gt; DebugEdges</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_Reducer_EdgeQuadrics" data-uid="g3.Reducer.EdgeQuadrics">EdgeQuadrics</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Reducer.QEdge[] EdgeQuadrics</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.Reducer.QEdge.html">Reducer.QEdge</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_Reducer_EdgeQueue" data-uid="g3.Reducer.EdgeQueue">EdgeQueue</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IndexPriorityQueue EdgeQueue</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.IndexPriorityQueue.html">IndexPriorityQueue</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_Reducer_ENABLE_DEBUG_CHECKS" data-uid="g3.Reducer.ENABLE_DEBUG_CHECKS">ENABLE_DEBUG_CHECKS</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ENABLE_DEBUG_CHECKS</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_Reducer_ENABLE_PROFILING" data-uid="g3.Reducer.ENABLE_PROFILING">ENABLE_PROFILING</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ENABLE_PROFILING</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_Reducer_HaveBoundary" data-uid="g3.Reducer.HaveBoundary">HaveBoundary</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool HaveBoundary</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_Reducer_IsBoundaryVtxCache" data-uid="g3.Reducer.IsBoundaryVtxCache">IsBoundaryVtxCache</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool[] IsBoundaryVtxCache</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_Reducer_MinEdgeLength" data-uid="g3.Reducer.MinEdgeLength">MinEdgeLength</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected double MinEdgeLength</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_Reducer_MinimizeQuadricPositionError" data-uid="g3.Reducer.MinimizeQuadricPositionError">MinimizeQuadricPositionError</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool MinimizeQuadricPositionError</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_Reducer_PreserveBoundaryShape" data-uid="g3.Reducer.PreserveBoundaryShape">PreserveBoundaryShape</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool PreserveBoundaryShape</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_Reducer_ProjectionMode" data-uid="g3.Reducer.ProjectionMode">ProjectionMode</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Reducer.TargetProjectionMode ProjectionMode</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.Reducer.TargetProjectionMode.html">Reducer.TargetProjectionMode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_Reducer_ReduceMode" data-uid="g3.Reducer.ReduceMode">ReduceMode</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Reducer.TargetModes ReduceMode</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.Reducer.TargetModes.html">Reducer.TargetModes</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_Reducer_target" data-uid="g3.Reducer.target">target</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IProjectionTarget target</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.IProjectionTarget.html">IProjectionTarget</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_Reducer_TargetCount" data-uid="g3.Reducer.TargetCount">TargetCount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int TargetCount</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="g3_Reducer_vertQuadrics" data-uid="g3.Reducer.vertQuadrics">vertQuadrics</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected QuadricError[] vertQuadrics</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.QuadricError.html">QuadricError</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="g3_Reducer_begin_collapse_" data-uid="g3.Reducer.begin_collapse*"></a>
+  <h4 id="g3_Reducer_begin_collapse" data-uid="g3.Reducer.begin_collapse">begin_collapse()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void begin_collapse()</code></pre>
+  </div>
+  
+  
+  <a id="g3_Reducer_begin_ops_" data-uid="g3.Reducer.begin_ops*"></a>
+  <h4 id="g3_Reducer_begin_ops" data-uid="g3.Reducer.begin_ops">begin_ops()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void begin_ops()</code></pre>
+  </div>
+  
+  
+  <a id="g3_Reducer_begin_pass_" data-uid="g3.Reducer.begin_pass*"></a>
+  <h4 id="g3_Reducer_begin_pass" data-uid="g3.Reducer.begin_pass">begin_pass()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void begin_pass()</code></pre>
+  </div>
+  
+  
+  <a id="g3_Reducer_begin_project_" data-uid="g3.Reducer.begin_project*"></a>
+  <h4 id="g3_Reducer_begin_project" data-uid="g3.Reducer.begin_project">begin_project()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void begin_project()</code></pre>
+  </div>
+  
+  
+  <a id="g3_Reducer_begin_setup_" data-uid="g3.Reducer.begin_setup*"></a>
+  <h4 id="g3_Reducer_begin_setup" data-uid="g3.Reducer.begin_setup">begin_setup()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void begin_setup()</code></pre>
+  </div>
+  
+  
+  <a id="g3_Reducer_CollapseEdge_" data-uid="g3.Reducer.CollapseEdge*"></a>
+  <h4 id="g3_Reducer_CollapseEdge_System_Int32_g3_Vector3d_System_Int32__" data-uid="g3.Reducer.CollapseEdge(System.Int32,g3.Vector3d,System.Int32@)">CollapseEdge(Int32, Vector3d, out Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual Reducer.ProcessResult CollapseEdge(int edgeID, Vector3d vNewPos, out int collapseToV)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">edgeID</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">vNewPos</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">collapseToV</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.Reducer.ProcessResult.html">Reducer.ProcessResult</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_Reducer_DebugCheckVertexConstraints_" data-uid="g3.Reducer.DebugCheckVertexConstraints*"></a>
+  <h4 id="g3_Reducer_DebugCheckVertexConstraints" data-uid="g3.Reducer.DebugCheckVertexConstraints">DebugCheckVertexConstraints()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void DebugCheckVertexConstraints()</code></pre>
+  </div>
+  
+  
+  <a id="g3_Reducer_DoDebugChecks_" data-uid="g3.Reducer.DoDebugChecks*"></a>
+  <h4 id="g3_Reducer_DoDebugChecks" data-uid="g3.Reducer.DoDebugChecks">DoDebugChecks()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void DoDebugChecks()</code></pre>
+  </div>
+  
+  
+  <a id="g3_Reducer_DoReduce_" data-uid="g3.Reducer.DoReduce*"></a>
+  <h4 id="g3_Reducer_DoReduce" data-uid="g3.Reducer.DoReduce">DoReduce()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void DoReduce()</code></pre>
+  </div>
+  
+  
+  <a id="g3_Reducer_end_collapse_" data-uid="g3.Reducer.end_collapse*"></a>
+  <h4 id="g3_Reducer_end_collapse" data-uid="g3.Reducer.end_collapse">end_collapse()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void end_collapse()</code></pre>
+  </div>
+  
+  
+  <a id="g3_Reducer_end_ops_" data-uid="g3.Reducer.end_ops*"></a>
+  <h4 id="g3_Reducer_end_ops" data-uid="g3.Reducer.end_ops">end_ops()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void end_ops()</code></pre>
+  </div>
+  
+  
+  <a id="g3_Reducer_end_pass_" data-uid="g3.Reducer.end_pass*"></a>
+  <h4 id="g3_Reducer_end_pass" data-uid="g3.Reducer.end_pass">end_pass()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void end_pass()</code></pre>
+  </div>
+  
+  
+  <a id="g3_Reducer_end_project_" data-uid="g3.Reducer.end_project*"></a>
+  <h4 id="g3_Reducer_end_project" data-uid="g3.Reducer.end_project">end_project()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void end_project()</code></pre>
+  </div>
+  
+  
+  <a id="g3_Reducer_end_setup_" data-uid="g3.Reducer.end_setup*"></a>
+  <h4 id="g3_Reducer_end_setup" data-uid="g3.Reducer.end_setup">end_setup()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void end_setup()</code></pre>
+  </div>
+  
+  
+  <a id="g3_Reducer_FastCollapsePass_" data-uid="g3.Reducer.FastCollapsePass*"></a>
+  <h4 id="g3_Reducer_FastCollapsePass_System_Double_System_Int32_System_Boolean_" data-uid="g3.Reducer.FastCollapsePass(System.Double,System.Int32,System.Boolean)">FastCollapsePass(Double, Int32, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void FastCollapsePass(double fMinEdgeLength, int nRounds = 1, bool MeshIsClosedHint = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">fMinEdgeLength</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">nRounds</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">MeshIsClosedHint</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_Reducer_FullProjectionPass_" data-uid="g3.Reducer.FullProjectionPass*"></a>
+  <h4 id="g3_Reducer_FullProjectionPass" data-uid="g3.Reducer.FullProjectionPass">FullProjectionPass()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void FullProjectionPass()</code></pre>
+  </div>
+  
+  
+  <a id="g3_Reducer_get_projected_collapse_position_" data-uid="g3.Reducer.get_projected_collapse_position*"></a>
+  <h4 id="g3_Reducer_get_projected_collapse_position_System_Int32_g3_Vector3d_" data-uid="g3.Reducer.get_projected_collapse_position(System.Int32,g3.Vector3d)">get_projected_collapse_position(Int32, Vector3d)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Vector3d get_projected_collapse_position(int vid, Vector3d vNewPos)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">vid</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">vNewPos</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.Vector3d.html">Vector3d</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_Reducer_InitializeQueue_" data-uid="g3.Reducer.InitializeQueue*"></a>
+  <h4 id="g3_Reducer_InitializeQueue" data-uid="g3.Reducer.InitializeQueue">InitializeQueue()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void InitializeQueue()</code></pre>
+  </div>
+  
+  
+  <a id="g3_Reducer_InitializeVertexQuadrics_" data-uid="g3.Reducer.InitializeVertexQuadrics*"></a>
+  <h4 id="g3_Reducer_InitializeVertexQuadrics" data-uid="g3.Reducer.InitializeVertexQuadrics">InitializeVertexQuadrics()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void InitializeVertexQuadrics()</code></pre>
+  </div>
+  
+  
+  <a id="g3_Reducer_IsBoundaryV_" data-uid="g3.Reducer.IsBoundaryV*"></a>
+  <h4 id="g3_Reducer_IsBoundaryV_System_Int32_" data-uid="g3.Reducer.IsBoundaryV(System.Int32)">IsBoundaryV(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool IsBoundaryV(int vid)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">vid</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_Reducer_next_edge_" data-uid="g3.Reducer.next_edge*"></a>
+  <h4 id="g3_Reducer_next_edge_System_Int32_System_Boolean__" data-uid="g3.Reducer.next_edge(System.Int32,System.Boolean@)">next_edge(Int32, out Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual int next_edge(int cur_eid, out bool bDone)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">cur_eid</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">bDone</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_Reducer_OnEdgeCollapse_" data-uid="g3.Reducer.OnEdgeCollapse*"></a>
+  <h4 id="g3_Reducer_OnEdgeCollapse_System_Int32_System_Int32_System_Int32_g3_DMesh3_EdgeCollapseInfo_" data-uid="g3.Reducer.OnEdgeCollapse(System.Int32,System.Int32,System.Int32,g3.DMesh3.EdgeCollapseInfo)">OnEdgeCollapse(Int32, Int32, Int32, DMesh3.EdgeCollapseInfo)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnEdgeCollapse(int edgeID, int va, int vb, DMesh3.EdgeCollapseInfo collapseInfo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">edgeID</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">va</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">vb</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.DMesh3.EdgeCollapseInfo.html">DMesh3.EdgeCollapseInfo</a></td>
+        <td><span class="parametername">collapseInfo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_Reducer_OptimalPoint_" data-uid="g3.Reducer.OptimalPoint*"></a>
+  <h4 id="g3_Reducer_OptimalPoint_System_Int32_g3_QuadricError__System_Int32_System_Int32_" data-uid="g3.Reducer.OptimalPoint(System.Int32,g3.QuadricError@,System.Int32,System.Int32)">OptimalPoint(Int32, ref QuadricError, Int32, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Vector3d OptimalPoint(int eid, ref QuadricError q, int ea, int eb)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">eid</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.QuadricError.html">QuadricError</a></td>
+        <td><span class="parametername">q</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">ea</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">eb</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.Vector3d.html">Vector3d</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_Reducer_Precompute_" data-uid="g3.Reducer.Precompute*"></a>
+  <h4 id="g3_Reducer_Precompute_System_Boolean_" data-uid="g3.Reducer.Precompute(System.Boolean)">Precompute(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Precompute(bool bMeshIsClosed = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">bMeshIsClosed</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_Reducer_project_vertex_" data-uid="g3.Reducer.project_vertex*"></a>
+  <h4 id="g3_Reducer_project_vertex_System_Int32_g3_IProjectionTarget_" data-uid="g3.Reducer.project_vertex(System.Int32,g3.IProjectionTarget)">project_vertex(Int32, IProjectionTarget)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void project_vertex(int vID, IProjectionTarget targetIn)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">vID</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.IProjectionTarget.html">IProjectionTarget</a></td>
+        <td><span class="parametername">targetIn</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_Reducer_project_vertices_" data-uid="g3.Reducer.project_vertices*"></a>
+  <h4 id="g3_Reducer_project_vertices" data-uid="g3.Reducer.project_vertices">project_vertices()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IEnumerable&lt;int&gt; project_vertices()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_Reducer_ReduceToEdgeLength_" data-uid="g3.Reducer.ReduceToEdgeLength*"></a>
+  <h4 id="g3_Reducer_ReduceToEdgeLength_System_Double_" data-uid="g3.Reducer.ReduceToEdgeLength(System.Double)">ReduceToEdgeLength(Double)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ReduceToEdgeLength(double minEdgeLen)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">minEdgeLen</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_Reducer_ReduceToTriangleCount_" data-uid="g3.Reducer.ReduceToTriangleCount*"></a>
+  <h4 id="g3_Reducer_ReduceToTriangleCount_System_Int32_" data-uid="g3.Reducer.ReduceToTriangleCount(System.Int32)">ReduceToTriangleCount(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ReduceToTriangleCount(int nCount)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">nCount</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_Reducer_ReduceToVertexCount_" data-uid="g3.Reducer.ReduceToVertexCount*"></a>
+  <h4 id="g3_Reducer_ReduceToVertexCount_System_Int32_" data-uid="g3.Reducer.ReduceToVertexCount(System.Int32)">ReduceToVertexCount(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ReduceToVertexCount(int nCount)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">nCount</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_Reducer_Reproject_" data-uid="g3.Reducer.Reproject*"></a>
+  <h4 id="g3_Reducer_Reproject" data-uid="g3.Reducer.Reproject">Reproject()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Reproject()</code></pre>
+  </div>
+  
+  
+  <a id="g3_Reducer_RuntimeDebugCheck_" data-uid="g3.Reducer.RuntimeDebugCheck*"></a>
+  <h4 id="g3_Reducer_RuntimeDebugCheck_System_Int32_" data-uid="g3.Reducer.RuntimeDebugCheck(System.Int32)">RuntimeDebugCheck(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void RuntimeDebugCheck(int eid)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">eid</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_Reducer_SetProjectionTarget_" data-uid="g3.Reducer.SetProjectionTarget*"></a>
+  <h4 id="g3_Reducer_SetProjectionTarget_g3_IProjectionTarget_" data-uid="g3.Reducer.SetProjectionTarget(g3.IProjectionTarget)">SetProjectionTarget(IProjectionTarget)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetProjectionTarget(IProjectionTarget target)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.IProjectionTarget.html">IProjectionTarget</a></td>
+        <td><span class="parametername">target</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_Reducer_start_edges_" data-uid="g3.Reducer.start_edges*"></a>
+  <h4 id="g3_Reducer_start_edges" data-uid="g3.Reducer.start_edges">start_edges()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual int start_edges()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_Reducer_UpdateNeighbours_" data-uid="g3.Reducer.UpdateNeighbours*"></a>
+  <h4 id="g3_Reducer_UpdateNeighbours_System_Int32_" data-uid="g3.Reducer.UpdateNeighbours(System.Int32)">UpdateNeighbours(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void UpdateNeighbours(int vid)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">vid</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            ViRGIS VR GIS
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

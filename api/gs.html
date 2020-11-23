@@ -1,0 +1,290 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace gs
+   | ViRGIS VR GIS </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace gs
+   | ViRGIS VR GIS ">
+    <meta name="generator" content="docfx 2.56.5.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    
+    <link rel="shortcut icon" href="https://www.virgis.org/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="https://www.virgis.org">
+                <img id="logo" class="img" src="https://www.virgis.org/images/virgis_light.png" alt="">
+              </a>    </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="gs">
+  
+  <h1 id="gs" data-uid="gs" class="text-break">Namespace gs
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="gs.AutoHoleFill.html">AutoHoleFill</a></h4>
+      <section><p>Work in progress. Idea is that this class will analyze the hole and choose correct filling
+strategy. Mainly just calling other fillers. </p>
+<p>Also contains prototype of filler that decomposes hole into spans based on normals and
+then uses PlanarSpansFiller. See comments, is not really functional.</p>
+</section>
+      <h4><a class="xref" href="gs.EditMeshSpatial.html">EditMeshSpatial</a></h4>
+      <section><p>For use case where we are making local edits to a source mesh. We mask out
+removed triangles from base mesh SpatialDS, and raycast new triangles separately.</p>
+</section>
+      <h4><a class="xref" href="gs.LinearFalloff.html">LinearFalloff</a></h4>
+      <section><p>returns 1 in range [0,ConstantRange], and then falls off to 0 in range [ConstantRange,1]</p>
+</section>
+      <h4><a class="xref" href="gs.MarchingCubesPro.html">MarchingCubesPro</a></h4>
+      <section></section>
+      <h4><a class="xref" href="gs.MergeCoincidentEdges.html">MergeCoincidentEdges</a></h4>
+      <section><p>Merge coincident edges.</p>
+</section>
+      <h4><a class="xref" href="gs.MeshAssembly.html">MeshAssembly</a></h4>
+      <section><p>Given an input mesh, try to decompose it&apos;s connected components into
+parts with some semantics - solids, open meshes, etc.</p>
+</section>
+      <h4><a class="xref" href="gs.MeshAutoRepair.html">MeshAutoRepair</a></h4>
+      <section><p>Mesh Auto Repair top-level driver.</p>
+<p>TODO:</p>
+<ul>
+<li>remove degenerate <em>faces</em>  (which may still have all edges &gt; length)<ul>
+<li>this is tricky, in many CAD meshes these faces can&apos;t just be collapsed. But can often remove via flipping...?</li>
+</ul>
+</li>
+</ul>
+</section>
+      <h4><a class="xref" href="gs.MeshInsertProjectedPolygon.html">MeshInsertProjectedPolygon</a></h4>
+      <section><p>Inserts a polygon into a mesh using a planar projection. You provide a
+projection frame and either the polygon in the frame&apos;s XY-coordinate system,
+or a DCurve3 space curve that will be projected. </p>
+<p>Currently you must also provide a seed triangle, that intersects the curve.
+We flood-fill from the vertices of that triangle to find the interior vertices,
+and hence the set of faces that are modified.</p>
+<p>The insertion operation splits the existing mesh edges, so the inserted polygon
+will have more segments than the input polygon, in general. If you set
+SimplifyInsertion = true, then we collapse these extra edges, so you (should)
+get back an edge loop with the same number of vertices. However, on a non-planar
+mesh this means the edges will no longer lie on the input surface.</p>
+<p>If RemovePolygonInterior = true, the faces inside the polygon are deleted</p>
+<p>returns:
+ModifiedRegion: this is the RegionOperator created to subset the mesh for editing.
+  You can use this to access the modified mesh</p>
+<p>InsertedPolygonVerts: the output vertex ID for Polygon[i]. This <em>does not</em> 
+include the intermediate vertices, it&apos;s a 1-1 correspondence.</p>
+<p>InsertedLoop: inserted edge loop on output mesh</p>
+<p>InteriorTriangles: the triangles inside the polygon, null if RemovePolygonInterior=true</p>
+<p>If you would like to change the behavior after the insertion is computed, you can 
+subclass and override BackPropagate().</p>
+<p>[TODO] currently we construct a planar BVTree (but 3D) to map the new vertices to
+3D via barycentric interpolation. However we could do this inline. MeshInsertUVPolyCurve 
+needs to fully support working on separate coordinate set (it tries via Get/Set PointF, but
+it is not 100% working), and it needs to let client know about poke and split events, w/
+bary-coords, so that we can compute the new 3D positions. </p>
+</section>
+      <h4><a class="xref" href="gs.MeshRepairOrientation.html">MeshRepairOrientation</a></h4>
+      <section></section>
+      <h4><a class="xref" href="gs.MeshScalarSamplingGrid.html">MeshScalarSamplingGrid</a></h4>
+      <section><p>Sample a scalar function on a discrete grid. Can sample full grid, or
+compute values around a specific iso-contour and then fill in rest of grid
+with correctly-signed values via fast sweeping (this is the default)</p>
+<p>TODO: </p>
+<ul>
+<li>I think we are over-exploring the grid most of the time. eg along an x-ray that
+intersects the surface, we only need at most 2 cells, but we are computing at least 3,
+and possibly 5. </li>
+<li>it may be better to use something like bloomenthal polygonizer continuation? where we 
+are keeping track of active edges instead of active cells?</li>
+</ul>
+</section>
+      <h4><a class="xref" href="gs.MeshSpatialSort.html">MeshSpatialSort</a></h4>
+      <section><p>This class sorts a set of mesh components.</p>
+</section>
+      <h4><a class="xref" href="gs.MeshSpatialSort.ComponentMesh.html">MeshSpatialSort.ComponentMesh</a></h4>
+      <section></section>
+      <h4><a class="xref" href="gs.MeshSpatialSort.MeshSolid.html">MeshSpatialSort.MeshSolid</a></h4>
+      <section></section>
+      <h4><a class="xref" href="gs.MeshStitchLoops.html">MeshStitchLoops</a></h4>
+      <section><p>Stitch together two edge loops without any constraint that they have the same vertex count
+(otherwise can use MeshEditor.StitchLoop / StitchUnorderedEdges).</p>
+<p>[TODO]</p>
+<ul>
+<li>something smarter than stitch_span_simple(). For example, equalize length we have
+travelled along the span. Could also use normals to try to keep span &quot;smooth&quot;</li>
+<li>currently Loop0 and Loop1 need to be reversed/not depending on whether we are
+stitching &quot;through&quot; mesh or not. If not set properly, then fill self-intersects.
+Could we (optionally) resolve this automatically, eg by checking total of the two alternatives?</li>
+</ul>
+</section>
+      <h4><a class="xref" href="gs.MeshTopology.html">MeshTopology</a></h4>
+      <section><p>Extract topological information about the mesh based on identifying
+semantic edges/vertices/etc</p>
+<p>WIP</p>
+</section>
+      <h4><a class="xref" href="gs.MeshWindingNumberGrid.html">MeshWindingNumberGrid</a></h4>
+      <section><p>Sample mesh winding number (MWN) on a discrete grid. Can sample full grid, or
+compute MWN values along a specific iso-contour and then fill in rest of grid
+with correctly-signed values via fast sweeping (this is the default)</p>
+<p>TODO: </p>
+<ul>
+<li>I think we are over-exploring the grid most of the time. eg along an x-ray that
+intersects the surface, we only need at most 2 cells, but we are computing at least 3,
+and possibly 5. </li>
+<li>it may be better to use something like bloomenthal polygonizer continuation? where we 
+are keeping track of active edges instead of active cells?</li>
+</ul>
+</section>
+      <h4><a class="xref" href="gs.MinimalHoleFill.html">MinimalHoleFill</a></h4>
+      <section><p>Construct a &quot;minimal&quot; fill surface for the hole. This surface
+is often quasi-developable, reconstructs sharp edges, etc. 
+There are various options.</p>
+</section>
+      <h4><a class="xref" href="gs.PointSetHashtable.html">PointSetHashtable</a></h4>
+      <section></section>
+      <h4><a class="xref" href="gs.PointSetHashtable.PointList.html">PointSetHashtable.PointList</a></h4>
+      <section></section>
+      <h4><a class="xref" href="gs.RemesherPro.html">RemesherPro</a></h4>
+      <section><p>Extension to Remesher that is smarter about which edges/vertices to touch:</p>
+<ul>
+<li>queue tracks edges that were affected on last pass, and hence might need to be updated</li>
+<li>FastSplitIteration() just does splits, to reach target edge length as quickly as possible</li>
+<li>RemeshIteration() applies remesh pass for modified edges</li>
+<li>TrackedSmoothPass() smooths all vertices but only adds to queue if edge changes enough</li>
+<li>TrackedProjectionPass() same</li>
+</ul>
+</section>
+      <h4><a class="xref" href="gs.RemoveDuplicateTriangles.html">RemoveDuplicateTriangles</a></h4>
+      <section><p>Remove duplicate triangles.</p>
+</section>
+      <h4><a class="xref" href="gs.RemoveOccludedTriangles.html">RemoveOccludedTriangles</a></h4>
+      <section><p>Remove &quot;occluded&quot; triangles, ie triangles on the &quot;inside&quot; of the mesh. 
+This is a fuzzy definition, current implementation is basically computing
+something akin to ambient occlusion, and if face is fully occluded, then
+we classify it as inside and remove it.</p>
+</section>
+      <h4><a class="xref" href="gs.SmoothedHoleFill.html">SmoothedHoleFill</a></h4>
+      <section><p>This fills a hole in a mesh by doing a trivial fill, optionally offsetting along a fixed vector,
+then doing a remesh, then a laplacian smooth, then a second remesh.</p>
+</section>
+      <h4><a class="xref" href="gs.WyvillFalloff.html">WyvillFalloff</a></h4>
+      <section><p>returns 1 in range [0,ConstantRange], and then falls off to 0 in range [ConstantRange,1]</p>
+</section>
+    <h3 id="interfaces">Interfaces
+  </h3>
+      <h4><a class="xref" href="gs.IFalloffFunction.html">IFalloffFunction</a></h4>
+      <section></section>
+    <h3 id="enums">Enums
+  </h3>
+      <h4><a class="xref" href="gs.MarchingCubesPro.RootfindingModes.html">MarchingCubesPro.RootfindingModes</a></h4>
+      <section></section>
+      <h4><a class="xref" href="gs.MeshAutoRepair.RemoveModes.html">MeshAutoRepair.RemoveModes</a></h4>
+      <section></section>
+      <h4><a class="xref" href="gs.MeshScalarSamplingGrid.ComputeModes.html">MeshScalarSamplingGrid.ComputeModes</a></h4>
+      <section></section>
+      <h4><a class="xref" href="gs.MeshWindingNumberGrid.ComputeModes.html">MeshWindingNumberGrid.ComputeModes</a></h4>
+      <section></section>
+      <h4><a class="xref" href="gs.RemoveOccludedTriangles.CalculationMode.html">RemoveOccludedTriangles.CalculationMode</a></h4>
+      <section></section>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            ViRGIS VR GIS
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

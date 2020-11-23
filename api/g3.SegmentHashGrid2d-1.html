@@ -1,0 +1,601 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SegmentHashGrid2d&lt;T&gt;
+   | ViRGIS VR GIS </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SegmentHashGrid2d&lt;T&gt;
+   | ViRGIS VR GIS ">
+    <meta name="generator" content="docfx 2.56.5.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    
+    <link rel="shortcut icon" href="https://www.virgis.org/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="https://www.virgis.org">
+                <img id="logo" class="img" src="https://www.virgis.org/images/virgis_light.png" alt="">
+              </a>    </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="g3.SegmentHashGrid2d`1">
+  
+  
+  <h1 id="g3_SegmentHashGrid2d_1" data-uid="g3.SegmentHashGrid2d`1" class="text-break">Class SegmentHashGrid2d&lt;T&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>Hash Grid for 2D segments. You provide the &apos;segment&apos; type. If you have an indexable
+set of segments this can just be int, or can be more complex segment data structure
+(but be careful w/ structs...)</p>
+<p>Segments are stored in the grid cell that contains the segment center. We keep track
+of the extent of the <em>longest</em> segment that has been added. The search radius for
+distance queries is expanded by this extent. </p>
+<p>So, distance queries <strong>ARE NOT EFFICIENT</strong> if you even one very long segment.
+[TODO] make a multi-level hash</p>
+<p>Does not actually store 2D segments. So, to remove a segment
+you must also know it&apos;s 2D center, so we can look up the cell coordinates.
+Hence, to &apos;update&apos; a segment, you need to know both it&apos;s old and new 2D centers.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">SegmentHashGrid2d&lt;T&gt;</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="g3.html">g3</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="g3_SegmentHashGrid2d_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SegmentHashGrid2d&lt;T&gt;</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="g3_SegmentHashGrid2d_1__ctor_" data-uid="g3.SegmentHashGrid2d`1.#ctor*"></a>
+  <h4 id="g3_SegmentHashGrid2d_1__ctor_System_Double__0_" data-uid="g3.SegmentHashGrid2d`1.#ctor(System.Double,`0)">SegmentHashGrid2d(Double, T)</h4>
+  <div class="markdown level1 summary"><p>&quot;invalid&quot; value will be returned by queries if no valid result is found (eg bounded-distance query)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SegmentHashGrid2d(double cellSize, T invalidValue)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">cellSize</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">invalidValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="g3_SegmentHashGrid2d_1_FindNearestInRadius_" data-uid="g3.SegmentHashGrid2d`1.FindNearestInRadius*"></a>
+  <h4 id="g3_SegmentHashGrid2d_1_FindNearestInRadius_g3_Vector2d_System_Double_System_Func__0_System_Double__System_Func__0_System_Boolean__" data-uid="g3.SegmentHashGrid2d`1.FindNearestInRadius(g3.Vector2d,System.Double,System.Func{`0,System.Double},System.Func{`0,System.Boolean})">FindNearestInRadius(Vector2d, Double, Func&lt;T, Double&gt;, Func&lt;T, Boolean&gt;)</h4>
+  <div class="markdown level1 summary"><p>Find nearest segment in grid, within radius, without locking / thread-safety
+You must provided distF which returns distance between query_pt and the segment argument
+You can ignore specific segments via ignoreF lambda - return true to ignore 
+Return value is pair (nearest_index,min_dist) or (invalidValue,double.MaxValue)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyValuePair&lt;T, double&gt; FindNearestInRadius(Vector2d query_pt, double radius, Func&lt;T, double&gt; distF, Func&lt;T, bool&gt; ignoreF = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.Vector2d.html">Vector2d</a></td>
+        <td><span class="parametername">query_pt</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">radius</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
+        <td><span class="parametername">distF</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">ignoreF</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_SegmentHashGrid2d_1_FindNearestInSquaredRadius_" data-uid="g3.SegmentHashGrid2d`1.FindNearestInSquaredRadius*"></a>
+  <h4 id="g3_SegmentHashGrid2d_1_FindNearestInSquaredRadius_g3_Vector2d_System_Double_System_Func__0_System_Double__System_Func__0_System_Boolean__" data-uid="g3.SegmentHashGrid2d`1.FindNearestInSquaredRadius(g3.Vector2d,System.Double,System.Func{`0,System.Double},System.Func{`0,System.Boolean})">FindNearestInSquaredRadius(Vector2d, Double, Func&lt;T, Double&gt;, Func&lt;T, Boolean&gt;)</h4>
+  <div class="markdown level1 summary"><p>Variant of FindNearestInRadius that works with squared-distances.
+Return value is pair (nearest_index,min_dist) or (invalidValue,double.MaxValue)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyValuePair&lt;T, double&gt; FindNearestInSquaredRadius(Vector2d query_pt, double radiusSqr, Func&lt;T, double&gt; distSqrF, Func&lt;T, bool&gt; ignoreF = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="g3.Vector2d.html">Vector2d</a></td>
+        <td><span class="parametername">query_pt</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">radiusSqr</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
+        <td><span class="parametername">distSqrF</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">ignoreF</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.keyvaluepair-2">KeyValuePair</a>&lt;T, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_SegmentHashGrid2d_1_InsertSegment_" data-uid="g3.SegmentHashGrid2d`1.InsertSegment*"></a>
+  <h4 id="g3_SegmentHashGrid2d_1_InsertSegment__0_g3_Vector2d_System_Double_" data-uid="g3.SegmentHashGrid2d`1.InsertSegment(`0,g3.Vector2d,System.Double)">InsertSegment(T, Vector2d, Double)</h4>
+  <div class="markdown level1 summary"><p>Insert segment at position. This function is thread-safe, uses a SpinLock internally</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InsertSegment(T value, Vector2d center, double extent)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.Vector2d.html">Vector2d</a></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">extent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_SegmentHashGrid2d_1_InsertSegmentUnsafe_" data-uid="g3.SegmentHashGrid2d`1.InsertSegmentUnsafe*"></a>
+  <h4 id="g3_SegmentHashGrid2d_1_InsertSegmentUnsafe__0_g3_Vector2d_System_Double_" data-uid="g3.SegmentHashGrid2d`1.InsertSegmentUnsafe(`0,g3.Vector2d,System.Double)">InsertSegmentUnsafe(T, Vector2d, Double)</h4>
+  <div class="markdown level1 summary"><p>Insert segment without locking / thread-safety</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InsertSegmentUnsafe(T value, Vector2d center, double extent)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.Vector2d.html">Vector2d</a></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">extent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_SegmentHashGrid2d_1_RemoveSegment_" data-uid="g3.SegmentHashGrid2d`1.RemoveSegment*"></a>
+  <h4 id="g3_SegmentHashGrid2d_1_RemoveSegment__0_g3_Vector2d_" data-uid="g3.SegmentHashGrid2d`1.RemoveSegment(`0,g3.Vector2d)">RemoveSegment(T, Vector2d)</h4>
+  <div class="markdown level1 summary"><p>Remove segment. This function is thread-safe, uses a SpinLock internally</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveSegment(T value, Vector2d center)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.Vector2d.html">Vector2d</a></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_SegmentHashGrid2d_1_RemoveSegmentUnsafe_" data-uid="g3.SegmentHashGrid2d`1.RemoveSegmentUnsafe*"></a>
+  <h4 id="g3_SegmentHashGrid2d_1_RemoveSegmentUnsafe__0_g3_Vector2d_" data-uid="g3.SegmentHashGrid2d`1.RemoveSegmentUnsafe(`0,g3.Vector2d)">RemoveSegmentUnsafe(T, Vector2d)</h4>
+  <div class="markdown level1 summary"><p>Remove segment without locking / thread-safety</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveSegmentUnsafe(T value, Vector2d center)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.Vector2d.html">Vector2d</a></td>
+        <td><span class="parametername">center</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_SegmentHashGrid2d_1_UpdateSegment_" data-uid="g3.SegmentHashGrid2d`1.UpdateSegment*"></a>
+  <h4 id="g3_SegmentHashGrid2d_1_UpdateSegment__0_g3_Vector2d_g3_Vector2d_System_Double_" data-uid="g3.SegmentHashGrid2d`1.UpdateSegment(`0,g3.Vector2d,g3.Vector2d,System.Double)">UpdateSegment(T, Vector2d, Vector2d, Double)</h4>
+  <div class="markdown level1 summary"><p>Move segment from old to new position. This function is thread-safe, uses a SpinLock internally</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateSegment(T value, Vector2d old_center, Vector2d new_center, double new_extent)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.Vector2d.html">Vector2d</a></td>
+        <td><span class="parametername">old_center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.Vector2d.html">Vector2d</a></td>
+        <td><span class="parametername">new_center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">new_extent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="g3_SegmentHashGrid2d_1_UpdateSegmentUnsafe_" data-uid="g3.SegmentHashGrid2d`1.UpdateSegmentUnsafe*"></a>
+  <h4 id="g3_SegmentHashGrid2d_1_UpdateSegmentUnsafe__0_g3_Vector2d_g3_Vector2d_System_Double_" data-uid="g3.SegmentHashGrid2d`1.UpdateSegmentUnsafe(`0,g3.Vector2d,g3.Vector2d,System.Double)">UpdateSegmentUnsafe(T, Vector2d, Vector2d, Double)</h4>
+  <div class="markdown level1 summary"><p>Move segment from old to new position without locking / thread-safety</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateSegmentUnsafe(T value, Vector2d old_center, Vector2d new_center, double new_extent)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.Vector2d.html">Vector2d</a></td>
+        <td><span class="parametername">old_center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="g3.Vector2d.html">Vector2d</a></td>
+        <td><span class="parametername">new_center</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">new_extent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            ViRGIS VR GIS
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

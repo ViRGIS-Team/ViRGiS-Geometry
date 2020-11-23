@@ -1,0 +1,580 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class RemesherPro
+   | ViRGIS VR GIS </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class RemesherPro
+   | ViRGIS VR GIS ">
+    <meta name="generator" content="docfx 2.56.5.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    
+    <link rel="shortcut icon" href="https://www.virgis.org/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="https://www.virgis.org">
+                <img id="logo" class="img" src="https://www.virgis.org/images/virgis_light.png" alt="">
+              </a>    </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="gs.RemesherPro">
+  
+  
+  <h1 id="gs_RemesherPro" data-uid="gs.RemesherPro" class="text-break">Class RemesherPro
+  </h1>
+  <div class="markdown level0 summary"><p>Extension to Remesher that is smarter about which edges/vertices to touch:</p>
+<ul>
+<li>queue tracks edges that were affected on last pass, and hence might need to be updated</li>
+<li>FastSplitIteration() just does splits, to reach target edge length as quickly as possible</li>
+<li>RemeshIteration() applies remesh pass for modified edges</li>
+<li>TrackedSmoothPass() smooths all vertices but only adds to queue if edge changes enough</li>
+<li>TrackedProjectionPass() same</li>
+</ul>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">RemesherPro</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="gs.html">gs</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="gs_RemesherPro_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class RemesherPro : Remesher</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="gs_RemesherPro__ctor_" data-uid="gs.RemesherPro.#ctor*"></a>
+  <h4 id="gs_RemesherPro__ctor_DMesh3_" data-uid="gs.RemesherPro.#ctor(DMesh3)">RemesherPro(DMesh3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RemesherPro(DMesh3 m)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DMesh3</span></td>
+        <td><span class="parametername">m</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="gs_RemesherPro_FaceProjectionPassesPerIteration" data-uid="gs.RemesherPro.FaceProjectionPassesPerIteration">FaceProjectionPassesPerIteration</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int FaceProjectionPassesPerIteration</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="gs_RemesherPro_UseFaceAlignedProjection" data-uid="gs.RemesherPro.UseFaceAlignedProjection">UseFaceAlignedProjection</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseFaceAlignedProjection</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="gs_RemesherPro_vBufferVWeights" data-uid="gs.RemesherPro.vBufferVWeights">vBufferVWeights</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected DVector&lt;double&gt; vBufferVWeights</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DVector</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="gs_RemesherPro_ComputeProjectedVertexPos_" data-uid="gs.RemesherPro.ComputeProjectedVertexPos*"></a>
+  <h4 id="gs_RemesherPro_ComputeProjectedVertexPos_System_Int32_System_Boolean__" data-uid="gs.RemesherPro.ComputeProjectedVertexPos(System.Int32,System.Boolean@)">ComputeProjectedVertexPos(Int32, out Boolean)</h4>
+  <div class="markdown level1 summary"><p>This computes projected position w/ proper constraints/etc.
+Does not modify mesh.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual Vector3d ComputeProjectedVertexPos(int vID, out bool bModified)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">vID</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">bModified</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector3d</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="gs_RemesherPro_EdgesIterator_" data-uid="gs.RemesherPro.EdgesIterator*"></a>
+  <h4 id="gs_RemesherPro_EdgesIterator" data-uid="gs.RemesherPro.EdgesIterator">EdgesIterator()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IEnumerable&lt;int&gt; EdgesIterator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="gs_RemesherPro_FastestRemesh_" data-uid="gs.RemesherPro.FastestRemesh*"></a>
+  <h4 id="gs_RemesherPro_FastestRemesh_System_Int32_System_Boolean_" data-uid="gs.RemesherPro.FastestRemesh(System.Int32,System.Boolean)">FastestRemesh(Int32, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Converge on remeshed result as quickly as possible</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void FastestRemesh(int nMaxIterations = 25, bool bDoFastSplits = true)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">nMaxIterations</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">bDoFastSplits</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="gs_RemesherPro_FastSplitIteration_" data-uid="gs.RemesherPro.FastSplitIteration*"></a>
+  <h4 id="gs_RemesherPro_FastSplitIteration" data-uid="gs.RemesherPro.FastSplitIteration">FastSplitIteration()</h4>
+  <div class="markdown level1 summary"><p>This pass only does edge splits. Returns number of split edges.
+Tracks previously-split </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int FastSplitIteration()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="gs_RemesherPro_InitializeBuffersForFacePass_" data-uid="gs.RemesherPro.InitializeBuffersForFacePass*"></a>
+  <h4 id="gs_RemesherPro_InitializeBuffersForFacePass" data-uid="gs.RemesherPro.InitializeBuffersForFacePass">InitializeBuffersForFacePass()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void InitializeBuffersForFacePass()</code></pre>
+  </div>
+  
+  
+  <a id="gs_RemesherPro_OnEdgeSplit_" data-uid="gs.RemesherPro.OnEdgeSplit*"></a>
+  <h4 id="gs_RemesherPro_OnEdgeSplit_System_Int32_System_Int32_System_Int32_DMesh3_EdgeSplitInfo_" data-uid="gs.RemesherPro.OnEdgeSplit(System.Int32,System.Int32,System.Int32,DMesh3.EdgeSplitInfo)">OnEdgeSplit(Int32, Int32, Int32, DMesh3.EdgeSplitInfo)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnEdgeSplit(int edgeID, int va, int vb, DMesh3.EdgeSplitInfo splitInfo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">edgeID</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">va</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">vb</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">DMesh3.EdgeSplitInfo</span></td>
+        <td><span class="parametername">splitInfo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="gs_RemesherPro_PopState_" data-uid="gs.RemesherPro.PopState*"></a>
+  <h4 id="gs_RemesherPro_PopState" data-uid="gs.RemesherPro.PopState">PopState()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PopState()</code></pre>
+  </div>
+  
+  
+  <a id="gs_RemesherPro_PushState_" data-uid="gs.RemesherPro.PushState*"></a>
+  <h4 id="gs_RemesherPro_PushState" data-uid="gs.RemesherPro.PushState">PushState()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PushState()</code></pre>
+  </div>
+  
+  
+  <a id="gs_RemesherPro_RemeshIteration_" data-uid="gs.RemesherPro.RemeshIteration*"></a>
+  <h4 id="gs_RemesherPro_RemeshIteration" data-uid="gs.RemesherPro.RemeshIteration">RemeshIteration()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void RemeshIteration()</code></pre>
+  </div>
+  
+  
+  <a id="gs_RemesherPro_ResetQueue_" data-uid="gs.RemesherPro.ResetQueue*"></a>
+  <h4 id="gs_RemesherPro_ResetQueue" data-uid="gs.RemesherPro.ResetQueue">ResetQueue()</h4>
+  <div class="markdown level1 summary"><p>Reset tracked-edges queue. Should be called if mesh is modified by external functions
+between passes, and also between different types of passes (eg FastSplitIteration vs RemeshIteration)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResetQueue()</code></pre>
+  </div>
+  
+  
+  <a id="gs_RemesherPro_SharpEdgeReprojectionRemesh_" data-uid="gs.RemesherPro.SharpEdgeReprojectionRemesh*"></a>
+  <h4 id="gs_RemesherPro_SharpEdgeReprojectionRemesh_System_Int32_System_Int32_System_Boolean_" data-uid="gs.RemesherPro.SharpEdgeReprojectionRemesh(System.Int32,System.Int32,System.Boolean)">SharpEdgeReprojectionRemesh(Int32, Int32, Boolean)</h4>
+  <div class="markdown level1 summary"><p>This is a remesh that tries to recover sharp edges by aligning triangles to face normals
+of our projection target (similar to Ohtake RZN-flow). </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SharpEdgeReprojectionRemesh(int nRemeshIterations, int nTuneIterations, bool bDoFastSplits = true)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">nRemeshIterations</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">nTuneIterations</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">bDoFastSplits</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="gs_RemesherPro_TrackedFaceProjectionPass_" data-uid="gs.RemesherPro.TrackedFaceProjectionPass*"></a>
+  <h4 id="gs_RemesherPro_TrackedFaceProjectionPass" data-uid="gs.RemesherPro.TrackedFaceProjectionPass">TrackedFaceProjectionPass()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void TrackedFaceProjectionPass()</code></pre>
+  </div>
+  
+  
+  <a id="gs_RemesherPro_TrackedProjectionPass_" data-uid="gs.RemesherPro.TrackedProjectionPass*"></a>
+  <h4 id="gs_RemesherPro_TrackedProjectionPass_System_Boolean_" data-uid="gs.RemesherPro.TrackedProjectionPass(System.Boolean)">TrackedProjectionPass(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void TrackedProjectionPass(bool bParallel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">bParallel</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="gs_RemesherPro_TrackedSmoothPass_" data-uid="gs.RemesherPro.TrackedSmoothPass*"></a>
+  <h4 id="gs_RemesherPro_TrackedSmoothPass_System_Boolean_" data-uid="gs.RemesherPro.TrackedSmoothPass(System.Boolean)">TrackedSmoothPass(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void TrackedSmoothPass(bool bParallel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">bParallel</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            ViRGIS VR GIS
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
