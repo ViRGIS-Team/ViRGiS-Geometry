@@ -5,6 +5,10 @@ using System.Linq;
 using UnityEngine;
 using System.Threading.Tasks;
 using Unity.Mathematics;
+using Unity.Burst;
+using Unity.Jobs;
+using Unity.Collections;
+
 
 namespace g3
 {
@@ -2589,77 +2593,126 @@ namespace g3
         /// Attempts to create a lowest degree colorisation - outputting up to 6 colors
         /// 6Colorisation should always be possible for a planar network.
         /// 
-        /// Outputs  Int[] of colors numbered [1..6]
+        /// Uses a basic Greedy Coloring type of Algorithm based on Triangles
         /// 
         /// </summary>
-        /// <param name="uv0"> Vector2f[] containing  the r an g values</param>
-        /// <param name="uv1"> Vector</param>
-        /// <returns></returns>
-        public int[] Colorisation() {
-            int[] colorisation = new int[VertexCount];
 
-            int[] patterns = new int[] {1, 2, 3, 4, 5, 6};
-            int[] inverted = new int[] {3, 4, 5, 0, 1, 2};
+        /// <returns>Int[] of colors numbered [1..6]</returns>
+        public int[] Colorisation() {
+            NativeArray<int> colorisation = new NativeArray<int>(VertexCount, Allocator.Persistent);
+            NativeArray<int4> triangles = new NativeArray<int4>( Triangles().Select(tri => ((int3)tri).xyzz).ToArray(), Allocator.Persistent);
+
+            NativeArray<int> patterns = new NativeArray<int>(new int[] {1, 2, 3, 4, 5, 6}, Allocator.Persistent);
+            NativeArray<int> inverted = new NativeArray<int> (new int[] {3, 4, 5, 0, 1, 2}, Allocator.Persistent);
+
+            // Initialise the job data
+            
+            ColorisationJob job = new ColorisationJob() {
+                patterns = patterns,
+                inverted = inverted,
+                triangles = triangles,
+                colorisation = colorisation
+            };
+
+            //JobHandle sheduleJobDependency = new JobHandle();
+            job.Run(triangles.Length);
+            //sheduleJobHandle.Complete();
+
+            patterns.Dispose();
+            inverted.Dispose();
+            triangles.Dispose();
+            int[] ret = colorisation.ToArray();
+            colorisation.Dispose();
+
+            return ret;
+        }
+
+        [BurstCompile(CompileSynchronously = true)]
+        struct ColorisationJob : IJobFor
+        {
+
+            [ReadOnly]
+            public NativeArray<int> patterns;
+
+            [ReadOnly]
+            public NativeArray<int> inverted;
+
+            [ReadOnly]
+            public NativeArray<int4> triangles;
+
+            public NativeArray<int> colorisation;
+
+
 
             // iterate through the trianglesin the mesh
-            foreach (Index3i triangle in Triangles()) {
+            public void Execute(int index)
+            {
 
-                /// holds the summary of current vertex colors
-                int[] mask = new int[6];
-                /// the vertex indices for this triangle
-                int[] tri = triangle.array;
+                    /// holds the summary of current vertex colors
+                    NativeArray<int> mask = new NativeArray<int>(6, Allocator.Temp);
 
-                ///iterate through the vertices and add the color to mask
-                foreach(int v in tri) {
-                    int c = colorisation[v];
-                    if ( c == 0 ) continue;
-                    for(int i =0; i<6; i++){
-                        if (c == patterns[i]){
-                            mask[i] += 1;
-                            break;
-                        }
-                    }
-                }
+                    /// the vertex indices for this triangle
+                    int4 t = triangles[index];
+                    NativeArray<int> tri = new NativeArray<int>(3, Allocator.Temp) {
+                        [0] = t.x, 
+                        [1] = t.y,
+                        [2] =  t.z
+                    };
+                    
 
-                // if there are any vertex color clashes ...
-                if (mask.Max() > 1) {
-                    for(int i =0; i<6; i++){
-                        if (mask[i] > 1) {
-                            foreach(int v in tri) {
-                                if (colorisation[v] == patterns[i]){
-                                    // flip the conflicted color to it's inverse
-                                    // TODO There is a small chance that it has already been flipped
-                                    // should really check other triangles
-                                    colorisation[v] = patterns[inverted[i]];
-                                    break;
-                                }
-                            };
-                            mask[i] -= 1;
-                            mask[inverted[i]] += 1;
-                        }
-                    }
-                }
-
-                // fill out the triangle
-
-                while (mask.Sum() < 3) {
+                    ///iterate through the vertices and add the color to mask
                     foreach(int v in tri) {
-                        if ( colorisation[v] == 0){
-                            /// fill with the lowest available color
-                            for(int i =0; i<6; i++){
-                                if (mask[i] == 0 ) {
-                                    // check the inverse does aready exist
-                                    if (mask[inverted[i]] > 0) continue;
-                                    colorisation[v] = patterns[i];
-                                    mask[i] +=1;
-                                    break;
+                        int c = colorisation[v];
+                        if ( c == 0 ) continue;
+                        for( int i =0; i<6; i++){
+                            if (c == patterns[i]){
+                                mask[i] += 1;
+                                break;
+                            }
+                        }
+                    }
+
+                    // if there are any vertex color clashes ...
+                    if (mask.Max() > 1) {
+                        for(int i =0; i<6; i++){
+                            if (mask[i] > 1) {
+                                foreach(int v in tri) {
+                                    if (colorisation[v] == patterns[i]){
+                                        // flip the conflicted color to it's inverse
+                                        // TODO There is a small chance that it has already been flipped
+                                        // should really check other triangles
+                                        colorisation[v] = patterns[inverted[i]];
+                                        break;
+                                    }
+                                };
+                                mask[i] -= 1;
+                                mask[inverted[i]] += 1;
+                            }
+                        }
+                    }
+
+                    // fill out the triangle
+
+                    while (mask.Sum() < 3) {
+                        foreach(int v in tri) {
+                            if ( colorisation[v] == 0){
+                                /// fill with the lowest available color
+                                for(int i =0; i<6; i++){
+                                    if (mask[i] == 0 ) {
+                                        // check the inverse does aready exist
+                                        if (mask[inverted[i]] > 0) continue;
+                                        colorisation[v] = patterns[i];
+                                        mask[i] +=1;
+                                        break;
+                                    }
                                 }
                             }
                         }
                     }
-                }
+                    mask.Dispose();
+                    tri.Dispose();
+                
             }
-            return colorisation;
         }
 
         /// <summary>
