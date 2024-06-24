@@ -341,5 +341,18 @@ namespace VirgisGeometry
         {
             return new Vector3f(c.r, c.g, c.b);
         }
+
+        public void ChangeAxisOrderTo(AxisOrder ax)
+        {
+            if (axisOrder == ax) return;
+            if (axisOrder.Axis2 == ax.Axis2) return;
+            if (axisOrder.Axis2 == ax.Axis2) return;
+            if (axisOrder.Axis2 == AxisType.Up || ax.Axis2 == AxisType.Up)
+            {
+                float temp = y;
+                y = z;
+                z = temp;
+            }
+        }
     }
 }

@@ -516,16 +516,46 @@ namespace VirgisGeometry
             }
         }
 
+        /// <summary>
+        /// Change 
+        /// </summary>
+        /// <param name="ax"></param>
         public void ChangeAxisOrderTo(AxisOrder ax)
         {
             if (axisOrder == ax) return;
             if (axisOrder.Axis2 == ax.Axis2) return;
-            if (axisOrder.Axis2 == ax.Axis2) return;
+            if (axisOrder.Axis3 == ax.Axis3) return;
             if (axisOrder.Axis2 == AxisType.Up || ax.Axis2 == AxisType.Up)
             {
                 double temp = y;
                 y = z;
                 z = temp;
+            }
+        }
+
+        /// <summary>
+        /// Transforms Vector3 based upon the provided Transform
+        /// </summary>
+        /// <param name="transform">Matrix4d transformation matrix</param>
+        /// <returns></returns>
+        public bool Transform(Matrix4d transform, AxisOrder target = default, bool isYup = false)
+        {
+            if (target != default)
+                axisOrder = target;
+            if (transform == Matrix4d.Identity) return true;
+            if (isYup && axisOrder != AxisOrder.EUN)
+            {
+                transform = new Matrix4d(transform.Row0, transform.Row2, transform.Row1, transform.Row3, true);
+            }
+            try
+            {
+                Vector3d newv = transform * this;
+                x = newv.x; y = newv.y; z = newv.z;
+                return true;
+            }
+            catch
+            {
+                return false;
             }
         }
     }
