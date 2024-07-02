@@ -109,16 +109,16 @@ Basically, each of the three axis is represented as being North, South, East, We
 
 VirgisGeometry supports the following axis, the first two being the most common for data and the third represents the Unity Game Space axis order:
 
-- ENU (right handed)
-- NED (right handed)
-- EUN (left handed) (Unity Game Space)
+- ENU (right handed) i.e. x is east, y is north and z is up;
+- NED (right handed) i.e. x is north, y is east and z is down;
+- EUN (left handed) (Unity Game Space) where 0,0,0 rotation will have you facing nort
 
 > [!NOTE]
-> The axis order is only used when casting Vectors and Meshes to Unity Vector3s and Meshes, at which popint the order is checked and if neccesary changed to ensure that the result is corrrectly in EUN order. This does mean that - if you do not explicitly set the `Vector3d` axis order, the cast will assume that you want to rotate the data from a Z up `Vector3d` to a Y up `Vector3`. It you do not, then set the data as being in EUN coordinates already!
+> The axis order is only used when casting Vectors and Meshes to Unity Vector3s and Meshes, at which point the order is checked and if neccesary changed to ensure that the result is corrrectly in EUN order. This does mean that - if you do not explicitly set the `Vector3d` axis order, the cast will assume that you want to rotate the data from a Z up `Vector3d` to a Y up `Vector3`. It you do not, then set the data as being in EUN coordinates already!
 >
-> When casting FROM Unity to VirgisGeometry, the data is NOT changed but the axis order is set. This ensures round trip integrity but means that the resulting Vector3d (dor instance) is in EUN. If you are exporting the data or manipulating it, you need to confirm that you are using the right axis order yourself.
+> When casting FROM Unity to VirgisGeometry, the data is NOT changed but the axis order is set. This ensures round trip integrity but means that the resulting Vector3d (for instance) is in EUN. If you are exporting the data or manipulating it, you need to confirm that you are using the right axis order yourself.
 
-For Vectors, the axis order can be checked and changed in on go, e.g. :
+For Vectors, the axis order can be checked and changed in one call, e.g. :
 
 ```
 Vector3 v = ...;
