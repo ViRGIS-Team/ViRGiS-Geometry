@@ -156,10 +156,6 @@ namespace VirgisGeometry
             MaterialAssignment[meshID] = materialID;
         }
 
-
-
-
-
         //
         // DMesh3 construction utilities
         //
