@@ -792,7 +792,7 @@ namespace VirgisGeometry
             Vector2d a = bbox.GetCorner(3); // upper left
             Vector2d b = bbox.GetCorner(1); // bottom right
 
-            // unless both a and b are vertices of the polygon, the lineab must intersect the polygon
+            // unless either a or b are vertices of the polygon, the lineab must intersect the polygon
             if ( Vertices.Contains(a) || Vertices.Contains(b)) 
             {
                 // use the other diagonal instead
