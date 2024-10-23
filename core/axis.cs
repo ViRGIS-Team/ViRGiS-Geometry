@@ -6,7 +6,7 @@ namespace VirgisGeometry
     /// <summary>
     /// structures used to record axis order
     /// </summary>
-    public enum AxisType
+    public enum AxisType : byte
     {
         Other = 0,
         North = 1,
