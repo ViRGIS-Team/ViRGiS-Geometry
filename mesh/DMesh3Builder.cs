@@ -53,7 +53,7 @@ namespace VirgisGeometry
         public int AppendNewMesh(bool bHaveVtxNormals, bool bHaveVtxColors, bool bHaveVtxUVs, bool bHaveFaceGroups)
         {
             int index = Meshes.Count;
-            DMesh3 m = new DMesh3(bHaveVtxNormals, bHaveVtxColors, bHaveVtxUVs, bHaveFaceGroups);
+            DMesh3 m = new(bHaveVtxNormals, bHaveVtxColors, bHaveVtxUVs, bHaveFaceGroups);
             Meshes.Add(m);
             MaterialAssignment.Add(-1);     // no material is known
             Metadata.Add(new Dictionary<string, object>());

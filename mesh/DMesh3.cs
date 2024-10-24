@@ -1376,6 +1376,14 @@ namespace VirgisGeometry
             }
         }
 
+        public IEnumerable<NewVertexInfo> VerticesAll()
+        {
+            foreach ( int vid in vertices_refcount)
+            {
+                yield return GetVertexAll(vid);
+            }
+        }
+
         /// <summary>
         /// Enumerate triangles
         /// </summary>
