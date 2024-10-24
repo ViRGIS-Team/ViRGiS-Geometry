@@ -6,7 +6,7 @@ namespace VirgisGeometry
     /// <summary>
     /// structures used to record axis order
     /// </summary>
-    public enum AxisType
+    public enum AxisType : byte
     {
         Other = 0,
         North = 1,
@@ -96,7 +96,7 @@ namespace VirgisGeometry
 
         public readonly byte[] ToArray()
         {
-            return new byte[] { (byte)Axis1, (byte)Axis2, (byte)Axis3 };
+            return new byte[3] { (byte)Axis1, (byte)Axis2, (byte)Axis3 };
         }
     }
 }

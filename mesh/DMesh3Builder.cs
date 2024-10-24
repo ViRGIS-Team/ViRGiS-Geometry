@@ -53,7 +53,7 @@ namespace VirgisGeometry
         public int AppendNewMesh(bool bHaveVtxNormals, bool bHaveVtxColors, bool bHaveVtxUVs, bool bHaveFaceGroups)
         {
             int index = Meshes.Count;
-            DMesh3 m = new DMesh3(bHaveVtxNormals, bHaveVtxColors, bHaveVtxUVs, bHaveFaceGroups);
+            DMesh3 m = new(bHaveVtxNormals, bHaveVtxColors, bHaveVtxUVs, bHaveFaceGroups);
             Meshes.Add(m);
             MaterialAssignment.Add(-1);     // no material is known
             Metadata.Add(new Dictionary<string, object>());
@@ -155,10 +155,6 @@ namespace VirgisGeometry
                 throw new ArgumentOutOfRangeException("[SimpleMeshBuilder::AssignMaterial] meshID or materialID are out-of-range");
             MaterialAssignment[meshID] = materialID;
         }
-
-
-
-
 
         //
         // DMesh3 construction utilities

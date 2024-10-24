@@ -1377,6 +1377,14 @@ namespace VirgisGeometry
             }
         }
 
+        public IEnumerable<NewVertexInfo> VerticesAll()
+        {
+            foreach ( int vid in vertices_refcount)
+            {
+                yield return GetVertexAll(vid);
+            }
+        }
+
         /// <summary>
         /// Enumerate triangles
         /// </summary>
@@ -2607,14 +2615,14 @@ namespace VirgisGeometry
         /// 
         /// </summary>
         /// <returns>Int[] of colors numbered [1..6]</returns>
-        public IEnumerator<int[]> Colorisation(int cycleTimer = 10) {
-            int[] colorisation = new int[VertexCount];
+        public IEnumerator<byte[]> Colorisation(int cycleTimer = 10) {
+            byte[] colorisation = new byte[VertexCount];
             LinkedList<int> queue = new();
             Stack<int> previous = new();
  
             bool TryChangeVertex( int id)
             {
-                int[] vmask = new int[7];
+                byte[] vmask = new byte[7];
 
                 // try simple brute force - look for a color not used in any of this vertex's neighbours
                 // Get the one-ring around the vertex and collect their colors
@@ -2626,11 +2634,11 @@ namespace VirgisGeometry
                 }
 
                 // if there is an unused color - use it
-                for(int i = colorisation[id] +1 ; i < 7; i++) 
+                for(int i = colorisation[id] + 1 ; i < 7; i++) 
                 {
                     if (vmask[i] == 0)
                     {
-                        colorisation[id] = i;
+                        colorisation[id] = (byte)i;
                         return true;
                     }
                 }
@@ -2670,9 +2678,9 @@ namespace VirgisGeometry
         /// </summary>
         /// <param name="uv"></param>
         /// <exception cref="Exception"></exception>
-        public IEnumerator ColorisationCoroutine(int cycleTimer, Action<int[]> callback)
+        public IEnumerator ColorisationCoroutine(int cycleTimer, Action<byte[]> callback)
         {
-            IEnumerator<int[]> colorizer = Colorisation(cycleTimer);
+            IEnumerator<byte[]> colorizer = Colorisation(cycleTimer);
             System.Diagnostics.Stopwatch stopwatch = new();
             stopwatch.Start();
             while (colorizer.MoveNext())
