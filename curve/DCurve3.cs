@@ -17,12 +17,14 @@ namespace VirgisGeometry
         public bool Closed { get; set; }
         public int Timestamp;
         protected List<object> data = new();
+        public AxisOrder axisOrder;
 
         public DCurve3()
         {
             vertices = new List<Vector3d>();
             Closed = false;
             Timestamp = 1;
+            axisOrder = AxisOrder.ENU;
         }
 
         public DCurve3(List<Vector3d> verticesIn, bool bClosed, bool bTakeOwnership = false)
@@ -33,12 +35,14 @@ namespace VirgisGeometry
                 this.vertices = new List<Vector3d>(verticesIn);
             Closed = bClosed;
             Timestamp = 1;
+            axisOrder = AxisOrder.ENU;
         }
         public DCurve3(IEnumerable<Vector3d> verticesIn, bool bClosed)
         {
             this.vertices = new List<Vector3d>(verticesIn);
             Closed = bClosed;
             Timestamp = 1;
+            axisOrder = AxisOrder.ENU;
         }
 
         /// <summary>
@@ -55,6 +59,7 @@ namespace VirgisGeometry
                 Closed = true;
             }
             Timestamp = 1;
+            axisOrder = AxisOrder.ENU;
         }
 
         public DCurve3(DCurve3 copy)
@@ -63,6 +68,7 @@ namespace VirgisGeometry
             data = new (copy.data);
             Closed = copy.Closed;
             Timestamp = 1;
+            axisOrder = AxisOrder.ENU;
         }
 
         public DCurve3(ISampledCurve3d icurve)
@@ -70,6 +76,7 @@ namespace VirgisGeometry
             this.vertices = new List<Vector3d>(icurve.Vertices);
             Closed = icurve.Closed;
             Timestamp = 1;
+            axisOrder = AxisOrder.ENU;
         }
 
         public DCurve3(Polygon2d poly, int ix = 0, int iy = 1)
@@ -83,6 +90,7 @@ namespace VirgisGeometry
             }
             Closed = true;
             Timestamp = 1;
+            axisOrder = AxisOrder.ENU;
         }
 
         /// <summary>
@@ -95,6 +103,7 @@ namespace VirgisGeometry
             Closed = bClosed;
             vertices = v_in.ToList<Vector3>().Select(vertex => (Vector3d)vertex).ToList<Vector3d>();
             Timestamp = 1;
+            axisOrder = AxisOrder.ENU;
         }
 
         public void AppendVertex(Vector3d v) {
@@ -109,7 +118,8 @@ namespace VirgisGeometry
         /// <param name="i"></param>
         public void InsertVertex(Vector3d v, int i)
         {
-            vertices.Insert(i, v);
+            vertices.Insert(i, v); 
+            Timestamp++;
         }
 
         public int VertexCount {
@@ -160,7 +170,14 @@ namespace VirgisGeometry
             return vertices;
         }
 
+        /// <summary>
+        /// Set the indicated vertex changing Axis Order depending on the axis order of the vector3d
+        /// </summary>
+        /// <param name="i" cref="int"></param>
+        /// <param name="v" cref="Vector3d"></param>
         public void SetVertex(int i, Vector3d v) {
+            System.Diagnostics.Debug.Assert(v.IsFinite);     // this will really catch a lot of bugs...
+            if (axisOrder != v.axisOrder) v.ChangeAxisOrderTo(axisOrder);
             vertices[i] = v;
             Timestamp++;
         }

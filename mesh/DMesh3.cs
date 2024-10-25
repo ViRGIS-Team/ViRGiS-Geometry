@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -430,6 +429,11 @@ namespace VirgisGeometry
             return new Vector3f((float)vertices[i], (float)vertices[i + 1], (float)vertices[i + 2]) { axisOrder = axisOrder };
         }
 
+        /// <summary>
+        /// Set the indicated vertex - changing Axis Order depending on the Axis Order of the Vector3d
+        /// </summary>
+        /// <param name="vID" cref="int"></param>
+        /// <param name="vNewPos" cref="Vector3d"></param>
         public void SetVertex(int vID, Vector3d vNewPos) {
             System.Diagnostics.Debug.Assert(vNewPos.IsFinite);     // this will really catch a lot of bugs...
             debug_check_is_vertex(vID);

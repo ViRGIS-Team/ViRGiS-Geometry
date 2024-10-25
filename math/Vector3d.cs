@@ -276,7 +276,13 @@ namespace VirgisGeometry
         }
         public override bool Equals(object obj)
         {
-            return this == (Vector3d)obj;
+            try
+            {
+                return this == (Vector3d)obj;
+            } catch
+            {
+                return false;
+            }
         }
         public override int GetHashCode()
         {
@@ -531,6 +537,7 @@ namespace VirgisGeometry
                 y = z;
                 z = temp;
             }
+            axisOrder = ax;
         }
 
         /// <summary>
