@@ -2572,9 +2572,25 @@ namespace VirgisGeometry
         /// </summary>
         public void CalculateUVs()
         {
-            EnableVertexUVs(Vector2f.Zero);
             OrthogonalPlaneFit3 orth = new OrthogonalPlaneFit3(Vertices());
-            Frame3f frame = new Frame3f(orth.Origin, orth.Normal);
+            Frame3f frame = new Frame3f(orth.Origin, -1 * orth.Normal);
+            //
+            // check the orientation of the plane in UV space.
+            // for image planes  - we assume that the x direction from the first point to the second point should always be positive
+            // if not - reverse the frame
+            //
+            if (Math.Sign(
+                frame.ToPlaneUV((Vector3f)GetVertex(0), 2).x -
+                frame.ToPlaneUV((Vector3f)GetVertex(1), 2).x
+                ) > -1)
+            {
+                frame = new Frame3f(orth.Origin, orth.Normal);
+            }
+            CalculateUVs(frame);
+        }
+        public void CalculateUVs(Frame3f frame) {
+            EnableVertexUVs(Vector2f.Zero);
+
             AxisAlignedBox3d bounds = CachedBounds;
             AxisAlignedBox2d boundsInFrame = new AxisAlignedBox2d();
             for (int i = 0; i < 8; i++)
