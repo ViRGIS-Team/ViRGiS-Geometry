@@ -44,6 +44,13 @@ namespace VirgisGeometry
             Axis3 = AxisType.North
         };
 
+        public static readonly AxisOrder Undefined = new()
+        {
+            Axis1 = AxisType.Other,
+            Axis2 = AxisType.Other,
+            Axis3 = AxisType.Other
+        };
+
         /// <summary>
         /// This considers the case where the axis order needs to swap between:
         ///  [e,n,s]u[n,e,s] (which is needed for Unity) and
@@ -90,7 +97,7 @@ namespace VirgisGeometry
                 case "NED":
                     return NED;
                 default:
-                    return default;
+                    return Undefined;
             }
         }
 

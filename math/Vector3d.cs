@@ -11,12 +11,12 @@ namespace VirgisGeometry
         public double z;
         public AxisOrder axisOrder;
 
-        public Vector3d(double f) { x = y = z = f; axisOrder = AxisOrder.ENU; }
-        public Vector3d(double x, double y, double z) { this.x = x; this.y = y; this.z = z; axisOrder = AxisOrder.ENU; }
-        public Vector3d(double[] v2) { x = v2[0]; y = v2[1]; z = v2[2]; axisOrder = AxisOrder.ENU; }
+        public Vector3d(double f) { x = y = z = f; axisOrder = AxisOrder.Undefined; }
+        public Vector3d(double x, double y, double z) { this.x = x; this.y = y; this.z = z; axisOrder = AxisOrder.Undefined; }
+        public Vector3d(double[] v2) { x = v2[0]; y = v2[1]; z = v2[2]; axisOrder = AxisOrder.Undefined; }
         public Vector3d(Vector3d copy) { x = copy.x; y = copy.y; z = copy.z; axisOrder = copy.axisOrder; }
         public Vector3d(Vector3f copy) { x = copy.x; y = copy.y; z = copy.z; axisOrder = copy.axisOrder; }
-        public Vector3d(Vector2d copy) { x = copy.x; y = copy.y; z = 1; axisOrder = AxisOrder.ENU; }
+        public Vector3d(Vector2d copy) { x = copy.x; y = copy.y; z = 1; axisOrder = AxisOrder.Undefined; }
 
         static public readonly Vector3d Zero = new Vector3d(0.0f, 0.0f, 0.0f);
         static public readonly Vector3d One = new Vector3d(1.0f, 1.0f, 1.0f);
@@ -528,9 +528,13 @@ namespace VirgisGeometry
         /// <param name="ax"></param>
         public void ChangeAxisOrderTo(AxisOrder ax)
         {
-            if (axisOrder == ax) return;
-            if (axisOrder.Axis2 == ax.Axis2) return;
-            if (axisOrder.Axis3 == ax.Axis3) return;
+            if (
+                axisOrder == AxisOrder.Undefined || 
+                ax == AxisOrder.Undefined ||
+                axisOrder == ax ||
+                axisOrder.Axis2 == ax.Axis2 ||
+                axisOrder.Axis3 == ax.Axis3
+            ) return;
             if (axisOrder.Axis2 == AxisType.Up || ax.Axis2 == AxisType.Up)
             {
                 double temp = y;

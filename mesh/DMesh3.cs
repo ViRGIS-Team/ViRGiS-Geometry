@@ -172,7 +172,7 @@ namespace VirgisGeometry
 
             edges = new DVector<int>();
             edges_refcount = new RefCountVector();
-            axisOrder = AxisOrder.ENU;
+            axisOrder = AxisOrder.Undefined;
         }
         public DMesh3(MeshComponents flags) : 
             this( (flags & MeshComponents.VertexNormals) != 0,  (flags & MeshComponents.VertexColors) != 0,
@@ -2579,9 +2579,10 @@ namespace VirgisGeometry
             // for image planes  - we assume that the x direction from the first point to the second point should always be positive
             // if not - reverse the frame
             //
+            List<Vector3d> start = Vertices().Take(2).ToList();
             if (Math.Sign(
-                frame.ToPlaneUV((Vector3f)GetVertex(0), 2).x -
-                frame.ToPlaneUV((Vector3f)GetVertex(1), 2).x
+                frame.ToPlaneUV((Vector3f)start[0], 2).x -
+                frame.ToPlaneUV((Vector3f)start[1], 2).x
                 ) > -1)
             {
                 frame = new Frame3f(orth.Origin, orth.Normal);
@@ -2601,7 +2602,7 @@ namespace VirgisGeometry
             float width = (float)boundsInFrame.Width;
             float height = (float)boundsInFrame.Height;
 
-            for (int i = 0; i < VertexCount; i++)
+            foreach (int i in VertexIndices())
             {
                 Vector2f UV = frame.ToPlaneUV((Vector3f)GetVertex(i), 3);
                 UV.x = (UV.x - min.x) / width;
@@ -2728,14 +2729,11 @@ namespace VirgisGeometry
             }
             try
             {
-                for (int i = 0; i < VertexCount; i++)
+                foreach (int i in VertexIndices())
                 {
-                    if (IsVertex(i))
-                    {
-                        SetVertex(i, transform * GetVertex(i));
-                    }
-            };
-            return true;
+                    SetVertex(i, transform * GetVertex(i));
+                }
+                return true;
             }
             catch
             {

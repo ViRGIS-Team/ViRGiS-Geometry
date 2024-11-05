@@ -171,7 +171,7 @@ namespace VirgisGeometry
                                                       AxisOrder ax = default)
         {
             DMesh3 mesh = new DMesh3(Normals != null, false, false, TriGroups != null);
-            if (ax == default) mesh.axisOrder = AxisOrder.ENU; else mesh.axisOrder = ax;
+            if (ax == default) mesh.axisOrder = AxisOrder.Undefined; else mesh.axisOrder = ax;
 
             Vector3d[] v = BufferUtil.ToVector3d(Vertices);
             for (int i = 0; i < v.Length; ++i)

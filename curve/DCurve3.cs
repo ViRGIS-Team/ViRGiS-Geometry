@@ -24,7 +24,7 @@ namespace VirgisGeometry
             vertices = new List<Vector3d>();
             Closed = false;
             Timestamp = 1;
-            axisOrder = AxisOrder.ENU;
+            axisOrder = AxisOrder.Undefined;
         }
 
         public DCurve3(List<Vector3d> verticesIn, bool bClosed, bool bTakeOwnership = false)
@@ -35,14 +35,14 @@ namespace VirgisGeometry
                 this.vertices = new List<Vector3d>(verticesIn);
             Closed = bClosed;
             Timestamp = 1;
-            axisOrder = AxisOrder.ENU;
+            axisOrder = AxisOrder.Undefined;
         }
         public DCurve3(IEnumerable<Vector3d> verticesIn, bool bClosed)
         {
             this.vertices = new List<Vector3d>(verticesIn);
             Closed = bClosed;
             Timestamp = 1;
-            axisOrder = AxisOrder.ENU;
+            axisOrder = AxisOrder.Undefined;
         }
 
         /// <summary>
@@ -59,7 +59,7 @@ namespace VirgisGeometry
                 Closed = true;
             }
             Timestamp = 1;
-            axisOrder = AxisOrder.ENU;
+            axisOrder = AxisOrder.Undefined;
         }
 
         public DCurve3(DCurve3 copy)
@@ -68,7 +68,7 @@ namespace VirgisGeometry
             data = new (copy.data);
             Closed = copy.Closed;
             Timestamp = 1;
-            axisOrder = AxisOrder.ENU;
+            axisOrder = AxisOrder.Undefined;
         }
 
         public DCurve3(ISampledCurve3d icurve)
@@ -76,7 +76,7 @@ namespace VirgisGeometry
             this.vertices = new List<Vector3d>(icurve.Vertices);
             Closed = icurve.Closed;
             Timestamp = 1;
-            axisOrder = AxisOrder.ENU;
+            axisOrder = AxisOrder.Undefined;
         }
 
         public DCurve3(Polygon2d poly, int ix = 0, int iy = 1)
@@ -90,7 +90,7 @@ namespace VirgisGeometry
             }
             Closed = true;
             Timestamp = 1;
-            axisOrder = AxisOrder.ENU;
+            axisOrder = AxisOrder.Undefined;
         }
 
         /// <summary>
@@ -103,7 +103,7 @@ namespace VirgisGeometry
             Closed = bClosed;
             vertices = v_in.ToList<Vector3>().Select(vertex => (Vector3d)vertex).ToList<Vector3d>();
             Timestamp = 1;
-            axisOrder = AxisOrder.ENU;
+            axisOrder = AxisOrder.Undefined;
         }
 
         public void AppendVertex(Vector3d v) {
