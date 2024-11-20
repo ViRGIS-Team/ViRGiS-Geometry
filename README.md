@@ -22,7 +22,7 @@ This Version has the following BREAKING CHANGEs :
 ```
 Vector3d v = new Vector3d(...) { axisOrder= AxisOrder.ENU }
 ```
-- DMesh3 now includes details of the Axis Order and this is used when casting to Unity Mesh.
+- DMesh3 and DCurve3 now include details of the Axis Order and this is used when casting to Unity Mesh etc.
 
 # Projects using ViRGiS Geometry
 
@@ -104,6 +104,7 @@ Therefore, we have introduced the concept of "Axis Order" into VirgisGeometry, u
 - `Vector3d`
 - `Vector3f`
 - `DMesh3`
+- `DCurve3`
 
 Basically, each of the three axis is represented as being North, South, East, West, Up or Down. Note that the choice of horizontal axes (e.g. which is North and which is East) is to some extent arbitrary unless you are using AR, however historically there has been a preference for [right handed coordinate systems](https://en.wikipedia.org/wiki/Right-hand_rule#:~:text=For%20right%2Dhanded%20coordinates%2C%20if,axis%20(second%20coordinate%20vector)). However, the choice of vertical axis is critical since we perceive that axis very different.
 
@@ -111,7 +112,7 @@ VirgisGeometry supports the following axis, the first two being the most common 
 
 - ENU (right handed) i.e. x is east, y is north and z is up;
 - NED (right handed) i.e. x is north, y is east and z is down;
-- EUN (left handed) (Unity Game Space) where 0,0,0 rotation will have you facing nort
+- EUN (left handed) (Unity Game Space) where 0,0,0 rotation will have you facing north
 
 > [!NOTE]
 > The axis order is only used when casting Vectors and Meshes to Unity Vector3s and Meshes, at which point the order is checked and if neccesary changed to ensure that the result is corrrectly in EUN order. This does mean that - if you do not explicitly set the `Vector3d` axis order, the cast will assume that you want to rotate the data from a Z up `Vector3d` to a Y up `Vector3`. It you do not, then set the data as being in EUN coordinates already!
