@@ -11,14 +11,14 @@ namespace VirgisGeometry
         public float z;
         public AxisOrder axisOrder;
 
-        public Vector3f(float f) {  x = y = z = f; axisOrder = AxisOrder.ENU; }
-        public Vector3f(float x, float y, float z) { this.x = x; this.y = y; this.z = z; axisOrder = AxisOrder.ENU; }
-        public Vector3f(float[] v2) { x = v2[0]; y = v2[1]; z = v2[2]; axisOrder = AxisOrder.ENU; }
+        public Vector3f(float f) {  x = y = z = f; axisOrder = AxisOrder.Undefined; }
+        public Vector3f(float x, float y, float z) { this.x = x; this.y = y; this.z = z; axisOrder = AxisOrder.Undefined; }
+        public Vector3f(float[] v2) { x = v2[0]; y = v2[1]; z = v2[2]; axisOrder = AxisOrder.Undefined; }
         public Vector3f(Vector3f copy) {  x = copy.x; y = copy.y; z = copy.z; axisOrder = copy.axisOrder; }
 
-        public Vector3f(double f) {  x = y = z = (float)f; axisOrder = AxisOrder.ENU; }
-        public Vector3f(double x, double y, double z) { this.x = (float)x; this.y = (float)y; this.z = (float)z; axisOrder = AxisOrder.ENU; }
-        public Vector3f(double[] v2) {  x = (float)v2[0]; y = (float)v2[1]; z = (float)v2[2]; axisOrder = AxisOrder.ENU; }
+        public Vector3f(double f) {  x = y = z = (float)f; axisOrder = AxisOrder.Undefined; }
+        public Vector3f(double x, double y, double z) { this.x = (float)x; this.y = (float)y; this.z = (float)z; axisOrder = AxisOrder.Undefined; }
+        public Vector3f(double[] v2) {  x = (float)v2[0]; y = (float)v2[1]; z = (float)v2[2]; axisOrder = AxisOrder.Undefined; }
         public Vector3f(Vector3d copy) {  x = (float)copy.x; y = (float)copy.y; z = (float)copy.z; axisOrder = copy.axisOrder; }
 
         static public readonly Vector3f Zero = new Vector3f(0.0f, 0.0f, 0.0f);
@@ -344,9 +344,13 @@ namespace VirgisGeometry
 
         public void ChangeAxisOrderTo(AxisOrder ax)
         {
-            if (axisOrder == ax) return;
-            if (axisOrder.Axis2 == ax.Axis2) return;
-            if (axisOrder.Axis2 == ax.Axis2) return;
+            if (
+                 axisOrder == AxisOrder.Undefined ||
+                 ax == AxisOrder.Undefined ||
+                 axisOrder == ax ||
+                 axisOrder.Axis2 == ax.Axis2 ||
+                 axisOrder.Axis3 == ax.Axis3
+             ) return;
             if (axisOrder.Axis2 == AxisType.Up || ax.Axis2 == AxisType.Up)
             {
                 float temp = y;

@@ -6,7 +6,7 @@ namespace VirgisGeometry
     /// <summary>
     /// structures used to record axis order
     /// </summary>
-    public enum AxisType
+    public enum AxisType : byte
     {
         Other = 0,
         North = 1,
@@ -42,6 +42,13 @@ namespace VirgisGeometry
             Axis1 = AxisType.East,
             Axis2 = AxisType.Up,
             Axis3 = AxisType.North
+        };
+
+        public static readonly AxisOrder Undefined = new()
+        {
+            Axis1 = AxisType.Other,
+            Axis2 = AxisType.Other,
+            Axis3 = AxisType.Other
         };
 
         /// <summary>
@@ -90,13 +97,13 @@ namespace VirgisGeometry
                 case "NED":
                     return NED;
                 default:
-                    return default;
+                    return Undefined;
             }
         }
 
         public readonly byte[] ToArray()
         {
-            return new byte[] { (byte)Axis1, (byte)Axis2, (byte)Axis3 };
+            return new byte[3] { (byte)Axis1, (byte)Axis2, (byte)Axis3 };
         }
     }
 }

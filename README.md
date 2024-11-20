@@ -128,7 +128,7 @@ v.ChangeAxisOrderTo(AxisOrder.ENU);
 
 This is a NOP if the AxisOrder is correct and should be called before any AxisOrder critical operation on the Vector since you may not know the whole life history of the Vector.
 
-For `DMesh3` the axis order for all verteces can be changed with the `Transform` function - note that you need to give it the transformation matix to make the change AND the target axis order.
+For `DMesh3` the axis order for all verteces can be changed with the `Transform` function - note that you need to give it the transformation matrix to make the change AND the target axis order.
 
 # Transforms
 
@@ -156,7 +156,7 @@ There are a multitude of Geometric entities in this package. A few which we find
 
 - `Polyline2D` and 3D. Provide useful extensions to Lists of `Vector3d` and 2d.
 
-- `DCurve3` - provides a good of managing lines in 3D space.
+- `DCurve3` - provides a good way of managing lines in 3D space.
 
 - `GeneralPolygon2D` - A vary good way of managing and manipulating arbitrary Polygons with holes as meshes. The class includes the ability to create from a list of `DCurve3` linear rings - with the expectation that the polygons are approximately planar - at least locally - and the 3D curves are mapped onto the best orthogonal plan of reference using a Frame3f. 
 

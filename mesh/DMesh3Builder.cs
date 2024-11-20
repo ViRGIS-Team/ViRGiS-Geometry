@@ -53,7 +53,7 @@ namespace VirgisGeometry
         public int AppendNewMesh(bool bHaveVtxNormals, bool bHaveVtxColors, bool bHaveVtxUVs, bool bHaveFaceGroups)
         {
             int index = Meshes.Count;
-            DMesh3 m = new DMesh3(bHaveVtxNormals, bHaveVtxColors, bHaveVtxUVs, bHaveFaceGroups);
+            DMesh3 m = new(bHaveVtxNormals, bHaveVtxColors, bHaveVtxUVs, bHaveFaceGroups);
             Meshes.Add(m);
             MaterialAssignment.Add(-1);     // no material is known
             Metadata.Add(new Dictionary<string, object>());
@@ -156,10 +156,6 @@ namespace VirgisGeometry
             MaterialAssignment[meshID] = materialID;
         }
 
-
-
-
-
         //
         // DMesh3 construction utilities
         //
@@ -175,7 +171,7 @@ namespace VirgisGeometry
                                                       AxisOrder ax = default)
         {
             DMesh3 mesh = new DMesh3(Normals != null, false, false, TriGroups != null);
-            if (ax == default) mesh.axisOrder = AxisOrder.ENU; else mesh.axisOrder = ax;
+            if (ax == default) mesh.axisOrder = AxisOrder.Undefined; else mesh.axisOrder = ax;
 
             Vector3d[] v = BufferUtil.ToVector3d(Vertices);
             for (int i = 0; i < v.Length; ++i)

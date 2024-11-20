@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -173,7 +172,7 @@ namespace VirgisGeometry
 
             edges = new DVector<int>();
             edges_refcount = new RefCountVector();
-            axisOrder = AxisOrder.ENU;
+            axisOrder = AxisOrder.Undefined;
         }
         public DMesh3(MeshComponents flags) : 
             this( (flags & MeshComponents.VertexNormals) != 0,  (flags & MeshComponents.VertexColors) != 0,
@@ -430,6 +429,11 @@ namespace VirgisGeometry
             return new Vector3f((float)vertices[i], (float)vertices[i + 1], (float)vertices[i + 2]) { axisOrder = axisOrder };
         }
 
+        /// <summary>
+        /// Set the indicated vertex - changing Axis Order depending on the Axis Order of the Vector3d
+        /// </summary>
+        /// <param name="vID" cref="int"></param>
+        /// <param name="vNewPos" cref="Vector3d"></param>
         public void SetVertex(int vID, Vector3d vNewPos) {
             System.Diagnostics.Debug.Assert(vNewPos.IsFinite);     // this will really catch a lot of bugs...
             debug_check_is_vertex(vID);
@@ -1374,6 +1378,14 @@ namespace VirgisGeometry
         public IEnumerable<Vector3d> Vertices() {
             foreach (int vid in vertices_refcount) {
                 yield return GetVertex(vid);
+            }
+        }
+
+        public IEnumerable<NewVertexInfo> VerticesAll()
+        {
+            foreach ( int vid in vertices_refcount)
+            {
+                yield return GetVertexAll(vid);
             }
         }
 
@@ -2560,9 +2572,26 @@ namespace VirgisGeometry
         /// </summary>
         public void CalculateUVs()
         {
-            EnableVertexUVs(Vector2f.Zero);
             OrthogonalPlaneFit3 orth = new OrthogonalPlaneFit3(Vertices());
-            Frame3f frame = new Frame3f(orth.Origin, orth.Normal);
+            Frame3f frame = new Frame3f(orth.Origin, -1 * orth.Normal);
+            //
+            // check the orientation of the plane in UV space.
+            // for image planes  - we assume that the x direction from the first point to the second point should always be positive
+            // if not - reverse the frame
+            //
+            List<Vector3d> start = Vertices().Take(2).ToList();
+            if (Math.Sign(
+                frame.ToPlaneUV((Vector3f)start[0], 2).x -
+                frame.ToPlaneUV((Vector3f)start[1], 2).x
+                ) > -1)
+            {
+                frame = new Frame3f(orth.Origin, orth.Normal);
+            }
+            CalculateUVs(frame);
+        }
+        public void CalculateUVs(Frame3f frame) {
+            EnableVertexUVs(Vector2f.Zero);
+
             AxisAlignedBox3d bounds = CachedBounds;
             AxisAlignedBox2d boundsInFrame = new AxisAlignedBox2d();
             for (int i = 0; i < 8; i++)
@@ -2573,7 +2602,7 @@ namespace VirgisGeometry
             float width = (float)boundsInFrame.Width;
             float height = (float)boundsInFrame.Height;
 
-            for (int i = 0; i < VertexCount; i++)
+            foreach (int i in VertexIndices())
             {
                 Vector2f UV = frame.ToPlaneUV((Vector3f)GetVertex(i), 3);
                 UV.x = (UV.x - min.x) / width;
@@ -2607,14 +2636,14 @@ namespace VirgisGeometry
         /// 
         /// </summary>
         /// <returns>Int[] of colors numbered [1..6]</returns>
-        public IEnumerator<int[]> Colorisation(int cycleTimer = 10) {
-            int[] colorisation = new int[VertexCount];
+        public IEnumerator<byte[]> Colorisation(int cycleTimer = 10) {
+            byte[] colorisation = new byte[VertexCount];
             LinkedList<int> queue = new();
             Stack<int> previous = new();
  
             bool TryChangeVertex( int id)
             {
-                int[] vmask = new int[7];
+                byte[] vmask = new byte[7];
 
                 // try simple brute force - look for a color not used in any of this vertex's neighbours
                 // Get the one-ring around the vertex and collect their colors
@@ -2626,11 +2655,11 @@ namespace VirgisGeometry
                 }
 
                 // if there is an unused color - use it
-                for(int i = colorisation[id] +1 ; i < 7; i++) 
+                for(int i = colorisation[id] + 1 ; i < 7; i++) 
                 {
                     if (vmask[i] == 0)
                     {
-                        colorisation[id] = i;
+                        colorisation[id] = (byte)i;
                         return true;
                     }
                 }
@@ -2670,9 +2699,9 @@ namespace VirgisGeometry
         /// </summary>
         /// <param name="uv"></param>
         /// <exception cref="Exception"></exception>
-        public IEnumerator ColorisationCoroutine(int cycleTimer, Action<int[]> callback)
+        public IEnumerator ColorisationCoroutine(int cycleTimer, Action<byte[]> callback)
         {
-            IEnumerator<int[]> colorizer = Colorisation(cycleTimer);
+            IEnumerator<byte[]> colorizer = Colorisation(cycleTimer);
             System.Diagnostics.Stopwatch stopwatch = new();
             stopwatch.Start();
             while (colorizer.MoveNext())
@@ -2700,14 +2729,11 @@ namespace VirgisGeometry
             }
             try
             {
-                for (int i = 0; i < VertexCount; i++)
+                foreach (int i in VertexIndices())
                 {
-                    if (IsVertex(i))
-                    {
-                        SetVertex(i, transform * GetVertex(i));
-                    }
-            };
-            return true;
+                    SetVertex(i, transform * GetVertex(i));
+                }
+                return true;
             }
             catch
             {
