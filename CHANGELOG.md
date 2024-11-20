@@ -1,6 +1,14 @@
+# Version 4.0.1
+
+- Add AxisOrder to DCurve3
+- Fixes to AxisOrder
+- Fixes to PointInPolygon
+- Add VertexAll iterator to DMesh3
+- Fixes to various mesh utilities to ensure that they run with sparse meshes
+
 # Version 4.0.0
 
-The manin changes in this Version are that the Namespace has been changed from `g3` to `VirgisGeometry` and there are many new integrations into Unity.
+The main changes in this Version are that the Namespace has been changed from `g3` to `VirgisGeometry` and there are many new integrations into Unity.
 
 - Namespace changed from `g3` to `VirgisGeometry`
 - Add Matrix4d Type
