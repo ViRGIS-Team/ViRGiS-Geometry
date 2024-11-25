@@ -2638,9 +2638,11 @@ namespace VirgisGeometry
         /// <returns>Int[] of colors numbered [1..6]</returns>
         public IEnumerator<byte[]> Colorisation(int cycleTimer = 10) {
             byte[] colorisation = new byte[VertexCount];
+            Array.Fill<byte>(colorisation, 0xff);
             LinkedList<int> queue = new();
             Stack<int> previous = new();
- 
+
+            //Change Vertex Color Function
             bool TryChangeVertex( int id)
             {
                 byte[] vmask = new byte[7];
@@ -2649,13 +2651,14 @@ namespace VirgisGeometry
                 // Get the one-ring around the vertex and collect their colors
                 foreach(int v in VtxVerticesItr(id))
                 {
-                    vmask[colorisation[v]] += 1;
+                    if (colorisation[v] != 0xFF)
+                        vmask[colorisation[v]] += 1;
                     if (! previous.Contains(v) && ! queue.Contains(v)) 
                         queue.AddLast(v);
                 }
 
                 // if there is an unused color - use it
-                for(int i = colorisation[id] + 1 ; i < 7; i++) 
+                for(int i = colorisation[id] == 0xFF? 1 : colorisation[id] + 1 ; i < 7; i++) 
                 {
                     if (vmask[i] == 0)
                     {
@@ -2668,24 +2671,41 @@ namespace VirgisGeometry
                 return false;
             }
 
+            // start with arbotrarily chosen vertex 0
             queue.AddLast(0);
-            System.Diagnostics.Stopwatch watch = new();
-            while (queue.Count > 0)
+            bool incomplete = true;
+            while (incomplete)
             {
-                watch.Restart();
-                while (queue.Count > 0 && watch.ElapsedMilliseconds < cycleTimer)
+                System.Diagnostics.Stopwatch watch = new();
+                while (queue.Count > 0)
                 {
-                    if (TryChangeVertex(queue.First()))
+                    watch.Restart();
+                    while (queue.Count > 0 && watch.ElapsedMilliseconds < cycleTimer)
                     {
-                        previous.Push(queue.First());
-                        queue.RemoveFirst();
-                    } else
-                    {
-                        queue.AddFirst(previous.Pop());
-                        if (queue.Count == VertexCount) throw new Exception("Colorisation of Mesh Failed!");
+                        if (TryChangeVertex(queue.First()))
+                        {
+                            previous.Push(queue.First());
+                            queue.RemoveFirst();
+                        }
+                        else
+                        {
+                            queue.AddFirst(previous.Pop());
+                            if (queue.Count == VertexCount) throw new Exception("Colorisation of Mesh Failed!");
+                        }
                     }
-                }
-                yield return colorisation;
+                    yield return colorisation;
+                };
+
+                // All vertices contiguous with vertex 0 are now colorised - 
+                // but there may be areas of the mesh not connected to this
+                int next = Array.FindIndex<byte>(colorisation, item => item == 0xFF);
+                if (next == -1)
+                {
+                    incomplete = false;
+                } else
+                {
+                    queue.AddLast(next);
+                };
             };
             yield break;
         }
