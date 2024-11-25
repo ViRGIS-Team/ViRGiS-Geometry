@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Unity.Mathematics;
 
 namespace VirgisGeometry
@@ -14,6 +15,17 @@ namespace VirgisGeometry
         public Index3i(int ii, int jj, int kk) { a = ii; b = jj; c = kk; }
         public Index3i(int[] i2) { a = i2[0]; b = i2[1]; c = i2[2]; }
         public Index3i(Index3i copy) { a = copy.a; b = copy.b; c = copy.b; }
+
+        public Index3i(IEnumerable<int> v)
+        {
+            IEnumerator<int> values = v.GetEnumerator();
+            if (!values.MoveNext()) throw new Exception("Triangle is incomplete");
+            a = values.Current;
+            if (!values.MoveNext()) throw new Exception("Triangle is incomplete");
+            b = values.Current;
+            if (!values.MoveNext()) throw new Exception("Triangle is incomplete");
+            c = values.Current;
+        }
 
         // reverse last two indices if cycle is true (useful for cw/ccw codes)
         public Index3i(int ii, int jj, int kk, bool cycle) {

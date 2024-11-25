@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.IO;
 using System.IO.Compression;
+using UnityEngine;
 
 namespace VirgisGeometry
 {
@@ -166,49 +167,49 @@ namespace VirgisGeometry
         /// convert input set into Vector3d.
         /// Supports packed list of float/double tuples, list of Vector3f/Vector3d
         /// </summary>
-        static public Vector3d[] ToVector3d<T>(IEnumerable<T> values) {
-            Vector3d[] result = null;
-
-            int N = values.Count();
-            int k = 0; int j = 0;
-
+        static public IEnumerable<Vector3d> ToVector3d<T>(IEnumerable<T> values) {
             Type t = typeof(T);
+
             if (t == typeof(float)) {
-                N /= 3;
-                result = new Vector3d[N];
-                IEnumerable<float> valuesf = values as IEnumerable<float>;
-                foreach (float f in valuesf) {
-                    result[k][j++] = f;
-                    if (j == 3) {
-                        j = 0; k++;
-                    }
+                IEnumerator<float> valuesf = (values as IEnumerable<float>).GetEnumerator();
+                while (valuesf.MoveNext() )
+                {
+                    float x = valuesf.Current;
+                    if (!valuesf.MoveNext()) throw new Exception("Vector Data is incomplete");
+                    float y = valuesf.Current;
+                    if (!valuesf.MoveNext()) throw new Exception("Vector Data is incomplete");
+                    float z = valuesf.Current;
+                    yield return new Vector3d(x, y, z);
                 }
             } else if (t == typeof(double)) {
-                N /= 3;
-                result = new Vector3d[N];
-                IEnumerable<double> valuesd = values as IEnumerable<double>;
-                foreach (double f in valuesd) {
-                    result[k][j++] = f;
-                    if (j == 3) {
-                        j = 0; k++;
-                    }
+                IEnumerator<double> valuesd = (values as IEnumerable<double>).GetEnumerator();
+                while (valuesd.MoveNext() )
+                {
+                    double x = valuesd.Current;
+                    if (!valuesd.MoveNext()) throw new Exception("Vector Data is incomplete");
+                    double y = valuesd.Current;
+                    if (!valuesd.MoveNext()) throw new Exception("Vector Data is incomplete");
+                    double z = valuesd.Current;
+                    yield return new Vector3d(x, y, z);
                 }
             } else if (t == typeof(Vector3f)) {
-                result = new Vector3d[N];
-                IEnumerable<Vector3f> valuesvf = values as IEnumerable<Vector3f>;
+                IEnumerable<Vector3f> valuesvf = (values as IEnumerable<Vector3f>);
                 foreach (Vector3f v in valuesvf)
-                    result[k++] = v;
+                    yield return (Vector3d)v;
+            }
+            else if (t == typeof(Vector3))
+            {
+                IEnumerable<Vector3> valuesuv = (values as IEnumerable<Vector3>);
+                foreach (Vector3 v in valuesuv)
+                    yield return (Vector3d)v;
 
-            } else if (t == typeof(Vector3d)) {
-                result = new Vector3d[N];
+            }
+            else if (t == typeof(Vector3d)) {
                 IEnumerable<Vector3d> valuesvd = values as IEnumerable<Vector3d>;
                 foreach (Vector3d v in valuesvd)
-                    result[k++] = v;
-
+                    yield return v;
             } else
                 throw new NotSupportedException("ToVector3d: unknown type " + t.ToString());
-
-            return result;
         }
 
 
@@ -217,49 +218,58 @@ namespace VirgisGeometry
         /// convert input set into Vector3f.
         /// Supports packed list of float/double tuples, list of Vector3f/Vector3d
         /// </summary>
-        static public Vector3f[] ToVector3f<T>(IEnumerable<T> values) {
-            Vector3f[] result = null;
-
-            int N = values.Count();
-            int k = 0; int j = 0;
-
+        static public IEnumerable<Vector3f> ToVector3f<T>(IEnumerable<T> values)
+        {
             Type t = typeof(T);
-            if ( t == typeof(float) ) {
-                N /= 3;
-                result = new Vector3f[N];
-                IEnumerable<float> valuesf = values as IEnumerable<float>;
-                foreach ( float f in valuesf ) {
-                    result[k][j++] = f;
-                    if ( j == 3 ) {
-                        j = 0; k++;
-                    }
-                }
-            } else if ( t == typeof(double) ) {
-                N /= 3;
-                result = new Vector3f[N];
-                IEnumerable<double> valuesd = values as IEnumerable<double>;
-                foreach ( double f in valuesd ) {
-                    result[k][j++] = (float)f;
-                    if ( j == 3 ) {
-                        j = 0; k++;
-                    }
-                }
-            } else if ( t == typeof(Vector3f) ) {
-                result = new Vector3f[N];
-                IEnumerable<Vector3f> valuesvf = values as IEnumerable<Vector3f>;
-                foreach (Vector3f v in valuesvf)
-                    result[k++] = v;
 
-            } else if ( t == typeof(Vector3d) ) {
-                result = new Vector3f[N];
+            if (t == typeof(float))
+            {
+                IEnumerator<float> valuesf = (values as IEnumerable<float>).GetEnumerator();
+                while(valuesf.MoveNext())
+                {
+                    float x = valuesf.Current;
+                    if (! valuesf.MoveNext() ) throw new Exception("Vector Data is incomplete");
+                    float y = valuesf.Current;
+                    if (!valuesf.MoveNext()) throw new Exception("Vector Data is incomplete");
+                    float z = valuesf.Current;
+                    yield return new Vector3f(x, y, z);
+                }
+            }
+            else if (t == typeof(double))
+            {
+                IEnumerator<double> valuesd = (values as IEnumerable<double>).GetEnumerator();
+                while (valuesd.MoveNext() )
+                {
+                    double x = valuesd.Current;
+                    if (!valuesd.MoveNext()) throw new Exception("Vector Data is incomplete");
+                    double y = valuesd.Current;
+                    if (!valuesd.MoveNext()) throw new Exception("Vector Data is incomplete");
+                    double z = valuesd.Current;
+                    yield return new Vector3f(x, y, z);
+                }
+            }
+            else if (t == typeof(Vector3f))
+            {
+                IEnumerable<Vector3f> valuesvf = (values as IEnumerable<Vector3f>);
+                foreach (Vector3f v in valuesvf)
+                    yield return v;
+
+            }
+            else if (t == typeof(Vector3))
+            {
+                IEnumerable<Vector3> valuesuv = (values as IEnumerable<Vector3>);
+                foreach (Vector3 v in valuesuv)
+                    yield return (Vector3f)v;
+
+            }
+            else if (t == typeof(Vector3d))
+            {
                 IEnumerable<Vector3d> valuesvd = values as IEnumerable<Vector3d>;
                 foreach (Vector3d v in valuesvd)
-                    result[k++] = (Vector3f)v;
-
-            } else
-                throw new NotSupportedException("ToIndex3i: unknown type " + t.ToString());
-
-            return result;
+                    yield return (Vector3f)v;
+            }
+            else
+                throw new NotSupportedException("ToVector3f: unknown type " + t.ToString());
         }
 
 
@@ -269,87 +279,66 @@ namespace VirgisGeometry
         /// convert input set into Index3i.
         /// Supports packed list of int tuples, list of Vector3i/Index3i
         /// </summary>
-        static public Index3i[] ToIndex3i<T>(IEnumerable<T> values) {
-            Index3i[] result = null;
-
-            int N = values.Count();
-            int k = 0; int j = 0;
+        static public IEnumerable<Index3i> ToIndex3i<T>(IEnumerable<T> values) {
 
             Type t = typeof(T);
             if (t == typeof(int)) {
-                N /= 3;
-                result = new Index3i[N];
-                IEnumerable<int> valuesi = values as IEnumerable<int>;
-                foreach (int i in valuesi) {
-                    result[k][j++] = i;
-                    if (j == 3) {
-                        j = 0; k++;
-                    }
+                IEnumerator<int> valuesi = (values as IEnumerable<int>).GetEnumerator();
+                while (valuesi.MoveNext())
+                {
+                    int a = valuesi.Current;
+                    if (!valuesi.MoveNext()) throw new Exception("Triangle is incomplete");
+                    int b = valuesi.Current;
+                    if (!valuesi.MoveNext()) throw new Exception("Triangle is incomplete");
+                    int c = valuesi.Current;
+                    yield return new Index3i(a, b, c);
                 }
             } else if (t == typeof(Index3i)) {
-                result = new Index3i[N];
                 IEnumerable<Index3i> valuesvi = values as IEnumerable<Index3i>;
-                foreach (Index3i v in valuesvi)
-                    result[k++] = v;
-
+                foreach (Index3i i in valuesvi)
+                    yield return i;
             } else if (t == typeof(Vector3i)) {
-                result = new Index3i[N];
                 IEnumerable<Vector3i> valuesvi = values as IEnumerable<Vector3i>;
                 foreach (Vector3i v in valuesvi)
-                    result[k++] = v;
+                    yield return (Index3i)v;
 
             } else
                 throw new NotSupportedException("ToIndex2i: unknown type " + t.ToString());
-
-            return result;
         }
 
         /// <summary>
         /// convert input set into Index2i.
         /// Supports packed list of int tuples, list of Vector2i/Index2i
         /// </summary>
-        static public Index2i[] ToIndex2i<T>(IEnumerable<T> values)
+        static public IEnumerable<Index2i> ToIndex2i<T>(IEnumerable<T> values)
         {
-            Index2i[] result = null;
-
-            int N = values.Count();
-            int k = 0; int j = 0;
-
             Type t = typeof(T);
             if (t == typeof(int))
             {
-                N /= 3;
-                result = new Index2i[N];
-                IEnumerable<int> valuesi = values as IEnumerable<int>;
-                foreach (int i in valuesi)
+                IEnumerator<int> valuesi = (values as IEnumerable<int>).GetEnumerator();
+                while(valuesi.MoveNext())
                 {
-                    result[k][j++] = i;
-                    if (j == 3)
-                    {
-                        j = 0; k++;
-                    }
+                    int a = valuesi.Current;
+                    if (! valuesi.MoveNext()) throw new Exception("Index2i data is not complete");
+                    int b = valuesi.Current;
+                    yield return new Index2i(a, b);
                 }
             }
             else if (t == typeof(Index2i))
             {
-                result = new Index2i[N];
                 IEnumerable<Index2i> valuesvi = values as IEnumerable<Index2i>;
-                foreach (Index2i v in valuesvi)
-                    result[k++] = v;
-
+                foreach (Index2i i in valuesvi)
+                    yield return i;
             }
             else if (t == typeof(Vector2i))
             {
-                result = new Index2i[N];
                 IEnumerable<Vector2i> valuesvi = values as IEnumerable<Vector2i>;
                 foreach (Vector2i v in valuesvi)
-                    result[k++] = v;
+                    yield return (Index2i)v;
 
             }
             else
-                throw new NotSupportedException("ToVector3d: unknown type " + t.ToString());
-
-            return result;
+                throw new NotSupportedException("ToIndex2i: unknown type " + t.ToString());
         }
 
 
@@ -563,7 +552,7 @@ namespace VirgisGeometry
 #if NET_2_0 || NET_2_0_SUBSET
             DeflateStream zip = new DeflateStream(ms, CompressionMode.Compress);
 #else
-            DeflateStream zip = new DeflateStream(ms, (bFast) ? CompressionLevel.Fastest : CompressionLevel.Optimal, true);
+            DeflateStream zip = new DeflateStream(ms, (bFast) ? System.IO.Compression.CompressionLevel.Fastest : System.IO.Compression.CompressionLevel.Optimal, true);
 #endif
             zip.Write(buffer, 0, buffer.Length);
             zip.Close();
