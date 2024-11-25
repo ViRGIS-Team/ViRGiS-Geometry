@@ -1,6 +1,6 @@
 {
     "name": "com.virgis.geometry",
-    "version": "4.0.1",
+    "version": "4.0.2",
     "displayName": "ViRGiS Geometry Package",
     "description": "Open-Source (Boost-license) Unity library for geometric computing.",
     "unity": "2020.1",
