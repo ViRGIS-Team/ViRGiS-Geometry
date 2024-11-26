@@ -2638,27 +2638,29 @@ namespace VirgisGeometry
         /// <returns>Int[] of colors numbered [1..6]</returns>
         public IEnumerator<byte[]> Colorisation(int cycleTimer = 10) {
             byte[] colorisation = new byte[VertexCount];
-            Array.Fill<byte>(colorisation, 0xff);
+            Array.Fill<byte>(colorisation, 0xFF);
             LinkedList<int> queue = new();
             Stack<int> previous = new();
 
             //Change Vertex Color Function
             bool TryChangeVertex( int id)
             {
-                byte[] vmask = new byte[7];
+                byte[] vmask = new byte[6];
 
                 // try simple brute force - look for a color not used in any of this vertex's neighbours
                 // Get the one-ring around the vertex and collect their colors
                 foreach(int v in VtxVerticesItr(id))
                 {
-                    if (colorisation[v] != 0xFF)
+                    if (colorisation[v] != 0xFF && colorisation[v] != 0xFE )
                         vmask[colorisation[v]] += 1;
-                    if (! previous.Contains(v) && ! queue.Contains(v)) 
-                        queue.AddLast(v);
+                    if (colorisation[v] == 0xFF ) {
+                        queue.AddFirst(v);
+                        colorisation[v] = 0xFE;
+                    }
                 }
 
-                // if there is an unused color - use it
-                for(int i = colorisation[id] == 0xFF? 1 : colorisation[id] + 1 ; i < 7; i++) 
+                // if there is an unused color higher than the current colour - use it
+                for(int i = colorisation[id] == 0xFF || colorisation[id] == 0xFE ? 0 : colorisation[id] ; i < 6; i++) 
                 {
                     if (vmask[i] == 0)
                     {
@@ -2667,11 +2669,11 @@ namespace VirgisGeometry
                     }
                 }
 
-                colorisation[id] = 0;
+                colorisation[id] = 0xFE;
                 return false;
             }
 
-            // start with arbotrarily chosen vertex 0
+            // start with arbritrarily chosen vertex 0
             queue.AddLast(0);
             bool incomplete = true;
             while (incomplete)
@@ -2682,13 +2684,15 @@ namespace VirgisGeometry
                     watch.Restart();
                     while (queue.Count > 0 && watch.ElapsedMilliseconds < cycleTimer)
                     {
-                        if (TryChangeVertex(queue.First()))
+                        int current = queue.First();
+                        queue.RemoveFirst();
+                        if (TryChangeVertex(current))
                         {
-                            previous.Push(queue.First());
-                            queue.RemoveFirst();
+                            previous.Push(current);
                         }
                         else
                         {
+                            queue.AddFirst(current);
                             queue.AddFirst(previous.Pop());
                             if (queue.Count == VertexCount) throw new Exception("Colorisation of Mesh Failed!");
                         }
