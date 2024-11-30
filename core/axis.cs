@@ -106,6 +106,11 @@ namespace VirgisGeometry
             return this == (AxisOrder)obj;
         }
 
+        public override int GetHashCode()
+        {
+            return 8 * (int)Axis1 + 4 * (int)Axis2 + (int)Axis3;
+        }
+
         public readonly byte[] ToArray()
         {
             return new byte[3] { (byte)Axis1, (byte)Axis2, (byte)Axis3 };
