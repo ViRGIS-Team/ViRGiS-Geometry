@@ -101,7 +101,25 @@ namespace VirgisGeometry
             }
         }
 
+        public static bool operator ==(Matrix3f a, Matrix3f b)
+        {
+            return a.Row0 == b.Row0 && a.Row1 == b.Row1 && a.Row2 == b.Row2;
+        }
 
+        public static bool operator !=(Matrix3f a, Matrix3f b)
+        {
+            return a.Row0 != b.Row0 || a.Row1 != b.Row1 || a.Row2 != b.Row2;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return this == (Matrix3f)obj;
+        }
+
+        public override int GetHashCode()
+        {
+            return (int)Math.Floor(Determinant);
+        }
 
         public Vector3f Row(int i) {
             return (i == 0) ? Row0 : (i == 1) ? Row1 : Row2;

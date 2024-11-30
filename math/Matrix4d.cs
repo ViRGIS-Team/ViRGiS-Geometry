@@ -243,7 +243,10 @@ namespace VirgisGeometry
             return this == (Matrix4d)obj;
         }
 
-
+        public override int GetHashCode()
+        {
+            return (int)Math.Floor(Determinant);
+        }
 
         public double InnerProduct(ref Matrix4d m2)
         {
