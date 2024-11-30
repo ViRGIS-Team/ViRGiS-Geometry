@@ -158,7 +158,7 @@ namespace gs
 
             // construct submesh
             RegionOperator regionOp = new RegionOperator(Mesh, faceROI);
-            DSubmesh3 roiSubmesh = regionOp.Region;
+            DSubmesh3Legacy roiSubmesh = regionOp.Region;
             DMesh3 roiMesh = roiSubmesh.SubMesh;
 
             // save 3D positions of unmodified mesh

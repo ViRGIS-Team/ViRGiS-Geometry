@@ -684,7 +684,8 @@ namespace VirgisGeometry
         //
         // Returns true if submesh successfully inserted, false if any triangles failed
         // (which happens if triangle would result in non-manifold mesh)
-        public bool ReinsertSubmesh(DSubmesh3 sub, ref int[] new_tris, out IndexMap SubToNewV,
+        [Obsolete("Use the new DSubmesh3 class")]
+        public bool ReinsertSubmesh(DSubmesh3Legacy sub, ref int[] new_tris, out IndexMap SubToNewV,
             DuplicateTriBehavior eDuplicateBehavior = DuplicateTriBehavior.AssertAbort)
         {
             if (sub.BaseBorderV == null)

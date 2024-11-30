@@ -50,6 +50,13 @@ namespace VirgisGeometry
             get { return new int[] { a, b, c }; }
         }
 
+        public IEnumerator<int> GetEnumerator()
+        {
+            yield return a;
+            yield return b;
+            yield return c;
+        }
+
 
         public int LengthSquared
         {
@@ -219,6 +226,12 @@ namespace VirgisGeometry
             get { return new int[] { a, b }; }
         }
 
+        public IEnumerator<int> GetEnumerator()
+        {
+            yield return a;
+            yield return b;
+        }
+
 
         public int LengthSquared
         {
@@ -340,14 +353,6 @@ namespace VirgisGeometry
 
     }
 
-
-
-
-
-
-
-
-
     public struct Index4i
     {
         public int a;
@@ -373,6 +378,14 @@ namespace VirgisGeometry
 
         public int[] array {
             get { return new int[4] { a, b, c, d }; }
+        }
+
+        public IEnumerator<int> GetEnumerator()
+        {
+            yield return a;
+            yield return b;
+            yield return c;
+            yield return d;
         }
 
 

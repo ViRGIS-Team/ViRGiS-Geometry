@@ -39,7 +39,7 @@ namespace VirgisGeometry
         /// (if false, them throws exception if there are still any triangles!)
         /// if bPreserveManifold, checks that we will not create a bowtie vertex first
         /// </summary>
-        public MeshResult RemoveVertex(int vID, bool bRemoveAllTriangles = true, bool bPreserveManifold = false)
+        public virtual MeshResult RemoveVertex(int vID, bool bRemoveAllTriangles = true, bool bPreserveManifold = false)
         {
             if (vertices_refcount.isValid(vID) == false)
                 return MeshResult.Failed_NotAVertex;
@@ -90,7 +90,7 @@ namespace VirgisGeometry
         ///   If this check is not done, you have to make sure you don't create a bowtie, because other
         ///   code assumes we don't have bowties, and will not handle it properly
         /// </summary>
-        public MeshResult RemoveTriangle(int tID, bool bRemoveIsolatedVertices = true, bool bPreserveManifold = false)
+        public virtual MeshResult RemoveTriangle(int tID, bool bRemoveIsolatedVertices = true, bool bPreserveManifold = false)
         {
             if ( ! triangles_refcount.isValid(tID) ) {
                 Debug.Assert(false);
@@ -1083,7 +1083,7 @@ namespace VirgisGeometry
             triangle_edges[i + 2] = e2;
         }
 
-        int add_edge(int vA, int vB, int tA, int tB = InvalidID)
+        internal virtual int add_edge(int vA, int vB, int tA, int tB = InvalidID)
         {
             if (vB < vA) {
                 int t = vB; vB = vA; vA = t;

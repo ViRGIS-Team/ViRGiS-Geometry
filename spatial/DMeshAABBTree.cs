@@ -145,6 +145,7 @@ namespace VirgisGeometry
         }
         protected void find_nearest_tri(int iBox, Vector3d p, ref double fNearestSqr, ref int tID)
         {
+            p.ChangeAxisOrderTo(mesh.axisOrder);
             int idx = box_to_index[iBox];
             if ( idx < triangles_end ) {            // triange-list case, array is [N t1 t2 ... tN]
                 int num_tris = index_list[idx];
@@ -208,6 +209,7 @@ namespace VirgisGeometry
         }
         protected void find_nearest_vtx(int iBox, Vector3d p, ref double fNearestSqr, ref int vid)
         {
+            p.ChangeAxisOrderTo(mesh.axisOrder);
             int idx = box_to_index[iBox];
             if (idx < triangles_end) {            // triange-list case, array is [N t1 t2 ... tN]
                 int num_tris = index_list[idx];

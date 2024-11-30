@@ -113,23 +113,23 @@ namespace VirgisGeometry
         public static readonly Index2i InvalidEdge = new Index2i(InvalidID, InvalidID);
 
 
-        RefCountVector vertices_refcount;
-        DVector<double> vertices;
-		DVector<float> normals;
-		DVector<float> colors;
-		DVector<float> uv;
+        protected RefCountVector vertices_refcount;
+        internal virtual DVector<double> vertices { get; set; }
+        internal virtual DVector<float> normals { get; set; }
+        internal virtual DVector<float> colors { get; set; }
+        internal virtual DVector<float> uv { get; set; }
 
         // [TODO] this is optional if we only want to use this class as an iterable mesh-with-nbrs
         //   make it optional with a flag? (however find_edge depends on it...)
-        SmallListSet vertex_edges;
+        internal virtual SmallListSet vertex_edges { get; set; }
 
-        RefCountVector triangles_refcount;
-        DVector<int> triangles;
-        DVector<int> triangle_edges;
-		DVector<int> triangle_groups;
+        protected RefCountVector triangles_refcount;
+        internal virtual DVector<int> triangles { get; set; }
+        internal virtual DVector<int> triangle_edges { get; set; }
+        internal virtual DVector<int> triangle_groups { get; set; }
 
-        RefCountVector edges_refcount;
-        DVector<int> edges;
+        protected RefCountVector edges_refcount;
+        internal virtual DVector<int> edges { get; set; }
 
         int timestamp = 0;
         int shape_timestamp = 0;
@@ -137,16 +137,23 @@ namespace VirgisGeometry
         int max_group_id = 0;
 
         // "normal" meshes are counter-clockwise. Unity is CW though...
-        public bool Clockwise = false;
-        bool bFlip = false;
-        bool bFlipNormals = false;
-        public AxisOrder axisOrder;
+        public virtual bool Clockwise { get; set; } = false;
+        internal virtual bool bFlip { get; set; } = false;
+        internal virtual bool bFlipNormals { get; set; } = false;
+        public virtual AxisOrder axisOrder { get; set; }
 
 
         /// <summary>
         /// Support attaching arbitrary data to mesh. 
         /// </summary>
-        Dictionary<string, object> Metadata = null;
+        internal virtual Dictionary<string, object> Metadata { get; set; } = null;
+
+        internal DMesh3(bool IsSubmesh) 
+        {
+            vertices_refcount = new RefCountVector();
+            triangles_refcount = new RefCountVector();
+            edges_refcount = new RefCountVector();
+        }
 
 
         public DMesh3(bool bWantNormals = true, bool bWantColors = false, bool bWantUVs = false, bool bWantTriGroups = false)
@@ -339,7 +346,7 @@ namespace VirgisGeometry
 
 
 
-		void updateTimeStamp(bool bShapeChange) {
+		protected void updateTimeStamp(bool bShapeChange) {
             timestamp++;
             if (bShapeChange)
                 shape_timestamp++;
@@ -405,13 +412,13 @@ namespace VirgisGeometry
         // info
 
         public bool IsVertex(int vID) {
-            return vertices_refcount.isValid(vID);
+            return vID != InvalidID && vertices_refcount.isValid(vID);
         }
         public bool IsTriangle(int tID) {
-            return triangles_refcount.isValid(tID);
+            return tID != InvalidID && triangles_refcount.isValid(tID);
         }
         public bool IsEdge(int eID) {
-            return edges_refcount.isValid(eID);
+            return eID != InvalidID && edges_refcount.isValid(eID);
         }
 
 
@@ -451,15 +458,16 @@ namespace VirgisGeometry
                 debug_check_is_vertex(vID);
                 int i = 3 * vID;
                 if (bFlipNormals)
-                    return new Vector3f(-normals[i], -normals[i + 1], -normals[i + 2]);
+                    return new Vector3f(-normals[i], -normals[i + 1], -normals[i + 2]) { axisOrder = axisOrder };
                 else
-                    return new Vector3f(normals[i], normals[i + 1], normals[i + 2]);
+                    return new Vector3f(normals[i], normals[i + 1], normals[i + 2]) { axisOrder = axisOrder };
             }
 		}
 
 		public void SetVertexNormal(int vID, Vector3f vNewNormal) {
 			if ( HasVertexNormals ) {
                 debug_check_is_vertex(vID);
+                if (vNewNormal.axisOrder != axisOrder) vNewNormal.ChangeAxisOrderTo(axisOrder);
                 int i = 3*vID;
 				normals[i] = vNewNormal.x; normals[i+1] = vNewNormal.y; normals[i+2] = vNewNormal.z;
                 updateTimeStamp(false);
@@ -522,6 +530,27 @@ namespace VirgisGeometry
                 vinfo.bHaveUV = true;
                 vinfo.uv.Set(uv[2 * vID], uv[2 * vID + 1]);
             }
+            return true;
+        }
+
+        public bool SetVertex(int vID, NewVertexInfo vinfo, bool bWantNormals, bool bWantColors, bool bWantUVs)
+        {
+            if (vertices_refcount.isValid(vID) == false)
+                return false;
+            SetVertex(vID, vinfo.v);
+            if (HasVertexNormals && bWantNormals)
+            {
+                SetVertexNormal(vID, vinfo.n);
+            }
+            if (HasVertexColors && bWantColors)
+            {
+                SetVertexColor(vID, vinfo.c);
+            }
+            if (HasVertexUVs && bWantUVs)
+            {
+                SetVertexUV(vID, vinfo.uv);
+            }
+            updateTimeStamp(false);
             return true;
         }
 
@@ -983,7 +1012,7 @@ namespace VirgisGeometry
         /// <summary>
         /// Append new vertex at position and other fields, returns new vid
         /// </summary>
-        public int AppendVertex(ref NewVertexInfo info)
+        public virtual int AppendVertex(ref NewVertexInfo info)
         {
             int vid = vertices_refcount.allocate();
 			int i = 3*vid;
@@ -1024,7 +1053,7 @@ namespace VirgisGeometry
         /// <summary>
         /// copy vertex fromVID from existing source mesh, returns new vid
         /// </summary>
-        public int AppendVertex(DMesh3 from, int fromVID)
+        public virtual int AppendVertex(DMesh3 from, int fromVID)
         {
             int bi = 3 * fromVID;
 
@@ -1082,7 +1111,7 @@ namespace VirgisGeometry
         /// If bUnsafe, we use fast id allocation that does not update free list.
         /// You should only be using this between BeginUnsafeVerticesInsert() / EndUnsafeVerticesInsert() calls
         /// </summary>
-        public MeshResult InsertVertex(int vid, ref NewVertexInfo info, bool bUnsafe = false)
+        public virtual MeshResult InsertVertex(int vid, ref NewVertexInfo info, bool bUnsafe = false)
         {
             if (vertices_refcount.isValid(vid))
                 return MeshResult.Failed_VertexAlreadyExists;
@@ -1140,7 +1169,7 @@ namespace VirgisGeometry
         public int AppendTriangle(int v0, int v1, int v2, int gid = -1) {
             return AppendTriangle(new Index3i(v0, v1, v2), gid);
         }
-        public int AppendTriangle(Index3i tv, int gid = -1) {
+        public virtual int AppendTriangle(Index3i tv, int gid = -1) {
             if (IsVertex(tv[0]) == false || IsVertex(tv[1]) == false || IsVertex(tv[2]) == false) {
                 Util.gDevAssert(false);
                 return InvalidID;
@@ -1203,7 +1232,7 @@ namespace VirgisGeometry
         /// If bUnsafe, we use fast id allocation that does not update free list.
         /// You should only be using this between BeginUnsafeTrianglesInsert() / EndUnsafeTrianglesInsert() calls
         /// </summary>
-        public MeshResult InsertTriangle(int tid, Index3i tv, int gid = -1, bool bUnsafe = false)
+        public virtual MeshResult InsertTriangle(int tid, Index3i tv, int gid = -1, bool bUnsafe = false)
         {
             if (triangles_refcount.isValid(tid))
                 return MeshResult.Failed_TriangleAlreadyExists;
@@ -1366,7 +1395,8 @@ namespace VirgisGeometry
         /// </summary>
         public IEnumerable<int> BoundaryEdgeIndices() {
             foreach ( int eid in edges_refcount ) {
-                if (edges[4 * eid + 3] == InvalidID)
+                int x = edges[4 * eid + 3];
+                if (! IsTriangle(x))
                     yield return eid;
             }
         }
@@ -1725,11 +1755,7 @@ namespace VirgisGeometry
 
 
         public bool IsBoundaryEdge(int eid) {
-            return edges[4 * eid + 3] == InvalidID;
-        }
-        [System.Obsolete("edge_is_boundary will be removed in future, use IsBoundaryEdge instead")]
-        public bool edge_is_boundary(int eid) {
-            return edges[4 * eid + 3] == InvalidID;
+            return ! IsTriangle(edges[4 * eid + 3]);
         }
 
         public bool edge_has_v(int eid, int vid) {
@@ -1752,14 +1778,9 @@ namespace VirgisGeometry
             return (et0 == tid) ? et1 : ((et1 == tid) ? et0 : InvalidID);
         }
 
-
-        [System.Obsolete("vertex_is_boundary will be removed in future, use IsBoundaryVertex instead")]
-        public bool vertex_is_boundary(int vID) {
-            return IsBoundaryVertex(vID);
-        }
         public bool IsBoundaryVertex(int vID) {
             foreach (int e in vertex_edges.ValueItr(vID)) {
-                if (edges[4 * e + 3] == InvalidID)
+                if (IsGroupBoundaryEdge(e))
                     return true;
             }
             return false;

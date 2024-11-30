@@ -204,7 +204,7 @@ namespace VirgisGeometry
 
             int ri = 0;
             foreach (Component comp in c.Components) {
-                DSubmesh3 submesh = new DSubmesh3(meshIn, comp.Indices);
+                DSubmesh3Legacy submesh = new DSubmesh3Legacy(meshIn, comp.Indices);
                 result[ri++] = submesh.SubMesh;
             }
 
@@ -220,7 +220,7 @@ namespace VirgisGeometry
             MeshConnectedComponents c = new MeshConnectedComponents(meshIn);
             c.FindConnectedT();
             c.SortByCount(false);
-            DSubmesh3 submesh = new DSubmesh3(meshIn, c.Components[0].Indices);
+            DSubmesh3Legacy submesh = new DSubmesh3Legacy(meshIn, c.Components[0].Indices);
             return submesh.SubMesh;
         }
 

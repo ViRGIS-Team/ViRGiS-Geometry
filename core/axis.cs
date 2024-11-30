@@ -101,6 +101,11 @@ namespace VirgisGeometry
             }
         }
 
+        public override bool Equals(object obj)
+        {
+            return this == (AxisOrder)obj;
+        }
+
         public readonly byte[] ToArray()
         {
             return new byte[3] { (byte)Axis1, (byte)Axis2, (byte)Axis3 };

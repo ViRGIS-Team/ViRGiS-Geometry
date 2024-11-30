@@ -176,7 +176,7 @@ namespace VirgisGeometry
             foreach ( var pair in meshes ) {
                 groupIDs[k] = pair.Key;
                 List<int> tri_list = pair.Value;
-                result[k++] = DSubmesh3.QuickSubmesh(mesh, tri_list);
+                result[k++] = DSubmesh3Legacy.QuickSubmesh(mesh, tri_list);
             }
 
             return result;

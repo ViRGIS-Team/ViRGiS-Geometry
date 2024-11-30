@@ -14,10 +14,11 @@ namespace VirgisGeometry
     ///   trying to guess it here, by making some assumptions about what happens. It works for now, but
     ///   it would better if MeshEditor returned this information.
     /// </summary>
+    [Obsolete("Use the new DSubmesh3 class")]
     public class RegionOperator
     {
         public DMesh3 BaseMesh;
-        public DSubmesh3 Region;
+        public DSubmesh3Legacy Region;
 
         // this is only valid after BackPropagate() call!! maps submeshverts to base mesh
         public IndexMap ReinsertSubToBaseMapV;
@@ -30,10 +31,10 @@ namespace VirgisGeometry
 
         int[] cur_base_tris;
 
-        public RegionOperator(DMesh3 mesh, int[] regionTris, Action<DSubmesh3> submeshConfigF = null)
+        public RegionOperator(DMesh3 mesh, int[] regionTris, Action<DSubmesh3Legacy> submeshConfigF = null)
         {
             BaseMesh = mesh;
-            Region = new DSubmesh3(mesh);
+            Region = new DSubmesh3Legacy(mesh);
             if (submeshConfigF != null)
                 submeshConfigF(Region);
             Region.Compute(regionTris);
@@ -42,10 +43,10 @@ namespace VirgisGeometry
             cur_base_tris = (int[])regionTris.Clone();
         }
 
-        public RegionOperator(DMesh3 mesh, IEnumerable<int> regionTris, Action<DSubmesh3> submeshConfigF = null)
+        public RegionOperator(DMesh3 mesh, IEnumerable<int> regionTris, Action<DSubmesh3Legacy> submeshConfigF = null)
         {
             BaseMesh = mesh;
-            Region = new DSubmesh3(mesh);
+            Region = new DSubmesh3Legacy(mesh);
             if (submeshConfigF != null)
                 submeshConfigF(Region);
             Region.Compute(regionTris);

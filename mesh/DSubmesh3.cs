@@ -1,15 +1,294 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace VirgisGeometry
 {
+    /// <summary>
+    /// DSubmesh3 done properly - with rteferences to the base DMesh3 instead of copying and mapping
+    /// 
+    /// Note the main change here is that any change to the Submesh will autmatically also apply to the base mesh,
+    /// this is a feature.
+    /// 
+    /// The DSubmesh3 is now a DMesh3 - so there is no need to fetch Submesh from the DSubmesh3.
+    /// 
+    /// If you want the previous behaviour - do Copy on the DSubmesh3
+    /// </summary>
+    public class DSubmesh3: DMesh3
+    {
+        protected DMesh3 BaseMesh; // This is the base mesh that the submesh references
+        protected IEnumerable<int> selectedTris; // keeps the selected triangles for this 
+ 
+        // redirect the base data structures to the base mesh
+        internal override DVector<double> vertices 
+        { 
+            get { return BaseMesh.vertices; }
+            set { BaseMesh.vertices = value; }
+        }
+        internal override DVector<float> normals
+        {
+            get { return BaseMesh.normals; }
+            set { BaseMesh.normals = value; }
+        }
+        internal override DVector<float> colors
+        {
+            get { return BaseMesh.colors; }
+            set { BaseMesh.colors = value; }
+        }
+        internal override DVector<float> uv
+        {
+            get { return BaseMesh.uv; }
+            set { BaseMesh.uv = value; }
+        }
+        internal override SmallListSet vertex_edges
+        {
+            get { return BaseMesh.vertex_edges; }
+            set { BaseMesh.vertex_edges = value; }
+        }
+        internal override DVector<int> triangles
+        {
+            get { return BaseMesh.triangles; }
+            set { BaseMesh.triangles = value; }
+        }
+
+        internal override DVector<int> triangle_edges
+        {
+            get { return BaseMesh.triangle_edges; }
+            set { BaseMesh.triangle_edges = value; }
+        }
+        internal override DVector<int> triangle_groups
+        {
+            get { return BaseMesh.triangle_groups; }
+            set { BaseMesh.triangle_groups = value; }
+        }
+        internal override DVector<int> edges
+        {
+            get { return BaseMesh.edges; }
+            set { BaseMesh.edges = value; }
+        }
+        public override bool Clockwise
+        {
+            get { return BaseMesh.Clockwise; }
+            set { BaseMesh.Clockwise = value; }
+        }
+        internal override bool bFlip
+        {
+            get { return BaseMesh.bFlip; }
+            set { BaseMesh.bFlip = value; }
+        }
+        internal override bool bFlipNormals
+        {
+            get { return BaseMesh.bFlipNormals; }
+            set { BaseMesh.bFlipNormals = value; }
+        }
+        public override AxisOrder axisOrder
+        {
+            get { return BaseMesh.axisOrder; }
+            set { BaseMesh.axisOrder = value; }
+        }
+        internal override Dictionary<string, object> Metadata
+        {
+            get { return BaseMesh.Metadata; }
+            set { BaseMesh.Metadata = value; }
+        }
+
+
+        // Constructors
+        public DSubmesh3(DMesh3 mesh, int[] subTriangles): base(true)
+        {
+            BaseMesh = mesh;
+            compute(subTriangles);
+        }
+
+        public DSubmesh3(DMesh3 mesh, IEnumerable<int> subTriangles, int nTriEstimate = 0) : base(true)
+        {
+            BaseMesh = mesh;
+            compute(subTriangles);
+        }
+
+        public DSubmesh3(DMesh3 mesh): base(true)
+        {
+            BaseMesh = mesh;
+        }
 
 
 
+        /// <summary>
+        /// Create the submesh using the supplied triangle array
+        /// </summary>
+        /// <param name="subTriangles"></param>
+        public void Compute(int[] subTriangles)
+        {
+            selectedTris = subTriangles;
+            compute(subTriangles);
+        }
 
-    public class DSubmesh3
+        /// <summary>
+        /// Create the submesh using the supplied triangle iterator
+        /// </summary>
+        /// <param name="subTriangles"></param>
+        public void Compute(IEnumerable<int> subTriangles, int nTriEstimate = 0)
+        {
+            selectedTris = subTriangles;
+            compute(subTriangles);
+        }
+
+        /// <summary>
+        /// Create the submesh as an n-ring around vertex vID
+        /// </summary>
+        /// <param name="vID"></param>
+        /// <param name="n"></param>
+        public void Compute(int vID, int n)
+        {
+            if (!BaseMesh.IsVertex(vID))
+                throw new Exception("Not a valid vertex");
+            MeshFaceSelection mfs = new(BaseMesh);
+            mfs.ExpandToOneRingNeighbours(n - 1);
+            mfs.SelectVertexOneRing(vID);
+            compute(mfs);
+        }
+
+
+        void compute(IEnumerable<int> triangles)
+        {
+            compute(triangles.GetEnumerator());
+        }
+
+        void compute(IEnumerator<int> triangles)
+        {
+            foreach (int tri in TriangleIndices())
+                base.RemoveTriangle(tri);
+            while (triangles.MoveNext()) {
+                if (!BaseMesh.IsTriangle(triangles.Current)) continue; // don't get shouty over incorrect triangle
+                foreach (int vert in BaseMesh.GetTriangle(triangles.Current))
+                {
+                    if (!IsVertex(vert))
+                    {
+                        vertices_refcount.allocate_at_unsafe(vert);
+                    } else
+                    {
+                        vertices_refcount.increment(vert);
+                    }
+                }
+                foreach (int edge in BaseMesh.GetTriEdges(triangles.Current))
+                {
+                    if (!IsEdge(edge))
+                    {
+                        edges_refcount.allocate_at_unsafe(edge);
+                    } else
+                    {
+                        edges_refcount.increment(edge);
+                    }
+                }
+                triangles_refcount.allocate_at_unsafe(triangles.Current);
+            }
+            vertices_refcount.rebuild_free_list();
+            edges_refcount.rebuild_free_list();
+            triangles_refcount.rebuild_free_list();
+        }
+
+        public override int AppendVertex(ref NewVertexInfo info) 
+        {
+            int vID = BaseMesh.AppendVertex(ref info);
+            vertices_refcount.allocate_at(vID);
+            updateTimeStamp(true);
+            return vID;
+        }
+
+        public override int AppendVertex(DMesh3 from, int fromVID)
+        {
+            int vID = BaseMesh.AppendVertex(from, fromVID);
+            vertices_refcount.allocate_at(vID);
+            updateTimeStamp(true);
+            return vID;
+        }
+
+        public override MeshResult InsertVertex(int vid, ref NewVertexInfo info, bool bUnsafe = false)
+        {
+            bool bOK = (bUnsafe) ? vertices_refcount.allocate_at_unsafe(vid) :
+                       vertices_refcount.allocate_at(vid);
+            if (bOK == false)
+                return MeshResult.Failed_CannotAllocateVertex;
+            MeshResult mr = BaseMesh.InsertVertex(vid, ref info, bUnsafe);
+            if (mr == MeshResult.Ok)
+                updateTimeStamp(true);
+            return mr;
+        }
+
+        public override int AppendTriangle(Index3i tv, int gid = -1) 
+        {
+            int tri = BaseMesh.AppendTriangle(tv, gid);
+            triangles_refcount.allocate_at(tri);
+            updateTimeStamp(true);
+            return tri;
+        }
+
+        public override MeshResult InsertTriangle(int tid, Index3i tv, int gid = -1, bool bUnsafe = false)
+        {
+            bool bOK = (bUnsafe) ? triangles_refcount.allocate_at_unsafe(tid) :
+                       triangles_refcount.allocate_at(tid);
+            if (bOK == false)
+                return MeshResult.Failed_CannotAllocateTriangle;
+            MeshResult mr = BaseMesh.InsertTriangle(tid, tv, gid, bUnsafe);
+            if (mr == MeshResult.Ok)
+                updateTimeStamp(true);
+            return mr;
+        }
+
+        internal override int add_edge(int vA, int vB, int tA, int tB = InvalidID)
+        {
+            int eid = BaseMesh.add_edge(vA, vB, tA, tB);
+            edges_refcount.allocate_at(eid);
+            return eid;
+        }
+
+        /// <summary>
+        /// Cannot Remove Triangles from SubMesh. Remove the triangle from the BaseMesh and rebuild the SubMesh
+        /// </summary>
+        /// <param name="tID"></param>
+        /// <param name="bRemoveIsolatedVertices"></param>
+        /// <param name="bPreserveManifold"></param>
+        /// <returns></returns>
+        public override MeshResult RemoveTriangle(int tID, bool bRemoveIsolatedVertices = true, bool bPreserveManifold = false)
+        {
+            MeshResult mr = BaseMesh.RemoveTriangle(tID, bRemoveIsolatedVertices, bPreserveManifold);
+            if (mr == MeshResult.Ok) compute(selectedTris);
+            return mr;
+        }
+
+        /// <summary>
+        /// Cannot Remove Vertex from SubMesh. Remove the Vertex from the  BaseMesh and rebuild the 
+        /// </summary>
+        /// <param name="vID"></param>
+        /// <param name="bRemoveAllTriangles"></param>
+        /// <param name="bPreserveManifold"></param>
+        /// <returns></returns>
+        public override MeshResult RemoveVertex(int vID, bool bRemoveAllTriangles = true, bool bPreserveManifold = false)
+        {
+            MeshResult mr = BaseMesh.RemoveVertex(vID, bRemoveAllTriangles, bPreserveManifold);
+            if (mr == MeshResult.Ok) compute(selectedTris);
+            return mr;
+        }
+
+        // Static Mesh Creators for backweards compatibility
+
+        public static DMesh3 QuickSubmesh(DMesh3 mesh, int[] triangles)
+        {
+            DSubmesh3 submesh = new DSubmesh3(mesh, triangles);
+            return submesh;
+        }
+        public static DMesh3 QuickSubmesh(DMesh3 mesh, IEnumerable<int> triangles)
+        {
+            return QuickSubmesh(mesh, triangles.ToArray());
+        }
+    }
+
+
+    /// <summary>
+    /// Legacy DSubmesh3 class 
+    /// </summary>
+    [Obsolete("The Legacy DSubmesh3 class is now obsolete and will be removed in a future version")]
+    public class DSubmesh3Legacy
     {
         public DMesh3 BaseMesh;
         public DMesh3 SubMesh;
@@ -32,18 +311,18 @@ namespace VirgisGeometry
         public IndexHashSet BaseBorderV;        // list of border vertex indices on base mesh (ie verts of BaseBorderE - does not include mesh boundary vertices)
 
 
-        public DSubmesh3(DMesh3 mesh, int[] subTriangles)
+        public DSubmesh3Legacy(DMesh3 mesh, int[] subTriangles)
         {
             BaseMesh = mesh;
             compute(subTriangles, subTriangles.Length);
         }
-        public DSubmesh3(DMesh3 mesh, IEnumerable<int> subTriangles, int nTriEstimate = 0)
+        public DSubmesh3Legacy(DMesh3 mesh, IEnumerable<int> subTriangles, int nTriEstimate = 0)
         {
             BaseMesh = mesh;
             compute(subTriangles, nTriEstimate);
         }
 
-        public DSubmesh3(DMesh3 mesh)
+        public DSubmesh3Legacy(DMesh3 mesh)
         {
             BaseMesh = mesh;
         }
@@ -120,9 +399,6 @@ namespace VirgisGeometry
                 triangles[i] = BaseToSubT[triangles[i]];
         }
 
-
-
-
         public void ComputeBoundaryInfo(int[] subTriangles) {
             ComputeBoundaryInfo(subTriangles, subTriangles.Length);
         }
@@ -168,7 +444,7 @@ namespace VirgisGeometry
         {
             int est_verts = tri_count_est / 2;
 
-            SubMesh = new DMesh3( BaseMesh.Components & WantComponents );
+            SubMesh = new DMesh3(BaseMesh.Components & WantComponents) { axisOrder = BaseMesh.axisOrder };
 
             BaseSubmeshV = new IndexFlagSet(BaseMesh.MaxVertexID, est_verts);
             BaseToSubV = new IndexMap(BaseMesh.MaxVertexID, est_verts);
@@ -208,18 +484,25 @@ namespace VirgisGeometry
                     SubToBaseT.insert(tid, sub_tid);
                 }
             }
-
-
-
-
         }
 
+        /// <summary>
+        /// Apply any changes to the vertices back top the base mesh
+        /// </summary>
+        public void ApplyToBaseMesh()
+        {
+            NewVertexInfo vinfo = new();
+            foreach (int vID in SubMesh.VertexIndices())
+            {
+                if (SubMesh.GetVertex(vID, ref vinfo, true, true, true))
+                    BaseMesh.SetVertex(vID, vinfo, true, true, true);
+            }
+        }
 
-
-
+        // Static Mesh Creators
 
         public static DMesh3 QuickSubmesh(DMesh3 mesh, int[] triangles) {
-            DSubmesh3 submesh = new DSubmesh3(mesh, triangles);
+            DSubmesh3Legacy submesh = new DSubmesh3Legacy(mesh, triangles);
             return submesh.SubMesh;
         }
         public static DMesh3 QuickSubmesh(DMesh3 mesh, IEnumerable<int> triangles) {

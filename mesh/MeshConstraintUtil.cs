@@ -88,7 +88,7 @@ namespace VirgisGeometry
 
         // loop through submesh border edges on basemesh, map to submesh, and
         // pin those edges / vertices
-        public static void FixSubmeshBoundaryEdges(MeshConstraints cons, DSubmesh3 sub)
+        public static void FixSubmeshBoundaryEdges(MeshConstraints cons, DSubmesh3Legacy sub)
         {
             Debug.Assert(sub.BaseBorderE != null);
             foreach ( int base_eid in sub.BaseBorderE ) {
