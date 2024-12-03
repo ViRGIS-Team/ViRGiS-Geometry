@@ -404,7 +404,7 @@ namespace VirgisGeometry
 
                 triangulator.Run();
 
-                if ( ! triangulator.Output.Status.IsCreated || 
+                if (!triangulator.Output.Status.IsCreated ||
                        triangulator.Output.Status.Value != Triangulator.Status.OK
                    )
                 {
@@ -420,9 +420,9 @@ namespace VirgisGeometry
                 Index3i[] triangles = new Index3i[tri_count];
                 long idx = 0;
 
-                for ( int i = 0; i < tri_count; i++)
+                for (int i = 0; i < tri_count; i++)
                 {
-                    triangles[i] = new(tris[idx++], tris[idx++], tris[idx++] );
+                    triangles[i] = new(tris[idx++], tris[idx++], tris[idx++]);
                 }
 
 
@@ -431,13 +431,14 @@ namespace VirgisGeometry
                 triangulator.Input.HoleSeeds.Dispose();
                 triangulator.Dispose();
                 return triangles;
-            } catch
+            }
+            catch (Exception ex)
             {
                 triangulator.Input.Positions.Dispose();
                 triangulator.Input.ConstraintEdges.Dispose();
                 triangulator.Input.HoleSeeds.Dispose();
                 triangulator.Dispose();
-                return default;
+                throw ex;
             }
         }
 
