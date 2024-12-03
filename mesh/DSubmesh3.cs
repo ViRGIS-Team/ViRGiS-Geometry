@@ -143,8 +143,9 @@ namespace VirgisGeometry
             if (!BaseMesh.IsVertex(vID))
                 throw new Exception("Not a valid vertex");
             MeshFaceSelection mfs = new(BaseMesh);
-            mfs.ExpandToOneRingNeighbours(n - 1);
             mfs.SelectVertexOneRing(vID);
+            if (n > 1)
+                mfs.ExpandToOneRingNeighbours(n - 1);
             compute(mfs);
         }
 
@@ -157,7 +158,7 @@ namespace VirgisGeometry
         void compute(IEnumerator<int> triangles)
         {
             foreach (int tri in TriangleIndices())
-                base.RemoveTriangle(tri);
+                base.RemoveTriangle(tri, true, true, true);
             while (triangles.MoveNext()) {
                 if (!BaseMesh.IsTriangle(triangles.Current)) continue; // don't get shouty over incorrect triangle
                 foreach (int vert in BaseMesh.GetTriangle(triangles.Current))
@@ -165,20 +166,16 @@ namespace VirgisGeometry
                     if (!IsVertex(vert))
                     {
                         vertices_refcount.allocate_at_unsafe(vert);
-                    } else
-                    {
-                        vertices_refcount.increment(vert);
-                    }
+                    } 
+                    vertices_refcount.increment(vert);
                 }
                 foreach (int edge in BaseMesh.GetTriEdges(triangles.Current))
                 {
                     if (!IsEdge(edge))
                     {
                         edges_refcount.allocate_at_unsafe(edge);
-                    } else
-                    {
-                        edges_refcount.increment(edge);
                     }
+                    edges_refcount.increment(edge);
                 }
                 triangles_refcount.allocate_at_unsafe(triangles.Current);
             }
@@ -249,7 +246,7 @@ namespace VirgisGeometry
         /// <param name="bRemoveIsolatedVertices"></param>
         /// <param name="bPreserveManifold"></param>
         /// <returns></returns>
-        public override MeshResult RemoveTriangle(int tID, bool bRemoveIsolatedVertices = true, bool bPreserveManifold = false)
+        public virtual MeshResult RemoveTriangle(int tID, bool bRemoveIsolatedVertices = true, bool bPreserveManifold = false, bool bIsSubmesh = false)
         {
             MeshResult mr = BaseMesh.RemoveTriangle(tID, bRemoveIsolatedVertices, bPreserveManifold);
             if (mr == MeshResult.Ok) compute(selectedTris);

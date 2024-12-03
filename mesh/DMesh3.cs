@@ -1508,7 +1508,8 @@ namespace VirgisGeometry
 		public IEnumerable<int> VtxVerticesItr(int vID) {
 			if ( vertices_refcount.isValid(vID) ) {
                 foreach ( int eid in vertex_edges.ValueItr(vID) )
-                    yield return edge_other_v(eid, vID);
+                    if (IsEdge(eid))
+                        yield return edge_other_v(eid, vID);
 			}
 		}
 
@@ -1518,9 +1519,11 @@ namespace VirgisGeometry
         /// </summary>
 		public IEnumerable<int> VtxEdgesItr(int vID) {
 			if ( vertices_refcount.isValid(vID) ) {
-                return vertex_edges.ValueItr(vID);
+                foreach (int eid in vertex_edges.ValueItr(vID))
+                    if (IsEdge(eid))
+                        yield return eid;
 			}
-            return Enumerable.Empty<int>();
+            yield break;
         }
 
 
@@ -1534,13 +1537,17 @@ namespace VirgisGeometry
             if ( vertices_refcount.isValid(vID) ) {
                 int count = 0;
                 foreach (int eid in vertex_edges.ValueItr(vID)) {
-                    int ei = 4 * eid;
-                    if ( edges[ei+3] == InvalidID ) {
-                        if (count == 0)
-                            e0 = eid;
-                        else if (count == 1)
-                            e1 = eid;
-                        count++;
+                    if (IsEdge(eid))
+                    {
+                        int ei = 4 * eid;
+                        if (edges[ei + 3] == InvalidID)
+                        {
+                            if (count == 0)
+                                e0 = eid;
+                            else if (count == 1)
+                                e1 = eid;
+                            count++;
+                        }
                     }
                 }
                 return count;
@@ -1559,9 +1566,12 @@ namespace VirgisGeometry
             if (vertices_refcount.isValid(vID)) {
                 int count = 0;
                 foreach (int eid in vertex_edges.ValueItr(vID)) {
-                    int ei = 4 * eid;
-                    if ( edges[ei+3] == InvalidID ) 
-                        e[count++] = eid;
+                    if (IsEdge(eid))
+                    {
+                        int ei = 4 * eid;
+                        if (edges[ei + 3] == InvalidID)
+                            e[count++] = eid;
+                    }
                 }
                 return count;
             }
@@ -1581,25 +1591,31 @@ namespace VirgisGeometry
 
             if (bUseOrientation) {
                 foreach (int eid in vertex_edges.ValueItr(vID)) {
-                    int vOther = edge_other_v(eid, vID);
-					int i = 4*eid;
-                    int et0 = edges[i + 2];
-                    if (tri_has_sequential_v(et0, vID, vOther))
-                        vTriangles.Add(et0);
-                    int et1 = edges[i + 3];
-                    if (et1 != InvalidID && tri_has_sequential_v(et1, vID, vOther))
-                        vTriangles.Add(et1);
+                    if (IsEdge(eid))
+                    {
+                        int vOther = edge_other_v(eid, vID);
+                        int i = 4 * eid;
+                        int et0 = edges[i + 2];
+                        if (tri_has_sequential_v(et0, vID, vOther))
+                            vTriangles.Add(et0);
+                        int et1 = edges[i + 3];
+                        if (et1 != InvalidID && tri_has_sequential_v(et1, vID, vOther))
+                            vTriangles.Add(et1);
+                    }
                 }
             } else {
                 // brute-force method
                 foreach (int eid in vertex_edges.ValueItr(vID)) {
-					int i = 4*eid;					
-                    int t0 = edges[i + 2];
-                    if (vTriangles.Contains(t0) == false)
-                        vTriangles.Add(t0);
-                    int t1 = edges[i + 3];
-                    if (t1 != InvalidID && vTriangles.Contains(t1) == false)
-                        vTriangles.Add(t1);
+                    if (IsEdge(eid))
+                    {
+                        int i = 4 * eid;
+                        int t0 = edges[i + 2];
+                        if (vTriangles.Contains(t0) == false)
+                            vTriangles.Add(t0);
+                        int t1 = edges[i + 3];
+                        if (t1 != InvalidID && vTriangles.Contains(t1) == false)
+                            vTriangles.Add(t1);
+                    }
                 }
             }
             return MeshResult.Ok;
@@ -1624,14 +1640,17 @@ namespace VirgisGeometry
                 return -1;
             int N = 0;
             foreach (int eid in vertex_edges.ValueItr(vID)) {
-                int vOther = edge_other_v(eid, vID);
-				int i = 4*eid;
-                int et0 = edges[i + 2];
-                if (tri_has_sequential_v(et0, vID, vOther))
-                    N++;
-                int et1 = edges[i + 3];
-                if (et1 != InvalidID && tri_has_sequential_v(et1, vID, vOther))
-                    N++;
+                if (IsEdge(eid))
+                {
+                    int vOther = edge_other_v(eid, vID);
+                    int i = 4 * eid;
+                    int et0 = edges[i + 2];
+                    if (tri_has_sequential_v(et0, vID, vOther))
+                        N++;
+                    int et1 = edges[i + 3];
+                    if (et1 != InvalidID && tri_has_sequential_v(et1, vID, vOther))
+                        N++;
+                }
             }
             return N;
         }
@@ -1643,14 +1662,17 @@ namespace VirgisGeometry
 		public IEnumerable<int> VtxTrianglesItr(int vID) {
 			if ( IsVertex(vID) ) {
 				foreach (int eid in vertex_edges.ValueItr(vID)) {
-					int vOther = edge_other_v(eid, vID);
-					int i = 4*eid;
-					int et0 = edges[i + 2];
-					if (tri_has_sequential_v(et0, vID, vOther))
-						yield return et0;
-					int et1 = edges[i + 3];
-					if (et1 != InvalidID && tri_has_sequential_v(et1, vID, vOther))
-						yield return et1;
+                    if (IsEdge(eid))
+                    {
+                        int vOther = edge_other_v(eid, vID);
+                        int i = 4 * eid;
+                        int et0 = edges[i + 2];
+                        if (IsTriangle(et0) && tri_has_sequential_v(et0, vID, vOther))
+                            yield return et0;
+                        int et1 = edges[i + 3];
+                        if (IsTriangle(et1) && tri_has_sequential_v(et1, vID, vOther))
+                            yield return et1;
+                    }
 				}
 			}
 		}
@@ -1683,11 +1705,14 @@ namespace VirgisGeometry
             if (vertices_refcount.isValid(vID)) {
                 int n = 0;
                 foreach (int eid in vertex_edges.ValueItr(vID)) {
-                    int other_idx = 3 * edge_other_v(eid, vID);
-                    centroid.x += vertices[other_idx];
-                    centroid.y += vertices[other_idx + 1];
-                    centroid.z += vertices[other_idx + 2];
-                    n++;
+                    if (IsEdge(eid))
+                    {
+                        int other_idx = 3 * edge_other_v(eid, vID);
+                        centroid.x += vertices[other_idx];
+                        centroid.y += vertices[other_idx + 1];
+                        centroid.z += vertices[other_idx + 2];
+                        n++;
+                    }
                 }
                 if (n > 0) {
                     double d = 1.0 / n;
@@ -1780,7 +1805,7 @@ namespace VirgisGeometry
 
         public bool IsBoundaryVertex(int vID) {
             foreach (int e in vertex_edges.ValueItr(vID)) {
-                if (IsGroupBoundaryEdge(e))
+                if (IsEdge(e) && IsBoundaryEdge(e))
                     return true;
             }
             return false;
@@ -1868,19 +1893,24 @@ namespace VirgisGeometry
                 throw new Exception("DMesh3.IsGroupBoundaryVertex: no triangle groups!");
             int group_id = int.MinValue;
             foreach (int eID in vertex_edges.ValueItr(vID)) {
-                int et0 = edges[4 * eID + 2];
-                int g0 = triangle_groups[et0];
-                if (group_id != g0) {
-                    if (group_id == int.MinValue)
-                        group_id = g0;
-                    else
-                        return true;        // saw multiple group IDs
-                }
-                int et1 = edges[4 * eID + 3];
-                if (et1 != InvalidID) {
-                    int g1 = triangle_groups[et1];
-                    if (group_id != g1)
-                        return true;        // saw multiple group IDs
+                if (IsEdge(eID))
+                {
+                    int et0 = edges[4 * eID + 2];
+                    int g0 = triangle_groups[et0];
+                    if (group_id != g0)
+                    {
+                        if (group_id == int.MinValue)
+                            group_id = g0;
+                        else
+                            return true;        // saw multiple group IDs
+                    }
+                    int et1 = edges[4 * eID + 3];
+                    if (et1 != InvalidID)
+                    {
+                        int g1 = triangle_groups[et1];
+                        if (group_id != g1)
+                            return true;        // saw multiple group IDs
+                    }
                 }
             }
             return false;
@@ -1899,18 +1929,23 @@ namespace VirgisGeometry
                 throw new Exception("DMesh3.IsGroupJunctionVertex: no triangle groups!");
             Index2i groups = Index2i.Max;
             foreach (int eID in vertex_edges.ValueItr(vID)) {
-                Index2i et = new Index2i(edges[4 * eID + 2], edges[4 * eID + 3]);
-                for (int k = 0; k < 2; ++k) {
-                    if (et[k] == InvalidID)
-                        continue;
-                    int g0 = triangle_groups[et[k]];
-                    if (g0 != groups.a && g0 != groups.b) {
-                        if (groups.a != Index2i.Max.a && groups.b != Index2i.Max.b)
-                            return true;
-                        if (groups.a == Index2i.Max.a)
-                            groups.a = g0;
-                        else
-                            groups.b = g0;
+                if (IsEdge(eID))
+                {
+                    Index2i et = new Index2i(edges[4 * eID + 2], edges[4 * eID + 3]);
+                    for (int k = 0; k < 2; ++k)
+                    {
+                        if (et[k] == InvalidID)
+                            continue;
+                        int g0 = triangle_groups[et[k]];
+                        if (g0 != groups.a && g0 != groups.b)
+                        {
+                            if (groups.a != Index2i.Max.a && groups.b != Index2i.Max.b)
+                                return true;
+                            if (groups.a == Index2i.Max.a)
+                                groups.a = g0;
+                            else
+                                groups.b = g0;
+                        }
                     }
                 }
             }
@@ -1931,19 +1966,23 @@ namespace VirgisGeometry
             if (triangle_groups == null)
                 throw new Exception("DMesh3.GetVertexGroups: no triangle groups!");
             foreach (int eID in vertex_edges.ValueItr(vID)) {
-                int et0 = edges[4 * eID + 2];
-                int g0 = triangle_groups[et0];
-                if ( groups.Contains(g0) == false )
-                    groups[ng++] = g0;
-                if (ng == 4)
-                    return false;
-                int et1 = edges[4 * eID + 3];
-                if ( et1 != InvalidID ) {
-                    int g1 = triangle_groups[et1];
-                    if (groups.Contains(g1) == false)
-                        groups[ng++] = g1;
+                if (IsEdge(eID))
+                {
+                    int et0 = edges[4 * eID + 2];
+                    int g0 = triangle_groups[et0];
+                    if (groups.Contains(g0) == false)
+                        groups[ng++] = g0;
                     if (ng == 4)
                         return false;
+                    int et1 = edges[4 * eID + 3];
+                    if (et1 != InvalidID)
+                    {
+                        int g1 = triangle_groups[et1];
+                        if (groups.Contains(g1) == false)
+                            groups[ng++] = g1;
+                        if (ng == 4)
+                            return false;
+                    }
                 }
             }
             return true;
@@ -1961,15 +2000,19 @@ namespace VirgisGeometry
             if (triangle_groups == null)
                 throw new Exception("DMesh3.GetAllVertexGroups: no triangle groups!");
             foreach (int eID in vertex_edges.ValueItr(vID)) {
-                int et0 = edges[4 * eID + 2];
-                int g0 = triangle_groups[et0];
-                if (groups.Contains(g0) == false)
-                    groups.Add(g0);
-                int et1 = edges[4 * eID + 3];
-                if ( et1 != InvalidID ) {
-                    int g1 = triangle_groups[et1];
-                    if (groups.Contains(g1) == false)
-                        groups.Add(g1);
+                if (IsEdge(eID))
+                {
+                    int et0 = edges[4 * eID + 2];
+                    int g0 = triangle_groups[et0];
+                    if (groups.Contains(g0) == false)
+                        groups.Add(g0);
+                    int et1 = edges[4 * eID + 3];
+                    if (et1 != InvalidID)
+                    {
+                        int g1 = triangle_groups[et1];
+                        if (groups.Contains(g1) == false)
+                            groups.Add(g1);
+                    }
                 }
             }
             return true;
@@ -1996,7 +2039,7 @@ namespace VirgisGeometry
                 int start_eid = -1;
                 bool start_at_boundary = false;
                 foreach (int eid in vertex_edges.ValueItr(vID)) {
-                    if (edges[4 * eid + 3] == DMesh3.InvalidID) {
+                    if (IsEdge(eid) && edges[4 * eid + 3] == DMesh3.InvalidID) {
                         start_at_boundary = true;
                         start_eid = eid;
                         break;
@@ -2361,15 +2404,18 @@ namespace VirgisGeometry
                 }
 
                 foreach ( int eid in vertex_edges.ValueItr(iLastV) ) {
-                    // replace vertex in edges
-                    replace_edge_vertex(eid, iLastV, iCurV);
+                    if (IsEdge(eid))
+                    {
+                        // replace vertex in edges
+                        replace_edge_vertex(eid, iLastV, iCurV);
 
-                    // replace vertex in triangles
-                    int t0 = edges[4*eid + 2];
-                    replace_tri_vertex(t0, iLastV, iCurV);
-                    int t1 = edges[4*eid + 3];
-                    if ( t1 != DMesh3.InvalidID )
-                        replace_tri_vertex(t1, iLastV, iCurV);
+                        // replace vertex in triangles
+                        int t0 = edges[4 * eid + 2];
+                        replace_tri_vertex(t0, iLastV, iCurV);
+                        int t1 = edges[4 * eid + 3];
+                        if (t1 != DMesh3.InvalidID)
+                            replace_tri_vertex(t1, iLastV, iCurV);
+                    }
                 }
 
                 // shift vertex refcount to new position
@@ -2522,6 +2568,7 @@ namespace VirgisGeometry
             int i = 0;
             foreach (int vi in mesh.VertexIndices())
             {
+                if (vi != i) Debug.Log("Vertex Index Mismatch");
                 if (mesh.IsVertex(vi))
                 {
                     data = mesh.GetVertexAll(vi);
