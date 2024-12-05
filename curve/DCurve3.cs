@@ -103,7 +103,7 @@ namespace VirgisGeometry
             Closed = bClosed;
             vertices = v_in.ToList<Vector3>().Select(vertex => (Vector3d)vertex).ToList<Vector3d>();
             Timestamp = 1;
-            axisOrder = AxisOrder.Undefined;
+            axisOrder = AxisOrder.EUN;
         }
 
         public void AppendVertex(Vector3d v) {
