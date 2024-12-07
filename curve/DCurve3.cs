@@ -118,6 +118,7 @@ namespace VirgisGeometry
         /// <param name="i"></param>
         public void InsertVertex(Vector3d v, int i)
         {
+            v.ChangeAxisOrderTo(axisOrder);
             vertices.Insert(i, v); 
             Timestamp++;
         }
