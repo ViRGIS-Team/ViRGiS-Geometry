@@ -3,10 +3,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using VirgisGeometry;
 
-namespace gs
+namespace VirgisGeometry
 {
     /// <summary>
     /// Construct a "minimal" fill surface for the hole. This surface

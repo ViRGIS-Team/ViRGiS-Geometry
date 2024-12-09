@@ -4,9 +4,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
-using VirgisGeometry;
 
-namespace gs
+namespace VirgisGeometry
 {
 	/// <summary>
 	/// Remove "occluded" triangles, ie triangles on the "inside" of the mesh. 

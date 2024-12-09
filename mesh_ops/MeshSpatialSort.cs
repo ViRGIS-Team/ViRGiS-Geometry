@@ -3,9 +3,8 @@
 using System;
 using System.Collections.Generic;
 using System.Threading;
-using VirgisGeometry;
 
-namespace gs
+namespace VirgisGeometry
 {
     /// <summary>
     /// This class sorts a set of mesh components.

@@ -4,9 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
-using VirgisGeometry;
 
-namespace gs
+namespace VirgisGeometry
 {
     /// <summary>
     /// Extension to Remesher that is smarter about which edges/vertices to touch:
