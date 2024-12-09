@@ -59,7 +59,7 @@ namespace VirgisGeometry
                 Closed = true;
             }
             Timestamp = 1;
-            axisOrder = AxisOrder.Undefined;
+            axisOrder = this.vertices.First().axisOrder;
         }
 
         public DCurve3(DCurve3 copy)
@@ -103,7 +103,6 @@ namespace VirgisGeometry
             Closed = bClosed;
             vertices = v_in.ToList<Vector3>().Select(vertex => (Vector3d)vertex).ToList<Vector3d>();
             Timestamp = 1;
-            axisOrder = AxisOrder.EUN;
         }
 
         public void AppendVertex(Vector3d v) {
@@ -345,6 +344,7 @@ namespace VirgisGeometry
         /// </summary>
         public int NearestVertex(Vector3d p)
         {
+            p.ChangeAxisOrderTo(axisOrder);
             double nearSqr = double.MaxValue;
             int i = -1;
             int N = vertices.Count;
@@ -364,6 +364,7 @@ namespace VirgisGeometry
         /// </summary>
         public double DistanceSquared(Vector3d p, out int iNearSeg, out double fNearSegT)
         {
+            p.ChangeAxisOrderTo(axisOrder);
             iNearSeg = -1;
             fNearSegT = double.MaxValue;
             double dist = double.MaxValue;
@@ -432,6 +433,7 @@ namespace VirgisGeometry
         public Vector3d Center()
         {
             Vector3d center = Vector3d.Zero;
+            center.ChangeAxisOrderTo(axisOrder);
             int len = SegmentCount;
             if (!Closed) len++;
             foreach( Vector3d v in Vertices )

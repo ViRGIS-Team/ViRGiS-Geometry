@@ -444,7 +444,7 @@ namespace VirgisGeometry
         public void SetVertex(int vID, Vector3d vNewPos) {
             System.Diagnostics.Debug.Assert(vNewPos.IsFinite);     // this will really catch a lot of bugs...
             debug_check_is_vertex(vID);
-            if (axisOrder != vNewPos.axisOrder) vNewPos.ChangeAxisOrderTo(axisOrder);
+            vNewPos.ChangeAxisOrderTo(axisOrder);
 
 			int i = 3*vID;
 			vertices[i] = vNewPos.x; vertices[i+1] = vNewPos.y; vertices[i+2] = vNewPos.z;
@@ -1408,6 +1408,20 @@ namespace VirgisGeometry
         public IEnumerable<Vector3d> Vertices() {
             foreach (int vid in vertices_refcount) {
                 yield return GetVertex(vid);
+            }
+        }
+
+        /// <summary>
+        /// Enumerate Vertex values in order x, y, z for each evrtex in order
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<Double> VertexValues()
+        {
+            foreach(Vector3d vertex in Vertices())
+            {
+                yield return vertex.x;
+                yield return vertex.y;
+                yield return vertex.z;
             }
         }
 

@@ -278,6 +278,11 @@ namespace VirgisGeometry
         {
             return QuickSubmesh(mesh, triangles.ToArray());
         }
+
+        public bool IsSubmeshInternalBoundaryVertex(int vID)
+        {
+            return IsBoundaryVertex(vID) && !BaseMesh.IsBoundaryVertex(vID);
+        }
     }
 
 
