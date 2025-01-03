@@ -142,6 +142,16 @@ namespace VirgisGeometry
         internal virtual bool bFlipNormals { get; set; } = false;
         public virtual AxisOrder axisOrder { get; set; }
 
+        /// <summary>
+        /// Contains the vertex map from the last cast to unity
+        /// </summary>
+        public int[] VertexMap;
+
+        /// <summary>
+        /// Contains the Triangle map from the last cast to unity
+        /// </summary>
+        public int[] TriangleMap;
+
 
         /// <summary>
         /// Support attaching arbitrary data to mesh. 
@@ -2578,11 +2588,13 @@ namespace VirgisGeometry
             Color[] colors = new Color[mesh.VertexCount];
             Vector2[] uvs = new Vector2[mesh.VertexCount];
             Vector3[] normals = new Vector3[mesh.VertexCount];
+            mesh.VertexMap = new int[mesh.VertexCount];
+            mesh.TriangleMap = new int[mesh.TriangleCount];
+            Dictionary<int, int> revVertexMap = new();
             NewVertexInfo data;
             int i = 0;
             foreach (int vi in mesh.VertexIndices())
             {
-                if (vi != i) Debug.Log("Vertex Index Mismatch");
                 if (mesh.IsVertex(vi))
                 {
                     data = mesh.GetVertexAll(vi);
@@ -2593,20 +2605,27 @@ namespace VirgisGeometry
                         uvs[i] = data.uv;
                     if (data.bHaveN)
                         normals[i] = data.n;
+                    mesh.VertexMap[i] = vi;
+                    revVertexMap.Add(vi, i);
+                    i++;
                 }
-                i++;
             }
             unityMesh.vertices = vertices;
             if (mesh.HasVertexColors) unityMesh.SetColors(colors);
             if (mesh.HasVertexUVs) unityMesh.SetUVs(0, uvs);
             int[] triangles = new int[mesh.TriangleCount * 3];
             int j = 0;
-            foreach (Index3i tri in mesh.Triangles())
+            foreach ( int t in mesh.TriangleIndices())
             {
-                triangles[j * 3] = tri.a;
-                triangles[j * 3 + 1] = tri.b;
-                triangles[j * 3 + 2] = tri.c;
-                j++;
+                if (mesh.IsTriangle(t))
+                {
+                    Index3i tri = mesh.GetTriangle(t);
+                    triangles[j * 3] = revVertexMap[tri.a];
+                    triangles[j * 3 + 1] = revVertexMap[tri.b];
+                    triangles[j * 3 + 2] = revVertexMap[tri.c];
+                    mesh.TriangleMap[j] = t;
+                    j++;
+                }
             }
             unityMesh.triangles = triangles;
             if (mesh.HasVertexNormals)
@@ -2720,23 +2739,32 @@ namespace VirgisGeometry
         /// <returns>Int[] of colors numbered [1..6]</returns>
         public IEnumerator<byte[]> Colorisation(int cycleTimer = 10) {
             byte[] colorisation = new byte[VertexCount];
+            Dictionary<int, int> vertexMap = new ();
             Array.Fill<byte>(colorisation, 0xFF);
             LinkedList<int> queue = new();
             Stack<int> previous = new();
 
+            int i = 0;
+            foreach (int v in VertexIndices())
+            {
+                vertexMap.Add(v,i++);
+            }
+
             //Change Vertex Color Function
-            bool TryChangeVertex( int id)
+            bool TryChangeVertex( int vID)
             {
                 byte[] vmask = new byte[6];
+                int id = vertexMap[vID];
 
                 // try simple brute force - look for a color not used in any of this vertex's neighbours
                 // Get the one-ring around the vertex and collect their colors
-                foreach(int v in VtxVerticesItr(id))
+                foreach(int vi in VtxVerticesItr(vID))
                 {
+                    int v = vertexMap[vi];
                     if (colorisation[v] != 0xFF && colorisation[v] != 0xFE )
                         vmask[colorisation[v]] += 1;
                     if (colorisation[v] == 0xFF ) {
-                        queue.AddFirst(v);
+                        queue.AddFirst(vi);
                         colorisation[v] = 0xFE;
                     }
                 }
@@ -2756,7 +2784,7 @@ namespace VirgisGeometry
             }
 
             // start with arbritrarily chosen vertex 0
-            queue.AddLast(0);
+            queue.AddLast(VertexIndices().First());
             bool incomplete = true;
             while (incomplete)
             {

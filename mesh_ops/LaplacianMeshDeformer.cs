@@ -113,7 +113,7 @@ namespace VirgisGeometry
                     sum_w += w;
                 }
                 sum_w = -sum_w;
-                M.Set(vid, vid, sum_w);
+                M.Set(i, i, sum_w);
             }
 
             // transpose(L) * L, but matrix is symmetric...

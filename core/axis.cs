@@ -17,7 +17,7 @@ namespace VirgisGeometry
         Down = 6
     }
 
-    public class AxisOrder
+    public struct AxisOrder
     {
         public AxisType Axis1;
         public AxisType Axis2;
@@ -50,10 +50,6 @@ namespace VirgisGeometry
             Axis2 = AxisType.Other,
             Axis3 = AxisType.Other
         };
-
-        public AxisOrder()
-        {
-        }
 
         public AxisOrder(byte[] array)
         {
