@@ -236,63 +236,62 @@ namespace VirgisGeometry
                 vertices2d.Add(vertex);
             }
 
-            Triangulator triangulator = new (Allocator.Persistent)
+            using Triangulator<float2> triangulator = new(Allocator.Persistent)
             {
                 Settings = {
                     RestoreBoundary = true,
                 }
             };
-            Triangulator.InputData input = new ()
-            {
-                Positions = new NativeArray<float2>(vertices2d.Select(vertex => (float2)vertex).ToArray(), Allocator.Persistent),
-            };
-
-            if (constraint_edges != null)
-            {
-                NativeArray<int> edges = new(constraint_edges.Count() * 2, Allocator.Persistent);
-
-                int idx = 0;
-                foreach (Index2i edge in BufferUtil.ToIndex2i(constraint_edges))
+                InputData<float2> input = new()
                 {
-                    edges[idx] = edge.a;
-                    idx++;
-                    edges[idx] = edge.b;
-                    idx++;
-                }
-                input.ConstraintEdges = edges;
-            }
+                    Positions = new NativeArray<float2>(vertices2d.Select(vertex => (float2)vertex).ToArray(), Allocator.Persistent),
+                };
 
-            triangulator.Input = input;
-            try
-            {
-
-                triangulator.Run();
-
-                if (!triangulator.Output.Status.IsCreated ||
-                       triangulator.Output.Status.Value != Triangulator.Status.OK
-                   )
+                if (constraint_edges != null)
                 {
-                    throw new Exception("Could not create Delaunay Triangulation");
+                    NativeArray<int> edges = new(constraint_edges.Count() * 2, Allocator.Persistent);
+
+                    int idx = 0;
+                    foreach (Index2i edge in BufferUtil.ToIndex2i(constraint_edges))
+                    {
+                        edges[idx] = edge.a;
+                        idx++;
+                        edges[idx] = edge.b;
+                        idx++;
+                    }
+                    input.ConstraintEdges = edges;
                 }
 
-                res = Build<Vector3d, int, Vector3d>(BufferUtil.ToVector3d(vertices), triangulator.Output.Triangles.AsArray().ToArray(), null, null, ax);
-                for (int i = 0; i < vertices2d.Count; i++)
+                triangulator.Input = input;
+                try
                 {
-                    res.SetVertexUV(i, (Vector2f)vertices2d[i]);
+
+                    triangulator.Run();
+
+                    if (!triangulator.Output.Status.IsCreated ||
+                           triangulator.Output.Status.Value != Status.OK
+                       )
+                    {
+                        throw new Exception("Could not create Delaunay Triangulation");
+                    }
+
+                    res = Build<Vector3d, int, Vector3d>(BufferUtil.ToVector3d(vertices), triangulator.Output.Triangles.AsArray().ToArray(), null, null, ax);
+                    for (int i = 0; i < vertices2d.Count; i++)
+                    {
+                        res.SetVertexUV(i, (Vector2f)vertices2d[i]);
+                    }
+
+                    triangulator.Input.Positions.Dispose();
+                    triangulator.Input.ConstraintEdges.Dispose();
+                    triangulator.Dispose();
                 }
-
-                triangulator.Input.Positions.Dispose();
-                triangulator.Input.ConstraintEdges.Dispose();
-                triangulator.Dispose();
-            }
-            catch (Exception e)
-            {
-                triangulator.Input.Positions.Dispose();
-                triangulator.Input.ConstraintEdges.Dispose();
-                triangulator.Dispose();
-                throw new Exception($"DMesh3 creation Failed: {e.Message}");
-            }
-
+                catch (Exception e)
+                {
+                    triangulator.Input.Positions.Dispose();
+                    triangulator.Input.ConstraintEdges.Dispose();
+                    triangulator.Dispose();
+                    throw new Exception($"DMesh3 creation Failed: {e.Message}");
+                }
             return res;
         }
     }

@@ -1,25 +1,24 @@
 {
-    "name": "com.virgis.geometry",
-    "version": "4.0.2",
-    "displayName": "ViRGiS Geometry Package",
-    "description": "Open-Source (Boost-license) Unity library for geometric computing.",
-    "unity": "2020.1",
-   "keywords": [
-      "geometry",
-      "mesh",
-      "3D",
-      "toolkit",
-      "virgis"
-    ],
-    "dependencies": {
-      "com.unity.mathematics": "1.3.1",
-      "com.andywiecko.burst.triangulator": "2.5.0",
-      "com.unity.collections": "2.4.0"
-    },
-    "author": {
-      "name": "Virgis Team",
-      "email": "info@virgis.og",
-      "url": "https://www.virgis.org"
-    }
+  "name": "com.virgis.geometry",
+  "version": "4.0.2",
+  "displayName": "ViRGiS Geometry Package",
+  "description": "Open-Source (Boost-license) Unity library for geometric computing.",
+  "unity": "2020.1",
+  "keywords": [
+    "geometry",
+    "mesh",
+    "3D",
+    "toolkit",
+    "virgis"
+  ],
+  "dependencies": {
+    "com.unity.mathematics": "1.3.1",
+    "com.andywiecko.burst.triangulator": "3.9.1",
+    "com.unity.collections": "2.4.0"
+  },
+  "author": {
+    "name": "Virgis Team",
+    "email": "info@virgis.og",
+    "url": "https://www.virgis.org"
   }
-  
+}
