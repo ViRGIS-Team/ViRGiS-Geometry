@@ -2,11 +2,8 @@
 // Distributed under the Boost Software License, Version 1.0. http://www.boost.org/LICENSE_1_0.txt
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using VirgisGeometry;
 
-namespace gs
+namespace VirgisGeometry
 {
     /// <summary>
     /// Inserts a polygon into a mesh using a planar projection. You provide a
@@ -158,7 +155,7 @@ namespace gs
 
             // construct submesh
             RegionOperator regionOp = new RegionOperator(Mesh, faceROI);
-            DSubmesh3 roiSubmesh = regionOp.Region;
+            DSubmesh3Legacy roiSubmesh = regionOp.Region;
             DMesh3 roiMesh = roiSubmesh.SubMesh;
 
             // save 3D positions of unmodified mesh

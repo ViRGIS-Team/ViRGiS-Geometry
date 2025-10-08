@@ -122,6 +122,7 @@ namespace VirgisGeometry
 
         public float Dot(Vector3f v2)
         {
+            v2.ChangeAxisOrderTo(axisOrder);
             return x * v2[0] + y * v2[1] + z * v2[2];
         }
         public static float Dot(Vector3f v1, Vector3f v2) {
@@ -131,6 +132,7 @@ namespace VirgisGeometry
 
         public Vector3f Cross(Vector3f v2)
         {
+            v2.ChangeAxisOrderTo(axisOrder);
             return new Vector3f(
                 y * v2.z - z * v2.y,
                 z * v2.x - x * v2.z,
@@ -141,6 +143,7 @@ namespace VirgisGeometry
         }
 
         public Vector3f UnitCross(Vector3f v2) {
+            v2.ChangeAxisOrderTo(axisOrder);
             Vector3f n = new Vector3f(
                 y * v2.z - z * v2.y,
                 z * v2.x - x * v2.z,
@@ -150,6 +153,7 @@ namespace VirgisGeometry
         }
 
         public float AngleD(Vector3f v2) {
+            v2.ChangeAxisOrderTo(axisOrder);
             float fDot = MathUtil.Clamp(Dot(v2), -1, 1);
             return (float)(Math.Acos(fDot) * MathUtil.Rad2Deg);
         }
@@ -157,6 +161,7 @@ namespace VirgisGeometry
             return v1.AngleD(v2);
         }
         public float AngleR(Vector3f v2) {
+            v2.ChangeAxisOrderTo(axisOrder); 
             float fDot = MathUtil.Clamp(Dot(v2), -1, 1);
             return (float)(Math.Acos(fDot));
         }
@@ -166,10 +171,12 @@ namespace VirgisGeometry
 
 
         public float DistanceSquared(Vector3f v2) {
-			float dx = v2.x-x, dy = v2.y-y, dz = v2.z-z;
+            v2.ChangeAxisOrderTo(axisOrder);
+            float dx = v2.x-x, dy = v2.y-y, dz = v2.z-z;
 			return dx*dx + dy*dy + dz*dz;
         }
         public float Distance(Vector3f v2) {
+            v2.ChangeAxisOrderTo(axisOrder);
             float dx = v2.x-x, dy = v2.y-y, dz = v2.z-z;
 			return (float)Math.Sqrt(dx*dx + dy*dy + dz*dz);
 		}
@@ -178,6 +185,7 @@ namespace VirgisGeometry
 
         public void Set(Vector3f o)
         {
+            o.ChangeAxisOrderTo(axisOrder);
             x = o[0]; y = o[1]; z = o[2];
         }
         public void Set(float fX, float fY, float fZ)
@@ -186,10 +194,12 @@ namespace VirgisGeometry
         }
         public void Add(Vector3f o)
         {
+            o.ChangeAxisOrderTo(axisOrder);
             x += o[0]; y += o[1]; z += o[2];
         }
         public void Subtract(Vector3f o)
         {
+            o.ChangeAxisOrderTo(axisOrder);
             x -= o[0]; y -= o[1]; z -= o[2];
         }
 
@@ -197,61 +207,67 @@ namespace VirgisGeometry
 
         public static Vector3f operator -(Vector3f v)
         {
-            return new Vector3f(-v.x, -v.y, -v.z);
+            return new Vector3f(-v.x, -v.y, -v.z) { axisOrder = v.axisOrder };
         }
 
         public static Vector3f operator *(float f, Vector3f v)
         {
-            return new Vector3f(f * v.x, f * v.y, f * v.z);
+            return new Vector3f(f * v.x, f * v.y, f * v.z) { axisOrder = v.axisOrder };
         }
         public static Vector3f operator *(Vector3f v, float f)
         {
-            return new Vector3f(f * v.x, f * v.y, f * v.z);
+            return new Vector3f(f * v.x, f * v.y, f * v.z) { axisOrder = v.axisOrder };
         }
         public static Vector3f operator /(Vector3f v, float f)
         {
-            return new Vector3f(v.x /f, v.y /f, v.z /f);
+            return new Vector3f(v.x /f, v.y /f, v.z /f) { axisOrder = v.axisOrder };
         }
         public static Vector3f operator /(float f, Vector3f v)
         {
-            return new Vector3f(f / v.x, f / v.y, f / v.z);
+            return new Vector3f(f / v.x, f / v.y, f / v.z) { axisOrder = v.axisOrder };
         }
 
         public static Vector3f operator *(Vector3f a, Vector3f b)
         {
-            return new Vector3f(a.x * b.x, a.y * b.y, a.z * b.z);
+            b.ChangeAxisOrderTo(a.axisOrder);
+            return new Vector3f(a.x * b.x, a.y * b.y, a.z * b.z) { axisOrder = a.axisOrder };
         }
         public static Vector3f operator /(Vector3f a, Vector3f b)
         {
-            return new Vector3f(a.x / b.x, a.y / b.y, a.z / b.z);
+            b.ChangeAxisOrderTo(a.axisOrder);
+            return new Vector3f(a.x / b.x, a.y / b.y, a.z / b.z) { axisOrder = a.axisOrder };
         }
 
 
         public static Vector3f operator +(Vector3f v0, Vector3f v1)
         {
-            return new Vector3f(v0.x + v1.x, v0.y + v1.y, v0.z + v1.z);
+            v1.ChangeAxisOrderTo(v0.axisOrder);
+            return new Vector3f(v0.x + v1.x, v0.y + v1.y, v0.z + v1.z) { axisOrder = v0.axisOrder };
         }
         public static Vector3f operator +(Vector3f v0, float f)
         {
-            return new Vector3f(v0.x + f, v0.y + f, v0.z + f);
+            return new Vector3f(v0.x + f, v0.y + f, v0.z + f) { axisOrder = v0.axisOrder };
         }
 
         public static Vector3f operator -(Vector3f v0, Vector3f v1)
         {
-            return new Vector3f(v0.x - v1.x, v0.y - v1.y, v0.z - v1.z);
+            v1.ChangeAxisOrderTo(v0.axisOrder);
+            return new Vector3f(v0.x - v1.x, v0.y - v1.y, v0.z - v1.z) { axisOrder = v0.axisOrder };
         }
         public static Vector3f operator -(Vector3f v0, float f)
         {
-            return new Vector3f(v0.x - f, v0.y - f, v0.z - f);
+            return new Vector3f(v0.x - f, v0.y - f, v0.z - f) { axisOrder = v0.axisOrder };
         }
 
 
         public static bool operator ==(Vector3f a, Vector3f b)
         {
+            b.ChangeAxisOrderTo(a.axisOrder);
             return (a.x == b.x && a.y == b.y && a.z == b.z);
         }
         public static bool operator !=(Vector3f a, Vector3f b)
         {
+            b.ChangeAxisOrderTo(a.axisOrder);
             return (a.x != b.x || a.y != b.y || a.z != b.z);
         }
         public override bool Equals(object obj)
@@ -282,11 +298,13 @@ namespace VirgisGeometry
         }
         public bool Equals(Vector3f other)
         {
+            other.ChangeAxisOrderTo(axisOrder);
             return (x == other.x && y == other.y && z == other.z);
         }
 
 
         public bool EpsilonEqual(Vector3f v2, float epsilon) {
+            v2.ChangeAxisOrderTo(axisOrder);
             return (float)Math.Abs(x - v2.x) <= epsilon && 
                    (float)Math.Abs(y - v2.y) <= epsilon &&
                    (float)Math.Abs(z - v2.z) <= epsilon;
@@ -295,8 +313,9 @@ namespace VirgisGeometry
 
         public static Vector3f Lerp(Vector3f a, Vector3f b, float t)
         {
+            b.ChangeAxisOrderTo(a.axisOrder);
             float s = 1 - t;
-            return new Vector3f(s * a.x + t * b.x, s * a.y + t * b.y, s * a.z + t * b.z);
+            return new Vector3f(s * a.x + t * b.x, s * a.y + t * b.y, s * a.z + t * b.z) { axisOrder = a.axisOrder };
         }
 
 
@@ -314,7 +333,7 @@ namespace VirgisGeometry
         }
         public static implicit operator Vector3(Vector3f v)
         {
-            if (v.axisOrder == AxisOrder.EUN) return new Vector3(v.x, v.y, v.z);
+            v.ChangeAxisOrderTo(AxisOrder.EUN);
             return new Vector3(v.x, v.z, v.y);
         }
         public static explicit operator Vector3f(double3 v)

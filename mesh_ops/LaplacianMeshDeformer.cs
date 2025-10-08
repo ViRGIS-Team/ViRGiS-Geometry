@@ -11,7 +11,8 @@ namespace VirgisGeometry
         // info that is fixed based on mesh
         PackedSparseMatrix PackedM;
         int N;
-        int[] ToMeshV, ToIndex;
+        int[] ToMeshV;
+        readonly Dictionary<int, int> ToIndex = new();
         double[] Px, Py, Pz;
         int[] nbr_counts;
         double[] MLx, MLy, MLz;
@@ -46,12 +47,13 @@ namespace VirgisGeometry
         public LaplacianMeshDeformer(DMesh3 mesh)
         {
             Mesh = mesh;
-            Util.gDevAssert(mesh.IsCompact);
+            //Util.gDevAssert(mesh.IsCompact);
         }
 
 
         public void SetConstraint(int vID, Vector3d targetPos, double weight, bool bForceToFixedPos = false)
         {
+            targetPos.ChangeAxisOrderTo(Mesh.axisOrder);
             SoftConstraints[vID] = new SoftConstraintV() { Position = targetPos, Weight = weight, PostFix = bForceToFixedPos };
             HavePostFixedConstraints = HavePostFixedConstraints || bForceToFixedPos;
             need_solve_update = true;
@@ -71,8 +73,7 @@ namespace VirgisGeometry
 
         public void Initialize()
         {
-            ToMeshV = new int[Mesh.MaxVertexID];
-            ToIndex = new int[Mesh.MaxVertexID];
+            ToMeshV = new int[Mesh.VertexCount];
             N = 0;
             foreach (int vid in Mesh.VertexIndices()) {
                 ToMeshV[N] = vid;
@@ -112,7 +113,7 @@ namespace VirgisGeometry
                     sum_w += w;
                 }
                 sum_w = -sum_w;
-                M.Set(vid, vid, sum_w);
+                M.Set(i, i, sum_w);
             }
 
             // transpose(L) * L, but matrix is symmetric...
@@ -235,8 +236,7 @@ namespace VirgisGeometry
                 return false;
 
             for ( int i = 0; i < N; ++i ) {
-                int vid = ToMeshV[i];
-                Result[vid] = new Vector3d(Sx[i], Sy[i], Sz[i]);
+                Result[i] = new Vector3d(Sx[i], Sy[i], Sz[i]);
             }
 
             // apply post-fixed constraints
@@ -244,7 +244,7 @@ namespace VirgisGeometry
                 foreach (var constraint in SoftConstraints) {
                     if (constraint.Value.PostFix) {
                         int vid = constraint.Key;
-                        Result[vid] = constraint.Value.Position;
+                        Result[ToIndex[vid]] = constraint.Value.Position;
                     }
                 }
             }
@@ -286,8 +286,7 @@ namespace VirgisGeometry
                 return false;
 
             for (int i = 0; i < N; ++i) {
-                int vid = ToMeshV[i];
-                Result[vid] = new Vector3d(X[0][i], X[1][i], X[2][i]);
+                Result[i] = new Vector3d(X[0][i], X[1][i], X[2][i]);
             }
 
             // apply post-fixed constraints
@@ -295,7 +294,7 @@ namespace VirgisGeometry
                 foreach (var constraint in SoftConstraints) {
                     if (constraint.Value.PostFix) {
                         int vid = constraint.Key;
-                        Result[vid] = constraint.Value.Position;
+                        Result[ToIndex[vid]] = constraint.Value.Position;
                     }
                 }
             }
@@ -320,13 +319,15 @@ namespace VirgisGeometry
 
         public bool SolveAndUpdateMesh()
         {
-            int N = Mesh.MaxVertexID;
+            if (WeightsM == null)
+                Initialize();       // force initialize...
             Vector3d[] Result = new Vector3d[N];
             if ( Solve(Result) == false )
                 return false;
             for (int i = 0; i < N; ++i) {
-                if (Mesh.IsVertex(i)) {
-                    Mesh.SetVertex(i, Result[i]);
+                int vid = ToMeshV[i];
+                if (Mesh.IsVertex(vid)) {
+                    Mesh.SetVertex(vid, Result[i]);
                 }
             }
             return true;

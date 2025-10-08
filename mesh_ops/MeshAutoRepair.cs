@@ -1,12 +1,9 @@
 ﻿// Copyright (c) Ryan Schmidt (rms@gradientspace.com) - All Rights Reserved
 // Distributed under the Boost Software License, Version 1.0. http://www.boost.org/LICENSE_1_0.txt
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using VirgisGeometry;
 
-namespace gs
+namespace VirgisGeometry
 {
     /// <summary>
     /// Mesh Auto Repair top-level driver.
@@ -32,10 +29,6 @@ namespace gs
 			None = 0, Interior = 1, Occluded = 2
 		};
 		public RemoveModes RemoveMode = MeshAutoRepair.RemoveModes.None;
-
-
-
-
 
         /// <summary>
         /// Set this to be able to cancel running remesher

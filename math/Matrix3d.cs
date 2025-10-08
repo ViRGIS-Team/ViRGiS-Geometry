@@ -238,14 +238,15 @@ namespace VirgisGeometry
             return this == (Matrix3d)obj;
         }
 
-
+        public override int GetHashCode()
+        {
+            return (int)Math.Floor(Determinant);
+        }
 
         public double InnerProduct(ref Matrix3d m2)
         {
             return Row0.Dot(ref m2.Row0) + Row1.Dot(ref m2.Row1) + Row2.Dot(ref m2.Row2);
         }
-
-
 
         public double Determinant {
 			get {

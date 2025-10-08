@@ -39,7 +39,7 @@ namespace VirgisGeometry
         /// (if false, them throws exception if there are still any triangles!)
         /// if bPreserveManifold, checks that we will not create a bowtie vertex first
         /// </summary>
-        public MeshResult RemoveVertex(int vID, bool bRemoveAllTriangles = true, bool bPreserveManifold = false)
+        public virtual MeshResult RemoveVertex(int vID, bool bRemoveAllTriangles = true, bool bPreserveManifold = false)
         {
             if (vertices_refcount.isValid(vID) == false)
                 return MeshResult.Failed_NotAVertex;
@@ -90,7 +90,7 @@ namespace VirgisGeometry
         ///   If this check is not done, you have to make sure you don't create a bowtie, because other
         ///   code assumes we don't have bowties, and will not handle it properly
         /// </summary>
-        public MeshResult RemoveTriangle(int tID, bool bRemoveIsolatedVertices = true, bool bPreserveManifold = false)
+        public virtual MeshResult RemoveTriangle(int tID, bool bRemoveIsolatedVertices = true, bool bPreserveManifold = false, bool bIsSubmesh = false)
         {
             if ( ! triangles_refcount.isValid(tID) ) {
                 Debug.Assert(false);
@@ -118,12 +118,14 @@ namespace VirgisGeometry
                 int eid = te[j];
                 replace_edge_triangle(eid, tID, InvalidID);
                 if (edges[4 * eid + 2] == InvalidID) {
-                    int a = edges[4 * eid];
-                    vertex_edges.Remove(a, eid);
+					if (!bIsSubmesh)
+					{
+						int a = edges[4 * eid];
+						vertex_edges.Remove(a, eid);
 
-                    int b = edges[4 * eid + 1];
-                    vertex_edges.Remove(b, eid);
-
+						int b = edges[4 * eid + 1];
+						vertex_edges.Remove(b, eid);
+					}
                     edges_refcount.decrement(eid);
                 }
             }
@@ -137,11 +139,13 @@ namespace VirgisGeometry
             for (int j = 0; j < 3; ++j) {
                 int vid = tv[j];
                 vertices_refcount.decrement(vid);
-                if ( bRemoveIsolatedVertices && vertices_refcount.refCount(vid) == 1) {
-                    vertices_refcount.decrement(vid);
-                    Debug.Assert(vertices_refcount.isValid(vid) == false);
-                    vertex_edges.Clear(vid);
-                }
+				if (bRemoveIsolatedVertices && vertices_refcount.refCount(vid) == 1)
+				{
+					vertices_refcount.decrement(vid);
+					Debug.Assert(vertices_refcount.isValid(vid) == false);
+					if (!bIsSubmesh)
+						vertex_edges.Clear(vid);
+				}
             }
 
             updateTimeStamp(true);
@@ -593,21 +597,27 @@ namespace VirgisGeometry
 			//  [TODO] if we had tri iterator for a, couldn't we check each tri for b  (skipping t0 and t1) ?
             int edges_a_count = vertex_edges.Count(a); 
             int eac = InvalidID, ead = InvalidID, ebc = InvalidID, ebd = InvalidID;
-            foreach ( int eid_a in vertex_edges.ValueItr(a) ) { 
-				int vax =  edge_other_v(eid_a, a);
-                if ( vax == c ) {
-                    eac = eid_a;
-                    continue;
-                }
-                if ( vax == d ) {
-                    ead = eid_a;
-                    continue;
-                }
-				if ( vax == b )
-					continue;
-                foreach (int eid_b in vertex_edges.ValueItr(b)) {
-					if ( edge_other_v(eid_b, b) == vax )
-						return MeshResult.Failed_InvalidNeighbourhood;
+            foreach ( int eid_a in vertex_edges.ValueItr(a) ) {
+				if (IsEdge(eid_a))
+				{
+					int vax = edge_other_v(eid_a, a);
+					if (vax == c)
+					{
+						eac = eid_a;
+						continue;
+					}
+					if (vax == d)
+					{
+						ead = eid_a;
+						continue;
+					}
+					if (vax == b)
+						continue;
+					foreach (int eid_b in vertex_edges.ValueItr(b))
+					{
+						if (edge_other_v(eid_b, b) == vax)
+							return MeshResult.Failed_InvalidNeighbourhood;
+					}
 				}
 			}
 
@@ -1083,7 +1093,7 @@ namespace VirgisGeometry
             triangle_edges[i + 2] = e2;
         }
 
-        int add_edge(int vA, int vB, int tA, int tB = InvalidID)
+        internal virtual int add_edge(int vA, int vB, int tA, int tB = InvalidID)
         {
             if (vB < vA) {
                 int t = vB; vB = vA; vA = t;

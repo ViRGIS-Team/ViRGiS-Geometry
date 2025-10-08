@@ -4,7 +4,6 @@ using System.Linq;
 using Unity.Collections;
 using Unity.Mathematics;
 using andywiecko.BurstTriangulator;
-using static UnityEngine.GraphicsBuffer;
 
 
 namespace VirgisGeometry
@@ -173,28 +172,30 @@ namespace VirgisGeometry
             DMesh3 mesh = new DMesh3(Normals != null, false, false, TriGroups != null);
             if (ax == default) mesh.axisOrder = AxisOrder.Undefined; else mesh.axisOrder = ax;
 
-            Vector3d[] v = BufferUtil.ToVector3d(Vertices);
-            for (int i = 0; i < v.Length; ++i)
-                mesh.AppendVertex(v[i], true);
+            foreach (Vector3d v in BufferUtil.ToVector3d(Vertices))
+                mesh.AppendVertex(v, true);
 
             if ( Normals != null ) {
-                Vector3f[] n = BufferUtil.ToVector3f(Normals);
-                if ( n.Length != v.Length )
+                IEnumerator<Vector3f> n = BufferUtil.ToVector3f(Normals).GetEnumerator();
+                foreach (int i in mesh.VertexIndices())
+                {
+                    mesh.SetVertexNormal(i, n.Current);
+                }
+                if ( ! n.MoveNext() )
                     throw new Exception("DMesh3Builder.Build: incorrect number of normals provided");
-                for (int i = 0; i < n.Length; ++i)
-                    mesh.SetVertexNormal(i, n[i]);
             }
 
-            Index3i[] t = BufferUtil.ToIndex3i(Triangles);
-            for (int i = 0; i < t.Length; ++i)
-                mesh.AppendTriangle(t[i]);
+            foreach (Index3i ind in BufferUtil.ToIndex3i(Triangles))
+                mesh.AppendTriangle(ind);
 
             if ( TriGroups != null ) {
-                List<int> groups = new List<int>(TriGroups);
-                if (groups.Count != t.Length)
-                    throw new Exception("DMesh3Builder.Build: incorect number of triangle groups");
-                for (int i = 0; i < t.Length; ++i)
-                    mesh.SetTriangleGroup(i, groups[i]);
+                IEnumerator<int> groups = TriGroups.GetEnumerator();
+                foreach(int tri in mesh.TriangleIndices())
+                {
+                    mesh.SetTriangleGroup(tri, groups.Current);
+                    if (! groups.MoveNext())
+                        throw new Exception("DMesh3Builder.Build: incorect number of triangle groups");
+                }
             }
             return mesh;
         }
@@ -224,90 +225,73 @@ namespace VirgisGeometry
                                                  IEnumerable<EType> constraint_edges = null,
                                                  AxisOrder ax = default)
         {
-            Vector3d[] vertices3d = BufferUtil.ToVector3d(vertices);
-            Index3i[] triangles;
-
-            OrthogonalPlaneFit3 orth = new (vertices3d);
+            DMesh3 res;
+            OrthogonalPlaneFit3 orth = new (BufferUtil.ToVector3d(vertices));
             Frame3f frame = new (orth.Origin, orth.Normal);
 
             List<Vector2d> vertices2d = new ();
-            foreach (Vector3d v in vertices3d)
+            foreach (Vector3d v in BufferUtil.ToVector3d(vertices))
             {
                 Vector2f vertex = frame.ToPlaneUV((Vector3f)v, 3);
                 vertices2d.Add(vertex);
             }
 
-            Triangulator triangulator = new (Allocator.Persistent)
+            using Triangulator<float2> triangulator = new(Allocator.Persistent)
             {
                 Settings = {
                     RestoreBoundary = true,
                 }
             };
-            Triangulator.InputData input = new ()
-            {
-                Positions = new NativeArray<float2>(vertices2d.Select(vertex => (float2)vertex).ToArray(), Allocator.Persistent),
-            };
-
-            if (constraint_edges != null)
-            {
-                NativeArray<int> edges = new(constraint_edges.Count() * 2, Allocator.Persistent);
-
-                int idx = 0;
-                foreach (Index2i edge in BufferUtil.ToIndex2i(constraint_edges))
+                InputData<float2> input = new()
                 {
-                    edges[idx] = edge.a;
-                    idx++;
-                    edges[idx] = edge.b;
-                    idx++;
-                }
-                input.ConstraintEdges = edges;
-            }
+                    Positions = new NativeArray<float2>(vertices2d.Select(vertex => (float2)vertex).ToArray(), Allocator.Persistent),
+                };
 
-            triangulator.Input = input;
-            try
-            {
-
-                triangulator.Run();
-
-                if (!triangulator.Output.Status.IsCreated ||
-                       triangulator.Output.Status.Value != Triangulator.Status.OK
-                   )
+                if (constraint_edges != null)
                 {
-                    throw new Exception("Could not create Delaunay Triangulation");
+                    NativeArray<int> edges = new(constraint_edges.Count() * 2, Allocator.Persistent);
+
+                    int idx = 0;
+                    foreach (Index2i edge in BufferUtil.ToIndex2i(constraint_edges))
+                    {
+                        edges[idx] = edge.a;
+                        idx++;
+                        edges[idx] = edge.b;
+                        idx++;
+                    }
+                    input.ConstraintEdges = edges;
                 }
 
-
-                // 
-                // extract the triangles from the delaunay triangulation 
-                //
-                int[] tris = triangulator.Output.Triangles.AsArray().ToArray();
-                int tri_count = tris.Length / 3;
-                triangles = new Index3i[tri_count];
-                long idx = 0;
-
-                for (int i = 0; i < tri_count; i++)
+                triangulator.Input = input;
+                try
                 {
-                    triangles[i] = new(tris[idx++], tris[idx++], tris[idx++]);
+
+                    triangulator.Run();
+
+                    if (!triangulator.Output.Status.IsCreated ||
+                           triangulator.Output.Status.Value != Status.OK
+                       )
+                    {
+                        throw new Exception("Could not create Delaunay Triangulation");
+                    }
+
+                    res = Build<Vector3d, int, Vector3d>(BufferUtil.ToVector3d(vertices), triangulator.Output.Triangles.AsArray().ToArray(), null, null, ax);
+                    for (int i = 0; i < vertices2d.Count; i++)
+                    {
+                        res.SetVertexUV(i, (Vector2f)vertices2d[i]);
+                    }
+
+                    triangulator.Input.Positions.Dispose();
+                    triangulator.Input.ConstraintEdges.Dispose();
+                    triangulator.Dispose();
                 }
-
-
-                triangulator.Input.Positions.Dispose();
-                triangulator.Input.ConstraintEdges.Dispose();
-                triangulator.Dispose();
-            }
-            catch
-            {
-                triangulator.Input.Positions.Dispose();
-                triangulator.Input.ConstraintEdges.Dispose();
-                triangulator.Dispose();
-                throw new Exception("DMesh3 creation Failed");
-            }
-
-            DMesh3 res = Build<Vector3d, Index3i, Vector3d>(vertices3d, triangles, null, null, ax);
-            for (int i = 0; i < vertices2d.Count; i++)
-            {
-                res.SetVertexUV(i, (Vector2f)vertices2d[i]);
-            }
+                catch (Exception e)
+                {
+                    triangulator.Input.Positions.Dispose();
+                    triangulator.Input.ConstraintEdges.Dispose();
+                    triangulator.Dispose();
+                    throw new Exception($"DMesh3 creation Failed: {e.Message}");
+                }
             return res;
         }
     }

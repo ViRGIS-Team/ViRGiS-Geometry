@@ -70,7 +70,7 @@ namespace VirgisGeometry
             MeshFaceSelection targetRegion = new MeshFaceSelection(mesh);
             targetRegion.Select(triangles);
             targetRegion.ExpandToOneRingNeighbours(nExpandRings);
-            DSubmesh3 submesh = new DSubmesh3(mesh, targetRegion);
+            DSubmesh3Legacy submesh = new DSubmesh3Legacy(mesh, targetRegion);
             return new MeshProjectionTarget(submesh.SubMesh); 
         }
     }

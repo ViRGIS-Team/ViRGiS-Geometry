@@ -556,6 +556,7 @@ namespace VirgisGeometry
         /// </summary>
         public static Vector3d BarycentricCoords(ref Vector3d vPoint, ref Vector3d V0, ref Vector3d V1, ref Vector3d V2)
         {
+            vPoint.ChangeAxisOrderTo(V0.axisOrder);
             Vector3d kV02 = V0 - V2;
             Vector3d kV12 = V1 - V2;
             Vector3d kPV2 = vPoint - V2;

@@ -2,11 +2,8 @@
 // Distributed under the Boost Software License, Version 1.0. http://www.boost.org/LICENSE_1_0.txt
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using VirgisGeometry;
 
-namespace gs
+namespace VirgisGeometry
 {
     /// <summary>
     /// This fills a hole in a mesh by doing a trivial fill, optionally offsetting along a fixed vector,

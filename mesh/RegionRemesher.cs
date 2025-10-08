@@ -6,10 +6,11 @@ using System.Linq;
 
 namespace VirgisGeometry
 {
+    [Obsolete("Regional Remeshing is not necessary with the updated DSubMesh3 class - use normal remeshing")]   
     public class RegionRemesher : Remesher
     {
         public DMesh3 BaseMesh;
-        public DSubmesh3 Region;
+        public DSubmesh3Legacy Region;
 
         // this is only valid after BackPropagate() call!! maps submeshverts to base mesh
         public IndexMap ReinsertSubToBaseMapV;
@@ -26,7 +27,7 @@ namespace VirgisGeometry
         public RegionRemesher(DMesh3 mesh, int[] regionTris)
         {
             BaseMesh = mesh;
-            Region = new DSubmesh3(mesh, regionTris);
+            Region = new (mesh, regionTris);
             Region.ComputeBoundaryInfo(regionTris);
             base.mesh = Region.SubMesh;
 
@@ -41,7 +42,7 @@ namespace VirgisGeometry
         public RegionRemesher(DMesh3 mesh, IEnumerable<int> regionTris)
         {
             BaseMesh = mesh;
-            Region = new DSubmesh3(mesh, regionTris);
+            Region = new (mesh, regionTris);
             int count = regionTris.Count();
             Region.ComputeBoundaryInfo(regionTris, count);
             base.mesh = Region.SubMesh;

@@ -51,6 +51,13 @@ namespace VirgisGeometry
             Axis3 = AxisType.Other
         };
 
+        public AxisOrder(byte[] array)
+        {
+            Axis1 = (AxisType)array[0];
+            Axis2 = (AxisType)array[1];
+            Axis3 = (AxisType)array[2];
+        }
+
         /// <summary>
         /// This considers the case where the axis order needs to swap between:
         ///  [e,n,s]u[n,e,s] (which is needed for Unity) and
@@ -65,7 +72,7 @@ namespace VirgisGeometry
         /// <param name="other"></param>
         /// <returns></returns>
         /// <exception cref="Exception"></exception>
-        public readonly Matrix4d TransformTo(AxisOrder other)
+        public Matrix4d TransformTo(AxisOrder other)
         {
             if (other == null) throw new Exception("Invalid AxisOrder");
             if (this == other) return Matrix4d.Identity;
@@ -101,7 +108,17 @@ namespace VirgisGeometry
             }
         }
 
-        public readonly byte[] ToArray()
+        public override bool Equals(object obj)
+        {
+            return this == (AxisOrder)obj;
+        }
+
+        public override int GetHashCode()
+        {
+            return 8 * (int)Axis1 + 4 * (int)Axis2 + (int)Axis3;
+        }
+
+        public byte[] ToArray()
         {
             return new byte[3] { (byte)Axis1, (byte)Axis2, (byte)Axis3 };
         }

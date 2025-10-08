@@ -237,5 +237,24 @@ namespace VirgisGeometry
             return new float2x2(m.Column(0), m.Column(1));
         }
 
+        public static bool operator ==(Matrix2f a, Matrix2f b)
+        {
+            return a.Row(0) == b.Row(0) && a.Row(1) == b.Row(1);
+        }
+
+        public static bool operator !=(Matrix2f a, Matrix2f b)
+        {
+            return a.Row(0) != b.Row(0) || a.Row(1) != b.Row(1);
+        }
+
+        public override bool Equals(object obj)
+        {
+            return this == (Matrix2f)obj;
+        }
+
+        public override int GetHashCode()
+        {
+            return (int)Math.Floor(Determinant);
+        }
     }
 }

@@ -382,7 +382,7 @@ namespace VirgisGeometry
             }
 
             RegionOperator region = new RegionOperator(mesh, triangles);
-            DSubmesh3 submesh = region.Region;
+            DSubmesh3Legacy submesh = region.Region;
             DMesh3 smoothMesh = submesh.SubMesh;
             LaplacianMeshSmoother smoother = new LaplacianMeshSmoother(smoothMesh);
 

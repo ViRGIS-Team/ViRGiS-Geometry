@@ -119,9 +119,11 @@ namespace VirgisGeometry
 
 
         public double Dot(Vector3d v2) {
+            v2.ChangeAxisOrderTo(axisOrder);
             return x * v2.x + y * v2.y + z * v2.z;
         }
         public double Dot(ref Vector3d v2) {
+            v2.ChangeAxisOrderTo(axisOrder);
             return x * v2.x + y * v2.y + z * v2.z;
         }
 
@@ -130,12 +132,14 @@ namespace VirgisGeometry
         }
 
         public Vector3d Cross(Vector3d v2) {
+            v2.ChangeAxisOrderTo(axisOrder);
             return new Vector3d(
                 y * v2.z - z * v2.y,
                 z * v2.x - x * v2.z,
                 x * v2.y - y * v2.x);
         }
         public Vector3d Cross(ref Vector3d v2) {
+            v2.ChangeAxisOrderTo(axisOrder);
             return new Vector3d(
                 y * v2.z - z * v2.y,
                 z * v2.x - x * v2.z,
@@ -146,6 +150,7 @@ namespace VirgisGeometry
         }
 
         public Vector3d UnitCross(ref Vector3d v2) {
+            v2.ChangeAxisOrderTo(axisOrder);
             Vector3d n = new Vector3d(
                 y * v2.z - z * v2.y,
                 z * v2.x - x * v2.z,
@@ -160,6 +165,7 @@ namespace VirgisGeometry
 
         public double AngleD(Vector3d v2)
         {
+            v2.ChangeAxisOrderTo(axisOrder);
             double fDot = MathUtil.Clamp(Dot(v2), -1, 1);
             return Math.Acos(fDot) * MathUtil.Rad2Deg;
         }
@@ -169,6 +175,7 @@ namespace VirgisGeometry
         }
         public double AngleR(Vector3d v2)
         {
+            v2.ChangeAxisOrderTo(axisOrder);
             double fDot = MathUtil.Clamp(Dot(v2), -1, 1);
             return Math.Acos(fDot);
         }
@@ -178,25 +185,30 @@ namespace VirgisGeometry
         }
 
 		public double DistanceSquared(Vector3d v2) {
-			double dx = v2.x-x, dy = v2.y-y, dz = v2.z-z;
+            v2.ChangeAxisOrderTo(axisOrder);
+            double dx = v2.x-x, dy = v2.y-y, dz = v2.z-z;
 			return dx*dx + dy*dy + dz*dz;
 		}
 		public double DistanceSquared(ref Vector3d v2) {
-			double dx = v2.x-x, dy = v2.y-y, dz = v2.z-z;
+            v2.ChangeAxisOrderTo(axisOrder);
+            double dx = v2.x-x, dy = v2.y-y, dz = v2.z-z;
 			return dx*dx + dy*dy + dz*dz;
 		}
 
         public double Distance(Vector3d v2) {
+            v2.ChangeAxisOrderTo(axisOrder);
             double dx = v2.x-x, dy = v2.y-y, dz = v2.z-z;
 			return Math.Sqrt(dx*dx + dy*dy + dz*dz);
 		}
         public double Distance(ref Vector3d v2) {
+            v2.ChangeAxisOrderTo(axisOrder);
             double dx = v2.x-x, dy = v2.y-y, dz = v2.z-z;
 			return Math.Sqrt(dx*dx + dy*dy + dz*dz);
 		}
 
         public void Set(Vector3d o)
         {
+            o.ChangeAxisOrderTo(axisOrder);
             x = o.x; y = o.y; z = o.z;
         }
         public void Set(double fX, double fY, double fZ)
@@ -205,10 +217,12 @@ namespace VirgisGeometry
         }
         public void Add(Vector3d o)
         {
+            o.ChangeAxisOrderTo(axisOrder);
             x += o.x; y += o.y; z += o.z;
         }
         public void Subtract(Vector3d o)
         {
+            o.ChangeAxisOrderTo(axisOrder);
             x -= o.x; y -= o.y; z -= o.z;
         }
 
@@ -216,62 +230,68 @@ namespace VirgisGeometry
 
         public static Vector3d operator -(Vector3d v)
         {
-            return new Vector3d(-v.x, -v.y, -v.z);
+            return new Vector3d(-v.x, -v.y, -v.z) { axisOrder = v.axisOrder };
         }
 
         public static Vector3d operator *(double f, Vector3d v)
         {
-            return new Vector3d(f * v.x, f * v.y, f * v.z);
+            return new Vector3d(f * v.x, f * v.y, f * v.z) { axisOrder = v.axisOrder };
         }
         public static Vector3d operator *(Vector3d v, double f)
         {
-            return new Vector3d(f * v.x, f * v.y, f * v.z);
+            return new Vector3d(f * v.x, f * v.y, f * v.z) { axisOrder = v.axisOrder };
         }
         public static Vector3d operator /(Vector3d v, double f)
         {
-            return new Vector3d(v.x / f, v.y / f, v.z / f);
+            return new Vector3d(v.x / f, v.y / f, v.z / f) { axisOrder = v.axisOrder };
         }
         public static Vector3d operator /(double f, Vector3d v)
         {
-            return new Vector3d(f / v.x, f / v.y, f / v.z);
+            return new Vector3d(f / v.x, f / v.y, f / v.z) { axisOrder = v.axisOrder };
         }
 
         public static Vector3d operator *(Vector3d a, Vector3d b)
         {
-            return new Vector3d(a.x * b.x, a.y * b.y, a.z * b.z);
+            b.ChangeAxisOrderTo(a.axisOrder);
+            return new Vector3d(a.x * b.x, a.y * b.y, a.z * b.z) { axisOrder = a.axisOrder };
         }
         public static Vector3d operator /(Vector3d a, Vector3d b)
         {
-            return new Vector3d(a.x / b.x, a.y / b.y, a.z / b.z);
+            b.ChangeAxisOrderTo(a.axisOrder);
+            return new Vector3d(a.x / b.x, a.y / b.y, a.z / b.z) { axisOrder = a.axisOrder };
         }
 
 
         public static Vector3d operator +(Vector3d v0, Vector3d v1)
         {
-            return new Vector3d(v0.x + v1.x, v0.y + v1.y, v0.z + v1.z);
+            v1.ChangeAxisOrderTo(v0.axisOrder);
+            return new Vector3d(v0.x + v1.x, v0.y + v1.y, v0.z + v1.z) { axisOrder = v0.axisOrder };
         }
         public static Vector3d operator +(Vector3d v0, double f)
         {
-            return new Vector3d(v0.x + f, v0.y + f, v0.z + f);
+            return new Vector3d(v0.x + f, v0.y + f, v0.z + f) { axisOrder = v0.axisOrder };
         }
 
         public static Vector3d operator -(Vector3d v0, Vector3d v1)
         {
-            return new Vector3d(v0.x - v1.x, v0.y - v1.y, v0.z - v1.z);
+            v1.ChangeAxisOrderTo(v0.axisOrder);
+            return new Vector3d(v0.x - v1.x, v0.y - v1.y, v0.z - v1.z) { axisOrder = v0.axisOrder };
         }
         public static Vector3d operator -(Vector3d v0, double f)
         {
-            return new Vector3d(v0.x - f, v0.y - f, v0.z - f);
+            return new Vector3d(v0.x - f, v0.y - f, v0.z - f) { axisOrder = v0.axisOrder };
         }
 
 
 
         public static bool operator ==(Vector3d a, Vector3d b)
         {
+            b.ChangeAxisOrderTo(a.axisOrder);
             return (a.x == b.x && a.y == b.y && a.z == b.z);
         }
         public static bool operator !=(Vector3d a, Vector3d b)
         {
+            b.ChangeAxisOrderTo(a.axisOrder);
             return (a.x != b.x || a.y != b.y || a.z != b.z);
         }
         public override bool Equals(object obj)
@@ -308,11 +328,13 @@ namespace VirgisGeometry
         }
         public bool Equals(Vector3d other)
         {
+            other.ChangeAxisOrderTo(axisOrder);
             return (x == other.x && y == other.y && z == other.z);
         }
 
 
         public bool EpsilonEqual(Vector3d v2, double epsilon) {
+            v2.ChangeAxisOrderTo(axisOrder);
             return Math.Abs(x - v2.x) <= epsilon && 
                    Math.Abs(y - v2.y) <= epsilon &&
                    Math.Abs(z - v2.z) <= epsilon;
@@ -320,10 +342,12 @@ namespace VirgisGeometry
 
 
         public static Vector3d Lerp(Vector3d a, Vector3d b, double t) {
+            b.ChangeAxisOrderTo(a.axisOrder);
             double s = 1 - t;
-            return new Vector3d(s * a.x + t * b.x, s * a.y + t * b.y, s * a.z + t * b.z);
+            return new Vector3d(s * a.x + t * b.x, s * a.y + t * b.y, s * a.z + t * b.z) { axisOrder = a.axisOrder };
         }
         public static Vector3d Lerp(ref Vector3d a, ref Vector3d b, double t) {
+            b.ChangeAxisOrderTo(a.axisOrder);
             double s = 1 - t;
             return new Vector3d(s * a.x + t * b.x, s * a.y + t * b.y, s * a.z + t * b.z);
         }
@@ -354,8 +378,8 @@ namespace VirgisGeometry
         }
         public static explicit operator Vector3(Vector3d v)
         {
-            if (v.axisOrder == AxisOrder.EUN) return new Vector3((float)v.x, (float)v.y, (float)v.z);
-            return new Vector3((float)v.x, (float)v.z, (float)v.y);
+            v.ChangeAxisOrderTo(AxisOrder.EUN);
+            return new Vector3((float)v.x, (float)v.y, (float)v.z);
         }
         public static implicit operator Vector3d(float3 v)
         {
@@ -403,7 +427,10 @@ namespace VirgisGeometry
             //   u2 = (v2-(u0*v2)u0-(u1*v2)u1)/|v2-(u0*v2)u0-(u1*v2)u1|
             //
             // where |A| indicates length of vector A and A*B indicates dot
-            // product of vectors A and B.
+            // product of vectors A and B
+            // 
+            v.ChangeAxisOrderTo(u.axisOrder);
+            w.ChangeAxisOrderTo(u.axisOrder);
 
             // compute u0
             double minLength = u.Normalize();
@@ -435,6 +462,9 @@ namespace VirgisGeometry
         public static void GenerateComplementBasis(ref Vector3d u, ref Vector3d v, Vector3d w)
         {
             double invLength;
+
+            v.ChangeAxisOrderTo(u.axisOrder);
+            w.ChangeAxisOrderTo(u.axisOrder);
 
             if (Math.Abs(w.x) >= Math.Abs(w.y)) {
                 // W.x or W.z is the largest magnitude component, swap them
@@ -469,6 +499,9 @@ namespace VirgisGeometry
         /// </summary>
         public static double ComputeOrthogonalComplement(int numInputs, Vector3d v0, ref Vector3d v1, ref Vector3d v2 /*, bool robust = false*/)
         {
+            v1.ChangeAxisOrderTo(v0.axisOrder);
+            v2.ChangeAxisOrderTo(v0.axisOrder);
+
             if (numInputs == 1) {
                 if (Math.Abs(v0[0]) > Math.Abs(v0[1])) {
                     v1 = new Vector3d( -v0[2], 0.0, +v0[0] );
