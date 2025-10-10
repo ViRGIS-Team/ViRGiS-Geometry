@@ -5,9 +5,9 @@ using System.Linq;
 namespace VirgisGeometry
 {
     /// <summary>
-    /// DSubmesh3 done properly - with rteferences to the base DMesh3 instead of copying and mapping
+    /// DSubmesh3 done properly - with references to the base DMesh3 instead of copying and mapping
     /// 
-    /// Note the main change here is that any change to the Submesh will autmatically also apply to the base mesh,
+    /// Note the main change here is that any change to the Submesh will automatically also apply to the base mesh,
     /// this is a feature.
     /// 
     /// The DSubmesh3 is now a DMesh3 - so there is no need to fetch Submesh from the DSubmesh3.
@@ -17,7 +17,7 @@ namespace VirgisGeometry
     public class DSubmesh3: DMesh3
     {
         protected DMesh3 BaseMesh; // This is the base mesh that the submesh references
-        protected IEnumerable<int> selectedTris; // keeps the selected triangles for this 
+        protected IEnumerable<int> selectedTris; // keeps the selected triangles for this submesh
  
         // redirect the base data structures to the base mesh
         internal override DVector<double> vertices 
@@ -246,7 +246,7 @@ namespace VirgisGeometry
         /// <param name="bRemoveIsolatedVertices"></param>
         /// <param name="bPreserveManifold"></param>
         /// <returns></returns>
-        public virtual MeshResult RemoveTriangle(int tID, bool bRemoveIsolatedVertices = true, bool bPreserveManifold = false, bool bIsSubmesh = false)
+        public override MeshResult RemoveTriangle(int tID, bool bRemoveIsolatedVertices = true, bool bPreserveManifold = false, bool bIsSubmesh = false)
         {
             MeshResult mr = BaseMesh.RemoveTriangle(tID, bRemoveIsolatedVertices, bPreserveManifold);
             if (mr == MeshResult.Ok) compute(selectedTris);
