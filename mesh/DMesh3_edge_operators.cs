@@ -70,8 +70,8 @@ namespace VirgisGeometry
                 }
             }
 
-            if ( vertices_refcount.refCount(vID) != 1)
-                throw new NotImplementedException("DMesh3.RemoveVertex: vertex is still referenced");
+			if (vertices_refcount.refCount(vID) != 1)
+				return MeshResult.Failed_VertexStillReferenced;
 
             vertices_refcount.decrement(vID);
             Debug.Assert(vertices_refcount.isValid(vID) == false);

@@ -155,38 +155,58 @@ namespace VirgisGeometry
         // This function checks that the mesh is well-formed, ie all internal data
         // structures are consistent
         /// </summary>
-        public bool CheckValidity(bool bAllowNonManifoldVertices = false, FailMode eFailMode = FailMode.Throw ) {
+        public bool CheckValidity(bool bAllowNonManifoldVertices = false, FailMode eFailMode = FailMode.Throw)
+        {
+            return CheckValidity(out MeshResult mr, bAllowNonManifoldVertices, eFailMode);
+        }
 
-			int[] triToVtxRefs = new int[this.MaxVertexID];
+        public bool CheckValidity(out MeshResult mr, bool bAllowNonManifoldVertices = false, FailMode eFailMode = FailMode.ReturnOnly)
+        {
 
-            bool is_ok = true;
-            Action<bool> CheckOrFailF = (b) => { is_ok = is_ok && b; };
+            int[] triToVtxRefs = new int[this.MaxVertexID];
+            MeshResult result = MeshResult.Ok;
+
+            Action<bool, MeshResult> CheckOrFailF = (b, mr) => {
+                if (b == false) 
+                    result = mr;
+                };
             if ( eFailMode == FailMode.DebugAssert ) {
-                CheckOrFailF = (b) => { Debug.Assert(b); is_ok = is_ok && b; };
+                CheckOrFailF = (b, mr) => { 
+                    Debug.Assert(b);
+                    if (b == false) 
+                        result = mr;
+                };
             } else if ( eFailMode == FailMode.gDevAssert ) {
-                CheckOrFailF = (b) => { Util.gDevAssert(b); is_ok = is_ok && b; };
+                CheckOrFailF = (b, mr) => { 
+                    Util.gDevAssert(b);
+                    if (b == false) 
+                        result = mr;
+                };
             } else if ( eFailMode == FailMode.Throw ) {
-                CheckOrFailF = (b) => { if (b == false) throw new Exception("DMesh3.CheckValidity: check failed"); };
+                CheckOrFailF = (b, mr) => { 
+                    if (b == false) 
+                        throw new Exception("DMesh3.CheckValidity: check failed" + mr.ToString()); 
+                };
             }
 
 			if ( normals != null )
-				CheckOrFailF(normals.size == vertices.size);
+				CheckOrFailF(normals.size == vertices.size, MeshResult.Failed_InvalidDataStructures);
 			if ( colors != null )
-				CheckOrFailF(colors.size == vertices.size);
+				CheckOrFailF(colors.size == vertices.size, MeshResult.Failed_InvalidDataStructures);
 			if ( uv != null )
-				CheckOrFailF(uv.size/2 == vertices.size/3);
+				CheckOrFailF(uv.size/2 == vertices.size/3, MeshResult.Failed_InvalidDataStructures);
 			if ( triangle_groups != null )
-				CheckOrFailF(triangle_groups.size == triangles.size/3);
+				CheckOrFailF(triangle_groups.size == triangles.size/3, MeshResult.Failed_InvalidDataStructures);
 
             foreach (int tID in TriangleIndices() ) { 
 
-                CheckOrFailF(IsTriangle(tID));
-                CheckOrFailF(triangles_refcount.refCount(tID) == 1);
+                CheckOrFailF(IsTriangle(tID), MeshResult.Failed_NotATriangle);
+                CheckOrFailF(triangles_refcount.refCount(tID) == 1, MeshResult.Failed_InvalidTriangleRefCount);
 
                 // vertices must exist
                 Index3i tv = GetTriangle(tID);
                 for (int j = 0; j < 3; ++j) {
-                    CheckOrFailF(IsVertex(tv[j]));
+                    CheckOrFailF(IsVertex(tv[j]), MeshResult.Failed_NotAVertex);
                     triToVtxRefs[tv[j]] += 1;
                 }
 
@@ -195,51 +215,52 @@ namespace VirgisGeometry
                 for (int j = 0; j < 3; ++j) {
                     int a = tv[j], b = tv[(j + 1) % 3];
                     e[j] = FindEdge(a, b);
-                    CheckOrFailF(e[j] != InvalidID);
-                    CheckOrFailF(edge_has_t(e[j], tID));
-                    CheckOrFailF(e[j] == FindEdgeFromTri(a, b, tID));
+                    CheckOrFailF(e[j] != InvalidID, MeshResult.Failed_NotAnEdge);
+                    CheckOrFailF(edge_has_t(e[j], tID), MeshResult.Failed_NotAnEdge);
+                    CheckOrFailF(e[j] == FindEdgeFromTri(a, b, tID), MeshResult.Failed_NotAnEdge);
                 }
-                CheckOrFailF(e[0] != e[1] && e[0] != e[2] && e[1] != e[2]);
+                CheckOrFailF(e[0] != e[1] && e[0] != e[2] && e[1] != e[2], MeshResult.Failed_NotAnEdge);
 
                 // tri nbrs must exist and reference this tri, or same edge must be boundary edge
                 Index3i te = GetTriEdges(tID);
                 for (int j = 0; j < 3; ++j) {
                     int eid = te[j];
-                    CheckOrFailF(IsEdge(eid));
+                    CheckOrFailF(IsEdge(eid), MeshResult.Failed_NotAnEdge);
                     int tOther = edge_other_t(eid, tID);
                     if (tOther == InvalidID) {
-                        CheckOrFailF(tri_is_boundary(tID));
+                        CheckOrFailF(tri_is_boundary(tID), MeshResult.Failed_NotAnEdge);
                         continue;
                     }
 
-                    CheckOrFailF( tri_has_neighbour_t(tOther, tID) == true);
+                    CheckOrFailF( tri_has_neighbour_t(tOther, tID) == true, MeshResult.Failed_NotATriangle);
 
                     // edge must have same two verts as tri for same index
                     int a = tv[j], b = tv[(j + 1) % 3];
                     Index2i ev = GetEdgeV(te[j]);
-                    CheckOrFailF(IndexUtil.same_pair_unordered(a, b, ev[0], ev[1]));
+                    CheckOrFailF(IndexUtil.same_pair_unordered(a, b, ev[0], ev[1]), MeshResult.Failed_NotAnEdge);
 
                     // also check that nbr edge has opposite orientation
                     Index3i othertv = GetTriangle(tOther);
                     int found = IndexUtil.find_tri_ordered_edge(b, a, othertv.array);
-                    CheckOrFailF(found != InvalidID);
+                    CheckOrFailF(found != InvalidID, MeshResult.Failed_NotAnEdge);
                 }
+
             }
 
 
             // edge verts/tris must exist
             foreach (int eID in EdgeIndices() ) { 
-                CheckOrFailF(IsEdge(eID));
-                CheckOrFailF(edges_refcount.refCount(eID) == 1);
+                CheckOrFailF(IsEdge(eID), MeshResult.Failed_NotAnEdge);
+                CheckOrFailF(edges_refcount.refCount(eID) == 1, MeshResult.Failed_InvalidEdgeRefCount);
                 Index2i ev = GetEdgeV(eID);
                 Index2i et = GetEdgeT(eID);
-                CheckOrFailF(IsVertex(ev[0]));
-                CheckOrFailF(IsVertex(ev[1]));
-                CheckOrFailF(et[0] != InvalidID);
-                CheckOrFailF(ev[0] < ev[1]);
-                CheckOrFailF(IsTriangle(et[0]));
+                CheckOrFailF(IsVertex(ev[0]), MeshResult.Failed_NotAVertex);
+                CheckOrFailF(IsVertex(ev[1]), MeshResult.Failed_NotAVertex);
+                CheckOrFailF(et[0] != InvalidID, MeshResult.Failed_NotAnEdge);
+                CheckOrFailF(ev[0] < ev[1], MeshResult.Failed_NotAnEdge);
+                CheckOrFailF(IsTriangle(et[0]), MeshResult.Failed_NotATriangle);
                 if (et[1] != InvalidID) {
-                    CheckOrFailF(IsTriangle(et[1]));
+                    CheckOrFailF(IsTriangle(et[1]), MeshResult.Failed_NotATriangle);
                 }
             }
 
@@ -247,68 +268,66 @@ namespace VirgisGeometry
             bool is_compact = vertices_refcount.is_dense;
             if (is_compact) {
                 for (int vid = 0; vid < vertices.Length / 3; ++vid) {
-                    CheckOrFailF(vertices_refcount.isValid(vid));
+                    CheckOrFailF(vertices_refcount.isValid(vid), MeshResult.Failed_InvalidVertexRefCount);
                 }
             }
 
             // vertex edges must exist and reference this vert
             foreach( int vID in VertexIndices()) { 
-                CheckOrFailF(IsVertex(vID));
+                CheckOrFailF(IsVertex(vID), MeshResult.Failed_NotAVertex);
 
                 Vector3d v = GetVertex(vID);
-                CheckOrFailF(double.IsNaN(v.LengthSquared) == false);
-                CheckOrFailF(double.IsInfinity(v.LengthSquared) == false);
+                CheckOrFailF(double.IsNaN(v.LengthSquared) == false, MeshResult.Failed_NotAVertex);
+                CheckOrFailF(double.IsInfinity(v.LengthSquared) == false, MeshResult.Failed_NotAVertex);
 
                 foreach(int edgeid in vertex_edges.ValueItr(vID)) { 
-                    CheckOrFailF(IsEdge(edgeid));
-                    CheckOrFailF(edge_has_v(edgeid, vID));
+                    CheckOrFailF(IsEdge(edgeid), MeshResult.Failed_NotAnEdge);
+                    CheckOrFailF(edge_has_v(edgeid, vID), MeshResult.Failed_NotAnEdge);
 
                     int otherV = edge_other_v(edgeid, vID);
                     int e2 = find_edge(vID, otherV);
-                    CheckOrFailF(e2 != InvalidID);
-                    CheckOrFailF(e2 == edgeid);
+                    CheckOrFailF(e2 != InvalidID, MeshResult.Failed_NotAnEdge   );
+                    CheckOrFailF(e2 == edgeid, MeshResult.Failed_NotAnEdge);
                     e2 = find_edge(otherV, vID);
-                    CheckOrFailF(e2 != InvalidID);
-                    CheckOrFailF(e2 == edgeid);
+                    CheckOrFailF(e2 != InvalidID, MeshResult.Failed_NotAnEdge);
+                    CheckOrFailF(e2 == edgeid, MeshResult.Failed_NotAnEdge);
                 }
 
                 foreach ( int nbr_vid in VtxVerticesItr(vID) ) {
-                    CheckOrFailF(IsVertex(nbr_vid));
+                    CheckOrFailF(IsVertex(nbr_vid), MeshResult.Failed_NotAVertex);
                     int edge = find_edge(vID, nbr_vid);
-                    CheckOrFailF(IsEdge(edge));
+                    CheckOrFailF(IsEdge(edge), MeshResult.Failed_NotAnEdge);
                 }
 
 				List<int> vTris = new List<int>(), vTris2 = new List<int>();
                 GetVtxTriangles(vID, vTris, false);
 				GetVtxTriangles(vID, vTris2, true);
-				CheckOrFailF(vTris.Count == vTris2.Count);
-				//System.Console.WriteLine(string.Format("{0} {1} {2}", vID, vTris.Count, GetVtxEdges(vID).Count));
+				CheckOrFailF(vTris.Count == vTris2.Count, MeshResult.Failed_NotATriangle);
                 if ( bAllowNonManifoldVertices )
-    				CheckOrFailF(vTris.Count <= GetVtxEdgeCount(vID));
+    				CheckOrFailF(vTris.Count <= GetVtxEdgeCount(vID), MeshResult.Failed_NotATriangle);
                 else
-    				CheckOrFailF(vTris.Count == GetVtxEdgeCount(vID) || vTris.Count == GetVtxEdgeCount(vID) - 1);
-                CheckOrFailF(vertices_refcount.refCount(vID) == vTris.Count + 1);
-                CheckOrFailF(triToVtxRefs[vID] == vTris.Count);
+    				CheckOrFailF(vTris.Count == GetVtxEdgeCount(vID) || vTris.Count == GetVtxEdgeCount(vID) - 1, MeshResult.Failed_NotATriangle);
+                CheckOrFailF(vertices_refcount.refCount(vID) == vTris.Count + 1, MeshResult.Failed_InvalidVertexRefCount);
+                CheckOrFailF(triToVtxRefs[vID] == vTris.Count, MeshResult.Failed_NotAVertex);
                 foreach( int tID in vTris) {
-                    CheckOrFailF(tri_has_v(tID, vID));
+                    CheckOrFailF(tri_has_v(tID, vID), MeshResult.Failed_NotATriangle);
                 }
 
 				// check that edges around vert only references tris above, and reference all of them!
 				List<int> vRemoveTris = new List<int>(vTris);
 				foreach ( int edgeid in vertex_edges.ValueItr(vID)) {
 					Index2i edget = GetEdgeT(edgeid);
-					CheckOrFailF( vTris.Contains(edget[0]) );
+					CheckOrFailF( vTris.Contains(edget[0]), MeshResult.Failed_NotATriangle );
 					if ( edget[1] != InvalidID )
-						CheckOrFailF( vTris.Contains(edget[1]) );
+						CheckOrFailF( vTris.Contains(edget[1]) , MeshResult.Failed_NotATriangle);
 					vRemoveTris.Remove(edget[0]);
 					if ( edget[1] != InvalidID )
 						vRemoveTris.Remove(edget[1]);
 				}
-				CheckOrFailF(vRemoveTris.Count == 0);
+				CheckOrFailF(vRemoveTris.Count == 0, MeshResult.Failed_NotATriangle);
             }
-
-            return is_ok;
+            mr = result;
+            return result == MeshResult.Ok;
         }
-
     }
 }

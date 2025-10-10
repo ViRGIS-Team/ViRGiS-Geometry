@@ -30,10 +30,16 @@ namespace VirgisGeometry
         Failed_WouldCreateBowtie = 30,
         Failed_VertexAlreadyExists = 31,
         Failed_CannotAllocateVertex = 32,
+        Failed_VertexStillReferenced = 33,
 
         Failed_WouldCreateNonmanifoldEdge = 50,
         Failed_TriangleAlreadyExists = 51,
-        Failed_CannotAllocateTriangle = 52
+        Failed_CannotAllocateTriangle = 52,
+
+        Failed_InvalidDataStructures = 60, // for CheckValidity
+        Failed_InvalidVertexRefCount = 61,
+        Failed_InvalidTriangleRefCount = 62,
+        Failed_InvalidEdgeRefCount = 63
 
     };
 
@@ -2753,6 +2759,11 @@ namespace VirgisGeometry
             //Change Vertex Color Function
             bool TryChangeVertex( int vID)
             {
+                if ( ! IsVertex(vID))
+                {
+                    throw new InvalidOperationException("Colorisation trying to color a vertex that does not exist");
+                }
+                
                 byte[] vmask = new byte[6];
                 int id = vertexMap[vID];
 

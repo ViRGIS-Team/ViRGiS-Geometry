@@ -55,11 +55,12 @@ namespace VirgisGeometry
 		}
 
 
-		public bool Apply()
+		public bool Apply(bool compact = true, bool do_checks = false)
 		{
-			bool do_checks = false;
 
-			if ( do_checks ) Mesh.CheckValidity();
+			if ( do_checks ) 
+                if (! Mesh.CheckValidity(false, FailMode.ReturnOnly))
+                    return false;
 
 
             /*
@@ -181,11 +182,13 @@ namespace VirgisGeometry
 
             if (do_checks) Mesh.CheckValidity();
 
-            /*
-             * Might as well compact output mesh...
+            /*If requested compact output mesh...
              */
-			Mesh = new DMesh3(Mesh, true);
-            MeshNormals.QuickCompute(Mesh);
+            if (compact)
+            {
+                Mesh = new DMesh3(Mesh, true);
+                MeshNormals.QuickCompute(Mesh);
+            }
 
 			return true;
 		}
