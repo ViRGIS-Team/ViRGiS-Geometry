@@ -398,10 +398,21 @@ namespace VirgisGeometry
             return new double3(v.x, v.y, v.z);
         }
 
+        public static implicit operator netDxf.Vector3(Vector3d v)
+        {
+            return new netDxf.Vector3(v.x, v.y, v.z);
+        }
+        
+        public static implicit operator Vector3d(netDxf.Vector3 v)
+        {
+            return new Vector3d(v.X, v.Y, v.Z);
+        }
+
         public static explicit operator Vector3d(Vector2d v)
         {
             return new Vector3d(v);
         }
+
         public static explicit operator Vector2d(Vector3d v)
         {
             return new Vector2d(v.x, v.y);

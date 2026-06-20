@@ -23,6 +23,11 @@ This Version has the following BREAKING CHANGEs :
 Vector3d v = new Vector3d(...) { axisOrder= AxisOrder.ENU }
 ```
 - DMesh3 and DCurve3 now include details of the Axis Order and this is used when casting to Unity Mesh etc.
+# netDXF
+
+As of version 4.1.0, this package also includes netDXF, a  .net library programmed in C# to read and write AutoCAD DXF files. It supports AutoCad2000, AutoCad2004, AutoCad2007, AutoCad2010, AutoCad2013, and AutoCad2018 DXF database versions, in both text and binary format.
+
+The [parent package has been archived](https://github.com/haplokuon/netDxf) and it has been included here to allow he reading and writing of DXF files. See the [documentation](https://github.com/haplokuon/netDxf#netdxf) for details
 
 # Projects using ViRGiS Geometry
 
@@ -37,6 +42,8 @@ Many thanks to [GradientSpace](https://www.gradientspace.com/) for creating this
 Many, many data structures and algorithms have been ported from the WildMagic5 and GTEngine C++ libraries, which are developed by David Eberly at [Geometric Tools](https://www.geometrictools.com/). WildMagic5 and GTEngine are distributed under the Boost license as well, available [here](https://www.geometrictools.com/Downloads/Downloads.html). Any errors in code marked as ported from WildMagic5/GTEngine are most certainly ours!
 
 The **MeshSignedDistanceGrid** class was implemented based on the C++ [SDFGen](https://github.com/christopherbatty/SDFGen) code written by [Christopher Batty](https://cs.uwaterloo.ca/~c2batty/) and [Robert Bridson](http://www.cs.ubc.ca/~rbridson/). 
+
+Thanks to [Daniel Carvajal](haplokuon@gmail.com) for creating netDXF.
 
 This package uses the [Burst Triangulation Package](https://github.com/andywiecko/BurstTriangulator) for shape triangulation.
 
