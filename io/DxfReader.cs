@@ -20,10 +20,23 @@ namespace VirgisGeometry
 
         public IOReadResult Read(BinaryReader reader, ReadOptions options, IMeshBuilder builder)
         {
-            return Read(reader.BaseStream, options, builder);
+            return Read(reader.BaseStream, options, builder, default);
         }
 
-        public IOReadResult Read(Stream stream, ReadOptions options, IMeshBuilder builder)
+        private static int GetOrAddIndex(List<Vector3d> vertices, Vector3d v)
+        {
+            int index = vertices.IndexOf(v);
+
+            if (index < 0)
+            {
+                vertices.Add(v);
+                index = vertices.Count - 1;
+            }
+
+            return index;
+        }
+
+        public IOReadResult Read(Stream stream, ReadOptions options, IMeshBuilder builder, AxisOrder ax)
         {
             try
             {
@@ -31,8 +44,7 @@ namespace VirgisGeometry
 
                 List<Face3D> faces = doc.Entities.Faces3D.ToList();
                 IEnumerable<PolyfaceMesh> pfs = doc.Entities.PolyfaceMeshes;
-
-                builder.AppendNewMesh(false, false, false, false);
+                
                 //
                 // Add the Polyface Meshes
                 //
@@ -47,23 +59,28 @@ namespace VirgisGeometry
                         }
                     }
                 }
-
+                
+                List<Vector3d> vertices = new ();
+                List<Index3i> triangles = new ();
+                
                 foreach (Face3D face in faces)
                 {
 
-                    int a = builder.AppendVertex(face.FirstVertex.X, face.FirstVertex.Y, face.FirstVertex.Z);
-                    int b = builder.AppendVertex(face.SecondVertex.X, face.SecondVertex.Y, face.SecondVertex.Z);
-                    int c = builder.AppendVertex(face.ThirdVertex.X, face.ThirdVertex.Y, face.ThirdVertex.Z);
-                    builder.AppendTriangle(a, b, c);
+                    int a = GetOrAddIndex(vertices, face.FirstVertex);
+                    int b = GetOrAddIndex(vertices,face.SecondVertex);
+                    int c = GetOrAddIndex(vertices, face.ThirdVertex);
+                    triangles.Add(new Index3i(a, b, c));
                     if (face.FourthVertex != face.ThirdVertex)
                     {
-                        a = builder.AppendVertex(face.FirstVertex.X, face.FirstVertex.Y, face.FirstVertex.Z);
-                        b = builder.AppendVertex(face.ThirdVertex.X, face.ThirdVertex.Y, face.ThirdVertex.Z);
-                        c = builder.AppendVertex(face.FourthVertex.X, face.FourthVertex.Y, face.FourthVertex.Z);
-                        builder.AppendTriangle(a, b, c);
+                        a = GetOrAddIndex(vertices, face.FirstVertex);
+                        b = GetOrAddIndex(vertices,face.ThirdVertex);
+                        c = GetOrAddIndex(vertices, face.FourthVertex);
+                        triangles.Add(new Index3i(a, b, c));
                     }
                 }
 
+                builder.AppendNewMesh(DMesh3Builder.Build<Vector3d, Index3i, Vector3d>(vertices, triangles ));
+                
                 return IOReadResult.Ok;
             }
             catch (DxfVersionNotSupportedException ex)
