@@ -168,7 +168,7 @@ namespace netDxf.IO
                 string dwgCodePage = CheckHeaderVariable(stream, HeaderVariableCode.DwgCodePage, out this.isBinary);
                 if (string.IsNullOrEmpty(dwgCodePage))
                 {
-                    encoding = Encoding.GetEncoding(Encoding.ASCII.WindowsCodePage);
+                    encoding = Encoding.ASCII;
                     Debug.Assert(false, "No code page defined in the DXF.");
                 }
                 else
@@ -181,13 +181,13 @@ namespace netDxf.IO
                         }
                         catch
                         {
-                            encoding = Encoding.GetEncoding(Encoding.ASCII.WindowsCodePage);
+                            encoding = Encoding.ASCII;
                             Debug.Assert(false, "Invalid or not compatible code page defined in the DXF.");
                         }
                     }
                     else
                     {
-                        encoding = Encoding.GetEncoding(Encoding.ASCII.WindowsCodePage);
+                        encoding = Encoding.ASCII;
                         Debug.Assert(false, "Invalid code page defined in the DXF.");
                     }
                 }
