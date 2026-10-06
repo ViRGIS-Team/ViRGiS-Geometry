@@ -280,17 +280,12 @@ namespace VirgisGeometry
                     {
                         res.SetVertexUV(i, (Vector2f)vertices2d[i]);
                     }
-
-                    triangulator.Input.Positions.Dispose();
-                    triangulator.Input.ConstraintEdges.Dispose();
-                    triangulator.Dispose();
+                    input.Positions.Dispose();
                 }
                 catch (Exception e)
                 {
-                    triangulator.Input.Positions.Dispose();
-                    triangulator.Input.ConstraintEdges.Dispose();
-                    triangulator.Dispose();
-                    throw new Exception($"DMesh3 creation Failed: {e.Message}");
+                    input.Positions.Dispose();
+                    throw new Exception($"DMesh3 creation Failed: {e.Message}", e);
                 }
             return res;
         }

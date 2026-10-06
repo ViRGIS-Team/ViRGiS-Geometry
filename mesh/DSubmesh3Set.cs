@@ -31,7 +31,7 @@ namespace VirgisGeometry
         /// <summary>
         /// Construct submesh set from given keys and key-to-indices Func
         /// </summary>
-        public DSubmesh3Set(DMesh3 mesh, IEnumerable<object> keys, Func<object,IEnumerable<int>> indexSetsF)
+        public DSubmesh3Set(ref DMesh3 mesh, IEnumerable<object> keys, Func<object,IEnumerable<int>> indexSetsF)
         {
             Mesh = mesh;
             TriangleSetKeys = keys;
@@ -44,7 +44,7 @@ namespace VirgisGeometry
         /// <summary>
         /// Construct submesh set for an already-computed MeshConnectedComponents instance
         /// </summary>
-        public DSubmesh3Set(DMesh3 mesh, MeshConnectedComponents components)
+        public DSubmesh3Set(ref DMesh3 mesh, MeshConnectedComponents components)
         {
             Mesh = mesh;
 
@@ -77,7 +77,7 @@ namespace VirgisGeometry
             SpinLock data_lock = new SpinLock();
 
             gParallel.ForEach(TriangleSetKeys, (obj) => {
-                DSubmesh3 submesh = new DSubmesh3(Mesh, TriangleSetF(obj), 0);
+                DSubmesh3 submesh = new DSubmesh3(ref Mesh, TriangleSetF(obj), 0);
 
                 bool taken = false;
                 data_lock.Enter(ref taken);

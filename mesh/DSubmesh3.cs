@@ -16,7 +16,7 @@ namespace VirgisGeometry
     /// </summary>
     public class DSubmesh3: DMesh3
     {
-        protected DMesh3 BaseMesh; // This is the base mesh that the submesh references
+        public DMesh3 BaseMesh; // This is the base mesh that the submesh references
         protected IEnumerable<int> selectedTris; // keeps the selected triangles for this submesh
  
         // redirect the base data structures to the base mesh
@@ -94,19 +94,19 @@ namespace VirgisGeometry
 
 
         // Constructors
-        public DSubmesh3(DMesh3 mesh, int[] subTriangles): base(true)
+        public DSubmesh3(ref DMesh3 mesh, int[] subTriangles): base(true)
         {
             BaseMesh = mesh;
             compute(subTriangles);
         }
 
-        public DSubmesh3(DMesh3 mesh, IEnumerable<int> subTriangles, int nTriEstimate = 0) : base(true)
+        public DSubmesh3(ref DMesh3 mesh, IEnumerable<int> subTriangles, int nTriEstimate = 0) : base(true)
         {
             BaseMesh = mesh;
             compute(subTriangles);
         }
 
-        public DSubmesh3(DMesh3 mesh): base(true)
+        public DSubmesh3(ref DMesh3 mesh): base(true)
         {
             BaseMesh = mesh;
         }
@@ -269,14 +269,14 @@ namespace VirgisGeometry
 
         // Static Mesh Creators for backweards compatibility
 
-        public static DMesh3 QuickSubmesh(DMesh3 mesh, int[] triangles)
+        public static DMesh3 QuickSubmesh(ref DMesh3 mesh, int[] triangles)
         {
-            DSubmesh3 submesh = new DSubmesh3(mesh, triangles);
+            DSubmesh3 submesh = new DSubmesh3(ref mesh, triangles);
             return submesh;
         }
-        public static DMesh3 QuickSubmesh(DMesh3 mesh, IEnumerable<int> triangles)
+        public static DMesh3 QuickSubmesh(ref DMesh3 mesh, IEnumerable<int> triangles)
         {
-            return QuickSubmesh(mesh, triangles.ToArray());
+            return QuickSubmesh(ref mesh, triangles.ToArray());
         }
 
         public bool IsSubmeshInternalBoundaryVertex(int vID)
