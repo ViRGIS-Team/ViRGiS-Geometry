@@ -40,32 +40,19 @@ namespace VirgisGeometry
             get { return BaseMesh.uv; }
             set { BaseMesh.uv = value; }
         }
-        internal override SmallListSet vertex_edges
-        {
-            get { return BaseMesh.vertex_edges; }
-            set { BaseMesh.vertex_edges = value; }
-        }
+
         internal override DVector<int> triangles
         {
             get { return BaseMesh.triangles; }
             set { BaseMesh.triangles = value; }
         }
 
-        internal override DVector<int> triangle_edges
-        {
-            get { return BaseMesh.triangle_edges; }
-            set { BaseMesh.triangle_edges = value; }
-        }
         internal override DVector<int> triangle_groups
         {
             get { return BaseMesh.triangle_groups; }
             set { BaseMesh.triangle_groups = value; }
         }
-        internal override DVector<int> edges
-        {
-            get { return BaseMesh.edges; }
-            set { BaseMesh.edges = value; }
-        }
+
         public override bool Clockwise
         {
             get { return BaseMesh.Clockwise; }
@@ -91,6 +78,8 @@ namespace VirgisGeometry
             get { return BaseMesh.Metadata; }
             set { BaseMesh.Metadata = value; }
         }
+
+
 
 
         // Constructors
@@ -157,10 +146,14 @@ namespace VirgisGeometry
 
         void compute(IEnumerator<int> triangles)
         {
-            foreach (int tri in TriangleIndices())
-                base.RemoveTriangle(tri, true, true, true);
+            vertices_refcount = new RefCountVector();
+            triangles_refcount = new RefCountVector();
+            edges = new DVector<int>();
+            edges_refcount = new RefCountVector();
+            vertex_edges = new SmallListSet();
+            triangle_edges = new DVector<int>();
             while (triangles.MoveNext()) {
-                if (!BaseMesh.IsTriangle(triangles.Current)) continue; // don't get shouty over incorrect triangle
+                if (!BaseMesh.IsTriangle(triangles.Current)) throw new Exception("Incorrect triangle in SubMesh"); // don't get shouty over incorrect triangle
                 foreach (int vert in BaseMesh.GetTriangle(triangles.Current))
                 {
                     if (!IsVertex(vert))
@@ -168,20 +161,14 @@ namespace VirgisGeometry
                         vertices_refcount.allocate_at_unsafe(vert);
                     } 
                     vertices_refcount.increment(vert);
+                    allocate_edges_list(vert);
                 }
-                foreach (int edge in BaseMesh.GetTriEdges(triangles.Current))
-                {
-                    if (!IsEdge(edge))
-                    {
-                        edges_refcount.allocate_at_unsafe(edge);
-                    }
-                    edges_refcount.increment(edge);
-                }
-                triangles_refcount.allocate_at_unsafe(triangles.Current);
+                AppendTriangleToSubMesh(triangles.Current);
             }
             vertices_refcount.rebuild_free_list();
             edges_refcount.rebuild_free_list();
             triangles_refcount.rebuild_free_list();
+            RebuildFromEdgeRefcounts();
         }
 
         public override int AppendVertex(ref NewVertexInfo info) 
@@ -220,6 +207,30 @@ namespace VirgisGeometry
             return tri;
         }
 
+        public void AppendTriangleToSubMesh(int tid)
+        {
+            if (!BaseMesh.IsTriangle(tid)) throw new Exception("Invalid triangle in SubMesh");
+            Index3i tv = BaseMesh.GetTriangle(tid);
+            triangles_refcount.allocate_at_unsafe(tid);
+
+
+            // increment ref counts and update/create edges
+            vertices_refcount.increment(tv[0]);
+            vertices_refcount.increment(tv[1]);
+            vertices_refcount.increment(tv[2]);
+
+            int e0 = find_edge(tv[0], tv[1]);
+            int e1 = find_edge(tv[1], tv[2]);
+            int e2 = find_edge(tv[2], tv[0]);
+
+            add_tri_edge(tid, tv[0], tv[1], 0, e0);
+            add_tri_edge(tid, tv[1], tv[2], 1, e1);
+            add_tri_edge(tid, tv[2], tv[0], 2, e2);
+
+            updateTimeStamp(true);
+        }
+
+
         public override MeshResult InsertTriangle(int tid, Index3i tv, int gid = -1, bool bUnsafe = false)
         {
             bool bOK = (bUnsafe) ? triangles_refcount.allocate_at_unsafe(tid) :
@@ -230,13 +241,6 @@ namespace VirgisGeometry
             if (mr == MeshResult.Ok)
                 updateTimeStamp(true);
             return mr;
-        }
-
-        internal override int add_edge(int vA, int vB, int tA, int tB = InvalidID)
-        {
-            int eid = BaseMesh.add_edge(vA, vB, tA, tB);
-            edges_refcount.allocate_at(eid);
-            return eid;
         }
 
         /// <summary>
@@ -282,6 +286,11 @@ namespace VirgisGeometry
         public bool IsSubmeshInternalBoundaryVertex(int vID)
         {
             return IsBoundaryVertex(vID) && !BaseMesh.IsBoundaryVertex(vID);
+        }
+
+        public override CompactInfo CompactInPlace(bool bComputeCompactInfo = false)
+        {
+            throw new NotImplementedException("Cannot Compact a SubMesh");
         }
     }
 

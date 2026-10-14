@@ -1132,7 +1132,7 @@ namespace VirgisGeometry
 
 
 
-        void allocate_edges_list(int vid)
+        protected void allocate_edges_list(int vid)
         {
             if ( vid < vertex_edges.Size )
                 vertex_edges.Clear(vid);
