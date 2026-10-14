@@ -168,7 +168,10 @@ namespace VirgisGeometry
         {
             vertices_refcount = new RefCountVector();
             triangles_refcount = new RefCountVector();
+            edges = new DVector<int>();
             edges_refcount = new RefCountVector();
+            vertex_edges = new SmallListSet();
+            triangle_edges = new DVector<int>();
         }
 
 
@@ -427,13 +430,13 @@ namespace VirgisGeometry
 
         // info
 
-        public bool IsVertex(int vID) {
+        public virtual bool IsVertex(int vID) {
             return vID != InvalidID && vertices_refcount.isValid(vID);
         }
-        public bool IsTriangle(int tID) {
+        public virtual bool IsTriangle(int tID) {
             return tID != InvalidID && triangles_refcount.isValid(tID);
         }
-        public bool IsEdge(int eID) {
+        public virtual bool IsEdge(int eID) {
             return eID != InvalidID && edges_refcount.isValid(eID);
         }
 
@@ -1230,7 +1233,7 @@ namespace VirgisGeometry
             return tid;
         }
         // helper fn for above, just makes code cleaner
-        void add_tri_edge(int tid, int v0, int v1, int j, int eid)
+        protected void add_tri_edge(int tid, int v0, int v1, int j, int eid)
         {
             if (eid != InvalidID) {
                 edges[4 * eid + 3] = tid;
@@ -1854,7 +1857,7 @@ namespace VirgisGeometry
 
 
 
-        int find_edge(int vA, int vB)
+        protected int find_edge(int vA, int vB)
         {
             // [RMS] edge vertices must be sorted (min,max),
             //   that means we only need one index-check in inner loop.
@@ -2404,7 +2407,7 @@ namespace VirgisGeometry
         /// 
         /// If bComputeCompactInfo=false, the returned CompactInfo is not initialized
         /// </summary>
-        public CompactInfo CompactInPlace(bool bComputeCompactInfo = false)
+        public  virtual CompactInfo CompactInPlace(bool bComputeCompactInfo = false)
         {
             IndexMap mapV = (bComputeCompactInfo) ? new IndexMap(MaxVertexID, VertexCount) : null;
             CompactInfo ci = new CompactInfo();
