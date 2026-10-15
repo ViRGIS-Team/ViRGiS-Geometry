@@ -100,7 +100,18 @@ namespace VirgisGeometry
             BaseMesh = mesh;
         }
 
-
+        /// <summary>
+        /// Clears the Submesh (but not the BaseMesh) 
+        /// </summary>
+        public void Clear()
+        {
+            vertices_refcount = new RefCountVector();
+            triangles_refcount = new RefCountVector();
+            edges = new DVector<int>();
+            edges_refcount = new RefCountVector();
+            vertex_edges = new SmallListSet();
+            triangle_edges = new DVector<int>();
+        }
 
         /// <summary>
         /// Create the submesh using the supplied triangle array
@@ -138,7 +149,6 @@ namespace VirgisGeometry
             compute(mfs);
         }
 
-
         void compute(IEnumerable<int> triangles)
         {
             compute(triangles.GetEnumerator());
@@ -146,12 +156,7 @@ namespace VirgisGeometry
 
         void compute(IEnumerator<int> triangles)
         {
-            vertices_refcount = new RefCountVector();
-            triangles_refcount = new RefCountVector();
-            edges = new DVector<int>();
-            edges_refcount = new RefCountVector();
-            vertex_edges = new SmallListSet();
-            triangle_edges = new DVector<int>();
+            Clear();
             while (triangles.MoveNext()) {
                 if (!BaseMesh.IsTriangle(triangles.Current)) throw new Exception("Incorrect triangle in SubMesh"); // don't get shouty over incorrect triangle
                 foreach (int vert in BaseMesh.GetTriangle(triangles.Current))
@@ -159,16 +164,15 @@ namespace VirgisGeometry
                     if (!IsVertex(vert))
                     {
                         vertices_refcount.allocate_at_unsafe(vert);
+                        allocate_edges_list(vert);
                     } 
                     vertices_refcount.increment(vert);
-                    allocate_edges_list(vert);
                 }
                 AppendTriangleToSubMesh(triangles.Current);
             }
             vertices_refcount.rebuild_free_list();
             edges_refcount.rebuild_free_list();
             triangles_refcount.rebuild_free_list();
-            RebuildFromEdgeRefcounts();
         }
 
         public override int AppendVertex(ref NewVertexInfo info) 
@@ -285,7 +289,7 @@ namespace VirgisGeometry
 
         public bool IsSubmeshInternalBoundaryVertex(int vID)
         {
-            return IsBoundaryVertex(vID) && !BaseMesh.IsBoundaryVertex(vID);
+            return IsBoundaryVertex(vID) && ! BaseMesh.IsBoundaryVertex(vID);
         }
 
         public override CompactInfo CompactInPlace(bool bComputeCompactInfo = false)
