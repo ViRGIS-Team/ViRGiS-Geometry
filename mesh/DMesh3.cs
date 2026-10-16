@@ -164,14 +164,8 @@ namespace VirgisGeometry
         /// </summary>
         internal virtual Dictionary<string, object> Metadata { get; set; } = null;
 
-        internal DMesh3(bool IsSubmesh) 
+        internal DMesh3() 
         {
-            vertices_refcount = new RefCountVector();
-            triangles_refcount = new RefCountVector();
-            edges = new DVector<int>();
-            edges_refcount = new RefCountVector();
-            vertex_edges = new SmallListSet();
-            triangle_edges = new DVector<int>();
         }
 
 

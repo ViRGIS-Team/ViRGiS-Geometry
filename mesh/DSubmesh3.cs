@@ -80,23 +80,24 @@ namespace VirgisGeometry
         }
 
 
-
-
         // Constructors
-        public DSubmesh3(ref DMesh3 mesh, int[] subTriangles): base(true)
+        public DSubmesh3(ref DMesh3 mesh, int[] subTriangles): base()
         {
+            Clear();
             BaseMesh = mesh;
             compute(subTriangles);
         }
 
-        public DSubmesh3(ref DMesh3 mesh, IEnumerable<int> subTriangles, int nTriEstimate = 0) : base(true)
+        public DSubmesh3(ref DMesh3 mesh, IEnumerable<int> subTriangles, int nTriEstimate = 0) : base()
         {
+            Clear();
             BaseMesh = mesh;
             compute(subTriangles);
         }
 
-        public DSubmesh3(ref DMesh3 mesh): base(true)
+        public DSubmesh3(ref DMesh3 mesh): base()
         {
+            Clear();
             BaseMesh = mesh;
         }
 
